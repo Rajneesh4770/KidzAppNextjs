@@ -3,7 +3,7 @@ import Link from 'next/link'
 function Navbar() {
     return (
       <>
-        <nav className={`${style.navbar} fixed-top `}>
+        <nav className={`container ${style.navbar} fixed-top `}>
           {/* <!-- LOGO --> */}
           <div className={`container ${style.logo}`}>
             <Link href='/'>
