@@ -9,7 +9,7 @@ import style from '../styles/Home.module.css';
 function index() {
   return (
     <div className={style.body}>
-      <h1 className={style.h}>hello</h1>
+    
       {/* Crousel component of Home page */}
       <HomeCrousel />
 
