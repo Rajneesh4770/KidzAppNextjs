@@ -25,6 +25,7 @@
     "react-slick": "^0.29.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.2.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6"
   }
