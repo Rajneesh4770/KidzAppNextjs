@@ -27,7 +27,7 @@ function Navbar() {
               &#9776;
             </label>
             {/* <!-- NAVIGATION MENUS --> */}
-            <div className={style.menu}>
+            <div className={`container ${style.menu}`}>
               <li>
                 <Link href='/FindActivities'>
                   FindActivities
