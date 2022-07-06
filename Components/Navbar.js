@@ -5,7 +5,7 @@ function Navbar() {
       <>
         <nav className={`${style.navbar} fixed-top `}>
           {/* <!-- LOGO --> */}
-          <div className={`${style.logo}`}>
+          <div className={`container ${style.logo}`}>
             <Link href='/'>
               <div>
                 <img className={style.logoimage}
