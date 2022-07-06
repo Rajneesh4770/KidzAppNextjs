@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+  .input {
+    padding: .8rem 1rem;
+    width: 70%;
+    border-radius: 5rem 0rem 0rem 5rem;
+    outline: none;
+    border: .1rem solid #d1d1d1;
+    font-size: .9rem;
+  }
+  
+  /* ::placeholder {
+    color: #d1d1d1;
+  } */
+  
+  .subscribeBtn {
+    padding: .9rem 2rem;
+    border-radius: 0rem 5rem 5rem 0rem;
+    background: linear-gradient(90deg, #ff9966, #ff5e62);
+    color: #fff;
+    font-size: .9rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .form-input{
+      padding-top: 3px;
+  }

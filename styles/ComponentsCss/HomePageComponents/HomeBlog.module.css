@@ -1,0 +1,27 @@
+.maindiv{
+     background-color: #002240;
+}
+.heading{
+     color: #fff;
+     padding: 30px 0px;
+     font-weight: 700;
+     font-family: system-ui;
+}
+.blogCardHome{
+    margin-bottom: 15px;
+}
+.card{
+    border-radius: 18px !important;
+}
+.titleBlog{
+    display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+.hr{
+    border-bottom: 6px solid #9f57a9;
+    max-width: 30px;
+    margin: 5px auto 15px 0;
+}

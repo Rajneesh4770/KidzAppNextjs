@@ -1,0 +1,36 @@
+.footer {
+  background-color: #002240;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+.footer li {
+  list-style: none;
+  color: #8d969b;
+}
+.img1 {
+  width: 150px;
+  margin-top: 6px;
+}
+.img2 {
+  width: 150px;
+}
+.nav-link {
+  display: contents;
+  color: white;
+}
+
+.animate__animated.animate__rubberBand.animate__infinite {
+  --animate-duration: 2s;
+  --animate__infinite: infinite;
+  --animate-delay: 0.9s;
+  --animate__fast: 800ms;
+}
+
+.footer a {
+  text-decoration: none !important;
+  padding-bottom: 4px;
+}
+.footer h6 {
+  font-size: larger;
+}

@@ -1,0 +1,25 @@
+/* ...............................HomeCrouselCss................................*/
+
+/*.......... CrouselParagraphCss */
+.crouselParagraph {
+    display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 270px;
+}
+
+/* ...........CrouselHeading Css */
+
+.crouselHeading {
+    display: -webkit-box;
+}
+
+/* ............Crousel images css */
+.crouselImages {
+    width: 100%;
+    height: 480px;
+    filter: brightness(60%);
+    margin-top: 100px;
+}

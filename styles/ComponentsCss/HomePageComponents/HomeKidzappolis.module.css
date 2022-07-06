@@ -1,0 +1,72 @@
+.body{
+     background-color: #00aff4;
+     margin-top: 20px;
+}
+ /* circle card ........... */
+.kidzappHeading{
+   padding-top: 40px !important;
+   font-size: 3rem;
+   font-weight: 700;
+   color: #fff;
+   font-family: system-ui;
+}
+.activityBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 5px;
+    height: 100%;
+}
+.activityBoxHeading {
+   margin: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 74px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-family: system-ui;
+}
+.slick-slide img {
+     display: initial !important;
+}
+.activityBoxImage {
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    border-radius: 50%;
+    background-color: #fff;
+    height: 145px;
+    max-width: 100%;
+    width: 145px!important;
+    object-fit: contain;
+    padding: 15px 15px 15px 25px;
+    vertical-align: middle;
+    border-style: none;
+    display: block;
+}
+
+            /* collection boxs.......... */
+
+
+.aprovedImg {
+    border-radius: 50px;
+    height: 60px !important ;
+    width: 70px;
+    margin: 0px 20px;
+}
+.aprovedP{
+    width: 100px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+.conditionalCard{
+    margin:  0px auto 15px auto ;
+   
+}
+.slider2{
+    text-align: -webkit-center;
+}
+.collectionCard{
+    padding-bottom: 50px;
+}
