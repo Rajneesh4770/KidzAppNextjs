@@ -1,7 +1,13 @@
 // {
 //   "extends": "next/core-web-vitals"
 // }
-{
-  "extends": ["eslint:recommended", "next"]
-}
+// {
+//   "extends": ["eslint:recommended", "next"]
+  
+// }
 
+{
+  "parserOptions": {
+      "sourceType": "module"
+  }
+}
