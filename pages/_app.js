@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
           crossorigin='anonymous'
         />  
       </Head>
+      <h1>hello</h1>
       <Navbar />
       <Component {...pageProps} />
       <Footer/>
