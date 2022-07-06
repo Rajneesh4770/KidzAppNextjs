@@ -3,7 +3,7 @@ import Link from 'next/link'
 function Navbar() {
     return (
       <>
-        <nav className={`container ${style.navbar} fixed-top `}>
+        <nav className={` ${style.navbar} fixed-top `}>
           {/* <!-- LOGO --> */}
           <div className={`container ${style.logo}`}>
             <Link href='/'>
@@ -27,7 +27,7 @@ function Navbar() {
               &#9776;
             </label>
             {/* <!-- NAVIGATION MENUS --> */}
-            <div className={`container ${style.menu}`}>
+            <div className={`float-right ${style.menu}`}>
               <li>
                 <Link href='/FindActivities'>
                   FindActivities
