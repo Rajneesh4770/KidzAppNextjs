@@ -1,9 +1,132 @@
-.body{
+.marginFromHeader{
     margin-top: 100px;
 }
-.section1{
-    background-color: #00aff4;
-    height: 100px;
-    background-size: cover;
-    margin-top: auto;
-}
+/* filter section */
+.filter {
+         background-color: #58cbf8;
+   
+  }
+  .md2 {
+    padding: 0px 5px;
+  }
+  .btn1 {
+    background-color: #58cbf8;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* search result section */
+ .mainPara {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .leftContainer {
+    border-right: 1px solid #d8d2d2;
+  }
+  .imgSection {
+    position: relative;
+  }
+ .newdeal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+  .newDealImg {
+    width: 50px;
+    height: 50px;
+  }
+  .activity-page .searchResultSection .leftContainer .col-md-12 {
+    padding: 0;
+  }
+  .card {
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 12px;
+  }
+  
+    .cardtoppara {
+    font-weight: bold;
+  }
+  
+    .cardtitle {
+    color: #9576b3;
+    font-weight: bold;
+  }
+  .starRateButton {
+    color: #fff;
+    border-radius: 12px;
+    background-color: #f0c61a;
+    padding: 0px 10px;
+  }
+  .starspan {
+    width: max-content;
+    font-size: 14px;
+  }
+  .bottomtext {
+    color: var(--active-color);
+  }
+  .bottomButton {
+    border: 1px solid #e25b25;
+    color: #e25b25;
+    padding: 0px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+  }
+  .bottomButton:hover {
+    background-color: #e25b25;
+    color: #fff;
+  }
+  
+  .activity-page .searchResultSection .rightContainer .col-md-12 {
+    padding: 0;
+  }
+  
+  .rightcard {
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    position: relative;
+  }
+ 
+    .rightcardtitle {
+    font-weight: bold;
+  }
+  .rightstarRateButton {
+    color: #fff;
+    border-radius: 12px;
+    background-color: #f0c61a;
+    padding: 0px 10px;
+  }
+   .rightspan {
+    width: max-content;
+    font-size: 14px;
+  }
+  .newdeal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+.newdealimg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1199.98px) {
+  
+  }
+  @media (max-width: 991.98px) {
+  
+  }
+  @media (max-width: 767.98px) {
+  
+  }
+  @media (max-width: 575.98px) {
+    
+  }
