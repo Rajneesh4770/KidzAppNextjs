@@ -30,8 +30,7 @@ function Navbar() {
             <div className={`float-right ${style.menu}`}>
               <li>
                 <Link href='/FindActivities'>
-                  FindActivities
-                  
+                  FindActivities  
                 </Link>
               </li>
               <li>

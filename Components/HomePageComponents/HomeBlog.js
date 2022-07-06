@@ -5,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
 import {
   CardActionArea,
-  Button,
   CardContent,
   Card,
   CardActions,
@@ -37,7 +36,7 @@ function HomeBlog() {
                 className={`${i === 0 || i === 5 ? 'col-md-8' : 'col-md-4 '
                   } col-sm-12 ${style.blogCardHome}`}
               >
-                <Card className={style.card} sx={{ maxWidth: 734 }}>
+                <Card className={style.card} sx={{ maxWidth: 850 }}>
                   <CardActionArea>
                     <CardMedia
                       component='img'

@@ -4,42 +4,54 @@ import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';
 import HomeButton from "../HomePageComponents/HomeButton"
-import { Card , CardActions,CardContent, Typography } from '@mui/material';
 function HomeKidsActivitiesReviews() {
   const settings = {
-    dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    lazyLoad: true,
+    swipeToSlide: true,
+    arrows: false,
+    // dots: true,
     responsive: [
       {
-        breakpoint:1200,
-        settings:{
-          slidesToShow:3,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slideToScroll: 1,
+          arrows: false,
+          dots: false,
         }
       },
       {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slideToScroll: 1,
+          arrows: false,
+          dots: false,
+        }
       }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 1,
-      }
-    }
-  ]
+    ]
   };
-  const [data1, setData1] = useState([]);
+  const [reviewData, setReviewData] = useState([]);
+  const getReviewData = () => {
+    axios
+      .get(
+        "https://api2.kidzapp.com/api/3.0/reviews/featured?page=1&page_size=20&country_code=ae"
+      )
+      .then((response) => {
+        const myData = response.data;
+        setReviewData(myData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
-    axios.get("https://api2.kidzapp.com/api/3.0/reviews/featured?page=1&page_size=20&country_code=ae").then((res) => {
-      setData1(res.data);
-      console.log("activityreview",res.data);
-    })
-  },[])
+    getReviewData();
+  }, []);
+
   return (
     <div className={style.body}>
       <Head>
@@ -60,43 +72,52 @@ function HomeKidsActivitiesReviews() {
         <h1 className={style.heading}>by Real Parents</h1>
       </center><br/>
 
-      <div className={`container`}>
-        <Slider {...settings}>
-         {data1?.map((item)=>{
-         return(
-              <Card className={style.card}>
-                <CardContent>
-                  <Typography
-                  className={style.typotitle}
-                    sx={{ fontSize: 18 }}
-                    color='#955da4'
-                    gutterBottom
-                  >
-                    {item.venue.title}
-                  </Typography>
-                  <Typography variant='h5' component='div' className={style.typotitle}>
-                     {item.venue.brief_address} 
-                    <hr className={style.hr}></hr>
-                  </Typography>
-                  <br />
+      <div className={`${style.reviewComp} container`}>
+      <div className="row  mt-5">
+          <div className="col" align="center">
+            <Slider {...settings}>
+              {reviewData.map((slide, i) => {
+                return (
+                  <div key={slide.id} className="Review-slides ">
+                    <div className={style.reviewcard} style={{ width: "18rem" }}>
+                      <div className={style.cardbody}>
+                        <p className={style.cardTopPara}> {slide.venue.title} </p>
+                        <h5 className={style.cardtitle}>{slide.title} </h5>
+                        <hr className={style.hr}/>
+                        <p className={style.cardtext}>{slide.review}</p>
+                        <div className={style.bottomCardText}>
+                          <div className={`d-flex ${style.bottomRow}`}>
+                            <div className={`col-6 ${style.leftText}`}>
+                              <p className={style.textcenter}>
+                                {`${
+                                  !slide.user
+                                    ? "Anonymous"
+                                    : slide.user.first_name
+                                }`}
+                              </p>
+                              <p className={style.textcenter}>5 months ago</p>
+                            </div>
 
-                  <Typography variant='body2' className={style.review}>
-                    {item.review}
-                    <br />
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <div className={style.cardaction}>
-                    <span className={style.typotitle}>Name:</span>
-                    <br />
-                    <span>6 months ago</span>
+                            <div className=" col-6">
+                              <div className={`${style.starRate} ${style.rightText} ${style.textright}   absolute-center`}>
+                                <img
+                                className={style.starRateimg}
+                                  src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
+                                  alt=""
+                                />
+                                <span>{slide.rating}.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </CardActions>
-                </Card>
-                
-            ); 
-           })} 
-        </Slider>
+                );
+              })}
+            </Slider>
+          </div>
+        </div>
       </div><br/><br/>
       <HomeButton/><br/>
     </div>
