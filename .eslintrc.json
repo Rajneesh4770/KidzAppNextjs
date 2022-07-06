@@ -6,8 +6,11 @@
   
 // }
 
+// {
+//   "parserOptions": {
+//       "sourceType": "module"
+//   }
+// }
 {
-  "parserOptions": {
-      "sourceType": "module"
-  }
+  "extends": ["@salesforce/eslint-config-lwc/recommended"]
 }
