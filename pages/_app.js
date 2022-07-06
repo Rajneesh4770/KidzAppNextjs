@@ -21,6 +21,12 @@ function MyApp({ Component, pageProps }) {
         />  
       </Head>
       <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
       <Navbar />
       <Component {...pageProps} />
       <Footer/>
