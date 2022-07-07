@@ -25,11 +25,20 @@ function HomeKidsActivitiesReviews() {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slideToScroll: 1,
           arrows: false,
           dots: false,
         }
+      },
+      {
+      breakpoint:600,
+      settings:{
+        slidesToShow: 1,
+          slideToScroll: 1,
+          arrows: false,
+          dots: false,
+      }
       }
     ]
   };
@@ -74,11 +83,12 @@ function HomeKidsActivitiesReviews() {
 
       <div className={`${style.reviewComp} container`}>
       <div className="row  mt-5">
-          <div className="col" align="center">
+          <div className={`container `}>
             <Slider {...settings}>
               {reviewData.map((slide, i) => {
                 return (
-                  <div key={slide.id} className="Review-slides ">
+                  <div key={slide.id} 
+                  className={`${i===1  ? style.index :style.index1 }`}>
                     <div className={style.reviewcard} style={{ width: "18rem" }}>
                       <div className={style.cardbody}>
                         <p className={style.cardTopPara}> {slide.venue.title} </p>

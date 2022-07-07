@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidzappolis.module.css';
 import Head from 'next/head';
 import axios from 'axios';
@@ -134,6 +134,7 @@ function HomeKidzappolis() {
             </strong>
           </center>
           <br />
+          <div className={`container ${style.container}`}>
           <Slider {...settings}>
             {data.map((item) => (
               <div>
@@ -146,7 +147,7 @@ function HomeKidzappolis() {
                 </div>
               </div>
             ))}
-          </Slider>
+          </Slider></div>
         </div>
         <br />
 
@@ -169,6 +170,7 @@ function HomeKidzappolis() {
                       variant='top'
                       src={item1.image_url}
                       className={style.approvedImg}
+                      alt="image is not available"
                     />
                     <Card.Body>
                       <Card.Text className={style.approvedP}>

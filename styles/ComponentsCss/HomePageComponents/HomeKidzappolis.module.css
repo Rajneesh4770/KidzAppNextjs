@@ -70,3 +70,7 @@
 .collectionCard{
     padding-bottom: 50px;
 }
+
+.container{
+    max-width: 970px;
+}

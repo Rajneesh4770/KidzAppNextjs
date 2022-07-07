@@ -12,6 +12,7 @@
 }
 .reviewComp {
      width: 80%;
+     max-width: 980px;
    }
    .reviewcard {
      border-radius: 12px;
@@ -114,17 +115,25 @@
        width: 100%;
        max-width: none;
      }
+     .index{
+      width: 300px;
+     }
    }
    @media (max-width: 575.98px) {
      .reviewComp {
        width: 100%;
      }
      .reviewcard {
-       width: 14rem !important;
-       padding: 0px;
+       width: 16rem !important;
+       margin-left: 70px;
        height: 280px;
      }
      .bottomRow {
        padding: 10px 0px;
      }
+   }
+   @media (max-width:362px){
+    .reviewComp{
+      margin-left: 20px;
+    }
    }

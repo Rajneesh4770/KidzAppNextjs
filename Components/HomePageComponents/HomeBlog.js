@@ -28,19 +28,22 @@ function HomeBlog() {
         <h1 className={style.heading}>Our Blog Pics</h1>
         <br />
       </center>
-      <div className='container'>
+      <div className={`container ${style.container}`}>
         <div className='row'>
           {data.map((item, i) => {
             return (
               <div
-                className={`${i === 0 || i === 5 ? 'col-md-8' : 'col-md-4 '
+                className={`${i === 0 || i === 5 ? 'col-md-8' : 'col-md-4'
                   } col-sm-12 ${style.blogCardHome}`}
               >
-                <Card className={style.card} sx={{ maxWidth: 850 }}>
+                <Card
+                className={style.card} sx={{ maxWidth: 850, height:500 }}>
                   <CardActionArea>
                     <CardMedia
+                    className={style.image}
                       component='img'
-                      height='350'
+                      // height='350'
+                      max-height='350'
                       image={item.cover_image}
                       alt=''
                     />
@@ -50,12 +53,17 @@ function HomeBlog() {
                         variant='h5'
                         color='#002240'
                         component='div'
-                        className={style.titleBlog}
+                        // className={style.titleBlog}
+                        className={`${i===0 || i===5 ? '{style.titleBlog}' : '{style.titleBlog1}'}`}
                       >
                         {item.meta_title}
                       </Typography>
                       <br />
-                      <hr className={style.hr}></hr>
+                      <hr 
+                      className={`${i===0 || i===5 ? style.hr :style.hr1 }`}
+                      >
+
+                      </hr>
                       <Typography variant='h6' color='#9F57A9'>
                         {item.auther_name}
                       </Typography>
