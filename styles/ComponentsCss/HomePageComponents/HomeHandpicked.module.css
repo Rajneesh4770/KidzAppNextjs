@@ -55,8 +55,9 @@
   border-color: #adb1b8 #a2a6ac #8d9096;
   border-style: solid;
   border-width: 1px;
-  border-radius: 3px;
-  box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+  border-radius: 20px;
+  /* box-shadow: rgba(255,255,255,.6) 0 1px 0 inset; */
+  box-shadow: 0 0 1.5px 1.5px lightgrey;
   box-sizing: border-box;
   color: #0f1111;
   cursor: pointer;

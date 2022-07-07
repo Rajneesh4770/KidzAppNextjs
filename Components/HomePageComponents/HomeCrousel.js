@@ -26,6 +26,7 @@ function HomeCrousel() {
                                 <Carousel.Caption>
                                     <h1 className={style.crouselHeading}>{item.title}</h1>
                                     <p className={style.crouselParagraph}>{item.description}</p>
+                                    <button className={`btn ${style.button}`}>Book Now</button>
                                 </Carousel.Caption>
 
                             </Carousel.Item>

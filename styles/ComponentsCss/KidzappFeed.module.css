@@ -1,28 +1,141 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+/* kidzappFeed */
+ .row {
+  border-radius: 40px;
+  overflow: hidden;
+}
+.globeRow {
+  height: 400px;
+}
 
-  .input {
-    padding: .8rem 1rem;
-    width: 70%;
-    border-radius: 5rem 0rem 0rem 5rem;
-    outline: none;
-    border: .1rem solid #d1d1d1;
-    font-size: .9rem;
+.column {
+  padding: 0;
+}
+
+.col1img {
+  width: 100%;
+ max-height: 400px;
+}
+
+ .col2 {
+  background-color: #00aff4;
+  max-height: 400px;
+}
+.col2row3{
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+.col2text {
+  color: #fff;
+}
+.col2h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 60px;
+}
+.col2p {
+  font-size: 18px;
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+.searchbarrow {
+  border-radius: 25px !important;
+  overflow: hidden;
+  width: 635px;
+  margin-left: 8px;
+}
+.searchinput {
+  border-radius: 0;
+}
+.searchbtn {
+  background-color: #e25b25;
+  color: #fff;
+  font-weight: bold;
+  width: 40%;
+  border-radius: 0;
+}
+.kidzappFeed .content {
+  justify-content: center;
+  align-items: center;
+}
+.kidzFeedValues {
+  color: #fff;
+}
+/* .valueh2 {
+  font-weight: 900;
+  font-size: 36px;
+  margin: 0;
+}
+.valuep {
+  font-weight: 500;
+  font-size: 18px;
+} */
+.second {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+@media  (max-width: 992px) {
+  .col1img {
+    height: 400px;
+    object-fit: cover;
   }
-  
-  /* ::placeholder {
-    color: #d1d1d1;
+  .searchbarrow{
+    width: 400px;
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .globeRow {
+    margin: 0px;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .col1img {
+    height: 400px;
+    object-fit: cover;
+  }
+  /* .valueh2 {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0;
+  }
+  .valuep {
+    font-weight: 500;
+    font-size: 8px;
   } */
-  
-  .subscribeBtn {
-    padding: .9rem 2rem;
-    border-radius: 0rem 5rem 5rem 0rem;
-    background: linear-gradient(90deg, #ff9966, #ff5e62);
-    color: #fff;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  .valuesm4 {
+    width: 33.33%;
+    text-align: center;
   }
-  .form-input{
-      padding-top: 3px;
+  .searchbarrow{
+    width: 400px;
   }
+}
+
+@media (max-width: 575.98px) {
+  .globeRow {
+    margin: 0px;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .col1img {
+    height: 200px;
+    object-fit: cover;
+  }
+   /* .valueh2 { */
+    /* font-weight: 900; */
+    /* font-size: 20px; */
+    /* margin: 0; */
+  /* } */
+  /* .valuep { */
+    /* font-weight: 500; */
+    /* font-size: 8px; */
+  /* } */
+  /* .valuesm4 { */
+    /* width: 33.33%; */
+    /* text-align: center; */
+  /* } */
+}
