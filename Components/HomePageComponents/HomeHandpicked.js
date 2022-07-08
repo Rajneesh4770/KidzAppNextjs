@@ -21,12 +21,14 @@ function HomeHandpicked() {
     {
       breakpoint: 800,
       settings: {
+        dots: false,
         slidesToShow: 3,
       }
     },
     {
       breakpoint: 480,
       settings: {
+        dots: false,
         slidesToShow: 2,
       }
     }
@@ -106,8 +108,6 @@ function HomeHandpicked() {
           ))}
         </Slider>
       </div><br />
-
-      {/* CardSlider */}
       <div className={`container ${style.cardSection}`} >
         <Slider {...settings1} >
           {resData1?.map((item) => (

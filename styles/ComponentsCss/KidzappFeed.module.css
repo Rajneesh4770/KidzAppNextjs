@@ -96,18 +96,13 @@
     height: 400px;
     object-fit: cover;
   }
-  /* .valueh2 {
-    font-weight: 900;
-    font-size: 20px;
-    margin: 0;
+  .col2row3{
+    margin-top: 0px;
+    margin-left: 0px;
   }
-  .valuep {
-    font-weight: 500;
-    font-size: 8px;
-  } */
   .valuesm4 {
-    width: 33.33%;
-    text-align: center;
+    /* width: 33.33%; */
+    /* text-align: center; */
   }
   .searchbarrow{
     width: 400px;
@@ -125,17 +120,24 @@
     height: 200px;
     object-fit: cover;
   }
-   /* .valueh2 { */
-    /* font-weight: 900; */
-    /* font-size: 20px; */
-    /* margin: 0; */
-  /* } */
-  /* .valuep { */
-    /* font-weight: 500; */
-    /* font-size: 8px; */
-  /* } */
-  /* .valuesm4 { */
-    /* width: 33.33%; */
-    /* text-align: center; */
-  /* } */
+  .searchbarrow{
+    width: 280px;
+  }
+  .col2row3{
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-shrink: 0;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+
+  }
+  .valuesm4{
+
+  }
+    
+    
+  
 }

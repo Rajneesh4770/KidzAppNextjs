@@ -29,6 +29,13 @@
     border-radius: 25px;
     color: #fff;
     padding:5px 50px;
-    /* margin-left: -78%; */
     margin-top: -50%;
+}
+@media(min-width:1900px){
+ .crouselImages{
+    height: 600px;
+ }  
+ .button{
+    margin-bottom: -486px;
+ } 
 }

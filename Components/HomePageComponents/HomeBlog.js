@@ -42,7 +42,6 @@ function HomeBlog() {
                     <CardMedia
                     className={style.image}
                       component='img'
-                      // height='350'
                       max-height='350'
                       image={item.cover_image}
                       alt=''
@@ -53,7 +52,6 @@ function HomeBlog() {
                         variant='h5'
                         color='#002240'
                         component='div'
-                        // className={style.titleBlog}
                         className={`${i===0 || i===5 ? '{style.titleBlog}' : '{style.titleBlog1}'}`}
                       >
                         {item.meta_title}

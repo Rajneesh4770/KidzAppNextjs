@@ -31,8 +31,8 @@ function KidzappFeed() {
                   </div>
                 </div>
 
-                <div className={style.kidzFeedValues}>
-                  <div className={`row container ${style.col2row3}`}>
+                <div className={`container ${style.kidzFeedValues}`}>
+                  <div className={`row  ${style.col2row3}`}>
                     <div className={`col-md-4 col-sm-4 ${style.valuesm4}`}>
                       <div className="text">
                         <h2 className={style.valueh2}>2500 +</h2>

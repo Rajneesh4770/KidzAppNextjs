@@ -34,3 +34,11 @@
 .footer h6 {
   font-size: larger;
 }
+.maincontainer{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iconEffect:hover{
+  color: #ffee10;
+}

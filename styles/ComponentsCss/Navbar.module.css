@@ -129,3 +129,12 @@
     margin-left: 100px;
    }
    }
+   @media(min-width:2100px){
+    .logoimage{
+      margin-left: 299%;
+    }
+    .navlinks{
+      margin-right: 24%;
+    }
+   }
+  

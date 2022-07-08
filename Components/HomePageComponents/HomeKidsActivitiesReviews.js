@@ -115,7 +115,7 @@ function HomeKidsActivitiesReviews() {
                                   src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
                                   alt=""
                                 />
-                                <span>{slide.rating}.0</span>
+                                <span className={style.spanrating}>{slide.rating}.0</span>
                               </div>
                             </div>
                           </div>

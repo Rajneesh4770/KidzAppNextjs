@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <div className={`container-fluid ${style.footer}`}>
-        <div className='row'>
+        <div className={`container row ${style.maincontainer}`}>
           <div className='col-lg-2'>
             <ul>
               <h6>Kidz activities by Category</h6>
@@ -151,26 +151,26 @@ function Footer() {
               <ul>
                 <h6>Follow us on</h6>
                 <Link href='https://www.facebook.com/kidzappAE/'>
-                  <li>
+                  <li className={style.iconEffect}>
                     {' '}
                     <BsFacebook /> Facebook
                   </li>
                 </Link>
 
                 <Link href='https://www.instagram.com/accounts/login/?next=/kidzappuae/'>
-                  <li>
+                  <li className={style.iconEffect}>
                     {' '}
                     <BsInstagram /> Instagram
-                  </li>
+                  </li >
                 </Link>
                 <Link href='https://www.youtube.com/channel/UCcWhXfXzQ8cbVvJC3cGgu2Q'>
-                  <li>
+                  <li className={style.iconEffect}>
                     {' '}
                     <BsYoutube /> Youtube
                   </li>
                 </Link>
                 <Link href='https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions'>
-                  <li>
+                  <li className={style.iconEffect}>
                     {' '}
                     <BsWhatsapp /> Whatsapp
                   </li>

@@ -43,7 +43,6 @@
    }
    .cardtext {
      overflow: hidden !important;
-     /* height: 100px; */
      display: -webkit-box;
      -webkit-box-orient: vertical;
      -webkit-line-clamp: 2;
@@ -68,7 +67,7 @@
      padding-right: 59px;
      border-radius: 10px;
      padding-left: 16px;
-     margin-left: -6px;
+     margin-left: -9px;
    }
    .starRate {
      background-color: #f0c61a;
@@ -82,7 +81,10 @@
      margin-left: 70px;
    }
   .starRateimg {
-     margin-right: 5px;
+     margin-left: 11px;
+   }
+   .spanrating{
+    margin-left: 6px;
    }
    .leftText {
      text-align: center;
@@ -123,13 +125,16 @@
      .reviewComp {
        width: 100%;
      }
+     .starRate{
+      width: 45%;
+     }
      .reviewcard {
        width: 16rem !important;
        margin-left: 70px;
        height: 280px;
      }
      .bottomRow {
-       padding: 10px 0px;
+       padding: 10px 23px;
      }
    }
    @media (max-width:362px){
