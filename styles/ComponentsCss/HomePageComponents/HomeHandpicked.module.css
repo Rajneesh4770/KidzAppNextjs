@@ -133,6 +133,7 @@ height: 50px;
 .cardbutton{
   border-radius: 10px !important;
   margin-left: auto !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
 }
 
 /* span1 of the card AED reject value */
