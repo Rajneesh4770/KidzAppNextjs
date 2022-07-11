@@ -10,20 +10,20 @@ function Footer() {
           <div className='col-lg-2'>
             <ul>
               <h6>Kidz activities by Category</h6>
-              <Link href='/'>
-               <li> Exclusive on kidz app</li>
+              <Link href='/FindActivities'>
+               <li className={style.iconEffect}> Exclusive on kidz app</li>
               </Link>
               <Link href='/Spring Fun'>
-                <li> Spring Fun</li>
+                <li className={style.iconEffect}> Spring Fun</li>
               </Link>
               <Link href='/AfterSchool activities'>
-                <li> AfterSchool activities</li>
+                <li className={style.iconEffect}> AfterSchool activities</li>
               </Link>
               <Link href='/Animal Fun'>
-                <li> Animal Fun</li>
+                <li className={style.iconEffect}> Animal Fun</li>
               </Link>
               <Link href='/Art, Music & Dance'>
-                <li> Art, Music & Dance</li>
+                <li className={style.iconEffect}> Art, Music & Dance</li>
               </Link>
             </ul>
           </div>
@@ -32,19 +32,19 @@ function Footer() {
             <ul>
               <h6>Kidz activities by Category</h6>
               <Link href='/Baby'>
-                <li> Baby & hrefddler</li>
+                <li className={style.iconEffect}> Baby & hrefddler</li>
               </Link>
               <Link href='/Birthdays'>
-                <li> Birthdays</li>
+                <li className={style.iconEffect}> Birthdays</li>
               </Link>
               <Link href='/Courses '>
-                <li> Courses,Camps & Workshops</li>
+                <li className={style.iconEffect}> Courses,Camps & Workshops</li>
               </Link>
               <Link href='/Eat '>
-                <li> Eat Out</li>
+                <li className={style.iconEffect}> Eat Out</li>
               </Link>
               <Link href='/Explore '>
-                <li> Explore the city</li>
+                <li className={style.iconEffect}> Explore the city</li>
               </Link>
             </ul>
           </div>
@@ -53,13 +53,13 @@ function Footer() {
             <ul>
               <h6>Family Activity</h6>
               <Link href='/Venues '>
-                <li> Venues</li>
+                <li className={style.iconEffect}> Venues</li>
               </Link>
               <Link href='/Courses '>
-                <li> Courses</li>
+                <li className={style.iconEffect}> Courses</li>
               </Link>
               <Link href='/Events '>
-                <li> Events</li>
+                <li className={style.iconEffect}> Events</li>
               </Link>
 
               <li> </li>
@@ -74,10 +74,10 @@ function Footer() {
             <ul>
               <h6>Indoor/Outdoor kids Activity</h6>
               <Link href='/Indoor '>
-                <li> Indoor</li>
+                <li className={style.iconEffect}> Indoor</li>
               </Link>
               <Link href='/Outdoor '>
-                <li> Outdoor</li>
+                <li className={style.iconEffect}> Outdoor</li>
               </Link>
             </ul>
           </div>
@@ -86,35 +86,35 @@ function Footer() {
             <ul>
               <h6>Others</h6>
               <Link href='/activities '>
-                <li> Find activities</li>
+                <li className={style.iconEffect}> Find activities</li>
               </Link>
               <Link href='/Shrefry '>
-                <li> Our Shrefry</li>
+                <li className={style.iconEffect}> Our Shrefry</li>
               </Link>
               <Link href='/app '>
-                <li> About the app</li>
+                <li className={style.iconEffect}> About the app</li>
               </Link>
               <Link href='/hrefuch '>
-                <li> Get in hrefuch</li>
+                <li className={style.iconEffect}> Get in hrefuch</li>
               </Link>
               <Link href='/Blog '>
-                <li> Blog</li>
+                <li className={style.iconEffect}> Blog</li>
               </Link>
               <Link href='/map '>
-                <li> Site map</li>
+                <li className={style.iconEffect}> Site map</li>
               </Link>
             </ul>
 
             <ul>
               <h6>Legal</h6>
               <Link href='/Policy '>
-                <li> Privacy Policy</li>
+                <li className={style.iconEffect}> Privacy Policy</li>
               </Link>
               <Link href='/Term '>
-                <li> Term & Conditions</li>
+                <li className={style.iconEffect}> Term & Conditions</li>
               </Link>
               <Link href='/Cancellation '>
-                <li> Cancellation Policy</li>
+                <li className={style.iconEffect}> Cancellation Policy</li>
               </Link>
             </ul>
           </div>
@@ -124,7 +124,7 @@ function Footer() {
               <ul>
                 <h6>Available on</h6>
                 <Link href='https://apps.apple.com/us/app/kidzapp-dubai-family-guide/id1255769149'>
-                  <li>
+                  <li className={style.iconEffect}>
                     <img
                       src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-app-store.svg'
                       alt=''
@@ -134,7 +134,7 @@ function Footer() {
                 </Link>
                 <br />
                 <Link href='https://play.google.com/store/apps/details?id=com.kidzapp'>
-                  <li>
+                  <li className={style.iconEffect}>
                     <img
                       src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-google-play.svg'
                       alt=''
@@ -180,9 +180,9 @@ function Footer() {
           </div>
         </div>
         <hr></hr>
-        <br />
+        {/* <br /> */}
 
-        <center>
+        <center className={style.copyrightdiv}>
           {' '}
           <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
         </center>

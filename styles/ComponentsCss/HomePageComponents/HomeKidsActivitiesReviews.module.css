@@ -130,7 +130,8 @@
      }
      .reviewcard {
        width: 16rem !important;
-       margin-left: 70px;
+       margin-left: auto;
+       margin-right: auto;
        height: 280px;
      }
      .bottomRow {
@@ -139,6 +140,6 @@
    }
    @media (max-width:362px){
     .reviewComp{
-      margin-left: 20px;
+      margin-left: 0px;
     }
    }

@@ -105,6 +105,9 @@
     margin-top: 25px;
     z-index: 99 !important;
    }
+   .menu li{
+    border-bottom: 1px solid gray;
+   }
    .menu li:hover {
     display: inline-block;
     background-color:hsl(0, 0%, 80%);

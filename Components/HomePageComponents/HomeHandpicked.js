@@ -100,7 +100,7 @@ function HomeHandpicked() {
       <div className={`container ${style.buttonRow}`}>
         <Slider {...settings}>
           {data?.map((item) => (
-            <div>
+            <div className={style.buttondiv}>
               <button onClick={() => setActiveTab(item.internal_name)} className={style.button14} role="button">
                 {item.name}
               </button>
