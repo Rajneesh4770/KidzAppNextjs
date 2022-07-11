@@ -105,6 +105,9 @@
        width: 100%;
        max-width: none;
      }
+     .cardsection{
+      width: 100%;
+     }
    }
    @media (max-width: 991.98px) {
      .reviewComp {
@@ -119,6 +122,9 @@
      }
      .index{
       width: 300px;
+     }
+     .cardsection{
+      width: 100%;
      }
    }
    @media (max-width: 575.98px) {
@@ -137,9 +143,15 @@
      .bottomRow {
        padding: 10px 23px;
      }
+     .cardsection{
+      width: 100%;
+     }
    }
    @media (max-width:362px){
     .reviewComp{
       margin-left: 0px;
     }
+    .cardsection{
+      width: 100%;
+     }
    }

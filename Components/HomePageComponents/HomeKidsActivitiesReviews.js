@@ -16,7 +16,7 @@ function HomeKidsActivitiesReviews() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slideToScroll: 1,
           arrows: false,
           dots: false,
@@ -84,7 +84,7 @@ function HomeKidsActivitiesReviews() {
       <div className={`${style.reviewComp} container`}>
       <div className="row  mt-5">
           <div className={`container `}>
-            <Slider {...settings}>
+            <Slider {...settings} className={style.cardsection}>
               {reviewData.map((slide, i) => {
                 return (
                   <div key={slide.id} 
