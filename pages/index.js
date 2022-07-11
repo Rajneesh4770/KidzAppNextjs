@@ -9,7 +9,7 @@ import style from '../styles/Home.module.css';
 function index() {
   return (
     <div className={style.body}>
-     <div  className={style.sidenav}>
+     <div  className={`container ${style.sidenav}`}>
   <a href="https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions"
    className={`fixed ${style.a}`}>Chat</a>
   </div>
