@@ -100,10 +100,10 @@
     margin-top: 0px;
     margin-left: 0px;
   }
-  .valuesm4 {
+  /* .valuesm4 { */
     /* width: 33.33%; */
     /* text-align: center; */
-  }
+  /* } */
   .searchbarrow{
     width: 400px;
   }
@@ -132,12 +132,6 @@
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y);
-
+    display: none;
   }
-  .valuesm4{
-
-  }
-    
-    
-  
 }

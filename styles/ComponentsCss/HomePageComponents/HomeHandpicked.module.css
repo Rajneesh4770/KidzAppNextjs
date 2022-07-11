@@ -156,6 +156,11 @@ height: 50px;
 @media (max-width: 575.98px){
 
 }
-
+.newdealimg{
+  position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
 
 

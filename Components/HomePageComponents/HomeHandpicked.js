@@ -118,11 +118,11 @@ function HomeHandpicked() {
         <Slider className={style.mainslider} {...settings1} >
           {resData1?.map((item) => (
             <Card className={style.cards} sx={{ maxWidth: 300 }}>
+              <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div>
               <CardMedia className={style.cardImage}
                 component="img"
                 height="200"
                 image={item.image_url}
-
                 alt=" "
               />
               <CardContent>

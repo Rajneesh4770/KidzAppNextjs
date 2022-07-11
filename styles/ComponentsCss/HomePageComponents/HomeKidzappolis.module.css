@@ -17,6 +17,7 @@
     flex-flow: column;
     margin: 5px;
     height: 100%;
+    
 }
 .activityBoxHeading {
    margin: 0;
@@ -44,6 +45,7 @@
     vertical-align: middle;
     border-style: none;
     display: block;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
             /* collection boxs.......... */
@@ -62,7 +64,7 @@
 }
 .conditionalCard{
     margin:  0px auto 15px auto ;
-   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .slider2{
     text-align: -webkit-center;
