@@ -7,7 +7,7 @@ function Footer() {
     <>
       <div className={`container-fluid ${style.footer}`}>
         <div className={`container row ${style.maincontainer}`}>
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
               <h6>Kidz activities by Category</h6>
               <Link href='/FindActivities'>
@@ -28,7 +28,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
               <h6>Kidz activities by Category</h6>
               <Link href='/Baby'>
@@ -49,7 +49,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
               <h6>Family Activity</h6>
               <Link href='/Venues '>
@@ -82,7 +82,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
               <h6>Others</h6>
               <Link href='/activities '>
@@ -119,7 +119,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <div>
               <ul>
                 <h6>Available on</h6>
@@ -146,7 +146,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className='col-lg-2'>
+          <div className='col-lg-2 col-md-4 col-sm-6'>
             <div>
               <ul>
                 <h6>Follow us on</h6>

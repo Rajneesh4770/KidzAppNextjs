@@ -107,7 +107,9 @@ height: 50px;
 
 /* cards css */
 .cards{
-  margin-left: 15px !important;
+  /* margin-left: 15px !important; */
+  border-radius: 14px !important;
+  margin: 0 auto;
 }
 .cardImage{
   transform-origin: 50% 65%;
@@ -123,7 +125,25 @@ height: 50px;
   margin-bottom: 50px;
   max-width: 1150px;
 }
+/* card button */
+.cardbutton{
+  border-radius: 10px !important;
+  margin-left: auto !important;
+}
 
+/* span1 of the card AED reject value */
+.span1{
+  color: red;
+  font-family: bold;
+    font-weight: 600;
+}
+.span2{
+  font-family: bold;
+    font-weight: 600;
+}
+.mainslider{
+  margin-left: 40px;
+}
 
 
 

@@ -20,19 +20,21 @@ function HomeKidzappolis() {
       {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       }
     },
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
+        arrows:false,
       }
     },
     {
       breakpoint:600,
       settings:{
-        slidesToShow:1,
+        slidesToShow:2,
+        arrows:false,
       }
     }
   ]
@@ -59,12 +61,14 @@ function HomeKidzappolis() {
       breakpoint: 800,
       settings: {
         slidesToShow: 3,
+        arrows:false,
       }
     },
     {
       breakpoint:600,
       settings:{
         slidesToShow:2,
+        arrows:false,
       }
     }
   ]
@@ -168,11 +172,11 @@ function HomeKidzappolis() {
                   >
                     <Card.Img
                       variant='top'
-                      src={item1.image_url}
+                      src={item1.image_url?item1.image_url:'https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg'}
                       className={style.approvedImg}
                       alt="image is not available"
                     />
-                    <Card.Body>
+                    <Card.Body className={style.cardP}>
                       <Card.Text className={style.approvedP}>
                         {item1.name}
                       </Card.Text>

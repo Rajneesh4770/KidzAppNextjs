@@ -4,7 +4,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import HomeButton from './HomeButton';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css';
-import { Typography, CardContent, CardMedia, CardActions, Button, Card } from "@mui/material";
+import { Typography, CardContent, CardMedia, CardActions, Button, Card, Rating } from "@mui/material";
 function HomeHandpicked() {
   const settings = {
     dots: true,
@@ -54,26 +54,32 @@ function HomeHandpicked() {
     responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
       }
     },
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
       }
-    } 
+    },
+    {
+      breakpoint:600,
+      settings:{
+        slidesToShow:1,
+      }
+    }
   ]
     
   };
   const [resData1, setResData1] = useState([]);
-  const [activeTab, setActiveTab] = useState("featured_kidzapp_deal");
+  const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
     axios.get(`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
       .then((res) => {
         setResData1(res.data.results)
         console.log("apiname", activeTab);
-        console.log("data", resData1)
+        console.log("data of Hanpicked card", resData1)
       }
 
       ).catch(err => {
@@ -109,9 +115,9 @@ function HomeHandpicked() {
         </Slider>
       </div><br />
       <div className={`container ${style.cardSection}`} >
-        <Slider {...settings1} >
+        <Slider className={style.mainslider} {...settings1} >
           {resData1?.map((item) => (
-            <Card className={style.cards} sx={{ maxWidth: 345 }}>
+            <Card className={style.cards} sx={{ maxWidth: 300 }}>
               <CardMedia className={style.cardImage}
                 component="img"
                 height="200"
@@ -127,8 +133,13 @@ function HomeHandpicked() {
                   {item.brief_address}
                 </Typography>
               </CardContent>
+              <Typography>
+              <Rating name="read-only" value={item.average_rating} readOnly />
+              </Typography>
               <CardActions>
-                <Button size="small" variant="contained" color="error">
+                <span className={style.span1}><del>AED 120</del></span> &nbsp;
+                <span className={style.span2}>AED 99</span>
+                <Button className={style.cardbutton} size="small" variant="outlined" color="error" >
                   Book Now
                 </Button>
               </CardActions>
