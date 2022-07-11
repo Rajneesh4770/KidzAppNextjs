@@ -12,6 +12,7 @@
 }
 .card{
     border-radius: 18px !important;
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px !important;
 }
 .titleBlog{
     /* display: -webkit-box; */
