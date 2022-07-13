@@ -7,9 +7,10 @@
     width: 100px; /* Set a specific width */
     text-decoration: none; /* Remove underline */
     font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
+    color: black; /* White text color */
     border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
     z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
   .a:hover {
@@ -19,5 +20,5 @@
   /* The about link: 20px from the top with a green background */
   .a{
     top: 20px;
-    background-color: #04AA6D;
+    background-color:#fff;
   }
