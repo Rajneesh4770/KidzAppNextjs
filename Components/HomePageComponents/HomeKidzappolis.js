@@ -9,7 +9,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Typography } from '@mui/material';
 function HomeKidzappolis() {
   const settings = {
-    className:style.settings,
+    dots:true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
