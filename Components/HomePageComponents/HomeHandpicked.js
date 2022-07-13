@@ -121,12 +121,13 @@ function HomeHandpicked() {
           {resData1?.map((item) => (
             <Card className={style.cards} sx={{ maxWidth: 300 }}>
               <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div>
+              <div className={style.imageDiv}>
               <CardMedia className={style.cardImage}
                 component="img"
                 height="200"
                 image={item.image_url}
                 alt=" "
-              />
+              /></div>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={style.itemTitle}>
                   {item.title}

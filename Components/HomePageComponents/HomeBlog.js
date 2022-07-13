@@ -39,13 +39,14 @@ function HomeBlog() {
                 <Card
                 className={style.card} sx={{ maxWidth: 850, height:470 }}>
                   <CardActionArea>
+                    <div className={style.imageDiv}>
                     <CardMedia
                     className={style.image}
                       component='img'
                       max-height='350'
                       image={item.cover_image}
                       alt=''
-                    />
+                    /></div>
                     <CardContent>
                       <Typography
                         gutterBottom
