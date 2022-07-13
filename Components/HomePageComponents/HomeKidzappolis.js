@@ -14,7 +14,7 @@ function HomeKidzappolis() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrow: true,
+    arrows:false,
     prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
     nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
     responsive: [
@@ -44,6 +44,7 @@ function HomeKidzappolis() {
         arrows:false,
       }
     }
+    
   ]
   };
   const settings2 = {
@@ -162,6 +163,7 @@ function HomeKidzappolis() {
         </div>
         <br />
 
+              
         <div className='container'>
           <center>
             <strong>

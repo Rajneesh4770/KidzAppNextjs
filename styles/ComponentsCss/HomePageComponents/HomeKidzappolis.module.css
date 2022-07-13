@@ -10,6 +10,13 @@
    color: #fff;
    font-family: system-ui;
 }
+
+element.style {
+    display: block;
+}
+.slick-next:before {
+    display: none!important;
+}
 .activityBox{
     display: flex;
     align-items: center;
@@ -89,22 +96,6 @@ transform: translatey(-6px);
 .cardP{
     padding: 1.5rem 0rem !important;
 }
-.slickprev{
-    position: absolute;
-    display: block;
-    height: 20px;
-    width: 30px;
-    line-height: 0px;
-    font-size: 0px;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-    top: 50%;
-    margin-top: -10px;
-    padding: 0;
-    border: none;
-    outline: none;
-}
 .backarrow{
     content: " " !important;
     display: block !important;
@@ -121,11 +112,4 @@ transform: translatey(-6px);
     margin-top: -70px !important;
     margin-left: 10px !important;
 }
-.typography{
-    content: " " !important;
-}
-.settings.slick-next::before{
-    /* content:none !important; */
-    display: none !important;
- 
-}
+
