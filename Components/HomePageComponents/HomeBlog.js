@@ -37,7 +37,7 @@ function HomeBlog() {
                   } col-sm-12 ${style.blogCardHome}`}
               >
                 <Card
-                className={style.card} sx={{ maxWidth: 850, height:500 }}>
+                className={style.card} sx={{ maxWidth: 850, height:470 }}>
                   <CardActionArea>
                     <CardMedia
                     className={style.image}

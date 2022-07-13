@@ -1,7 +1,7 @@
 .a{
-    margin-top: 100px;
+    margin-top: 140px;
     position:fixed; /* Position them relative to the browser window */
-    left: -67px; /* Position them outside of the screen */
+    left: -77px; /* Position them outside of the screen */
     transition: 0.3s; /* Add transition on hover */
     padding: 15px; /* 15px padding */
     width: 100px; /* Set a specific width */

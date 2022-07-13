@@ -4,12 +4,19 @@ import Head from 'next/head';
 import axios from 'axios';
 import Slider from 'react-slick';
 import { Card } from 'react-bootstrap';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Typography } from '@mui/material';
 function HomeKidzappolis() {
   const settings = {
+    className:style.settings,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    arrow: true,
+    prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
+    nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
     responsive: [
       {
         breakpoint:1200,

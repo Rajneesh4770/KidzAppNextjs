@@ -17,8 +17,9 @@
     flex-flow: column;
     margin: 5px;
     height: 100%;
-    
+    padding-top: 10px;
 }
+
 .activityBoxHeading {
    margin: 0;
     color: #fff;
@@ -42,10 +43,13 @@
     width: 145px!important;
     object-fit: contain;
     padding: 15px 15px 15px 25px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     border-style: none;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.activityBoxImage:hover{
+    transform: translateY(-6px);
 }
 
             /* collection boxs.......... */
@@ -65,12 +69,18 @@
 .conditionalCard{
     margin:  0px auto 15px auto ;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.conditionalCard:hover{
+transform: translatey(-6px);
 }
 .slider2{
     text-align: -webkit-center;
 }
 .collectionCard{
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .container{
@@ -78,4 +88,44 @@
 }
 .cardP{
     padding: 1.5rem 0rem !important;
+}
+.slickprev{
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 30px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.backarrow{
+    content: " " !important;
+    display: block !important;
+    color: white !important;
+    font-size: 50px !important;
+    margin-top: -70px !important;
+    margin-left: -20px !important;
+}
+.forwardarrow{
+    content: " " !important;
+    display: block !important;
+    color: white !important;
+    font-size: 50px !important;
+    margin-top: -70px !important;
+    margin-left: 10px !important;
+}
+.typography{
+    content: " " !important;
+}
+.settings.slick-next::before{
+    /* content:none !important; */
+    display: none !important;
+ 
 }

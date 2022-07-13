@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import toast,{ Toaster } from 'react-hot-toast';
 import Head from 'next/head';
 import axios from 'axios';
 import Slider from 'react-slick';
@@ -87,6 +88,7 @@ function HomeHandpicked() {
       })
   }, [activeTab]);
 
+  const notify = () => toast('Successfully Booked.');
 
   return (
     <>
@@ -134,12 +136,13 @@ function HomeHandpicked() {
                 </Typography>
               </CardContent>
               <Typography>
-              <Rating name="read-only" value={item.average_rating} readOnly />
+              &nbsp; &nbsp;<Rating name="read-only" value={item.average_rating} readOnly />
               </Typography>
               <CardActions>
-                <span className={style.span1}><del>AED 120</del></span> &nbsp;
+              &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                 <span className={style.span2}>AED 99</span>
-                <Button className={style.cardbutton} size="small" variant="outlined" color="error" >
+                <Button className={style.cardbutton} size="small" variant="outlined" color="error"
+                onClick={notify} >
                   Book Now
                 </Button>
               </CardActions>
@@ -153,6 +156,7 @@ function HomeHandpicked() {
           
       </div>
       <HomeButton></HomeButton>
+      <Toaster/>
 </>
       )
 }
