@@ -42,7 +42,21 @@ function HomeHandpicked() {
     axios
       .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
-        setData(res.data);
+        const nameExp = [];
+        let kidzaprovedCollections =[]
+        if (res.data.length > 0) {
+          for (let val of res.data) {
+              if(val.create_button === false && val.internal_name !== 'featured' && val.internal_name !== 'featured_banner_uae' ){
+                nameExp.push(val)
+              }else if(val.create_list === true && val.internal_name !== 'featured' && val.internal_name !== 'featured_banner_uae' ){
+                nameExp.push(val)
+              }
+              if(val.create_button === true){
+                kidzaprovedCollections.push(val)
+              }
+          }
+      }
+        setData(nameExp);
       })
       .catch((err) => console.log(err, "error"));
   }, []);
@@ -107,7 +121,7 @@ function HomeHandpicked() {
         <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
       </div>
 
-      <div className={`container ${style.buttonRow}`}>
+      <div className={`container  ${style.buttonRow}`}>
         <Slider {...settings}>
           {data?.map((item) => (
             <div className={style.buttondiv}>
