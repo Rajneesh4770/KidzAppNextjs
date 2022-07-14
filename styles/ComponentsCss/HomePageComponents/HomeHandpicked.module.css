@@ -148,6 +148,7 @@ height: 50px;
 .cardbutton{
   border-radius: 10px !important;
   margin-left: auto !important;
+  margin-right: 5px !important;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
 }
 

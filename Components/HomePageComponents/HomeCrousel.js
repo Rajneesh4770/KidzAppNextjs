@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Carousel } from "react-bootstrap"
 import Axios from 'axios'
+import toast,{ Toaster } from 'react-hot-toast';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css';
 function HomeCrousel() {
     const [data, setData] = useState([]);
@@ -26,7 +27,9 @@ function HomeCrousel() {
                                 <Carousel.Caption>
                                     <h1 className={style.crouselHeading}>{item.title}</h1>
                                     <p className={style.crouselParagraph}>{item.description}</p>
-                                    <button className={`btn ${style.button}`}>Book Now</button>
+                                    <button className={`btn ${style.button}`}
+                                    onClick={()=>toast('Successfully Booked')}
+                                    >Book Now</button>
                                 </Carousel.Caption>
 
                             </Carousel.Item>
