@@ -13,6 +13,7 @@ function HomeHandpicked() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    arrows:false,
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -52,6 +53,7 @@ function HomeHandpicked() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows:false,
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -120,7 +122,7 @@ function HomeHandpicked() {
         <Slider className={style.mainslider} {...settings1} >
           {resData1?.map((item) => (
             <Card className={style.cards} sx={{ maxWidth: 300 }}>
-              <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div>
+              {/* <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div> */}
               <div className={style.imageDiv}>
               <CardMedia className={style.cardImage}
                 component="img"

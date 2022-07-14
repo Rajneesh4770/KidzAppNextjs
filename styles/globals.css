@@ -15,3 +15,11 @@ a {
   box-sizing: border-box;
 }
 
+.slick-prev:before {
+  content: '←';
+  display: none!important;
+}
+.slick-next:before {
+  content: '←';
+  display: none!important;
+}

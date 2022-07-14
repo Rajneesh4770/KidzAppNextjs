@@ -14,9 +14,7 @@
 element.style {
     display: block;
 }
-.slick-next:before {
-    display: none!important;
-}
+
 .activityBox{
     display: flex;
     align-items: center;
@@ -101,15 +99,21 @@ transform: translatey(-6px);
     display: block !important;
     color: white !important;
     font-size: 50px !important;
-    margin-top: -70px !important;
-    margin-left: -20px !important;
+    margin-top: -43px !important;
+    margin-left: -25px !important;
 }
 .forwardarrow{
     content: " " !important;
     display: block !important;
     color: white !important;
     font-size: 50px !important;
-    margin-top: -70px !important;
-    margin-left: 10px !important;
+    margin-top: -43px !important;
+    margin-left: 0px !important;
+}
+@media(max-width:425px){
+    .conditionalCard{
+        width: 8rem !important;
+        height: 171px !important;
+    }
 }
 

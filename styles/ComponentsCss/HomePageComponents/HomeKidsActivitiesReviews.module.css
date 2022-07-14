@@ -17,9 +17,12 @@
    .reviewcard {
      border-radius: 12px;
      margin: 10px;
-     overflow: hidden;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     height: 300px;
+     /* overflow: hidden; */
+     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+     /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     /* height: 1; */
+     min-height: 320px;
    }
  .cardTopPara {
      font-size: 16px;
@@ -50,14 +53,14 @@
      text-align: left;
    }
    .reviewcard {
-     overflow: hidden;
+     /* overflow: hidden; */
      padding: 20px;
      transition: transform 0.5s;
    }
    .reviewcard:hover {
      -ms-transform: scale(1.1);
      -webkit-transform: scale(1.1);
-     transform: scale(1.1);
+     transform: scale(0.9);
    }
    .bottomRow {
      background-color: lightgray;
@@ -138,7 +141,7 @@
        width: 16rem !important;
        margin-left: auto;
        margin-right: auto;
-       height: 280px;
+       /* height: 280px; */
      }
      .bottomRow {
        padding: 10px 23px;

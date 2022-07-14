@@ -9,12 +9,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Typography } from '@mui/material';
 function HomeKidzappolis() {
   const settings = {
-    dots:true,
+    dots:false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows:false,
+    slidesToScroll: 3,
+    
     prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
     nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
     responsive: [
@@ -33,14 +33,18 @@ function HomeKidzappolis() {
     {
       breakpoint: 800,
       settings: {
+        dots:false,
         slidesToShow: 3,
+        slidesToScroll: 1,
         arrows:false,
       }
     },
     {
       breakpoint:600,
       settings:{
+        dots:false,
         slidesToShow:2,
+        slidesToScroll: 1,
         arrows:false,
       }
     }

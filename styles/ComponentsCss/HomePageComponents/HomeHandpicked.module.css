@@ -112,9 +112,12 @@ height: 50px;
 .cards{
   /* margin-left: 15px !important; */
   border-radius: 14px !important;
-  margin: 0 auto;
+  margin: 15px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-
+  display: inherit !important;
+}
+.cards:hover{
+  transform: translateY(-4px);
 }
 .imageDiv{
   overflow: hidden;
@@ -161,11 +164,20 @@ height: 50px;
 @media (max-width: 575.98px){
 
 }
+@media(max-width:370px){
+  .cards{
+    
+  }
+  .mainslider{
+    margin-left: 23px !important;
+  }
+}
 .newdealimg{
   position: absolute;
     top: 10px;
     left: 10px;
     z-index: 1;
 }
+
 
 

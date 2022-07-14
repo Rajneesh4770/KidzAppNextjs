@@ -34,7 +34,7 @@ function Blog() {
   };
   useEffect(() => {
     getData();
-  },[]);
+  },);
   return (
     <div className={styleblog.blogBody}>
     <section className={styleblog.section1}>
