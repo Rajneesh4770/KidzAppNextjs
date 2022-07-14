@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import toast,{ Toaster } from 'react-hot-toast';
+import { baseUrl } from '../../pages/Apis';
 import Head from 'next/head';
 import axios from 'axios';
 import Slider from 'react-slick';
@@ -40,7 +41,7 @@ function HomeHandpicked() {
 
   useEffect(() => {
     axios
-      .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
+      .get(baseUrl+"lists?country_code=ae")
       .then((res) => {
         const nameExp = [];
         let kidzaprovedCollections =[]
@@ -95,7 +96,7 @@ function HomeHandpicked() {
   const [resData1, setResData1] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
-    axios.get(`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
+    axios.get(baseUrl+`experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
       .then((res) => {
         setResData1(res.data.results)
         console.log("apiname", activeTab);

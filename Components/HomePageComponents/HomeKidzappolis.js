@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidzappolis.module.css';
 import Head from 'next/head';
+import { baseUrl } from '../../pages/Apis';
 import axios from 'axios';
 import Slider from 'react-slick';
 import { Card } from 'react-bootstrap';
@@ -94,7 +95,7 @@ function HomeKidzappolis() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get('https://api2.kidzapp.com/api/3.0/categories?country_code=ae')
+      .get(baseUrl+'categories?country_code=ae')
       .then((res) => {
         setData(res.data);
         console.log(data);
@@ -103,7 +104,7 @@ function HomeKidzappolis() {
   const [data2, setData2] = useState([]);
   useEffect(() => {
     axios
-      .get('https://api2.kidzapp.com/api/3.0/lists?country_code=ae')
+      .get(baseUrl+'lists?country_code=ae')
       .then((res) => {
         let kidzaprovedCollections = [];
         let response_Name = [];

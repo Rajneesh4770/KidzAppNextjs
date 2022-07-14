@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidsActivitiesReviews.module.css';
+import { baseUrl } from '../../pages/Apis';
 import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';
@@ -46,7 +47,7 @@ function HomeKidsActivitiesReviews() {
   const getReviewData = () => {
     axios
       .get(
-        "https://api2.kidzapp.com/api/3.0/reviews/featured?page=1&page_size=20&country_code=ae"
+        baseUrl+"reviews/featured?page=1&page_size=20&country_code=ae"
       )
       .then((response) => {
         const myData = response.data;

@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import Router from 'next/router'
 import Axios from "axios";
+import { baseUrl } from "./Apis";
 import styleblog from "../styles/Blog.module.css"
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
@@ -22,7 +23,7 @@ function Blog() {
   const [data, setData] = useState([]);
   const getData = () => {
     Axios.get(
-      "https://api2.kidzapp.com/api/3.0/blogs?country_code=ae&limit=9&page=2"
+      baseUrl+"blogs?country_code=ae&limit=9&page=2"
     )
       .then((res) => {
         console.log(res.data.results);

@@ -6,7 +6,7 @@ function HomeButton() {
     <>
       <center>
         <button className={style.button17}
-        onClick={()=>toast('Now You See All')}
+        onClick={()=>toast('Now You See All ')}
         >View All</button>
       </center>
       <Toaster/>

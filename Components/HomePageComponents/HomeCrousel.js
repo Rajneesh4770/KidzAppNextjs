@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Carousel } from "react-bootstrap"
+import { baseUrl } from '../../pages/Apis';
 import Axios from 'axios'
 import toast,{ Toaster } from 'react-hot-toast';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css';
 function HomeCrousel() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        Axios.get("https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=featured_banner_uae&country_code=&page=1&page_size=10&city=&website=1")
+        Axios.get(baseUrl+"experiences/curated-list/?list_name=featured_banner_uae&country_code=&page=1&page_size=10&city=&website=1")
             .then((res) => {
                 setData(res.data.results)
                 console.log("data",res.data.results)

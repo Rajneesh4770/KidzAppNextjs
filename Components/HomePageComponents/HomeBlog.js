@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css';
 import axios from 'axios';
+import { baseUrl } from '../../pages/Apis';
 import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
 import {
@@ -15,7 +16,7 @@ function HomeBlog() {
   useEffect(() => {
     axios
       .get(
-        'https://api2.kidzapp.com/api/3.0/blogs?page=1&limit=10&country_code=ae',
+        baseUrl+'blogs?page=1&limit=10&country_code=ae',
       )
       .then((res) => {
         setData(res.data.results);
