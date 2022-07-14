@@ -47,6 +47,12 @@ function HomeKidzappolis() {
         slidesToScroll: 1,
         arrows:false,
       }
+    },{
+      breakpoint:400,
+      settings:{
+        slidesToShow:1,
+        arrows:false,
+      }
     }
     
   ]

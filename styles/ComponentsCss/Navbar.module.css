@@ -107,6 +107,7 @@
    }
    .menu li{
     border-bottom: 1px solid gray;
+    border-style: ridge;
    }
    .menu li:hover {
     display: inline-block;

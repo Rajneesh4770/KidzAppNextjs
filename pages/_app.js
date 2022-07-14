@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import Head from 'next/head';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer';
-import Navbar2 from '../Components/Navbar2';
 function MyApp({ Component, pageProps }) {
   module.exports = {
     eslint: {
@@ -22,7 +21,6 @@ function MyApp({ Component, pageProps }) {
         />  
       </Head>
       <Navbar/>
-      {/* <Navbar2/> */}
       <Component {...pageProps} />
       <Footer/>
     </>
