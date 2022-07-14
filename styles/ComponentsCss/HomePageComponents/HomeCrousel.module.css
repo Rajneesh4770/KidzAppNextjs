@@ -31,6 +31,10 @@
     padding:5px 50px;
     margin-top: -50%;
 }
+.button:hover{
+    color: black !important;
+    background-color: #fff !important;
+}
 @media(min-width:1900px){
  .crouselImages{
     height: 600px;

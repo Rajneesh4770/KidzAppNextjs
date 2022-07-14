@@ -54,6 +54,9 @@ function HomeHandpicked() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows:false,
+    centerMode:true,
+    slideToRepeat:true,
+
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -141,7 +144,7 @@ function HomeHandpicked() {
               <Typography>
               &nbsp; &nbsp;<Rating name="read-only" value={item.average_rating} readOnly />
               </Typography>
-              <CardActions>
+              <CardActions className='pb-3'>
               &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                 <span className={style.span2}>AED 99</span>
                 <Button className={style.cardbutton} size="small" variant="outlined" color="error"

@@ -115,5 +115,8 @@ transform: translatey(-6px);
         width: 8rem !important;
         height: 171px !important;
     }
+    .kidzappHeading{
+        font-weight: 600;
+    }
 }
 
