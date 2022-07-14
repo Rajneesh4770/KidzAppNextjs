@@ -15,11 +15,12 @@ a {
   box-sizing: border-box;
 }
 
-.slick-prev:before {
+.polisSlider .slick-prev:before {
   content: '←';
-  display: none!important;
+  display: none !important;
 }
-.slick-next:before {
+
+.polisSlider .slick-next:before {
   content: '←';
-  display: none!important;
+  display: none !important;
 }

@@ -9,87 +9,90 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Typography } from '@mui/material';
 function HomeKidzappolis() {
   const settings = {
-    dots:false,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,
-    
-    prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
-    nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
+
+    prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon className={style.backarrow} /></Typography>,
+    nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow} /></Typography>,
     responsive: [
       {
-        breakpoint:1200,
-        settings:{
-          slidesToShow:4,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
         }
       },
       {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          dots: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }, {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
       }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        dots:false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows:false,
-      }
-    },
-    {
-      breakpoint:600,
-      settings:{
-        dots:false,
-        slidesToShow:2,
-        slidesToScroll: 1,
-        arrows:false,
-      }
-    },{
-      breakpoint:400,
-      settings:{
-        slidesToShow:1,
-        arrows:false,
-      }
-    }
-    
-  ]
+
+    ]
   };
   const settings2 = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 2,
     slidesToScroll: 1,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    infinite: true,
     responsive: [
       {
-        breakpoint:1200,
-        settings:{
-          slidesToShow:5,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
         }
       },
       {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          // arrows:false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          // arrows:false,
+        }
       }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 3,
-        arrows:false,
-      }
-    },
-    {
-      breakpoint:600,
-      settings:{
-        slidesToShow:2,
-        arrows:false,
-      }
-    }
-  ]
+    ]
   };
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -156,24 +159,24 @@ function HomeKidzappolis() {
             </strong>
           </center>
           <br />
-          <div className={`container ${style.container}`}>
-          <Slider {...settings}>
-            {data.map((item) => (
-              <div>
-                <div className={`item ${style.activityBox}`}>
-                  <img
-                    className={style.activityBoxImage}
-                    src={item.image_url}
-                  />
-                  <p className={style.activityBoxHeading}>{item.name}</p>
+          <div className={`container polisSlider ${style.container}`}>
+            <Slider {...settings}>
+              {data.map((item) => (
+                <div>
+                  <div className={`item ${style.activityBox}`}>
+                    <img
+                      className={style.activityBoxImage}
+                      src={item.image_url}
+                    />
+                    <p className={style.activityBoxHeading}>{item.name}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </Slider></div>
+              ))}
+            </Slider></div>
         </div>
         <br />
 
-              
+
         <div className='container'>
           <center>
             <strong>
@@ -181,7 +184,8 @@ function HomeKidzappolis() {
             </strong>
           </center>
           <br />
-          <div className={style.slider2}>
+          <div className={`${style.slider2} ${style.collectionSlider}`}>
+
             <Slider {...settings2}>
               {data2.map((item1) => (
                 <div className={` ${style.collectionCard}`}>
@@ -191,7 +195,7 @@ function HomeKidzappolis() {
                   >
                     <Card.Img
                       variant='top'
-                      src={item1.image_url?item1.image_url:'https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg'}
+                      src={item1.image_url ? item1.image_url : 'https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg'}
                       className={style.approvedImg}
                       alt="image is not available"
                     />
