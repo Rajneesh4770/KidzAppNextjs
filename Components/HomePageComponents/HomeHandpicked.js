@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import toast,{ Toaster } from 'react-hot-toast';
 import Head from 'next/head';
 import axios from 'axios';
+import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
 import Slider from 'react-slick';
 import HomeButton from './HomeButton';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css';
@@ -13,7 +15,8 @@ function HomeHandpicked() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows:false,
+    prevArrow: <Typography className={style.typography}><ArrowBackIosNew  className={style.backarrow}/></Typography>,
+    nextArrow: <Typography className={style.typography}><ArrowForwardIos className={style.forwardarrow}/></Typography>,
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -25,6 +28,7 @@ function HomeHandpicked() {
       settings: {
         dots: false,
         slidesToShow: 3,
+        arrows:false,
       }
     },
     {
@@ -32,6 +36,7 @@ function HomeHandpicked() {
       settings: {
         dots: false,
         slidesToShow: 2,
+        arrows:false,
       }
     }
   ]
@@ -112,7 +117,7 @@ function HomeHandpicked() {
         <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
       </div>
 
-      <div className={`container ${style.buttonRow}`}>
+      <div className={`container modifiedSlickBtn ${style.buttonRow}`}>
         <Slider {...settings}>
           {data?.map((item) => (
             <div className={style.buttondiv}>

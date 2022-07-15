@@ -15,11 +15,11 @@ a {
   box-sizing: border-box;
 }
 
-.slick-prev:before {
+.modifiedSlickBtn .slick-prev:before {
   content: '←';
   display: none!important;
 }
-.slick-next:before {
+.modifiedSlickBtn .slick-next:before {
   content: '←';
   display: none!important;
 }

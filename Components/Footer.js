@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../styles/ComponentsCss/Footer.module.css';
 import Link from 'next/link';
+import API from '../backend'
 import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
@@ -175,6 +176,7 @@ function Footer() {
                     <BsWhatsapp /> Whatsapp
                   </li>
                 </Link>
+                <li><a href={API}>Facebook</a></li>
               </ul>
             </div>
           </div>

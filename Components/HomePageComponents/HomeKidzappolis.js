@@ -161,7 +161,7 @@ function HomeKidzappolis() {
             </strong>
           </center>
           <br />
-          <div className={`container ${style.container}`}>
+          <div className={`container modifiedSlickBtn ${style.container}`}>
           <Slider {...settings}>
             {data.map((item) => (
               <div>
