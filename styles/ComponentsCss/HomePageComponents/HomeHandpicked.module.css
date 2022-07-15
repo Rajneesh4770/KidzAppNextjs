@@ -46,42 +46,34 @@
   to{border-right-color: black;}
 }
 /* button div */
-/* 
+
 .buttondiv{
 height: 50px;
-} */
+}
 
 /* Button slider css */
 
 
-/* .HomeHandpicked_button14__42VCB {
+.button14 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* background-image: linear-gradient(#f7f8fa ,#e7e9ec); */
   background-color: #fff;
-  border-color: transparent;
+  border-color: #adb1b8 #a2a6ac #8d9096;
   border-style: solid;
   border-width: 1px;
-  border-radius: 100px;
+  border-radius: 20px;
   box-sizing: border-box;
   color: #0f1111;
   font-family: "Amazon Ember",Arial,sans-serif;
-  padding: 10px;
-  box-shadow: 4px 4px 5px rgb(0 0 0 / 20%);
+  height: 40px;
   font-size: 15.5px;
+  padding: 1px 16px;
+  text-align: center;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  touch-action: manipulation;
   margin: 2px 5px;
-  width: -webkit-fill-available;
-} */
-.buttondiv button {
-  background-color: #fff;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 100px;
-  box-sizing: border-box;
-  color: #0f1111;
-  font-family: "Amazon Ember",Arial,sans-serif;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
-  font-size: 15.5px;
-  margin: 10px;
   width: -webkit-fill-available;
 }
 
@@ -94,12 +86,12 @@ height: 50px;
 }
 
 .button14:hover {
-  /* border-color: #a2a6ac #979aa1 #82858a; */
+  border-color: #a2a6ac #979aa1 #82858a;
   transform: translateY(-2px);
 }
 
 .button14:focus {
-  /* border-color: #4100cd; */
+  border-color: #4100cd;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   outline: 0;
 }

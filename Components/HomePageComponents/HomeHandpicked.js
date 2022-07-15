@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import toast,{ Toaster } from 'react-hot-toast';
-import { baseUrl } from '../../pages/Apis';
 import Head from 'next/head';
 import axios from 'axios';
 import Slider from 'react-slick';
@@ -41,23 +40,9 @@ function HomeHandpicked() {
 
   useEffect(() => {
     axios
-      .get(baseUrl+"lists?country_code=ae")
+      .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
-        const nameExp = [];
-        let kidzaprovedCollections =[]
-        if (res.data.length > 0) {
-          for (let val of res.data) {
-              if(val.create_button === false && val.internal_name !== 'featured' && val.internal_name !== 'featured_banner_uae' ){
-                nameExp.push(val)
-              }else if(val.create_list === true && val.internal_name !== 'featured' && val.internal_name !== 'featured_banner_uae' ){
-                nameExp.push(val)
-              }
-              if(val.create_button === true){
-                kidzaprovedCollections.push(val)
-              }
-          }
-      }
-        setData(nameExp);
+        setData(res.data);
       })
       .catch((err) => console.log(err, "error"));
   }, []);
@@ -71,6 +56,8 @@ function HomeHandpicked() {
     arrows:false,
     centerMode:true,
     slideToRepeat:true,
+    autoplay:true,
+    autoplaySpeed:2000,
 
     responsive: [{
       breakpoint: 1024,
@@ -96,7 +83,7 @@ function HomeHandpicked() {
   const [resData1, setResData1] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
-    axios.get(baseUrl+`experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
+    axios.get(`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
       .then((res) => {
         setResData1(res.data.results)
         console.log("apiname", activeTab);
@@ -125,7 +112,7 @@ function HomeHandpicked() {
         <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
       </div>
 
-      <div className={`container  ${style.buttonRow}`}>
+      <div className={`container ${style.buttonRow}`}>
         <Slider {...settings}>
           {data?.map((item) => (
             <div className={style.buttondiv}>

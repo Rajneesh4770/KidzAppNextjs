@@ -35,6 +35,8 @@ element.style {
     text-overflow: ellipsis;
     text-align: center;
     font-family: system-ui;
+    width: 150px;
+  overflow: hidden;
 }
 .slick-slide img {
      display: initial !important;

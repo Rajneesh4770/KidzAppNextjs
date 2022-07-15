@@ -14,7 +14,9 @@ function HomeKidzappolis() {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:3000,
     
     prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
     nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
@@ -63,6 +65,8 @@ function HomeKidzappolis() {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:3000,
     responsive: [
       {
         breakpoint:1200,
