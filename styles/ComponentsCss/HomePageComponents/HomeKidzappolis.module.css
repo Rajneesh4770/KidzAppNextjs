@@ -98,8 +98,7 @@ element.style {
 }
 
 .collectionCard {
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding: 50px;
 }
 
 .container {

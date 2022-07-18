@@ -3,11 +3,11 @@ import style from '../styles/ComponentsCss/KidzappFeed.module.css';
 function KidzappFeed() {
   return (
     <>
-     <section className="kidzappFeed py-5 ">
+      <section className="kidzappFeed py-5 ">
         <div className="container py-4">
           <div className={`row ${style.row} ${style.globeRow}`}>
             <div className={`col-lg-4 col-md-4 col-sm-12  ${style.column}`}>
-              <img className={style.col1img} src="https://drfsb8fjssbd3.cloudfront.net/images/subsc-baby.png" alt=""  />
+              <img className={style.col1img} src="https://drfsb8fjssbd3.cloudfront.net/images/subsc-baby.png" alt="" />
             </div>
             <div className={`col-md-8  col-sm-12 p-2  ${style.col2}`}>
               <div className={style.content}>
@@ -57,8 +57,9 @@ function KidzappFeed() {
             </div>
           </div>
         </div>
-      </section><br/>
+      </section><br />
     </>
-  )}
+  )
+}
 
 export default KidzappFeed
