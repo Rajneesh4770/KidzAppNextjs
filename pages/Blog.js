@@ -11,9 +11,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import KidzappFeed from "../Components/KidzappFeed";
-import {
-  Button
-} from "@mui/material";
+import {Button} from "@mui/material";
 function Blog() {
   const [data, setData] = useState([]);
   const getData = () => {
