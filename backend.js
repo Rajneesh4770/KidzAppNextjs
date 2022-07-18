@@ -1,1 +1,0 @@
-export const CrouselApi = process.env.BASEURL
