@@ -34,8 +34,8 @@ function HomeBlog() {
           {data.map((item, i) => {
             return (
               <div
-                className={`${i === 0 || i === 5 ? 'col-md-8' : 'col-md-4'
-                  } col-sm-12 ${style.blogCardHome}`}
+                className={`${i === 0 || i === 5 ? `col-md-8 ` : i ===1 || i === 6 ? `col-md-4 ${style.smcard}` : `col-md-4 mb-5 ${style.bigcard}`
+                  }  col-sm-12 ${style.blogCardHome}` }
               >
                 <Card
                 className={style.card} sx={{ maxWidth: 850, height:470 }}>
