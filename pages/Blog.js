@@ -22,7 +22,7 @@ function Blog() {
   const [data, setData] = useState([]);
   const getData = () => {
     Axios.get(
-      "https://api2.kidzapp.com/api/3.0/blogs?country_code=ae&limit=9&page=2"
+      "https://api2.kidzapp.com/api/3.0/blogs?country_code=ae&limit=9&page=1"
     )
       .then((res) => {
         console.log(res.data.results);
