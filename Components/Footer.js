@@ -1,7 +1,6 @@
 import React from 'react'
 import style from '../styles/ComponentsCss/Footer.module.css';
 import Link from 'next/link';
-import API from '../backend'
 import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
@@ -12,7 +11,7 @@ function Footer() {
             <ul>
               <h6>Kidz activities by Category</h6>
               <Link href='/FindActivities'>
-               <li className={style.iconEffect}> Exclusive on kidz app</li>
+                <li className={style.iconEffect}> Exclusive on kidz app</li>
               </Link>
               <Link href='/Spring Fun'>
                 <li className={style.iconEffect}> Spring Fun</li>
@@ -176,7 +175,6 @@ function Footer() {
                     <BsWhatsapp /> Whatsapp
                   </li>
                 </Link>
-                <li><a href={API}>Facebook</a></li>
               </ul>
             </div>
           </div>

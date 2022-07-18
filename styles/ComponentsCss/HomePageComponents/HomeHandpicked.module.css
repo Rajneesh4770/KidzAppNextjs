@@ -63,7 +63,8 @@ height: 50px;
   border-width: 1px;
   border-radius: 20px;
   box-sizing: border-box;
-  color: #0f1111;
+  /* color: #0f1111; */
+  color: green;
   font-family: "Amazon Ember",Arial,sans-serif;
   height: 40px;
   font-size: 15.5px;
@@ -105,7 +106,7 @@ height: 50px;
 
 .buttonRow{
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* cards css */
@@ -171,14 +172,19 @@ height: 50px;
   }
 }
 @media (max-width: 575.98px){
-
+  .heading{
+    text-align: center;
+    font-size: 30px;
+      line-height: 30px;
+    font-weight: 600;
+    color: #002240;
+  }
 }
 @media(max-width:370px){
-  .cards{
-    
-  }
+  
   .mainslider{
-    margin-left: 23px !important;
+    margin-left: 0px !important;
+    width: 100%;
   }
 }
 .newdealimg{

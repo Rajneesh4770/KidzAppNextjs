@@ -66,9 +66,9 @@ function Blog() {
     <div className="container">
       <div className="row">
         <div className="col-lg-12 md-12 sm-12">
-          <div className={styleblog.backbtn}>
+          <div className={` ${styleblog.backbtn}`}>
             {/* <Link to=''> */}
-            <Button onClick={()=>Router.back()}>
+            <Button onClick={()=>Router.back()} className='changeBlogBackBtn'>
               <h6 className={styleblog.buttonback}>
                 {" "}
                 <ArrowBackIcon /> Go Back

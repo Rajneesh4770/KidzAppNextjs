@@ -5,11 +5,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    /* background-color: teal; */
     background-color: #fff;
-    /* color: #fff; */
     color: black;
-    box-shadow: 1.5px 1.5px lightgray;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
    }
    .navlinks a {
@@ -101,14 +99,17 @@
     position: absolute;
     background-color:#fff;
     right: 0;
-    left: 0;
+    width: 41% !important;
+    /* left: 0; */
     text-align: center;
-    margin-top: 25px;
+    margin-top: 39px !important;
     z-index: 99 !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
    }
    .menu li{
     border-bottom: 1px solid gray;
     border-style: ridge;
+    padding: 15px 0 !important;
    }
    .menu li:hover {
     display: inline-block;

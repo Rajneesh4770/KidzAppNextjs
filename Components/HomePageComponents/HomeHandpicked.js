@@ -10,7 +10,7 @@ import style from '../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.
 import { Typography, CardContent, CardMedia, CardActions, Button, Card, Rating } from "@mui/material";
 function HomeHandpicked() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -29,6 +29,7 @@ function HomeHandpicked() {
         dots: false,
         slidesToShow: 3,
         arrows:false,
+        autoplay:true,
       }
     },
     {
@@ -37,6 +38,7 @@ function HomeHandpicked() {
         dots: false,
         slidesToShow: 2,
         arrows:false,
+        autoplay:true,
       }
     }
   ]
@@ -54,14 +56,13 @@ function HomeHandpicked() {
 
   const settings1 = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows:false,
-    centerMode:true,
     slideToRepeat:true,
-    autoplay:true,
+    // autoplay:true,
     autoplaySpeed:2000,
 
     responsive: [{
@@ -154,7 +155,7 @@ function HomeHandpicked() {
               <CardActions className='pb-3'>
               &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                 <span className={style.span2}>AED 99</span>
-                <Button className={style.cardbutton} size="small" variant="outlined" color="error"
+                <Button className={style.cardbutton} size="small" variant="outlined" color="success"
                 onClick={notify} >
                   Book Now
                 </Button>

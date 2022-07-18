@@ -15,6 +15,7 @@ a {
   box-sizing: border-box;
 }
 
+/* Home Crousel Button css */
 .modifiedSlickBtn .slick-prev:before {
   content: '←';
   display: none!important;
@@ -23,3 +24,4 @@ a {
   content: '←';
   display: none!important;
 }
+

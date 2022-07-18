@@ -1,373 +1,410 @@
-.blogBody{
-    margin-top: 100px;
+.blogBody {
+  margin-top: 100px;
 }
-.section1{
-    background:url('https://kidzapp.com/images/blog-banner.jpg');
-    height: 100px;
-    background-size: cover;
-    margin-top: auto;
-    }
-    .searchbar{
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        margin-top: 32px;
-    }
-    .backbtn a{
-        text-decoration: none !important;
-        color: black;
-        
-    }
-    .backbtn h5{
-        padding-top: 10px;
-    }
-    .lastsection{
-        padding: 15px 0px 15px 0px;
-    }
-    .map1{
-        display: grid;
-        justify-content: space-around;
-        grid-template-columns: auto auto auto;
-    }
-    .m2{
-        width: 100%;
-    }
-    .bodyapi{
-        display: -webkit-box;
-        max-width: auto;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-    
-        overflow: hidden;
-    }
-    .texttruncate{
-        max-width: 150%;
-    }
-    
-    .buttonback{
-        color: black;
-        margin-left: -10px;
-        margin-top: 10px;
-        margin-bottom: -10px;
-    }
-    
-    
-    
-    /* CSS */
-    .button85 {
-      padding: 0.6em 2em;
-      border: none;
-      outline: none;
-      color: rgb(255, 255, 255);
-      background: #111;
-      cursor: pointer;
-      position: relative;
-      z-index: 0;
-      border-radius: 10px;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
-    
-    .button85:before {
-      content: "";
-      background: linear-gradient(
-        45deg,
-        #ff0000,
-        #ff7300,
-        #fffb00,
-        #48ff00,
-        #00ffd5,
-        #002bff,
-        #7a00ff,
-        #ff00c8,
-        #ff0000
-      );
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      background-size: 400%;
-      z-index: -1;
-      filter: blur(5px);
-      -webkit-filter: blur(5px);
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      animation: glowing-button-85 20s linear infinite;
-      transition: opacity 0.3s ease-in-out;
-      border-radius: 10px;
-    }
-    
-    @keyframes glowing-button-85 {
-      0% {
-        background-position: 0 0;
-      }
-      50% {
-        background-position: 400% 0;
-      }
-      100% {
-        background-position: 0 0;
-      }
-    }
-    
-    .button85 {
-        padding: 0.6em 2em;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        width: -webkit-fill-available;
-        /* width:'165px'; */
-      }
-      
-      .button85:before {
-        content: "";
-        background: linear-gradient(
-          45deg,
-          #ff0000,
-          #ff7300,
-          #fffb00,
-          #48ff00,
-          #00ffd5,
-          #002bff,
-          #7a00ff,
-          #ff00c8,
-          #ff0000
-        );
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        -webkit-filter: blur(5px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing-button-85 20s linear infinite;
-        transition: opacity 0.3s ease-in-out;
-        border-radius: 10px;
-      }
-      
-      @keyframes glowing-button85 {
-        0% {
-          background-position: 0 0;
-        }
-        50% {
-          background-position: 400% 0;
-        }
-        100% {
-          background-position: 0 0;
-        }
-      }
-      
-      .button85:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #222;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-      .button-div{
-          display: grid;
-      }
-      .icon-1{
-        font-size: 18px;  
-        color: red;
-      }
-      .icon-2{
-          color:#1976D2;
-      }
-    
-    
-    
-      /* old */
-    
-      .date__box {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #ccc;
-        border: 4px solid;
-        font-weight: bold;
-        padding: 5px 10px;
-      }
-      .date__box .date__day {
-        font-size: 22px;
-      }
-      
-      .blogcard {
-        padding: 30px;
-        position: relative;
-        margin: 0px 15px 0px 0px;
-      }
-       .datebox {
-        opacity: 0;
-        transform: scale(0.5);
-        transition: 300ms ease-in-out;
-      }
-      .blogcardbackground,
-      .blog-card .cardbackground--layer {
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: -webkit-fill-available;
-        height: 100%;
-       
-      }
-      .blogcardbackground {
-        padding: 15px;
-        background: white;
-        /* border-style: groove; */
-      }
-      .cardbackgroundwrapper {
-        height: 65%;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
-        position: relative;
-        overflow: hidden;
-      }
-      .cardbackgroundmain {
-        height: inherit;
-        position: relative;
-        transition: 300ms ease-in-out;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        /* border-style: groove; */
-    
-      }
-      .cardbackgroundlayer {
-        z-index: 0;
-        opacity: 0;
-        background: rgba(51, 51, 51, 0.9);
-        transition: 300ms ease-in-out;
-      }
-      .blogcardhead {
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .blogcardinfo {
-        z-index: 10;
-        background: white;
-        padding: 20px 15px;
-        margin-top: -72px;
-      }
-      .blogcardinfo h5 {
-        transition: 300ms ease-in-out;
-      }
-      .blogcard:hover .date__box {
-        opacity: 1;
-        transform: scale(1);
-      }
-      .blogcard:hover .cardbackgroundmain {
-        transform: scale(1.2) rotate(5deg);
-        display: flex;
-      }
-      .blogcard:hover .cardbackgroundlayer {
-        opacity: 0;
-      }
-      .blogcard:hover .blogcardinfo h5 {
-        color: #ffb535;
-      }
-      
-      a.icon-link {
-        color: #363738;
-        transition: 200ms ease-in-out;
-      }
-      a.icon-link i {
-        color: #ffb535;
-      }
-      a.icon-link:hover {
-        color: #ffb535;
-        text-decoration: none;
-      }
-      
-      .btncard {
-        background: white;
-        color: #363738;
-        font-weight: bold;
-        outline: none;
-        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        border-radius: 0;
-        height: 50px;
-        line-height: 50px;
-        display: inline-block;
-        padding: 0;
-        border: none;
-      }
-      .btncard:focus {
-        box-shadow: none;
-      }
-      .btncard:hover {
-        background: #ffb535;
-        color: #fff;
-      }
-      .btnwithicon {
-        padding-right: 20px;
-      }
-      .btnwithicon i {
-        padding: 0px 30px 0px 15px;
-        margin-right: 10px;
-        height: 50px;
-        line-height: 50px;
-        vertical-align: bottom;
-        color: white;
-        background: #ffb535;
-        clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
-      }
-      .btnonlyicon {
-        width: 50px;
-      }
-    
-      /* mediaquiry on card */
-    
-      @media only screen and (min-width: 992px) {
-        .map1{
-          display: grid;
-          justify-content: space-around;
-          grid-template-columns: auto auto auto;
-      }
-      }
-    
-      @media only screen and (min-width: 768px) and (max-width: 992px) {
-        .map1{
-          display: grid;
-          justify-content: space-around;
-          grid-template-columns: auto auto ;
-      }
-    }
-      
-    
-    @media only screen and (min-width: 600px) and (max-width:768px) {
-      .map1{
-        display: grid;
-        justify-content: space-around;
-        grid-template-columns: auto ;
-    }
-    }
-    
-    @media only screen and (max-width: 600px) {
-      .map1{
-        display: grid;
-        justify-content: space-around;
-        grid-template-columns: auto ;
-        margin-right: auto !important;
-    }
-    
-    }
+
+.section1 {
+  background: url('https://kidzapp.com/images/blog-banner.jpg');
+  height: 100px;
+  background-size: cover;
+  margin-top: auto;
+}
+
+.searchbar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 32px;
+}
+
+.backbtn a {
+  text-decoration: none !important;
+  color: black;
+
+}
+
+.backbtn h5 {
+  padding-top: 10px;
+}
+
+.lastsection {
+  padding: 15px 0px 15px 0px;
+}
+
+.map1 {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto;
+}
+
+.m2 {
+  width: 100%;
+}
+
+.bodyapi {
+  display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.texttruncate {
+  max-width: 150%;
+}
+
+.buttonback {
+  color: black;
+  margin-left: -10px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+
+
+/* CSS */
+.button85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button85:before {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: -webkit-fill-available;
+  /* width:'165px'; */
+}
+
+.button85:before {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button85 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button-div {
+  display: grid;
+}
+
+.icon-1 {
+  font-size: 18px;
+  color: red;
+}
+
+.icon-2 {
+  color: #1976D2;
+}
+
+
+
+/* old */
+
+.date__box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  border: 4px solid;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.date__box .date__day {
+  font-size: 22px;
+}
+
+.blogcard {
+  padding: 30px;
+  position: relative;
+  margin: 0px 15px 0px 0px;
+}
+
+.datebox {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 300ms ease-in-out;
+}
+
+.blogcardbackground,
+.blog-card .cardbackground--layer {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
+  height: 100%;
+
+}
+
+.blogcardbackground {
+  padding: 15px;
+  background: white;
+  /* border-style: groove; */
+}
+
+.cardbackgroundwrapper {
+  height: 65%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardbackgroundmain {
+  height: inherit;
+  position: relative;
+  transition: 300ms ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  /* border-style: groove; */
+
+}
+
+.cardbackgroundlayer {
+  z-index: 0;
+  opacity: 0;
+  background: rgba(51, 51, 51, 0.9);
+  transition: 300ms ease-in-out;
+}
+
+.blogcardhead {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogcardinfo {
+  z-index: 10;
+  background: white;
+  padding: 20px 15px;
+  margin-top: -72px;
+}
+
+.blogcardinfo h5 {
+  transition: 300ms ease-in-out;
+}
+
+.blogcard:hover .date__box {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.blogcard:hover .cardbackgroundmain {
+  transform: scale(1.2) rotate(5deg);
+  display: flex;
+}
+
+.blogcard:hover .cardbackgroundlayer {
+  opacity: 0;
+}
+
+.blogcard:hover .blogcardinfo h5 {
+  color: #ffb535;
+}
+
+a.icon-link {
+  color: #363738;
+  transition: 200ms ease-in-out;
+}
+
+a.icon-link i {
+  color: #ffb535;
+}
+
+a.icon-link:hover {
+  color: #ffb535;
+  text-decoration: none;
+}
+
+.btncard {
+  background: white;
+  color: #363738;
+  font-weight: bold;
+  outline: none;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 0;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+
+.btncard:focus {
+  box-shadow: none;
+}
+
+.btncard:hover {
+  background: #ffb535;
+  color: #fff;
+}
+
+.btnwithicon {
+  padding-right: 20px;
+}
+
+.btnwithicon i {
+  padding: 0px 30px 0px 15px;
+  margin-right: 10px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: bottom;
+  color: white;
+  background: #ffb535;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+}
+
+.btnonlyicon {
+  width: 50px;
+}
+
+.changeBlogBackBtn:hover {
+  background-color: red !important;
+}
+
+/* mediaquiry on card */
+
+@media only screen and (min-width: 992px) {
+  .map1 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .map1 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width:768px) {
+  .map1 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .map1 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto;
+    margin-right: auto !important;
+  }
+
+}

@@ -1,1 +1,1 @@
-export const API = process.env.production
+export const CrouselApi = process.env.BASEURL
