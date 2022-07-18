@@ -38,7 +38,7 @@ function HomeBlog() {
                   }  col-sm-12 ${style.blogCardHome}` }
               >
                 <Card
-                className={style.card} sx={{ maxWidth: 850, height:470 }}>
+                className={style.card} sx={{ maxWidth: 850 }}>
                   <CardActionArea>
                     <div className={style.imageDiv}>
                     <CardMedia
@@ -54,7 +54,7 @@ function HomeBlog() {
                         variant='h5'
                         color='#002240'
                         component='div'
-                        className={`${i===0 || i===5 ? '{style.titleBlog}' : '{style.titleBlog1}'}`}
+                        className={`${i===0 || i===5 ? `${style.titleBlog}` : `${style.titleBlog1}`}`}
                       >
                         {item.meta_title}
                       </Typography>
