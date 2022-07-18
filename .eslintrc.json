@@ -19,8 +19,5 @@
 
 
 {
-  "extends": ["@salesforce/eslint-config-lwc/recommended"],
-  "rules": {
-    "no-console": "error"
-  }
+  "extends": ["@salesforce/eslint-config-lwc/recommended"]
 }
