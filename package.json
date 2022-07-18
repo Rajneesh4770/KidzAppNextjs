@@ -32,5 +32,10 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^8.18.0",
     "eslint-config-next": "12.1.6"
-  }
+  },
+  
+    "overrides": {
+      "eslint-plugin-import": "^2.25.3"
+    }
+  
 }
