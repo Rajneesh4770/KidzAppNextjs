@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 /* NAVBAR STYLING STARTS */
-.navbar {
+.navbar1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +87,9 @@
    /* hamburgercheck */
    .hamburgercheck{
     display: none;
+   }
+   .LoginIcon{
+    cursor: pointer;
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 991px) {

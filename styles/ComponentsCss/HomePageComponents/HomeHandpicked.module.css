@@ -1,54 +1,71 @@
 /* .................heading div */
-.headingDiv{
+.headingDiv {
   margin-top: 30px;
 }
+
 /* ..........heading style */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-.heading{
+
+.heading {
   text-align: center;
   font-size: 46px;
-    line-height: 56px;
+  line-height: 56px;
   font-weight: 600;
   color: #002240;
 }
-.h1{
-    position: relative;
-    top: 50%;  
-    width: 24em;
-    margin: 15px auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;   
-    font-weight: 600;
-    color: black;
+
+.h1 {
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 15px auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  color: black;
 }
+
 /* ........... handpicked bottom line */
-.p{
+.p {
   text-align: center;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 10px;
-    
+
 }
 
 /* Animation */
-.h1{
+.h1 {
   animation: typewriter 5s steps(44) 1s 50 normal both,
-             blinkTextCursor 600ms steps(44) infinite normal;
+    blinkTextCursor 600ms steps(44) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 12em;}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 12em;
+  }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color:white;}
-  to{border-right-color: black;}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: white;
+  }
+
+  to {
+    border-right-color: black;
+  }
 }
+
 /* button div */
 
-.buttondiv{
-height: 50px;
+.buttondiv {
+  height: 50px;
 }
 
 /* Button slider css */
@@ -56,21 +73,19 @@ height: 50px;
 
 .button14 {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  /* background-image: linear-gradient(#f7f8fa ,#e7e9ec); */
   background-color: #fff;
   border-color: #adb1b8 #a2a6ac #8d9096;
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
   box-sizing: border-box;
-  /* color: #0f1111; */
   color: green;
-  font-family: "Amazon Ember",Arial,sans-serif;
+  font-family: "Amazon Ember", Arial, sans-serif;
   height: 40px;
   font-size: 15.5px;
   padding: 1px 16px;
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   touch-action: manipulation;
@@ -96,49 +111,55 @@ height: 50px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   outline: 0;
 }
-.itemTitle{
+
+.itemTitle {
   display: -webkit-box;
-    max-width: auto;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  max-width: auto;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.buttonRow{
+.buttonRow {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* cards css */
-.cards{
-  /* margin-left: 15px !important; */
+.cards {
   border-radius: 14px !important;
   margin: 15px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
   display: inherit !important;
 }
-.cards:hover{
+
+.cards:hover {
   transform: translateY(-4px);
 }
-.imageDiv{
+
+.imageDiv {
   overflow: hidden;
 }
-.cardImage{
+
+.cardImage {
   transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
   filter: brightness(100%);
 }
-.cardImage:hover{
+
+.cardImage:hover {
   filter: brightness(100%);
   transform: scale(1.3);
 }
+
 /* card container  */
-.cardSection{
+.cardSection {
   margin-bottom: 50px;
   max-width: 1150px;
 }
+
 /* card button */
-.cardbutton{
+.cardbutton {
   border-radius: 10px !important;
   margin-left: auto !important;
   margin-right: 5px !important;
@@ -146,53 +167,58 @@ height: 50px;
 }
 
 /* span1 of the card AED reject value */
-.span1{
+.span1 {
   color: red;
   font-family: bold;
-    font-weight: 600;
+  font-weight: 600;
 }
-.span2{
+
+.span2 {
   font-family: bold;
-    font-weight: 600;
+  font-weight: 600;
 }
-.mainslider{
+
+.mainslider {
   margin-left: 40px;
 }
-.backarrow{
+
+.backarrow {
   color: black;
-  margin-top: -12px;
+  margin-top: -4px;
 }
-.forwardarrow{
+
+.forwardarrow {
   color: black;
-  margin-top: -12px;
+  margin-top: -5px;
 }
-@media (max-width: 767.98px){
-  .mainslider{
+
+@media (max-width: 767.98px) {
+  .mainslider {
     width: 90%;
   }
 }
-@media (max-width: 575.98px){
-  .heading{
+
+@media (max-width: 575.98px) {
+  .heading {
     text-align: center;
     font-size: 30px;
-      line-height: 30px;
+    line-height: 30px;
     font-weight: 600;
     color: #002240;
   }
 }
-@media(max-width:370px){
-  
-  .mainslider{
+
+@media(max-width:370px) {
+
+  .mainslider {
     margin-left: 0px !important;
     width: 100%;
   }
 }
-.newdealimg{
+
+.newdealimg {
   position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
 }
-
-
-

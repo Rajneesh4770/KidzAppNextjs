@@ -36,16 +36,16 @@ function Blog() {
       <div className="row">
         <div className="col-lg-12 md-12 sm-12 ">
           <div className="search-img">
-            <form className="d-flex search-bar">
+            <form className={`blogsearchbarGlobalCss d-flex search-bar`}>
               <input
-                className="form-control me-2 mt-4"
+                className={` form-control  mt-4`}
                 type="search"
                 placeholder="Type Here To Search Blog"
                 aria-label="Search"
               />
-              <button className="btn btn-primary mt-4" type="submit">
+              {/* <button className="btn btn-primary mt-4" type="submit">
                 Search
-              </button>
+              </button> */}
             </form>
           </div>
         </div>
@@ -75,24 +75,24 @@ function Blog() {
 
       <div className="container">
         <div className="row">
-          <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
+          <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
             <button className={styleblog.button85} role="button">
               Arts & Crafts &nbsp; <BubbleChartIcon />
             </button>
           </div>
-          <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
+          <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
             <button className={styleblog.button85} role="button">
               Kids Activities &nbsp; <StadiumIcon />
             </button>
           </div>
-          <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
+          <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
             <button className={styleblog.button85} role="button">
               Parenting &nbsp; <BabyChangingStationIcon />
             </button>
           </div>
-          <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
+          <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
             <button className={styleblog.button85} role="button">
-              Health & Nutrition &nbsp; <HealthAndSafetyIcon />
+              Health&Nutri.. &nbsp; <HealthAndSafetyIcon />
             </button>
           </div>
         </div>
@@ -130,7 +130,7 @@ function Blog() {
           <div className={styleblog.blogcardhead}>
           </div>
           <div className={styleblog.blogcardinfo}>
-            <h5> {item.meta_title}</h5><br/>
+            <h5 className={styleblog.title}> {item.meta_title}</h5><br/>
             <DateRangeIcon/> &nbsp; {item.created_at} <br/>
             <AccountCircleIcon/> &nbsp; Posted  By:- {item.auther_name}<br/><br/>
             

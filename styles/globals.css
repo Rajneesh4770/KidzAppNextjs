@@ -24,4 +24,11 @@ a {
   content: '←';
   display: none!important;
 }
+/* Blog page top search bar global css */
+.blogsearchbarGlobalCss .form-control{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50% !important;
+
+}
 
