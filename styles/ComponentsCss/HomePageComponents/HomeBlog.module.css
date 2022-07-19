@@ -24,6 +24,15 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
    overflow: hidden;
+  
+}
+.titleBlog1{
+    overflow: hidden !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    text-align: left;
 }
 .titleBlog1{
     display: -webkit-box;
@@ -60,12 +69,16 @@
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
+.smcard{
+    height: 450px !important;
+}
 .bigcard .hr1{
 margin: 0px !important;
 }
 .bcard{
     background-color: none !important;
     height: 350px !important;
+    height: 450px!important;
 }
 @media(min-width:1200px){
     .container{
