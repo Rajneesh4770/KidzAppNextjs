@@ -4,6 +4,14 @@
 
 
 {
-  "extends": ["@salesforce/eslint-config-lwc/recommended"]
+  "extends": ["@salesforce/eslint-config-lwc/recommended"],
+  "env":{
+    "jest":true
+  },
+  "settings":{
+    "next":{
+      "version":"detect"
+    }
+  }
 }
 

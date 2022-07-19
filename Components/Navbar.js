@@ -21,6 +21,10 @@ const style1 = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
 };
 
 const Header =()  =>{
@@ -96,13 +100,15 @@ const Header =()  =>{
       >
         <Fade in={open}>
           <Box sx={style1}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+            <Typography id="transition-modal-title" variant="h3" component="h1">
               Login 
             </Typography>
-          <TextField id="standard-basic" label="Email-ID" variant="standard" />
-          <TextField id="standard-basic" label="Password" variant="standard" /><br></br><br/>
-          <Button variant="outlined" color="success">Sign in</Button><br/>
-          <Typography></Typography>
+          <TextField id="standard-basic" label="Email-ID" variant="standard" sx={{width:300}} />
+          <TextField id="standard-basic" label="Password" variant="standard" sx={{width:300}}/><br></br><br/>
+          <Button variant="outlined" color="success" sx={{width:300}}>Sign in</Button><br/>
+          <Typography>Forgot password? </Typography>
+         <hr/>
+          <Button variant="outlined" color="success" sx={{width:300}}>Sign Up</Button>
           </Box>
         </Fade>
       </Modal>
