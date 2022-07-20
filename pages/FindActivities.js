@@ -158,7 +158,7 @@ function FindActivities() {
                               </span>
                               <div className="row">
                                 <div className="col-md-6" align="left">
-                                  <h6>Distance: {card.bottomLeftText}</h6>
+                                  <h6>Distance: <span className={style1.distance}>2100 KM</span>  {card.bottomLeftText}</h6>
                                 </div>
                                 <div className="col-md-6" align="right">
                                   <h6>{card.bottomRightText}</h6>
