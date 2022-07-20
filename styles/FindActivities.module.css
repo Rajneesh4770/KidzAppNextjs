@@ -23,8 +23,8 @@
     font-weight: 700;
     font-size: 36px;
   }
-  .leftContainer {
-    border-right: 1px solid #d8d2d2;
+  .leftcontainer {
+    border-right: 1px solid gray;
   }
   .imgSection {
     position: relative;
@@ -44,10 +44,16 @@
   }
   .card {
     box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
-    height: 230px;
+    height: 207px;
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 12px;
+  }
+  .card:hover{
+    transform: translateY(-3px);
+  }
+  .cardImg{
+    height: 207px !important;
   }
   
     .cardtoppara {
@@ -57,24 +63,28 @@
     .cardtitle {
     color: #9576b3;
     font-weight: bold;
+    display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .starspan {
     width: max-content;
     font-size: 14px;
   }
   .bottomtext {
-    color: var(--active-color);
+    color: #37c8f8;
   }
   .bottomButton {
-    border: 1px solid #e25b25;
-    color: #e25b25;
-    padding: 0px 20px;
-    border-radius: 25px;
-    margin-top: 10px;
-    padding-bottom: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+    border-radius: 10px;
+    margin-top: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .bottomButton:hover {
-    background-color: #e25b25;
+    background-color: #559066;
     color: #fff;
   }
   
@@ -88,6 +98,9 @@
     margin-bottom: 15px;
     border-radius: 12px;
     position: relative;
+  }
+  .rightcard:hover{
+    transform: translateY(-2px);
   }
  
     .rightcardtitle {

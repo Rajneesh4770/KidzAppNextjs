@@ -5,8 +5,7 @@
 
 
 {
-  "extends": ["@salesforce/eslint-config-lwc/recommended"],
-  "CI":"false"
+  "extends": ["@salesforce/eslint-config-lwc/recommended"]
 }
 
 

@@ -115,10 +115,10 @@ function Blog() {
       <div className={styleblog.map1} >
         {data?.map((item) => {
           return (
-            <div className="container row ">
-              <div className=" m-2">
+            <div className="container row " >
+              <div className=" m-2" >
 
-                <article className={styleblog.blogcard}>
+                <article className={` ${styleblog.blogcard}`}>
                   <div className={styleblog.blogcardbackground}>
                     <div className={styleblog.cardbackgroundwrapper}>
                       <div className={styleblog.cardbackgroundmain} >
