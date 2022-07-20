@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer';
 function MyApp({ Component, pageProps }) {
-  module.exports = {
-    eslint: {
-      // Warning: This allows production builds to successfully complete even if
-      // your project has ESLint errors.
-      ignoreDuringBuilds: true,
-    },
-  }
+  // module.exports = {
+  //   eslint: {
+  //     // Warning: This allows production builds to successfully complete even if
+  //     // your project has ESLint errors.
+  //     ignoreDuringBuilds: true,
+  //   },
+  // }
   return (
     <>
       <Head>

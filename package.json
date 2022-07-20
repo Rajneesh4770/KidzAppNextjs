@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p $PORT",
-    "start:dev": "next start",
-    "lint": "next lint"
+    "start:dev": "next start"
+    
   },
   "dependencies": {
     "@emotion/styled": "^11.9.3",
