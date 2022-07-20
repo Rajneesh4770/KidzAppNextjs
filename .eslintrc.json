@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // {
 //   "extends": "next/core-web-vitals"
 // }
@@ -9,11 +9,11 @@
   "CI":"false"
 }
 
-=======
+
 {
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
     ]
 }
->>>>>>> 84f88927cf0e515892a4fb06b1051cd831775a0e
+
