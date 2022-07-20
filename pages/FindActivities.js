@@ -1,7 +1,22 @@
 import { style } from '@mui/system'
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import Axios from 'axios';
+import { baseUrl } from './config';
 import style1 from '../styles/FindActivities.module.css'
 function FindActivities() {
+  const [data, setData] = useState([]);
+  useEffect(()=>{
+    Axios.get(
+      baseUrl + "experiences/?country_code=ae&page=1&page_size=10"
+    )
+      .then((res) => {
+        console.log('findActivity page',res.data.results);
+        setData(res.data.results);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },[])
   const leftContainerCards = [
     {
       id: 1,
@@ -75,208 +90,206 @@ function FindActivities() {
   ];
   return (
     <>
-
-    <div className={style1.marginFromHeader}>
-      <section className={style1.filter}>
-        <div className="container py-4">
-          <div className="row">
-            <div className="col-md-10">
-              <div className="row leftContent">
-                <div className={`col-md-2 ${style1.md2}`}>
-                  <input
-                    className="form-control mr-sm-2"
-                    type="search"
-                    placeholder="Search   🔍"
-                    aria-label="Search"
-                  />
-                </div>
-                <div className="col-md-2">
-                  <select
-                    className="form-control"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option value="">City</option>
-                    <option>Dubai</option>
-                    <option>Abu Dhabi</option>
-                    <option>Sharjah</option>
-                    <option>Ajman</option>
-                  </select>
-                </div>
-                <div className="col-md-2">
-                  <select
-                    className="form-control"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option value="">Area</option>
-                    <option>All Area</option>
-                  </select>
-                </div>
-                <div className="col-md-2">
-                  <select
-                    className="form-control"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option value="">All Dates</option>
-                    <option>Today</option>
-                    <option>Weekend</option>
-                  </select>
-                </div>
-                <div className="col-md-2">
-                  <select
-                    className="form-control"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option value="">Category*</option>
-                    <option>Spring Fun</option>
-                    <option>Eat Out</option>
-                    <option>Animal Fun</option>
-                    <option>Play and Fun</option>
-                  </select>
-                </div>
-                <div className="col-md-2">
-                  <select
-                    className="form-control"
-                    id="exampleFormControlSelect1"
-                    disabled
-                  >
-                    <option value="">Sub Category</option>
-                    <option>Spring Fun</option>
-                    <option>Eat Out</option>
-                    <option>Animal Fun</option>
-                    <option>Play and Fun</option>
-                  </select>
+        {/*  button list */}
+      <div className={style1.marginFromHeader}>
+        <section className={style1.filter}>
+          <div className="container py-4">
+            <div className="row">
+              <div className="col-md-10">
+                <div className="row leftContent">
+                  <div className={`col-md-2 ${style1.md2}`}>
+                    <input
+                      className="form-control mr-sm-2"
+                      type="search"
+                      placeholder="Search   🔍"
+                      aria-label="Search"
+                    />
+                  </div>
+                  <div className="col-md-2">
+                    <select
+                      className="form-control"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option value="">City</option>
+                      <option>Dubai</option>
+                      <option>Abu Dhabi</option>
+                      <option>Sharjah</option>
+                      <option>Ajman</option>
+                    </select>
+                  </div>
+                  <div className="col-md-2">
+                    <select
+                      className="form-control"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option value="">Area</option>
+                      <option>All Area</option>
+                    </select>
+                  </div>
+                  <div className="col-md-2">
+                    <select
+                      className="form-control"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option value="">All Dates</option>
+                      <option>Today</option>
+                      <option>Weekend</option>
+                    </select>
+                  </div>
+                  <div className="col-md-2">
+                    <select
+                      className="form-control"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option value="">Category*</option>
+                      <option>Spring Fun</option>
+                      <option>Eat Out</option>
+                      <option>Animal Fun</option>
+                      <option>Play and Fun</option>
+                    </select>
+                  </div>
+                  <div className="col-md-2">
+                    <select
+                      className="form-control"
+                      id="exampleFormControlSelect1"
+                      disabled
+                    >
+                      <option value="">Sub Category</option>
+                      <option>Spring Fun</option>
+                      <option>Eat Out</option>
+                      <option>Animal Fun</option>
+                      <option>Play and Fun</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="col-md-2 rightContent">
-              <button className={style1.btn1}>More Filter</button>
+              <div className="col-md-2 rightContent">
+                <button className={style1.btn1}>More Filter</button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="searchResultSection py-3 container">
-        <div className="row">
-          <div className={`col-md-8 ${style1.leftcontainer}`}>
-            <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
-            <div className="col-md-12">
-              {leftContainerCards.map((card) => {
-                return (
-                  <div key={card.id} className="card-items">
-                    <div className={style1.card}>
-                      <div className="row no-gutters">
-                        <div className={`col-md-6 ${style1.imgSection}`}>
-                          <img
-                            src={card.image}
-                            className="card-img"
-                            alt="..."
-                          />
-                          <div
-                            className={`${
-                              !card.newDealImg ? "d-none" : style1.newdeal
-                            }`}
-                          >
+  {/* search result section */}
+        <section className="searchResultSection py-3 container">
+          <div className="row">
+            <div className={`col-md-8 ${style1.leftcontainer}`}>
+              <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
+              <div className="col-md-12">
+                {leftContainerCards.map((card) => {
+                  return (
+                    <div key={card.id} className="card-items">
+                      <div className={style1.card}>
+                        <div className="row no-gutters">
+                          <div className={`col-md-6 ${style1.imgSection}`}>
                             <img
-                              src={card.newDealImg}
-                              alt=""
-                              width="100"
-                              height="100"
-                              className={style1.newDealImg}
+                              src={card.image}
+                              className="card-img"
+                              alt="..."
                             />
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="card-body">
-                            <p className={`card-top-para ${style1.cardtoppara}`}>{card.cardTopPara}</p>
-                            <h6 className={style1.cardtitle}>{card.cardTitle}</h6>
-                            <button className={`btn starRateButton absolute-center mb-2 ${style1.starRateButton}`}>
-                              <img
-                                className="mr-2"
-                                src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
-                                alt="..."
-                              />
-                              <span className={style1.starspan}> {card.buttonLeftText}</span>
-                            </button>
-                            <h6 className={`card-text bottom-text mb-0 ${style1.buttotext}`}>
-                              {card.bottomText}
-                            </h6>
-                            <div className="row">
-                              <div className="col-md-6" align="left">
-                                <h6>{card.bottomLeftText}</h6>
-                              </div>
-                              <div className="col-md-6" align="right">
-                                <h6>{card.bottomRightText}</h6>
-                              </div>
-                            </div>
-                            <button
-                              className={`${
-                                !card.buttonText ? "d-none" :  style1.bottomButton
-                              }`}
+                            <div
+                              className={`${!card.newDealImg ? "d-none" : style1.newdeal
+                                }`}
                             >
-                              {card.buttonText}
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="col-md-4 rightContainer">
-            <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
-            <div className="col-md-12">
-              {rightContainerCards.map((card) => {
-                return (
-                  <div key={card.id} className={style1.carditems}>
-                    <div className={style1.rightcard}>
-                      <img
-                        src={card.image}
-                        className="card-img-top"
-                        alt="..."
-                      />
-                      <div
-                        className={`${
-                          !card.newDealImg ? "d-none" : style1.newdeal
-                        }`}
-                      >
-                        <img
-                          src={card.newDealImg}
-                          alt=""
-                          width="50"
-                          height="50"
-
-                        />
-                      </div>
-                      <div className="card-body">
-                        <p className={style1.rightcardtitle}>{card.cardTitle}</p>
-                        <div className="row">
-                          <div className="col-md-6" align="left">
-                            <button className={`btn starRateButton absolute-center ${style1.rightstarRateButton}`}>
                               <img
-                                className="mr-2"
-                                src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
-                                alt="..."
+                                src={card.newDealImg}
+                                alt=""
+                                width="100"
+                                height="100"
+                                className={style1.newDealImg}
                               />
-                              <span className={style1.rightspan}> {card.bottomLeftButtonText}</span>
-                            </button>
+                            </div>
                           </div>
-                          <div className="col-md-6" align="right">
-                            <h6>{card.bottomRightText}</h6>
+                          <div className="col-md-6">
+                            <div className="card-body">
+                              <p className={`card-top-para ${style1.cardtoppara}`}>{card.cardTopPara}</p>
+                              <h6 className={style1.cardtitle}>{card.cardTitle}</h6>
+                              <button className={`btn starRateButton absolute-center mb-2 ${style1.starRateButton}`}>
+                                <img
+                                  className="mr-2"
+                                  src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
+                                  alt="..."
+                                />
+                                <span className={style1.starspan}> {card.buttonLeftText}</span>
+                              </button>
+                              <h6 className={`card-text bottom-text mb-0 ${style1.buttotext}`}>
+                                {card.bottomText}
+                              </h6>
+                              <div className="row">
+                                <div className="col-md-6" align="left">
+                                  <h6>{card.bottomLeftText}</h6>
+                                </div>
+                                <div className="col-md-6" align="right">
+                                  <h6>{card.bottomRightText}</h6>
+                                </div>
+                              </div>
+                              <button
+                                className={`${!card.buttonText ? "d-none" : style1.bottomButton
+                                  }`}
+                              >
+                                {card.buttonText}
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+            </div>
+            <div className="col-md-4 rightContainer">
+              <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
+              <div className="col-md-12">
+                {rightContainerCards.map((card) => {
+                  return (
+                    <div key={card.id} className={style1.carditems}>
+                      <div className={style1.rightcard}>
+                        <img
+                          src={card.image}
+                          className="card-img-top"
+                          alt="..."
+                        />
+                        <div
+                          className={`${!card.newDealImg ? "d-none" : style1.newdeal
+                            }`}
+                        >
+                          <img
+                            src={card.newDealImg}
+                            alt=""
+                            width="50"
+                            height="50"
+
+                          />
+                        </div>
+                        <div className="card-body">
+                          <p className={style1.rightcardtitle}>{card.cardTitle}</p>
+                          <div className="row">
+                            <div className="col-md-6" align="left">
+                              <button className={`btn starRateButton absolute-center ${style1.rightstarRateButton}`}>
+                                <img
+                                  className="mr-2"
+                                  src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
+                                  alt="..."
+                                />
+                                <span className={style1.rightspan}> {card.bottomLeftButtonText}</span>
+                              </button>
+                            </div>
+                            <div className="col-md-6" align="right">
+                              <h6>{card.bottomRightText}</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </>
   )
 }

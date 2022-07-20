@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from "react";
+import  React, { useState, useEffect } from "react";
 import Router from 'next/router'
 import Axios from "axios";
-import { baseUrl } from "./Apis";
+import  baseUrl from "./config"
 import styleblog from "../styles/Blog.module.css"
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";

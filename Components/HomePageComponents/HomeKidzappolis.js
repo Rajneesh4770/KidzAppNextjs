@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidzappolis.module.css';
 import Head from 'next/head';
-import { baseUrl } from '../../pages/Apis';
+import { baseUrl } from '../../pages/config';
 import axios from 'axios';
 import Slider from 'react-slick';
 import { Card } from 'react-bootstrap';

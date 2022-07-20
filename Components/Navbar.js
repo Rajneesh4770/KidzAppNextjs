@@ -10,6 +10,7 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
 const style1 = {
   position: 'absolute',
@@ -107,7 +108,8 @@ const Header = () => {
             <TextField id="standard-basic" label="Password" variant="standard" sx={{ width: 300 }} /><br></br><br />
             <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign in</Button><br />
             <Typography>Forgot password? </Typography>
-            <hr />
+            {/* <hr /> */}
+            <Typography sx={{ width: 300 }}><HorizontalRuleIcon /></Typography>
             <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign Up</Button>
           </Box>
         </Fade>
