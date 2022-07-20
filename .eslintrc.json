@@ -1,3 +1,9 @@
+
+// {
+//   "extends": "next/core-web-vitals"
+// }
+
+
 {
     "builds": [
       {
@@ -5,5 +11,10 @@
         "use": "@nuxtjs/vercel-builder",
         "config": {}
       }
-    ]
+    ],
+  "extends": ["@salesforce/eslint-config-lwc/recommended"]
+
   }
+
+
+

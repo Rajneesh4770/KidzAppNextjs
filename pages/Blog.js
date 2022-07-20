@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from "react";
+import  React, { useState, useEffect } from "react";
 import Router from 'next/router'
 import Axios from "axios";
-import { baseUrl } from "./Apis";
+import  {baseUrl} from "./config"
 import styleblog from "../styles/Blog.module.css"
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
@@ -115,10 +115,10 @@ function Blog() {
       <div className={styleblog.map1} >
         {data?.map((item) => {
           return (
-            <div className="container row ">
-              <div className=" m-2">
+            <div className="container row " >
+              <div className=" m-2" >
 
-                <article className={styleblog.blogcard}>
+                <article className={` ${styleblog.blogcard}`}>
                   <div className={styleblog.blogcardbackground}>
                     <div className={styleblog.cardbackgroundwrapper}>
                       <div className={styleblog.cardbackgroundmain} >

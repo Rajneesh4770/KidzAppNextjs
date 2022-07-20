@@ -2,7 +2,7 @@ import { useState } from 'react'
 import style from '../styles/ComponentsCss/Navbar.module.css'
 import Link from 'next/link';
 import LoginIcon from '@mui/icons-material/Login';
-// import Sigin from '../pages/Login/signIn';
+import SignIn from '../pages/Login/SignIn';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -10,6 +10,7 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
 const style1 = {
   position: 'absolute',
@@ -41,8 +42,7 @@ const Header = () => {
           <Link href='/'>
             <div>
               <img className={style.logoimage}
-                src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png
-'
+                src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png'
               ></img>
             </div>
           </Link>
@@ -107,8 +107,11 @@ const Header = () => {
             <TextField id="standard-basic" label="Password" variant="standard" sx={{ width: 300 }} /><br></br><br />
             <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign in</Button><br />
             <Typography>Forgot password? </Typography>
-            <hr />
+           {/* <hr/>  */}
+            <Typography sx={{ width: 300 }}><HorizontalRuleIcon /></Typography>
+            <Link href='/Login/SignIn'>
             <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign Up</Button>
+            </Link>
           </Box>
         </Fade>
       </Modal>
