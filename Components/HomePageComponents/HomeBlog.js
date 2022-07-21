@@ -44,7 +44,7 @@ function HomeBlog() {
                     <CardMedia
                     className={style.image}
                       component='img'
-                      max-height='350'
+                      max-height='370'
                       image={item.cover_image}
                       alt=''
                     /></div>

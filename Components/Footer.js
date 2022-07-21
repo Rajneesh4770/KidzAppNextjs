@@ -5,7 +5,9 @@ import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
     <>
-      <div className={`container-fluid ${style.footer}`}>
+      <footer className={style.footer}>
+
+
         <div className={`container row ${style.maincontainer}`}>
           <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
@@ -178,15 +180,16 @@ function Footer() {
               </ul>
             </div>
           </div>
-        </div>
-        <hr></hr>
-        {/* <br /> */}
+          <hr></hr>
+          {/* <br /> */}
 
-        <center className={style.copyrightdiv}>
-          {' '}
-          <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
-        </center>
-      </div>
+          <center className={style.copyrightdiv}>
+            {' '}
+            <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
+          </center>
+        </div>
+      </footer>
+
     </>
   );
 }

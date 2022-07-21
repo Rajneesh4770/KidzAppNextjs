@@ -53,7 +53,7 @@ function HomeAsfeature() {
       ));
   return (
     <>
-    <h1 className={style.heading}>As featured In</h1>
+    <h1 className={style.heading}>As Featured In</h1>
     <div className="container">
               <div className="col-lg">
       <Slider {...settings}>

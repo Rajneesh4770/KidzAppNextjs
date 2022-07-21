@@ -14,6 +14,21 @@
   color: #002240;
 }
 
+.viewAllBtn {
+  margin: 20px 0px !important;
+}
+
+.cardbutton {
+  font-size: 12px !important;
+  padding: 5px 15px !important;
+}
+
+.cardbutton:hover {
+  text-decoration: none;
+  background-color: #e35b26;
+  color: #fff;
+}
+
 .h1 {
   position: relative;
   top: 50%;
@@ -24,7 +39,7 @@
   white-space: nowrap;
   overflow: hidden;
   font-weight: 600;
-  color: black;
+  color: #e35b26;
 }
 
 /* ........... handpicked bottom line */
@@ -74,12 +89,13 @@
 .button14 {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
-  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-color: transparent;
+  /* border-color: #adb1b8 #a2a6ac #8d9096; */
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
   box-sizing: border-box;
-  color: green;
+  color: #e35b26;
   font-family: "Amazon Ember", Arial, sans-serif;
   height: 40px;
   font-size: 15.5px;
@@ -153,10 +169,10 @@
 }
 
 /* card container  */
-.cardSection {
+/* .cardSection {
   margin-bottom: 50px;
   max-width: 1150px;
-}
+} */
 
 /* card button */
 .cardbutton {

@@ -50,7 +50,7 @@ const Header = () => {
           <div className='col-lg-12 col-md-6 '>
             <nav className={` ${style.navbar1} fixed-top `} >
               {/* <!-- LOGO --> */}
-              <div className='row'>
+              <div className={`row ${style.navRow}`}>
                 <div className={`col-sm-6 ${style.tglBTN} `}>
                   <span className={` ${style.logo}`}>
                     <Link href='/'>

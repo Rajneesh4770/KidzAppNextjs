@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import toast,{ Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import Head from 'next/head';
 import axios from 'axios';
 import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew';
@@ -15,8 +15,8 @@ function HomeHandpicked() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    prevArrow: <Typography className={style.typography}><ArrowBackIosNew  className={style.backarrow}/></Typography>,
-    nextArrow: <Typography className={style.typography}><ArrowForwardIos className={style.forwardarrow}/></Typography>,
+    prevArrow: <Typography className={style.typography}><ArrowBackIosNew className={style.backarrow} /></Typography>,
+    nextArrow: <Typography className={style.typography}><ArrowForwardIos className={style.forwardarrow} /></Typography>,
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -28,8 +28,8 @@ function HomeHandpicked() {
       settings: {
         dots: false,
         slidesToShow: 3,
-        arrows:false,
-        autoplay:true,
+        arrows: false,
+        autoplay: true,
       }
     },
     {
@@ -37,11 +37,11 @@ function HomeHandpicked() {
       settings: {
         dots: false,
         slidesToShow: 2,
-        arrows:false,
-        autoplay:true,
+        arrows: false,
+        autoplay: true,
       }
     }
-  ]
+    ]
   };
   const [data, setData] = useState([]);
 
@@ -60,10 +60,10 @@ function HomeHandpicked() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows:false,
-    slideToRepeat:true,
+    arrows: false,
+    slideToRepeat: true,
     // autoplay:true,
-    autoplaySpeed:2000,
+    autoplaySpeed: 2000,
 
     responsive: [{
       breakpoint: 1024,
@@ -78,13 +78,13 @@ function HomeHandpicked() {
       }
     },
     {
-      breakpoint:600,
-      settings:{
-        slidesToShow:1,
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
       }
     }
-  ]
-    
+    ]
+
   };
   const [resData1, setResData1] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
@@ -119,60 +119,72 @@ function HomeHandpicked() {
       </div>
 
       <div className={`container modifiedSlickBtn ${style.buttonRow}`}>
-        <Slider {...settings}>
-          {data?.map((item) => (
-            <div className={style.buttondiv}>
-              <button onClick={() => setActiveTab(item.internal_name)} className={style.button14} role="button">
-                {item.name}
-              </button>
-            </div>
-          ))}
-        </Slider>
-      </div><br />
+        <div className='row'>
+          <div className='col-lg-12'>
+            <Slider {...settings}>
+              {data?.map((item) => (
+                <div className={style.buttondiv}>
+                  <button onClick={() => setActiveTab(item.internal_name)} className={style.button14} role="button">
+                    {item.name}
+                  </button>
+                </div>
+              ))}
+            </Slider>
+          </div><br />
+        </div>
+      </div>
+
       <div className={`container ${style.cardSection}`} >
-        <Slider className={style.mainslider} {...settings1} >
-          {resData1?.map((item) => (
-            <Card className={style.cards} sx={{ maxWidth: 300 }}>
-              {/* <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div> */}
-              <div className={style.imageDiv}>
-              <CardMedia className={style.cardImage}
-                component="img"
-                height="200"
-                image={item.image_url}
-                alt=" "
-              /></div>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div" className={style.itemTitle}>
-                  {item.title}
-                </Typography>
-                <Typography variant="body4" color="purple" className="item-title">
-                  {item.brief_address}
-                </Typography>
-              </CardContent>
-              <Typography>
-              &nbsp; &nbsp;<Rating name="read-only" value={item.average_rating} readOnly />
-              </Typography>
-              <CardActions className='pb-3 '>
-              &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
-                <span className={style.span2}>AED 99</span>
-                <Button className={style.cardbutton} size="small" variant="outlined" color="success"
-                onClick={notify} >
-                  Book Now
-                </Button>
-              </CardActions>
-            </Card>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <Slider className={style.mainslider} {...settings1} >
+              {resData1?.map((item) => (
+                <Card className={style.cards} sx={{ maxWidth: 300 }}>
+                  {/* <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div> */}
+                  <div className={style.imageDiv}>
+                    <CardMedia className={style.cardImage}
+                      component="img"
+                      height="200"
+                      image={item.image_url}
+                      alt=" "
+                    /></div>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div" className={style.itemTitle}>
+                      {item.title}
+                    </Typography>
+                    <Typography variant="body4" color="purple" className="item-title">
+                      {item.brief_address}
+                    </Typography>
+                  </CardContent>
+                  <Typography>
+                    &nbsp; &nbsp;<Rating name="read-only" value={item.average_rating} readOnly />
+                  </Typography>
+                  <CardActions className='pb-3 '>
+                    &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
+                    <span className={style.span2}>AED 99</span>
+                    <Button className={style.cardbutton} size="small"  color="error"
+                      onClick={notify} >
+                      Book Now
+                    </Button>
+                  </CardActions>
+                </Card>
 
-          ))}
-        </Slider>
+              ))}
+            </Slider>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className={style.viewAllBtn}>
+              <HomeButton></HomeButton>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className={`container`}>
-          
-      </div>
-      <HomeButton></HomeButton>
-      <Toaster/>
-</>
-      )
+      <Toaster />
+    </>
+  )
 }
 
-      export default HomeHandpicked
+export default HomeHandpicked

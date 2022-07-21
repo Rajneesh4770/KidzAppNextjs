@@ -9,11 +9,12 @@
   background-color: #fff;
   color: black;
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+.navRow{
   max-width: 1320px;
   width: 100%;
   margin: 0 auto;
 }
-
 .navlinks a {
   color: #000;
 }
@@ -21,6 +22,7 @@
 /* LOGO */
 .logoimage {
   height: 60px;
+  cursor: pointer;
 }
 
 .content {

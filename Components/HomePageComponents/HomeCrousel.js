@@ -15,7 +15,7 @@ function HomeCrousel() {
     }, [])
     return (
         <>
-            <div className='container-flex'>
+            <div className='container-fluid p-0'>
                 <Carousel>
                     {data.map((item) => {
                         return (
