@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import Head from 'next/head';
 
 const style1 = {
   position: 'absolute',
@@ -35,58 +36,83 @@ const Header = () => {
 
   return (
     <>
-      <nav className={` ${style.navbar1} fixed-top `} >
-        {/* <!-- LOGO --> */}
+    <Head>
+    <link
+          href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
+          rel='stylesheet'
+          integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC'
+          crossorigin='anonymous'
+        />  
+    </Head>
 
-        <div className={` ${style.logo}`}>
-          <Link href='/'>
-            <div>
-              <img className={style.logoimage}
-                src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png'
-              ></img>
-            </div>
-          </Link>
-        </div>
-        {/* <!-- NAVIGATION MENU --> */}
-        <ul className={style.navlinks}>
-          {/* <!-- USING CHECKBOX HACK --> */}
-          <input
-            type='checkbox'
-            id='checkbox_toggle'
-            className={style.hamburgercheck}
-          />
-          <label htmlFor='checkbox_toggle' className={style.hamburger}>
-            &#9776;
-          </label>
-          {/* <!-- NAVIGATION MENUS --> */}
-          <div className={`float-right ${style.menu}`}>
-            <li>
-              <Link href='/FindActivities'>
-                FindActivities
-              </Link>
-            </li>
-            <li>
-              <Link href='/Blog'>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                KidzAppAwards
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                KidzAppTV
-              </Link>
-            </li>
-            <li className={style.LoginIcon}>
-              <LoginIcon onClick={handleOpen} />
-            </li>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-12 col-md-6 '>
+            <nav className={` ${style.navbar1} fixed-top `} >
+              {/* <!-- LOGO --> */}
+              <div className='row'>
+                <div className={`col-sm-6 ${style.tglBTN} `}>
+                  <span className={` ${style.logo}`}>
+                    <Link href='/'>
+                        <img className={style.logoimage}
+                          src='https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png'
+                        ></img>
+                    </Link>
+                  </span>
+
+                </div>
+                <div className={`col-sm-6 ${style.tglBTN} `}>
+
+                  <ul className={style.navlinks}>
+                    {/* <!-- USING CHECKBOX HACK --> */}
+                    
+                    <input
+                      type='checkbox'
+                      id='checkbox_toggle'
+                      className={style.hamburgercheck}
+                    />
+                    <label htmlFor='checkbox_toggle' className={style.hamburger}>
+                      &#9776;
+                    </label>
+                    {/* <!-- NAVIGATION MENUS --> */}
+                    <div className={`float-right ${style.menu}`}>
+                      <li>
+                        <Link href='/FindActivities'>
+                          FindActivities
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/Blog'>
+                          Blog
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/'>
+                          KidzAppAwards
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/'>
+                          KidzAppTV
+                        </Link>
+                      </li>
+                      <li className={style.LoginIcon}>
+                        <LoginIcon onClick={handleOpen} className={style.LoginIcon1} />
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+
+
+                {/* <!-- NAVIGATION MENU --> */}
+
+              </div>
+
+            </nav>
           </div>
-        </ul>
+        </div>
+      </div>
 
-      </nav>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -107,10 +133,10 @@ const Header = () => {
             <TextField id="standard-basic" label="Password" variant="standard" sx={{ width: 300 }} /><br></br><br />
             <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign in</Button><br />
             <Typography>Forgot password? </Typography>
-           {/* <hr/>  */}
+            {/* <hr/>  */}
             <Typography sx={{ width: 300 }}><HorizontalRuleIcon /></Typography>
             <Link href='/Login/SignIn'>
-            <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign Up</Button>
+              <Button variant="outlined" color="success" sx={{ width: 300 }}>Sign Up</Button>
             </Link>
           </Box>
         </Fade>

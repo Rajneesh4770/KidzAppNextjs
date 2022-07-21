@@ -4,26 +4,30 @@ import Axios from 'axios';
 import { baseUrl } from './config';
 import style1 from '../styles/FindActivities.module.css'
 import { Rating, Button } from '@mui/material';
+
 function FindActivities() {
   const [data, setData] = useState([]);
-  // const [pageindex,setPageindex]=useState(4)
-
-  var currentscrollHeight =0;
-  var count=4;
-  useEffect(()=>{
-
-    const handleResize = (e) => {
-      const heightWin = window.document.documentElement.scrollHeight - window.document.documentElement.clientHeight;
-      console.log("height", window.innerHeight, heightWin);
-
-      // do whatever
-    
+  const [pageindex, setPageindex] = useState(4);
+  // pageindex =4;
+  // var count = 4;
+  useEffect(() => {
+    const scroll = (event) => {
+      if (window.scrollY > 400) {
+        setPageindex( pageindex*2)
+        // pageindex + 4;
+        console.log('hello', pageindex)
+      }
+      console.log(window.scrollY)
     }
-},[]);
+    window.addEventListener("scroll", scroll, false);
+    return () => window.removeEventListener("scroll", scroll, false);
+
+  }, [])
 
   useEffect(() => {
+    
     Axios.get(
-      baseUrl + `experiences/?country_code=ae&page=1&page_size=${count}`
+      baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
     )
       .then((res) => {
         console.log('findActivity page', res.data.results);
@@ -32,7 +36,7 @@ function FindActivities() {
       .catch((error) => {
         console.log(error);
       });
-  }, [])
+  }, [pageindex])
   //         right side section api
   const [dataright, setDataright] = useState([]);
   useEffect(() => {

@@ -1,45 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 /* NAVBAR STYLING STARTS */
 .navbar1 {
-    display: flex;
+  /* display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    color: black;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: space-between; */
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-   }
-   .navlinks a {
-    color: black;
-   }
+.navlinks a {
+  color: #000;
+}
 
-   /* LOGO */
-   .logoimage{
-    height: 60px;
-   }
+/* LOGO */
+.logoimage {
+  height: 60px;
+}
 
-   .content {
-    position: relative;
-    margin: 0px;
-  }
-  
-  .content h2 {
-    color: #fff;
-    font-size: 4em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    margin: 0px;
-    margin-left: 120px;
-  }
-  
-  
-  
-  @keyframes animate {
-    0%,
-    100% {
-      clip-path: polygon(
-        0% 45%,
+.content {
+  position: relative;
+  margin: 0px;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 4em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  margin-left: 120px;
+}
+
+
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
         16% 44%,
         33% 50%,
         54% 60%,
@@ -47,13 +51,11 @@
         84% 59%,
         100% 52%,
         100% 100%,
-        0% 100%
-      );
-    }
-  
-    50% {
-      clip-path: polygon(
-        0% 60%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
         15% 65%,
         34% 66%,
         51% 62%,
@@ -61,84 +63,110 @@
         84% 45%,
         100% 46%,
         100% 100%,
-        0% 100%
-      );
-    }
+        0% 100%);
   }
-   /* NAVBAR MENU */
-   .menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-    padding-bottom: 5px;
-   }
-   
-   .menu li {
-    padding: 5px 14px;
-    list-style: none;
-   }
-   
-   /*HAMBURGER MENU*/
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  padding-bottom: 5px;
+  float: right;
+}
+
+.menu li {
+  padding: 5px 14px;
+  list-style: none;
+}
+/* .toggelBtn{
+  padding-top: 10px;
+} */
+
+/*HAMBURGER MENU*/
 .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  float: right;
+}
+.LoginIcon1{
+  color:#e35b26;
+}
+
+/* hamburgercheck */
+.hamburgercheck {
+  display: none;
+}
+
+
+.LoginIcon {
+  cursor: pointer;
+}
+
+@media(max-width:575.98px){
+  .navbar1 .tglBTN{
+    width: 50%!important;
+  }
+  .menu li {
+    border-bottom: 1px solid gray;
+    /* border-style: ridge; */
+    padding: 8px 0 !important;
+  }
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 991px) {
+  .navlinks a {
+    color: #fff;
+  }
+  .menu {
     display: none;
-    font-size: 24px;
-    user-select: none;
-   }
-   /* hamburgercheck */
-   .hamburgercheck{
-    display: none;
-   }
-   .LoginIcon{
-    cursor: pointer;
-   }
-   /* APPLYING MEDIA QUERIES */
-   @media (max-width: 991px) {
-   .menu { 
-    display:none;
     position: absolute;
-    background-color:#fff;
+    background-color: #000000e6;
     right: 0;
-    width: 41% !important;
+    width: 100%;
+    top: 61px;
     text-align: center;
     margin-top: 39px !important;
     z-index: 99 !important;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-   }
-   .menu li{
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px !important
+  }
+
+  .menu li {
     border-bottom: 1px solid gray;
-    border-style: ridge;
+    /* border-style: ridge; */
     padding: 15px 0 !important;
-   }
-   .menu li:hover {
+  }
+
+  .menu li:hover {
     display: inline-block;
-    background-color:hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 80%);
     transition: 0.3s ease;
-   }
-   input[type=checkbox]:checked ~ .menu{
+  }
+
+  input[type=checkbox]:checked~.menu {
     display: block;
-   }
-   .hamburger {
+  }
+
+  .hamburger {
     display: block;
-   }
-   .dropdown {
+    padding-top: 10px;
+  }
+
+  .dropdown {
     left: 50%;
     top: 30px;
     transform: translateX(35%);
-   }
-   .dropdown li:hover {
-    background-color: hsl(0, 0%, 80%);
-   }
-   .content h2{
+  }
+
+  .dropdown li:hover {
+    background-color: hsl(0, 0%, 80%);  
+  }
+
+  .content h2 {
     font-size: 3em;
     margin-left: 100px;
-   }
-   }
-   @media(min-width:2100px){
-    .logoimage{
-      margin-left: 299%;
-    }
-    .navlinks{
-      margin-right: 24%;
-    }
-   }
-  
+  }
+}
