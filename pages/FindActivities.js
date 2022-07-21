@@ -3,13 +3,27 @@ import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import { baseUrl } from './config';
 import style1 from '../styles/FindActivities.module.css'
-import { Rating,Button } from '@mui/material';
+import { Rating, Button } from '@mui/material';
 function FindActivities() {
   const [data, setData] = useState([]);
-  
+  // const [pageindex,setPageindex]=useState(4)
+
+  var currentscrollHeight =0;
+  var count=4;
+  useEffect(()=>{
+
+    const handleResize = (e) => {
+      const heightWin = window.document.documentElement.scrollHeight - window.document.documentElement.clientHeight;
+      console.log("height", window.innerHeight, heightWin);
+
+      // do whatever
+    
+    }
+},[]);
+
   useEffect(() => {
     Axios.get(
-      baseUrl + "experiences/?country_code=ae&page=1&page_size=10"
+      baseUrl + `experiences/?country_code=ae&page=1&page_size=${count}`
     )
       .then((res) => {
         console.log('findActivity page', res.data.results);
@@ -19,10 +33,10 @@ function FindActivities() {
         console.log(error);
       });
   }, [])
- //         right side section api
- const [dataright,setDataright]=useState([]);
-  useEffect(()=>{
-     
+  //         right side section api
+  const [dataright, setDataright] = useState([]);
+  useEffect(() => {
+
     Axios.get(
       "https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22"
     )
@@ -33,7 +47,7 @@ function FindActivities() {
       .catch((error) => {
         console.log(error);
       });
-  },[])
+  }, [])
   return (
     <>
       {/*  button list */}
@@ -151,10 +165,10 @@ function FindActivities() {
                             <div className="card-body">
                               <p className={`card-top-para ${style1.cardtoppara}`}>{card.name}</p>
                               <h6 className={style1.cardtitle}>{card.address}</h6>
-                              <Rating name="rating" defaultValue={card.number_of_reviews} /><br/>
+                              <Rating name="rating" defaultValue={card.number_of_reviews} /><br />
                               <span className={`card-text bottom-text mb-0 ${style1.bottomtext}`}>Ages: &nbsp;
-                             
-                                {card.ages_display[0]} - {card.ages_display[card.ages_display.length-1]}
+
+                                {card.ages_display[0]} - {card.ages_display[card.ages_display.length - 1]}
                               </span>
                               <div className="row">
                                 <div className="col-md-6" align="left">
@@ -165,7 +179,7 @@ function FindActivities() {
                                 </div>
                               </div>
                               <Button size="small" variant="outlined" color="success"
-                                className={`${ style1.bottomButton}`}>Book Now
+                                className={`${style1.bottomButton}`}>Book Now
                                 {card.buttonText}
                               </Button>
                             </div>
