@@ -4,6 +4,7 @@ import axios from 'axios';
 import  {baseUrl}  from '../../pages/config';
 import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
+// import getServerSideProps from '../../pages/index'
 import {
   CardActionArea,
   CardContent,
@@ -12,6 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 function HomeBlog() {
+
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -64,6 +66,7 @@ function HomeBlog() {
                       >
 
                       </hr>
+                      
                       <Typography variant='h6' color='#9F57A9'>
                         {item.auther_name}
                       </Typography>
@@ -79,6 +82,7 @@ function HomeBlog() {
       <HomeButton></HomeButton><br />
     </div>
   );
+
 }
 
 export default HomeBlog

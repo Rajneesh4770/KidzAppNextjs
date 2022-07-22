@@ -1,1 +1,1 @@
-export const baseUrl='https://api2.kidzapp.com/api/3.0/';
+export const baseUrl= process.env.API_ENDPOINT;

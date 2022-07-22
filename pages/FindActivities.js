@@ -16,9 +16,9 @@ function FindActivities() {
         setPageindex( pageindex+2)
         console.log('hello', pageindex)
       }
-      if (window.scrollY > 1000){
-        setPageindex(pageindex+4)
-      }
+      // if (window.scrollY > 1000){
+      //   setPageindex(pageindex+4)
+      // }
       console.log(window.scrollY)
     }
     window.addEventListener("scroll", scroll, false);
