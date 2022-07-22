@@ -12,15 +12,35 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import KidzappFeed from "../Components/KidzappFeed";
 import { Button } from "@mui/material";
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
 function Blog() {
+  const[loader,setLoader]=useState(false);
   const [data, setData] = useState([]);
+  const [pageindex, setPageindex] = useState(3);
+  useEffect(() => {
+    const scroll = (event) => {
+      if (window.scrollY > 400) {
+        setPageindex( pageindex*2)
+        // console.log('hello', pageindex)
+      }
+      if(window.scrollY>1200){
+        setPageindex(pageindex*2)
+      }
+      console.log(window.scrollY)
+    }
+    window.addEventListener("scroll", scroll, false);
+    return () => window.removeEventListener("scroll", scroll, false);
+
+  }, [])
   const getData = () => {
     Axios.get(
-      baseUrl + "blogs?country_code=ae&limit=9&page=2"
+      baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=2`
     )
       .then((res) => {
         console.log(res.data.results);
         setData(res.data.results);
+        setLoader(true);
       })
       .catch((error) => {
         console.log(error);
@@ -28,7 +48,7 @@ function Blog() {
   };
   useEffect(() => {
     getData();
-  });
+  },[pageindex]);
   return (
     <div className={styleblog.blogBody}>
       <section className={styleblog.section1}>
@@ -113,7 +133,11 @@ function Blog() {
       </section>
 
       <div className={styleblog.map1} >
+      {loader ? getData() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+      <CircularProgress color="success" />
+    </Stack>}
         {data?.map((item) => {
+          
           return (
             <div className="container row " >
               <div className=" m-2" >

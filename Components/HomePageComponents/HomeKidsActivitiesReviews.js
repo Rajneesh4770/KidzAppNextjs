@@ -12,7 +12,6 @@ function HomeKidsActivitiesReviews() {
     lazyLoad: true,
     swipeToSlide: true,
     arrows: false,
-    // dots: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -80,8 +79,7 @@ function HomeKidsActivitiesReviews() {
       <center>
         <h1 className={style.heading}> Kids Activities Reviews</h1>
         <h1 className={style.heading}>by Real Parents</h1>
-      </center><br/>
-
+      </center>
       <div className={`${style.reviewComp} container`}>
       <div className="row  mt-5">
           <div className={`container `}>

@@ -4,18 +4,20 @@ import Axios from 'axios';
 import { baseUrl } from './config';
 import style1 from '../styles/FindActivities.module.css'
 import { Rating, Button } from '@mui/material';
-
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
 function FindActivities() {
+  const[loader,setLoader]=useState(false);
   const [data, setData] = useState([]);
-  const [pageindex, setPageindex] = useState(4);
-  // pageindex =4;
-  // var count = 4;
+  const [pageindex, setPageindex] = useState(3);
   useEffect(() => {
     const scroll = (event) => {
       if (window.scrollY > 400) {
-        setPageindex( pageindex*2)
-        // pageindex + 4;
+        setPageindex( pageindex+2)
         console.log('hello', pageindex)
+      }
+      if (window.scrollY > 1000){
+        setPageindex(pageindex+4)
       }
       console.log(window.scrollY)
     }
@@ -23,34 +25,40 @@ function FindActivities() {
     return () => window.removeEventListener("scroll", scroll, false);
 
   }, [])
-
-  useEffect(() => {
-    
+  const LeftCard=()=>{
     Axios.get(
       baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
     )
       .then((res) => {
-        console.log('findActivity page', res.data.results);
+        console.log('findActivity page search result', res.data.results);
         setData(res.data.results);
+        setLoader(true);
       })
       .catch((error) => {
         console.log(error);
       });
+    };
+    useEffect(() => {
+      LeftCard();
   }, [pageindex])
   //         right side section api
   const [dataright, setDataright] = useState([]);
-  useEffect(() => {
-
+  
+const rightcard=()=>{
     Axios.get(
       "https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22"
     )
       .then((res) => {
         console.log('findActivity page right section', res.data.results);
         setDataright(res.data.results);
+        setLoader(true);
       })
       .catch((error) => {
         console.log(error);
       });
+    }
+    useEffect(() => {
+      rightcard();
   }, [])
   return (
     <>
@@ -105,7 +113,7 @@ function FindActivities() {
                       className="form-control"
                       id="exampleFormControlSelect1"
                     >
-                      <option value="">Category*</option>
+                      <option value="">Category</option>
                       <option>Spring Fun</option>
                       <option>Eat Out</option>
                       <option>Animal Fun</option>
@@ -141,6 +149,9 @@ function FindActivities() {
             <div className={`col-md-8 ${style1.leftcontainer}`}>
               <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
               <div className="col-md-12">
+              {loader ? LeftCard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+      <CircularProgress color="success" />
+    </Stack>}
                 {data?.map((card) => {
                   return (
                     <div key={card.id} className="card-items">
@@ -182,7 +193,7 @@ function FindActivities() {
                                   <h6>{card.bottomRightText}</h6>
                                 </div>
                               </div>
-                              <Button size="small" variant="outlined" color="success"
+                              <Button size="small" variant="outlined" color="error"
                                 className={`${style1.bottomButton}`}>Book Now
                                 {card.buttonText}
                               </Button>
@@ -200,6 +211,9 @@ function FindActivities() {
             <div className="col-md-4 rightContainer">
               <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
               <div className="col-md-12">
+              {loader ? rightcard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+      <CircularProgress color="success" />
+    </Stack>}
                 {dataright?.map((card) => {
                   return (
                     <div key={card.id} className={style1.carditems}>
