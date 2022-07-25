@@ -55,34 +55,13 @@ function HomeCrousel() {
                     </Carousel.Caption>
 
                 </Carousel.Item>
-    </Carousel>;;
+    </Carousel>;
     }
 
-    return (
+    return ( 
         <>
             <div className='container-fluid p-0'>
-                <Carousel>
-                    {data.map((item) => {
-                        return (
-                            <Carousel.Item
-                            key={item.id}>
-                                <img
-                                    className={style.crouselImages}
-                                    src={item.image_url}
-                                    alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
-                                />
-                                <Carousel.Caption>
-                                    <h1 className={style.crouselHeading}>{item.title}</h1>
-                                    <p className={style.crouselParagraph}>{item.description}</p>
-                                    <button className={`btn ${style.button}`}
-                                    onClick={()=>toast('Successfully Booked')}
-                                    >Book Now</button>
-                                </Carousel.Caption>
-
-                            </Carousel.Item>
-                        )
-                    })};
-                </Carousel>
+               
             {content}
             </div>
 
