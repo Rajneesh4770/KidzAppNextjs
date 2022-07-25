@@ -1,65 +1,70 @@
-import { style } from '@mui/system'
-import React, { useState, useEffect } from 'react'
-import Axios from 'axios';
-import { baseUrl } from './config';
-import style1 from '../styles/FindActivities.module.css'
-import { Rating, Button } from '@mui/material';
-import Stack from '@mui/material/Stack';
-import CircularProgress from '@mui/material/CircularProgress';
-function FindActivities() {
-  const[loader,setLoader]=useState(false);
-  const [data, setData] = useState([]);
-  const [pageindex, setPageindex] = useState(3);
-  useEffect(() => {
-    const scroll = (event) => {
-      if (window.scrollY > 400) {
-        setPageindex( pageindex+2)
-        console.log('hello', pageindex)
-      }
-      if (window.scrollY > 1000){
-        setPageindex(pageindex+4)
-      }
-      console.log(window.scrollY)
-    }
-    window.addEventListener("scroll", scroll, false);
-    return () => window.removeEventListener("scroll", scroll, false);
+import { style } from "@mui/system";
+import React, { useState, useEffect, useTransition } from "react";
+import ReactDOM from "react-dom";
+import ReactPaginate from "react-paginate";
+import Axios from "axios";
+import { baseUrl } from "./config";
+import style1 from "../styles/FindActivities.module.css";
+import { Rating, Button } from "@mui/material";
+import Stack from "@mui/material/Stack";
+import CircularProgress from "@mui/material/CircularProgress";
 
-  }, [])
-  const LeftCard=()=>{
-    Axios.get(
-      baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
-    )
-      .then((res) => {
-        console.log('findActivity page search result', res.data.results);
-        setData(res.data.results);
-        // setLoader(true);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+function FindActivities() {
+  const [loader, setLoader] = useState(false);
+  const [data, setData] = useState([]);
+  const [pageindex, setPageindex] = useState(9);
+  const [scroll, setScroll] = useState(400);
+
+  const [isPending, loaderHandler] = useTransition();
+
+  useEffect(() => {
+    const scrolling = (event) => {
+      if (window.scrollY > scroll) {
+        setPageindex(pageindex + 4);
+        setScroll(scroll + 400);
+        console.log("hello", pageindex);
+      }
+      console.log(window.scrollY, "scroll");
     };
-    useEffect(() => {
-      LeftCard();
-  }, [pageindex])
+    window.addEventListener("scroll", scrolling, false);
+    return () => window.removeEventListener("scroll", scrolling, false);
+  }, [scroll]);
+
+  useEffect(() => {
+
+      Axios.get(
+        baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
+      )
+        .then((res) => {
+          console.log("findActivity page search result", res.data.results);
+          loaderHandler(() => setData(res.data.results));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    
+    
+  }, [pageindex]);
+
   //         right side section api
   const [dataright, setDataright] = useState([]);
-  
-const rightcard=()=>{
+
+  const rightcard = () => {
     Axios.get(
       "https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22"
     )
       .then((res) => {
-        console.log('findActivity page right section', res.data.results);
+        console.log("findActivity page right section", res.data.results);
         setDataright(res.data.results);
         setLoader(true);
       })
       .catch((error) => {
         console.log(error);
       });
-    }
-    useEffect(() => {
-      rightcard();
-  }, [])
+  };
+  useEffect(() => {
+    rightcard();
+  }, []);
   return (
     <>
       {/*  button list */}
@@ -149,61 +154,100 @@ const rightcard=()=>{
             <div className={`col-md-8 ${style1.leftcontainer}`}>
               <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
               <div className="col-md-12">
-              {/* {loader ? LeftCard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+                {/* {loader ? LeftCard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
       <CircularProgress color="success" />
     </Stack>} */}
-                {data?.map((card) => {
-                  return (
-                    <div key={card.id} className="card-items">
-                      <div className={style1.card}>
-                        <div className="row no-gutters">
-                          <div className={`col-md-6 ${style1.imgSection}`}>
-                            <img
-                              src={card.image_url}
-                              className={`card-img ${style1.cardImg}`}
-                              alt="..."
-                            />
-                            <div
-                              className={`${!card.newDealImg ? "d-none" : style1.newdeal
-                                }`}
-                            >
+                {isPending || !data.length && (
+                  <Stack
+                    sx={{ alignItems: "center" }}
+                    spacing={2}
+                    direction="row"
+                  >
+                    <CircularProgress color="success" />
+                  </Stack>
+                )}
+                {data &&
+                  data?.map((card) => {
+                    return (
+                      <div key={card.id} className="card-items">
+                        <div className={style1.card}>
+                          <div className="row no-gutters">
+                            <div className={`col-md-6 ${style1.imgSection}`}>
                               <img
-                                src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-                                alt=""
-                                width="100"
-                                height="100"
-                                className={style1.newDealImg}
+                                src={card.image_url}
+                                className={`card-img ${style1.cardImg}`}
+                                alt="..."
                               />
-                            </div>
-                          </div>
-                          <div className="col-md-6">
-                            <div className="card-body">
-                              <p className={`card-top-para ${style1.cardtoppara}`}>{card.name}</p>
-                              <h6 className={style1.cardtitle}>{card.address}</h6>
-                              <Rating name="rating" defaultValue={card.number_of_reviews} /><br />
-                              <span className={`card-text bottom-text mb-0 ${style1.bottomtext}`}>Ages: &nbsp;
-
-                                {card.ages_display[0]} - {card.ages_display[card.ages_display.length - 1]}
-                              </span>
-                              <div className="row">
-                                <div className="col-md-6" align="left">
-                                  <h6>Distance: <span className={style1.distance}>2100 KM</span>  {card.bottomLeftText}</h6>
-                                </div>
-                                <div className="col-md-6" align="right">
-                                  <h6>{card.bottomRightText}</h6>
-                                </div>
+                              <div
+                                className={`${
+                                  !card.newDealImg ? "d-none" : style1.newdeal
+                                }`}
+                              >
+                                <img
+                                  src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+                                  alt=""
+                                  width="100"
+                                  height="100"
+                                  className={style1.newDealImg}
+                                />
                               </div>
-                              <Button size="small" variant="outlined" color="error"
-                                className={`${style1.bottomButton}`}>Book Now
-                                {card.buttonText}
-                              </Button>
+                            </div>
+                            <div className="col-md-6">
+                              <div className="card-body">
+                                <p
+                                  className={`card-top-para ${style1.cardtoppara}`}
+                                >
+                                  {card.name}
+                                </p>
+                                <h6 className={style1.cardtitle}>
+                                  {card.address}
+                                </h6>
+                                <Rating
+                                  name="rating"
+                                  defaultValue={card.number_of_reviews}
+                                />
+                                <br />
+                                <span
+                                  className={`card-text bottom-text mb-0 ${style1.bottomtext}`}
+                                >
+                                  Ages: &nbsp;
+                                  {card.ages_display[0]} -{" "}
+                                  {
+                                    card.ages_display[
+                                      card.ages_display.length - 1
+                                    ]
+                                  }
+                                </span>
+                                <div className="row">
+                                  <div className="col-md-6" align="left">
+                                    <h6>
+                                      Distance:{" "}
+                                      <span className={style1.distance}>
+                                        2100 KM
+                                      </span>{" "}
+                                      {card.bottomLeftText}
+                                    </h6>
+                                  </div>
+                                  <div className="col-md-6" align="right">
+                                    <h6>{card.bottomRightText}</h6>
+                                  </div>
+                                </div>
+                                <Button
+                                  size="small"
+                                  variant="outlined"
+                                  color="error"
+                                  className={`${style1.bottomButton}`}
+                                >
+                                  Book Now
+                                  {card.buttonText}
+                                </Button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             </div>
 
@@ -211,7 +255,7 @@ const rightcard=()=>{
             <div className="col-md-4 rightContainer">
               <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
               <div className="col-md-12">
-              {/* {loader ? rightcard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+                {/* {loader ? rightcard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
       <CircularProgress color="success" />
     </Stack>} */}
                 {dataright?.map((card) => {
@@ -223,21 +267,23 @@ const rightcard=()=>{
                           className="card-img-top"
                           alt="..."
                         />
-                        <div
-                          className={`${style1.newdeal}`}>
+                        <div className={`${style1.newdeal}`}>
                           <img
                             src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
                             alt=""
                             width="50"
                             height="50"
-
                           />
                         </div>
                         <div className="card-body">
                           <p className={style1.rightcardtitle}>{card.title}</p>
                           <div className="row">
                             <div className="col-md-6" align="left">
-                              <Rating name="read-only" value={card.average_rating} readOnly />
+                              <Rating
+                                name="read-only"
+                                value={card.average_rating}
+                                readOnly
+                              />
                             </div>
                             <div className="col-md-6" align="right">
                               <h6>{card.bottomRightText}</h6>
@@ -254,7 +300,7 @@ const rightcard=()=>{
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default FindActivities
+export default FindActivities;

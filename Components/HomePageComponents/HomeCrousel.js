@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+
 import { Carousel } from "react-bootstrap"
 import {baseUrl}  from '../../pages/config';
 import Axios from 'axios'
@@ -6,8 +7,9 @@ import toast,{ Toaster } from 'react-hot-toast';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css';
 function HomeCrousel() {
     const [data, setData] = useState([]);
+    const [language,setLanguage]=useState("ae");
     useEffect(() => {
-        Axios.get(baseUrl+"experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1")
+        Axios.get(baseUrl+`experiences/curated-list/?list_name=featured_banner_uae&country_code=${language}&page=1&page_size=10&city=&website=1&lang=eg`)
             .then((res) => {
                 console.log(res.data.results)
                 setData(res.data.results)
@@ -20,7 +22,8 @@ function HomeCrousel() {
         content = <Carousel>
         {data.map((item) => {
             return (
-                <Carousel.Item>
+                <Carousel.Item
+                key={item.id}>
                     <img
                         className={style.crouselImages}
                         src={item.image_url}
@@ -40,7 +43,8 @@ function HomeCrousel() {
     </Carousel>;
     else {
         content = <Carousel>
-                <Carousel.Item>
+                <Carousel.Item
+              >
                     <img
                         className={style.crouselImages}
                         src="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"

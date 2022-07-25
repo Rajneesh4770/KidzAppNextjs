@@ -17,15 +17,15 @@ import CircularProgress from "@mui/material/CircularProgress";
 function Blog() {
   const [loader, setLoader] = useState(false);
   const [data, setData] = useState([]);
-  const [pageindex, setPageindex] = useState(3);
+  const [pageindex, setPageindex] = useState(9);
   useEffect(() => {
     const scroll = (event) => {
       if (window.scrollY > 400) {
-        setPageindex(pageindex * 2);
+        setPageindex(pageindex +3);
         // console.log('hello', pageindex)
       }
       if (window.scrollY > 1200) {
-        setPageindex(pageindex * 2);
+        setPageindex(pageindex + 6);
       }
       console.log(window.scrollY);
     };
