@@ -28,7 +28,7 @@ function HomeCrousel() {
                                     <h1 className={style.crouselHeading}>{item.title}</h1>
                                     <p className={style.crouselParagraph}>{item.description}</p>
                                     <button className={`btn ${style.button}`}
-                                    onClick={()=>toast('Successfully Booked')}
+                                    onClick={()=>toast('Successfully Booked ')}
                                     >Book Now</button>
                                 </Carousel.Caption>
 
