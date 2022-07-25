@@ -22,8 +22,20 @@ a {
 }
 .modifiedSlickBtn .slick-next:before {
   content: '←';
-  display: none!important;
-}
+   display: none!important;
+ }
+/* .modifiedSlickBtn .slick-next:before {
+ content: '';
+    border: solid #fff;
+    display: inline;
+    border-width: 0px 2px 2px 0px;
+    padding: 15px;
+    position: absolute;
+    top: calc(50% - 30px)!important;
+    transform: rotate(137deg);
+    left: -4px;
+  /* display: none!important; */
+ 
 /* Blog page top search bar global css */
 .blogsearchbarGlobalCss .form-control{
   margin-left: auto !important;
@@ -31,6 +43,12 @@ a {
   width: 50% !important;
 
 }
+p{
+  font-size: 14px;
+}
+
+/* @media(min-width:1200px){
 .container {
   max-width: 1170px !important;
 }
+} */

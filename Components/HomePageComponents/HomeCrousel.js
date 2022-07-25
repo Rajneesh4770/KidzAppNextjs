@@ -10,7 +10,7 @@ function HomeCrousel() {
         Axios.get(baseUrl+"experiences/curated-list/?list_name=featured_banner_uae&country_code=&page=1&page_size=10&city=&website=1")
             .then((res) => {
                 setData(res.data.results)
-                console.log("data",res.data.results)
+                console.log("Home Crousel Data",res.data.results)
             })
     }, [])
     return (
@@ -19,7 +19,8 @@ function HomeCrousel() {
                 <Carousel>
                     {data.map((item) => {
                         return (
-                            <Carousel.Item>
+                            <Carousel.Item
+                            key={item.id}>
                                 <img
                                     className={style.crouselImages}
                                     src={item.image_url}

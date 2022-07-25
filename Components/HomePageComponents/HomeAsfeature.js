@@ -47,7 +47,8 @@ function HomeAsfeature() {
     "https://drfsb8fjssbd3.cloudfront.net/images/dubai-tv.png"
 
       ].map(num => (
-      <div>
+      <div
+      key={125}>
         <img className={style.mapimages} src={num} alt=""/> 
       </div>
       ));

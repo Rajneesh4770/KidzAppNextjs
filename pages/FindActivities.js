@@ -16,9 +16,9 @@ function FindActivities() {
         setPageindex( pageindex+2)
         console.log('hello', pageindex)
       }
-      // if (window.scrollY > 1000){
-      //   setPageindex(pageindex+4)
-      // }
+      if (window.scrollY > 1000){
+        setPageindex(pageindex+4)
+      }
       console.log(window.scrollY)
     }
     window.addEventListener("scroll", scroll, false);
@@ -32,7 +32,7 @@ function FindActivities() {
       .then((res) => {
         console.log('findActivity page search result', res.data.results);
         setData(res.data.results);
-        setLoader(true);
+        // setLoader(true);
       })
       .catch((error) => {
         console.log(error);
@@ -149,9 +149,9 @@ const rightcard=()=>{
             <div className={`col-md-8 ${style1.leftcontainer}`}>
               <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
               <div className="col-md-12">
-              {loader ? LeftCard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+              {/* {loader ? LeftCard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
       <CircularProgress color="success" />
-    </Stack>}
+    </Stack>} */}
                 {data?.map((card) => {
                   return (
                     <div key={card.id} className="card-items">
@@ -211,9 +211,9 @@ const rightcard=()=>{
             <div className="col-md-4 rightContainer">
               <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
               <div className="col-md-12">
-              {loader ? rightcard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+              {/* {loader ? rightcard() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
       <CircularProgress color="success" />
-    </Stack>}
+    </Stack>} */}
                 {dataright?.map((card) => {
                   return (
                     <div key={card.id} className={style1.carditems}>

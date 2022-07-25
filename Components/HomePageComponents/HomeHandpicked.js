@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import Head from 'next/head';
 import axios from 'axios';
 import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
@@ -50,6 +49,7 @@ function HomeHandpicked() {
       .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
         setData(res.data);
+        // console.log("Handpicked Button Data", res.data)
       })
       .catch((err) => console.log(err, "error"));
   }, []);
@@ -62,7 +62,6 @@ function HomeHandpicked() {
     slidesToScroll: 1,
     arrows: false,
     slideToRepeat: true,
-    // autoplay:true,
     autoplaySpeed: 2000,
 
     responsive: [{
@@ -92,8 +91,8 @@ function HomeHandpicked() {
     axios.get(`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
       .then((res) => {
         setResData1(res.data.results)
-        console.log("apiname", activeTab);
-        console.log("data of Hanpicked card", resData1)
+        // console.log("apiname", activeTab);
+        // console.log("Hanpicked card's Data", resData1)
       }
 
       ).catch(err => {
@@ -105,10 +104,6 @@ function HomeHandpicked() {
 
   return (
     <>
-      <Head>
-        <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-      </Head>
       {/* Headings */}
 
       <div className={`${style.headingDiv}`} >
@@ -123,7 +118,8 @@ function HomeHandpicked() {
           <div className='col-lg-12'>
             <Slider {...settings}>
               {data?.map((item) => (
-                <div className={style.buttondiv}>
+                <div className={style.buttondiv}
+                key={item.id}>
                   <button onClick={() => setActiveTab(item.internal_name)} className={style.button14} role="button">
                     {item.name}
                   </button>
@@ -139,7 +135,8 @@ function HomeHandpicked() {
           <div className='col-lg-12'>
             <Slider className={style.mainslider} {...settings1} >
               {resData1?.map((item) => (
-                <Card className={style.cards} sx={{ maxWidth: 300 }}>
+                <Card className={style.cards} sx={{ maxWidth: 300 }}
+                key={item.id}>
                   {/* <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div> */}
                   <div className={style.imageDiv}>
                     <CardMedia className={style.cardImage}

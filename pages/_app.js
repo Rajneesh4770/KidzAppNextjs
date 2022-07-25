@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import Head from 'next/head';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 function MyApp({ Component, pageProps }) {
   module.exports = {
     eslint: {
@@ -19,6 +20,10 @@ function MyApp({ Component, pageProps }) {
           integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC'
           crossorigin='anonymous'
         />  
+        <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        
       </Head>
       <Navbar/>
       <Component {...pageProps} />

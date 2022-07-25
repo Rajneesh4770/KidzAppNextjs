@@ -35,7 +35,7 @@ function HomeBlog() {
         <div className='row'>
           {data.map((item, i) => {
             return (
-              <div
+              <div key={item.id}
                 className={`${i === 0 || i === 5 ? `col-md-8 ` : i ===1 || i === 6 ? `col-md-4 ${style.smcard}` : `col-md-4 mb-5 ${style.bigcard}`
                   }  col-sm-12 ${style.blogCardHome}` }
               >

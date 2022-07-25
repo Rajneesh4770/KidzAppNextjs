@@ -30,11 +30,11 @@
   padding: 15px 0px 15px 0px;
 }
 
-.map1 {
+/* .map1 {
   display: grid;
   justify-content: space-around;
   grid-template-columns: auto auto auto;
-}
+} */
 
 .m2 {
   width: 100%;
@@ -62,7 +62,7 @@
 .title {
   display: -webkit-box;
   max-width: auto;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -229,9 +229,10 @@
 }
 
 .blogcard {
-  padding: 30px;
+  padding: 0 30px 0px 30px;
   position: relative;
   margin: 0px 15px 0px 0px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -276,6 +277,9 @@
   /* border-style: groove; */
 
 }
+.icons{
+  color: #ffb535!important;
+}
 
 .cardbackgroundlayer {
   z-index: 0;
@@ -295,7 +299,7 @@
   z-index: 10;
   background: white;
   padding: 20px 15px;
-  margin-top: -72px;
+  margin-top: -90px;
 
 }
 
@@ -340,14 +344,14 @@ a.icon-link:hover {
   color: #363738;
   font-weight: bold;
   outline: none;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 20%);
   overflow: hidden;
-  border-radius: 0;
-  height: 50px;
-  line-height: 50px;
+  border-radius: 8px;
+
   display: inline-block;
-  padding: 0;
+  padding: 5px 15px 5px 0px;
   border: none;
+  font-size: 14px;
 }
 
 .btncard:focus {
@@ -358,20 +362,20 @@ a.icon-link:hover {
   background: #ffb535;
   color: #fff;
 }
-
-.btnwithicon {
-  padding-right: 20px;
+.iconsText{
+  font-size: 14px;
 }
+/* .btnwithicon {
+  padding-right: 20px;
+} */
 
 .btnwithicon i {
-  padding: 0px 30px 0px 15px;
-  margin-right: 10px;
-  height: 50px;
-  line-height: 50px;
-  vertical-align: bottom;
-  color: white;
-  background: #ffb535;
-  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+  padding: 10px 30px 10px 15px;
+    margin-right: 10px;
+    color: white;
+    background: #ffb535;
+    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
 }
 
 .btnonlyicon {
@@ -384,13 +388,13 @@ a.icon-link:hover {
 
 /* mediaquiry on card */
 
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .map1 {
     display: grid;
     justify-content: space-around;
     grid-template-columns: auto auto auto;
   }
-}
+} */
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .map1 {
