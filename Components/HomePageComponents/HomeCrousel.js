@@ -7,12 +7,57 @@ import style from '../../styles/ComponentsCss/HomePageComponents/HomeCrousel.mod
 function HomeCrousel() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        Axios.get(baseUrl+"experiences/curated-list/?list_name=featured_banner_uae&country_code=&page=1&page_size=10&city=&website=1")
+        Axios.get(baseUrl+"experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1")
             .then((res) => {
+                console.log(res.data.results)
                 setData(res.data.results)
                 console.log("Home Crousel Data",res.data.results)
             })
     }, [])
+
+    let content = null;
+    if (data && data.length)
+        content = <Carousel>
+        {data.map((item) => {
+            return (
+                <Carousel.Item>
+                    <img
+                        className={style.crouselImages}
+                        src={item.image_url}
+                        alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+                    />
+                    <Carousel.Caption>
+                        <h1 className={style.crouselHeading}>{item.title}</h1>
+                        <p className={style.crouselParagraph}>{item.description}</p>
+                        <button className={`btn ${style.button}`}
+                        onClick={()=>toast('Successfully Booked')}
+                        >Book Now</button>
+                    </Carousel.Caption>
+
+                </Carousel.Item>
+            )
+        })};
+    </Carousel>;
+    else {
+        content = <Carousel>
+                <Carousel.Item>
+                    <img
+                        className={style.crouselImages}
+                        src="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+                        alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+                    />
+                    <Carousel.Caption>
+                        <h1 className={style.crouselHeading}></h1>
+                        <p className={style.crouselParagraph}></p>
+                        <button className={`btn ${style.button}`}
+                        onClick={()=>toast('Successfully Booked')}
+                        >Book Now</button>
+                    </Carousel.Caption>
+
+                </Carousel.Item>
+    </Carousel>;;
+    }
+
     return (
         <>
             <div className='container-fluid p-0'>
@@ -38,6 +83,7 @@ function HomeCrousel() {
                         )
                     })};
                 </Carousel>
+            {content}
             </div>
 
         </>
