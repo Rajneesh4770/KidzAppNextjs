@@ -97,7 +97,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href='/'>
+                        <Link href='/Getintouch'>
                           GetInTouch
                         </Link>
                       </li>

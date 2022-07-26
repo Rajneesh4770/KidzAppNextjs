@@ -1,0 +1,23 @@
+.body{
+    margin-top: 100px;
+}
+.section1{
+    margin-top: 100px;;
+}
+.topbackground{
+    background-image: url('https://beta.kidzapp.com/images/get-touch-banner.jpg');
+}
+.fromcontent{
+    display: flex;
+    justify-content: center;
+}
+.TextField{
+margin-right: 20px;
+}
+.Button{
+    background-color: #19AFF4;
+}
+.addressdiv{
+
+    justify-content: center;
+}

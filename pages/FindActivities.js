@@ -1,5 +1,5 @@
 import { style } from "@mui/system";
-import React, { useState, useEffect, useTransition } from "react";
+import { useState, useEffect, useTransition } from "react";
 import ReactDOM from "react-dom";
 import ReactPaginate from "react-paginate";
 import Axios from "axios";
