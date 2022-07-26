@@ -96,6 +96,16 @@ const Header = () => {
                           KidzAppTV
                         </Link>
                       </li>
+                      <li>
+                        <Link href='/'>
+                          GetInTouch
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='/'>
+                          GetListed
+                        </Link>
+                      </li>
                       <li className={style.LoginIcon}>
                         <LoginIcon onClick={handleOpen} className={style.LoginIcon1} />
                       </li>

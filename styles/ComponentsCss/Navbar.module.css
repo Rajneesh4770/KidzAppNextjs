@@ -18,6 +18,9 @@
 .navlinks a {
   color: #000;
 }
+.navlinks a:hover{
+  color: #19AFF4;
+}
 
 /* LOGO */
 .logoimage {
@@ -72,8 +75,8 @@
 /* NAVBAR MENU */
 .menu {
   display: flex;
-  gap: 1em;
-  font-size: 18px;
+  gap: 0.5em;
+  font-size: 16px;
   padding-bottom: 5px;
   float: right;
 }
@@ -105,6 +108,9 @@
 
 .LoginIcon {
   cursor: pointer;
+}
+.LoginIcon1:hover{
+ color :#19AFF4
 }
 
 @media(max-width:575.98px){
