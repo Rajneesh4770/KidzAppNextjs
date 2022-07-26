@@ -1,16 +1,20 @@
+
 // {
 //   "extends": "next/core-web-vitals"
 // }
-// {
-//   "extends": ["eslint:recommended", "next"]
-  
-// }
 
-// {
-//   "parserOptions": {
-//       "sourceType": "module"
-//   }
-// }
+
 {
+    "builds": [
+      {
+        "src": "nuxt.config.js",
+        "use": "@nuxtjs/vercel-builder",
+        "config": {}
+      }
+    ],
   "extends": ["@salesforce/eslint-config-lwc/recommended"]
-}
+
+  }
+
+
+

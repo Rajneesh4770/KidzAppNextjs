@@ -5,7 +5,8 @@ import HomeBlog from "../Components/HomePageComponents/HomeBlog";
 import HomeKidsActivitiesReviews from "../Components/HomePageComponents/HomeKidsActivitiesReviews";
 import HomeAsfeature from "../Components/HomePageComponents/HomeAsfeature";
 import KidzappFeed from "../Components/KidzappFeed";
-import style from '../styles/Home.module.css';
+import style from '../styles/Index.module.css';
+import apiData from '../Components/HomePageComponents/HomeBlog'
 function index() {
   return (
     <div className={style.body}>
@@ -37,5 +38,6 @@ function index() {
     </div>
   );
 }
+
 
 export default index

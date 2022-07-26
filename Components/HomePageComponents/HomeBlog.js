@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css';
 import axios from 'axios';
+import  {baseUrl}  from '../../pages/config';
 import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
+// import getServerSideProps from '../../pages/index'
 import {
   CardActionArea,
   CardContent,
@@ -11,11 +13,12 @@ import {
   Typography,
 } from '@mui/material';
 function HomeBlog() {
+
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
       .get(
-        'https://api2.kidzapp.com/api/3.0/blogs?page=1&limit=10&country_code=ae',
+        baseUrl+'blogs?page=1&limit=10&country_code=ae',
       )
       .then((res) => {
         setData(res.data.results);
@@ -32,18 +35,18 @@ function HomeBlog() {
         <div className='row'>
           {data.map((item, i) => {
             return (
-              <div
-                className={`${i === 0 || i === 5 ? 'col-md-8' : 'col-md-4'
-                  } col-sm-12 ${style.blogCardHome}`}
+              <div key={item.id}
+                className={`${i === 0 || i === 5 ? `col-md-8 ` : i ===1 || i === 6 ? `col-md-4 ${style.smcard}` : `col-md-4 mb-5 ${style.bigcard}`
+                  }  col-sm-12 ${style.blogCardHome}` }
               >
                 <Card
-                className={style.card} sx={{ maxWidth: 850, height:470 }}>
+                className={style.card} sx={{ maxWidth: 850 }}>
                   <CardActionArea>
                     <div className={style.imageDiv}>
                     <CardMedia
                     className={style.image}
                       component='img'
-                      max-height='350'
+                      max-height='370'
                       image={item.cover_image}
                       alt=''
                     /></div>
@@ -53,7 +56,7 @@ function HomeBlog() {
                         variant='h5'
                         color='#002240'
                         component='div'
-                        className={`${i===0 || i===5 ? '{style.titleBlog}' : '{style.titleBlog1}'}`}
+                        className={`${i===0 || i===5 ? `${style.titleBlog}` : `${style.titleBlog1}`}`}
                       >
                         {item.meta_title}
                       </Typography>
@@ -63,6 +66,7 @@ function HomeBlog() {
                       >
 
                       </hr>
+                      
                       <Typography variant='h6' color='#9F57A9'>
                         {item.auther_name}
                       </Typography>
@@ -78,6 +82,7 @@ function HomeBlog() {
       <HomeButton></HomeButton><br />
     </div>
   );
+
 }
 
 export default HomeBlog

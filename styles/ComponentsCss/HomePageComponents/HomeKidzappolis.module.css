@@ -41,6 +41,8 @@ element.style {
     text-overflow: ellipsis;
     text-align: center;
     font-family: system-ui;
+    width: 150px;
+  overflow: hidden;
 }
 
 .slick-slide img {
@@ -93,19 +95,10 @@ element.style {
     transform: translatey(-6px);
 }
 
-.slider2 {
-    text-align: -webkit-center;
-}
-
-.collectionCard {
-    padding: 50px;
-}
-
-.container {
+/* .container{
     max-width: 970px;
-}
-
-.cardP {
+} */
+.cardP{
     padding: 1.5rem 0rem !important;
 }
 

@@ -149,6 +149,12 @@
      .cardsection{
       width: 100%;
      }
+     .heading{
+      font-size: 27px;
+    line-height: 35px;
+    color: #002240;
+    font-weight: 700;
+     }
    }
    @media (max-width:362px){
     .reviewComp{
@@ -157,4 +163,5 @@
     .cardsection{
       width: 100%;
      }
+     
    }

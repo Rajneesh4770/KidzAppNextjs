@@ -15,12 +15,40 @@ a {
   box-sizing: border-box;
 }
 
-.polisSlider .slick-prev:before {
+/* Home Crousel Button css */
+.modifiedSlickBtn .slick-prev:before {
   content: '←';
   display: none !important;
+}
+.modifiedSlickBtn .slick-next:before {
+  content: '←';
+   display: none!important;
+ }
+/* .modifiedSlickBtn .slick-next:before {
+ content: '';
+    border: solid #fff;
+    display: inline;
+    border-width: 0px 2px 2px 0px;
+    padding: 15px;
+    position: absolute;
+    top: calc(50% - 30px)!important;
+    transform: rotate(137deg);
+    left: -4px;
+  /* display: none!important; */
+ 
+/* Blog page top search bar global css */
+.blogsearchbarGlobalCss .form-control{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50% !important;
+
+}
+p{
+  font-size: 14px;
 }
 
-.polisSlider .slick-next:before {
-  content: '←';
-  display: none !important;
+/* @media(min-width:1200px){
+.container {
+  max-width: 1170px !important;
 }
+} */

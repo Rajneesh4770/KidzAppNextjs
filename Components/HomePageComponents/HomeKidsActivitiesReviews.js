@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidsActivitiesReviews.module.css';
+import  {baseUrl}  from '../../pages/config';
 import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';
@@ -11,7 +12,6 @@ function HomeKidsActivitiesReviews() {
     lazyLoad: true,
     swipeToSlide: true,
     arrows: false,
-    // dots: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -46,7 +46,7 @@ function HomeKidsActivitiesReviews() {
   const getReviewData = () => {
     axios
       .get(
-        "https://api2.kidzapp.com/api/3.0/reviews/featured?page=1&page_size=20&country_code=ae"
+        baseUrl+"reviews/featured?page=1&page_size=20&country_code=ae"
       )
       .then((response) => {
         const myData = response.data;
@@ -79,8 +79,7 @@ function HomeKidsActivitiesReviews() {
       <center>
         <h1 className={style.heading}> Kids Activities Reviews</h1>
         <h1 className={style.heading}>by Real Parents</h1>
-      </center><br/>
-
+      </center>
       <div className={`${style.reviewComp} container`}>
       <div className="row  mt-5">
           <div className={`container `}>

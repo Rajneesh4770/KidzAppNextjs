@@ -47,13 +47,14 @@ function HomeAsfeature() {
     "https://drfsb8fjssbd3.cloudfront.net/images/dubai-tv.png"
 
       ].map(num => (
-      <div>
+      <div
+      key={125}>
         <img className={style.mapimages} src={num} alt=""/> 
       </div>
       ));
   return (
     <>
-    <h1 className={style.heading}>As featured In</h1>
+    <h1 className={style.heading}>As Featured In</h1>
     <div className="container">
               <div className="col-lg">
       <Slider {...settings}>

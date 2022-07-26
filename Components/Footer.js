@@ -5,13 +5,15 @@ import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
     <>
-      <div className={`container-fluid ${style.footer}`}>
+      <footer className={style.footer}>
+
+
         <div className={`container row ${style.maincontainer}`}>
           <div className='col-lg-2 col-md-4 col-sm-6'>
             <ul>
               <h6>Kidz activities by Category</h6>
               <Link href='/FindActivities'>
-               <li className={style.iconEffect}> Exclusive on kidz app</li>
+                <li className={style.iconEffect}> Exclusive on kidz app</li>
               </Link>
               <Link href='/Spring Fun'>
                 <li className={style.iconEffect}> Spring Fun</li>
@@ -178,17 +180,19 @@ function Footer() {
               </ul>
             </div>
           </div>
-        </div>
-        <hr></hr>
-        {/* <br /> */}
+          <hr></hr>
+          {/* <br /> */}
 
-        <center className={style.copyrightdiv}>
-          {' '}
-          <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
-        </center>
-      </div>
+          <center className={style.copyrightdiv}>
+            {' '}
+            <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
+          </center>
+        </div>
+      </footer>
+
     </>
   );
 }
+
 
 export default Footer
