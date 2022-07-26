@@ -16,6 +16,28 @@ function HomeCrousel() {
                 console.log("Home Crousel Data",res.data.results)
             })
     }, [])
+<<<<<<< HEAD
+=======
+    return (
+        <>
+            <div className='container-flex'>
+                <Carousel>
+                    {data.map((item) => {
+                        return (
+                            <Carousel.Item>
+                                <img
+                                    className={style.crouselImages}
+                                    src={item.image_url}
+                                    alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+                                />
+                                <Carousel.Caption>
+                                    <h1 className={style.crouselHeading}>{item.title}</h1>
+                                    <p className={style.crouselParagraph}>{item.description}</p>
+                                    <button className={`btn ${style.button}`}
+                                    onClick={()=>toast('Successfully Booked ')}
+                                    >Book Now</button>
+                                </Carousel.Caption>
+>>>>>>> 10c6ca135f0f63eb771c0a2ca941d66e4d65a8a2
 
     let content = null;
     if (data && data.length)
