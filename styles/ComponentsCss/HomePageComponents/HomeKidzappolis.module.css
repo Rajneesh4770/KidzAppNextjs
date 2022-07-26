@@ -21,6 +21,12 @@ element.style {
     margin: 0 auto;
 }
 
+@media(max-width:767.98px){
+    .collectionSlider {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 .activityBox {
     display: flex;
     align-items: center;
