@@ -1,3 +1,4 @@
+
 import style from "../styles/Getintouch.module.css";
 import { FormLabel, TextField, Button, Box } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
@@ -12,13 +13,18 @@ function Getintouch() {
           <div className="row">
             <div className="col-12 p-0">
               <div className={style.topbackground}>
-                <h1 style={{ color: "white" }}>Get In Touch</h1>
+                <h1 style={{ color: "white" }}>Get Listed on Kidzapp</h1>
+                <h5 style={{ color: "white" }}>
+                  Expand your reach by listing your business with us. Simply
+                  fill out the form below and you'll hear back from us very
+                  soon.{" "}
+                </h5>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container">
+        {/* <div className="container">
           <div className="row">
             <div className="col-lg-4">
               <div className={style.box1}>
@@ -69,17 +75,25 @@ function Getintouch() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className={style.section2}>
         <div className="container mt-5 mb-5">
           <div className="row">
             <div className={`col-lg-12 ${style.fromcontent}`}>
-              <Box
-                className={style.box}
-                
-              >
+            <div className={style.formtitle}>
+                <h3>
+                  <span className={style.headingcolor}>
+                  Experience Information
+                  </span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="row p-3">
+            <div className={`col-lg-12 ${style.fromcontent}`}>
+              <Box className={style.box}>
                 <FormLabel>
                   <div className="row">
                     <div className={`col-lg-6`}>
@@ -102,7 +116,7 @@ function Getintouch() {
                   <div className="row">
                     <div className={`col-lg-12`}>
                       <TextField
-                      className={style.TextField}
+                        className={style.TextField}
                         id="filled-basic"
                         label="E-mail"
                         variant="standard"
@@ -134,11 +148,10 @@ function Getintouch() {
                   </div>
                   <div className="row">
                     <div className={`col-lg-12`}>
-                      <div className="pb-2"><lable >Recaptcha</lable></div>
-                      <Recaptcha 
-
-                      sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" 
-                      />
+                      <div className="pb-2">
+                        <lable>Recaptcha</lable>
+                      </div>
+                      <Recaptcha sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" />
                     </div>
                   </div>
 

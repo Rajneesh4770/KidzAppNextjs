@@ -1,0 +1,16 @@
+.backgroundcontent{
+    margin-top: 100px;
+}
+.background{
+    background-image: url('https://beta.kidzapp.com/images/get-touch-banner.jpg');
+}
+.h2{
+    font-size: 19px;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 24px;
+    font-weight: 400;
+}
+.box{
+    border-radius: 10px !important;
+}
