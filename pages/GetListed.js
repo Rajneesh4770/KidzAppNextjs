@@ -1,6 +1,5 @@
-
 import style from "../styles/Getintouch.module.css";
-import { FormLabel, TextField, Button, Box } from "@mui/material";
+import { FormLabel, TextField, Button, Box,InputLabel,NativeSelect } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
 import KidzappFeed from "../Components/KidzappFeed";
 function Getintouch() {
@@ -23,69 +22,16 @@ function Getintouch() {
             </div>
           </div>
         </div>
-
-        {/* <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className={style.box1}>
-                <div className={style.cicon}>
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div className={style.ctext}>
-                  <span>info@kidzapp.com</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className={style.box1}>
-                <div className={style.cicon}>
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div className={style.ctext}>
-                  <span>+971585850843</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className={style.box1}>
-                <div className={style.cicon}>
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div className={style.ctext}>
-                  <span>
-                    Kidzapp LLC 1404 Ascott Park Place Sheikh Zayed Road, Dubai
-                    P.O. Box 117452 United Arab Emirates
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row pt-5">
-            <div className="col-lg-12">
-              <div className={style.formtitle}>
-                <h3>
-                  <span className={style.headingcolor}>
-                    Suggestion? Help? Just want to say Hi?
-                  </span>
-                  <br /> Fill out the form below and one of the Kidzapp family
-                  will be in touch
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       <section className={style.section2}>
         <div className="container mt-5 mb-5">
           <div className="row">
             <div className={`col-lg-12 ${style.fromcontent}`}>
-            <div className={style.formtitle}>
+              <div className={style.formtitle}>
                 <h3>
                   <span className={style.headingcolor}>
-                  Experience Information
+                    Experience Information
                   </span>
                 </h3>
               </div>
@@ -96,21 +42,21 @@ function Getintouch() {
               <Box className={style.box}>
                 <FormLabel>
                   <div className="row">
-                    <div className={`col-lg-6`}>
-                      <TextField
-                        id="filled-basic"
-                        label="First Name"
+                    <div className={`col-lg-12`}>
+                      <InputLabel
                         variant="standard"
-                        className={style.TextField}
-                      />
-                    </div>
-                    <div className={`col-lg-6`}>
-                      <TextField
-                        id="filled-basic"
-                        label="Last Name"
-                        variant="standard"
-                        className={style.TextField}
-                      />
+                        htmlFor="uncontrolled-native"
+                      >
+                        Type
+                      </InputLabel>
+                      <NativeSelect
+                      fullWidth
+                        // defaultValue={}
+                      >
+                        <option value={10}>Course</option>
+                        <option value={20}>Venue</option>
+                        <option value={30}>Event</option>
+                      </NativeSelect>
                     </div>
                   </div>
                   <div className="row">
