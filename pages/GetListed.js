@@ -40,7 +40,7 @@ function Getintouch() {
           <div className="row p-5">
             <div className={`col-lg-12 ${style.fromcontent}`}>
               <Box className={style.box} sx={{width:600}}>
-                <FormLabel>
+                <FormLabel className={style.FormLabel}>
                   <div className="row">
                     <div className={`col-lg-12`}>
                       <InputLabel
