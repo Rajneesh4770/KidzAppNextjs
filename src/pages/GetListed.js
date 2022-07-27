@@ -58,7 +58,7 @@ function Getintouch() {
                       </InputLabel>
                       <NativeSelect
                         fullWidth
-                        // defaultValue={}
+                        defaultValue={''}
                       >
                         <option value={10}>Course</option>
                         <option value={20}>Venue</option>
@@ -293,7 +293,7 @@ function Getintouch() {
                     </div>
                   </div>
 
-                  <div className="row pt-5">import KidzappFeed from "../../Components/KidzappFeed";
+                  <div className="row pt-5">
                     <div className={`col-lg-12`}>
                       <center>
                         <Button

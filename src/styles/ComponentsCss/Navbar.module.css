@@ -2,14 +2,10 @@
 
 /* NAVBAR STYLING STARTS */
 .navbar1 {
-  /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
   padding: 20px;
   background-color: #fff;
   color: black;
   box-shadow: 0px 2px 5px rgb(0 0 0 / 20%);
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 .navRow{
   max-width: 1320px;
@@ -23,7 +19,7 @@
   color: #19AFF4;
 }
 .navlinks a:focus{
-  color:#19AFF4 !important;
+  color:#19AFF4;
 }
 
 /* LOGO */
@@ -89,9 +85,6 @@
   padding: 5px 14px;
   list-style: none;
 }
-/* .toggelBtn{
-  padding-top: 10px;
-} */
 
 /*HAMBURGER MENU*/
 .hamburger {
@@ -123,7 +116,6 @@
   }
   .menu li {
     border-bottom: 1px solid gray;
-    /* border-style: ridge; */
     padding: 8px 0 !important;
   }
 }
@@ -148,7 +140,6 @@
 
   .menu li {
     border-bottom: 1px solid gray;
-    /* border-style: ridge; */
     padding: 15px 0 !important;
   }
 

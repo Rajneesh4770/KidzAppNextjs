@@ -136,7 +136,6 @@ function Getintouch() {
                     <div className={`col-lg-12`}>
                       <div className="pb-2"><lable >Recaptcha</lable></div>
                       <Recaptcha 
-
                       sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" 
                       />
                     </div>
