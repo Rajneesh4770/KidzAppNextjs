@@ -58,11 +58,11 @@ function Getintouch() {
                       </InputLabel>
                       <NativeSelect
                         fullWidth
-                        defaultValue={''}
+                        defaultValue={null}
                       >
-                        <option value={10}>Course</option>
-                        <option value={20}>Venue</option>
-                        <option value={30}>Event</option>
+                        <option >Course</option>
+                        <option >Venue</option>
+                        <option >Event</option>
                       </NativeSelect>
                     </div>
                   </div>
