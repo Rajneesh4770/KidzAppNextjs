@@ -56,7 +56,7 @@ function HomeAsfeature() {
     <>
     <h1 className={style.heading}>As Featured In</h1>
     <div className="container">
-              <div className="col-lg">
+              <div className="col-lg ">
       <Slider {...settings}>
         {renderSlides()}
       </Slider>
