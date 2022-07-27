@@ -1,5 +1,12 @@
 import style from "../styles/Getintouch.module.css";
-import { FormLabel, TextField, Button, Box,InputLabel,NativeSelect } from "@mui/material";
+import {
+  FormLabel,
+  TextField,
+  Button,
+  Box,
+  InputLabel,
+  NativeSelect,
+} from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
 import KidzappFeed from "../Components/KidzappFeed";
 function Getintouch() {
@@ -39,7 +46,7 @@ function Getintouch() {
           </div>
           <div className="row p-5">
             <div className={`col-lg-12 ${style.fromcontent}`}>
-              <Box className={style.box} sx={{width:600}}>
+              <Box className={style.box} sx={{ width: 600 }}>
                 <FormLabel className={style.FormLabel}>
                   <div className="row">
                     <div className={`col-lg-12`}>
@@ -50,7 +57,7 @@ function Getintouch() {
                         Type
                       </InputLabel>
                       <NativeSelect
-                      fullWidth
+                        fullWidth
                         // defaultValue={}
                       >
                         <option value={10}>Course</option>
@@ -69,7 +76,7 @@ function Getintouch() {
                         City
                       </InputLabel>
                       <NativeSelect
-                      fullWidth
+                        fullWidth
                         // defaultValue={}
                       >
                         <option value={10}>Dubai</option>
@@ -79,16 +86,15 @@ function Getintouch() {
                     </div>
                   </div>
 
-
                   <div className="row pt-4">
                     <div className={`col-lg-12`}>
-                    <InputLabel
+                      <InputLabel
                         variant="standard"
                         htmlFor="uncontrolled-native"
                       >
                         Experience Name
                       </InputLabel>
-                    <TextField
+                      <TextField
                         id="filled-basic"
                         // label="First Name"
                         variant="standard"
@@ -99,13 +105,13 @@ function Getintouch() {
 
                   <div className="row pt-4">
                     <div className={`col-lg-12`}>
-                    <InputLabel
+                      <InputLabel
                         variant="standard"
                         htmlFor="uncontrolled-native"
                       >
                         Venue Name
                       </InputLabel>
-                    <TextField
+                      <TextField
                         id="filled-basic"
                         // label="First Name"
                         variant="standard"
@@ -113,7 +119,6 @@ function Getintouch() {
                       />
                     </div>
                   </div>
-
 
                   <div className="row pt-4">
                     <div className={`col-lg-12`}>
@@ -124,7 +129,7 @@ function Getintouch() {
                         Category
                       </InputLabel>
                       <NativeSelect
-                      fullWidth
+                        fullWidth
                         // defaultValue={}
                       >
                         <option value={10}>AE day</option>
@@ -137,7 +142,6 @@ function Getintouch() {
                     </div>
                   </div>
 
-
                   <div className="row pt-4">
                     <div className={`col-lg-12`}>
                       <InputLabel
@@ -147,10 +151,10 @@ function Getintouch() {
                         Sub Category
                       </InputLabel>
                       <NativeSelect
-                      fullWidth
+                        fullWidth
                         // defaultValue={}
                       >
-                       <option value={10}>AE day</option>
+                        <option value={10}>AE day</option>
                         <option value={20}>Fun day </option>
                         <option value={30}>After School Activity</option>
                         <option value={10}>Animal fun </option>
@@ -173,16 +177,6 @@ function Getintouch() {
                     </div>
                   </div>
 
-
-                  <div className="row pt-4">
-                    <div className={`col-lg-12`}>
-                      <div className="pb-2">
-                        <lable>Recaptcha</lable>
-                      </div>
-                      <Recaptcha sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" />
-                    </div>
-                  </div>
-
                   <div className="row pt-5">
                     <div className={`col-lg-12`}>
                       <center>
@@ -202,6 +196,123 @@ function Getintouch() {
           </div>
         </div>
       </section>
+
+      {/* second form  */}
+      <section className={style.section2}>
+        <div className="container mt-5 mb-5">
+          <div className="row">
+            <div className={`col-lg-12 ${style.fromcontent}`}>
+              <div className={style.formtitle}>
+                <h3>
+                  <span className={style.headingcolor}>
+                    Contact Information
+                  </span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="row p-5">
+            <div className={`col-lg-12 ${style.fromcontent}`}>
+              <Box className={style.box} sx={{ width: 600 }}>
+                <FormLabel className={style.FormLabel}>
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Designation
+                      </InputLabel>
+                      <TextField
+                        id="filled-basic"
+                        // label="First Name"
+                        variant="standard"
+                        className={style.TextField}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Name
+                      </InputLabel>
+                      <TextField
+                        id="filled-basic"
+                        // label="First Name"
+                        variant="standard"
+                        className={style.TextField}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        E-mail
+                      </InputLabel>
+                      <TextField
+                        id="filled-basic"
+                        // label="First Name"
+                        variant="standard"
+                        className={style.TextField}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Phone Number
+                      </InputLabel>
+                      <TextField
+                        type="number"
+                        id="filled-basic"
+                        // label="First Name"
+                        variant="standard"
+                        className={style.TextField}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <div className="pb-2">
+                        <lable>Recaptcha</lable>
+                      </div>
+                      <Recaptcha sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" />
+                    </div>
+                  </div>
+
+                  <div className="row pt-5">
+                    <div className={`col-lg-12`}>
+                      <center>
+                        <Button
+                          className={style.Button}
+                          variant="contained"
+                          sx={{ width: 200 }}
+                        >
+                          Get Liested
+                        </Button>
+                      </center>
+                    </div>
+                  </div>
+                </FormLabel>
+              </Box>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <KidzappFeed />
     </div>
   );
