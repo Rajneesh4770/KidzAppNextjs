@@ -8,6 +8,7 @@
   padding: 20px;
   background-color: #fff;
   color: black;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 20%);
   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 .navRow{
@@ -20,6 +21,9 @@
 }
 .navlinks a:hover{
   color: #19AFF4;
+}
+.navlinks a:focus{
+  color:#19AFF4 !important;
 }
 
 /* LOGO */

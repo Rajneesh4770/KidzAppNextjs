@@ -37,9 +37,9 @@ function Getintouch() {
               </div>
             </div>
           </div>
-          <div className="row p-3">
+          <div className="row p-5">
             <div className={`col-lg-12 ${style.fromcontent}`}>
-              <Box className={style.box}>
+              <Box className={style.box} sx={{width:600}}>
                 <FormLabel>
                   <div className="row">
                     <div className={`col-lg-12`}>
@@ -59,28 +59,108 @@ function Getintouch() {
                       </NativeSelect>
                     </div>
                   </div>
-                  <div className="row">
+
+                  <div className="row pt-4">
                     <div className={`col-lg-12`}>
-                      <TextField
-                        className={style.TextField}
-                        id="filled-basic"
-                        label="E-mail"
+                      <InputLabel
                         variant="standard"
-                        placeholder="@gmail.com"
+                        htmlFor="uncontrolled-native"
+                      >
+                        City
+                      </InputLabel>
+                      <NativeSelect
+                      fullWidth
+                        // defaultValue={}
+                      >
+                        <option value={10}>Dubai</option>
+                        <option value={20}>AI AIN</option>
+                        <option value={30}>Abu Dhabi</option>
+                      </NativeSelect>
+                    </div>
+                  </div>
+
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                    <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Experience Name
+                      </InputLabel>
+                    <TextField
+                        id="filled-basic"
+                        // label="First Name"
+                        variant="standard"
+                        className={style.TextField}
                       />
                     </div>
                   </div>
-                  <div className="row">
+
+                  <div className="row pt-4">
                     <div className={`col-lg-12`}>
-                      <TextField
+                    <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Venue Name
+                      </InputLabel>
+                    <TextField
                         id="filled-basic"
-                        label="Subject"
+                        // label="First Name"
                         variant="standard"
                         className={style.TextField}
                       />
                     </div>
                   </div>
-                  <div className="row">
+
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Category
+                      </InputLabel>
+                      <NativeSelect
+                      fullWidth
+                        // defaultValue={}
+                      >
+                        <option value={10}>AE day</option>
+                        <option value={20}>Fun day </option>
+                        <option value={30}>After School Activity</option>
+                        <option value={10}>Animal fun </option>
+                        <option value={20}>Birthday</option>
+                        <option value={30}>Eat Out</option>
+                      </NativeSelect>
+                    </div>
+                  </div>
+
+
+                  <div className="row pt-4">
+                    <div className={`col-lg-12`}>
+                      <InputLabel
+                        variant="standard"
+                        htmlFor="uncontrolled-native"
+                      >
+                        Sub Category
+                      </InputLabel>
+                      <NativeSelect
+                      fullWidth
+                        // defaultValue={}
+                      >
+                       <option value={10}>AE day</option>
+                        <option value={20}>Fun day </option>
+                        <option value={30}>After School Activity</option>
+                        <option value={10}>Animal fun </option>
+                        <option value={20}>Birthday</option>
+                        <option value={30}>Eat Out</option>
+                      </NativeSelect>
+                    </div>
+                  </div>
+
+                  <div className="row pt-4">
                     <div className={`col-lg-12`}>
                       <TextField
                         id="standard-helperText"
@@ -92,7 +172,9 @@ function Getintouch() {
                       />
                     </div>
                   </div>
-                  <div className="row">
+
+
+                  <div className="row pt-4">
                     <div className={`col-lg-12`}>
                       <div className="pb-2">
                         <lable>Recaptcha</lable>
