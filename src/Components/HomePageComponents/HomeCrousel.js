@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
 import { Carousel } from "react-bootstrap"
-import {baseUrl}  from '../../pages/config';
+import {baseUrl}  from '../../config';
 import Axios from 'axios'
 import toast,{ Toaster } from 'react-hot-toast';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css';

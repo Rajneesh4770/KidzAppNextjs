@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Axios from "axios";
-import { baseUrl } from "./config";
+import { baseUrl } from "../config";
 import styleblog from "../styles/Blog.module.css";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
@@ -60,9 +60,6 @@ function Blog() {
                     placeholder="Type Here To Search Blog"
                     aria-label="Search"
                   />
-                  {/* <button className="btn btn-primary mt-4" type="submit">
-                Search
-              </button> */}
                 </form>
               </div>
             </div>
@@ -83,11 +80,9 @@ function Blog() {
                   className="changeBlogBackBtn"
                 >
                   <h6 className={styleblog.buttonback}>
-                    {" "}
                     <ArrowBackIcon /> Go Back
                   </h6>
                 </Button>
-                {/* </Link> */}
               </div>
             </div>
           </div>
@@ -149,7 +144,7 @@ function Blog() {
                           <div className={styleblog.cardbackgroundmain}>
                             <img src={item.cover_image} />
                             <div className={styleblog.cardbackgroundlayer}>
-                              <img src={item.cover_image} />
+                              <img className={styleblog.cardimg} src={item.cover_image} />
                             </div>
                           </div>
                         </div>

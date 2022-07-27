@@ -365,9 +365,9 @@ a.icon-link:hover {
 .iconsText{
   font-size: 14px;
 }
-/* .btnwithicon {
-  padding-right: 20px;
-} */
+.cardimg{
+  border-radius: 10px;
+}
 
 .btnwithicon i {
   padding: 10px 30px 10px 15px;
