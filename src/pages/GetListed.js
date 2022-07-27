@@ -8,7 +8,7 @@ import {
   NativeSelect,
 } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
-import KidzappFeed from "../Components/KidzappFeed";
+import KidzappFeed from '../../src/Components/KidzappFeed';
 function Getintouch() {
   return (
     <div className={style.body}>
@@ -293,7 +293,7 @@ function Getintouch() {
                     </div>
                   </div>
 
-                  <div className="row pt-5">
+                  <div className="row pt-5">import KidzappFeed from "../../Components/KidzappFeed";
                     <div className={`col-lg-12`}>
                       <center>
                         <Button

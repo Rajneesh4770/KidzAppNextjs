@@ -1,14 +1,27 @@
 import style from "../../styles/FooterPages/PrivacyPolicy.module.css";
+import KidzappFeed from "../../Components/KidzappFeed";
 function PrivacyPolicy() {
   return (
     <>
+<section className={style.section1}>
+        <div className="container-flex">
+          <div className="row">
+            <div className="col-12 p-0">
+              <div className={style.topbackground}>
+              <h1 className={style.mainheading}>Kidzapp Privacy Policy</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={style.section}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h1 className={style.heading}>Kidzapp Privacy Policy</h1>
+              
 
-              <p className={style.paragraph}>
+              <p className={style.paragraph1}>
                 This is the privacy and cookies policy for www.Kidzapp.com and
                 the Kidzapp application. For the purposes of this privacy
                 policy, both the website and application shall be referred to as
@@ -196,8 +209,93 @@ function PrivacyPolicy() {
                 means they cannot be used to track your movements around the
                 internet.
               </p>
+              <h2 className={style.heading2}>Information Sharing</h2>
+              <p className={style.paragraph}>
+                We may disclose aggregate statistics about visitors to the App,
+                customers and sales in order to describe our services to
+                prospective partners, advertisers, potential merchants and other
+                reputable third parties and for other lawful purposes, but these
+                statistics will include no personally identifiable information.
+              </p>
+              <p className={style.paragraph}>
+                We may disclose your personal information to any of our
+                affiliates, merchants, or to our agents or contractors who
+                assist us in providing the services we offer through the App,
+                processing transactions, fulfilling requests for information,
+                receiving and sending communications, updating marketing lists,
+                analysing data, providing support services or in other tasks,
+                from time to time. Our agents and contractors will only use your
+                information to the extent necessary to perform their functions.
+              </p>
+              <p className={style.paragraph}>
+                In the event that we undergo re-organisation or are sold to a
+                third party, you agree that any personal information we hold
+                about you may be transferred to that re-organised entity or
+                third party.
+              </p>
+              <p className={style.paragraph}>
+                We may disclose your personal information if required to do so
+                by law or if we believe that such action is necessary to prevent
+                fraud or cyber crime or to protect the App or enforce the terms
+                under which you transact with us or enforce the rights, property
+                or personal safety of any person.
+              </p>
+              <h2 className={style.heading2}>
+                Information deletion / Requesting deletion of your data
+              </h2>
+              <p className={style.paragraph}>
+                To request data deletion or for any other queries related to
+                information collected and usage please send an email to
+                info@kidzapp.com. Please make sure to mention in the email
+                subject that this is a “Data Deletion Request”
+              </p>
+              <h2 className={style.heading2}>Public forums</h2>
+              <p className={style.paragraph}>
+                The App may, from time to time, make public forums available to
+                its users. Any information that is disclosed in these areas
+                becomes public information and you should exercise caution when
+                using these and never disclose your personal information.I
+              </p>
+              <h2 className={style.heading2}>External links</h2>
+              <p className={style.paragraph}>
+                The App may, from time to time, contain links to external sites.
+                We are not responsible for the privacy policies or the content
+                of such sites.
+              </p>
+              <h2 className={style.heading2}>Payment processing</h2>
+              <p className={style.paragraph}>
+                Payment details you provide will be encrypted using industry
+                standard 128 bit secure sockets layer (SSL) technology before
+                they are submitted to us or our payment partners over the
+                internet. You will be providing credit or debit card information
+                directly to the Payment Solutions Provider (PSP) which operates
+                a secure server to process payment details, encrypting your
+                credit/debit card information and authorising payment. We do not
+                store your credit card number or security code on our servers,
+                though it may transit through our servers as it passes to PSP.
+                Information which you supply to our PSP is not within our
+                control and is subject to PSP’s own privacy policy and terms and
+                conditions.
+              </p>
+              <h2 className={style.heading2}>Contacting Us</h2>
+              <p className={style.paragraph}>
+                Please submit any questions, concerns or comments you have about
+                this privacy policy or any requests concerning your personal
+                data by email to info@kidzapp.com.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+                      <KidzappFeed/>
+            </div>
+
+          </div>
+
         </div>
       </section>
     </>

@@ -10,7 +10,7 @@ import BubbleChartIcon from "@mui/icons-material/BubbleChart";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import KidzappFeed from "../Components/KidzappFeed";
+import KidzappFeed from '../../src/Components/KidzappFeed';
 import { Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";

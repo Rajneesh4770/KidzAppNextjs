@@ -1,7 +1,7 @@
 import style from "../styles/Getintouch.module.css";
 import { FormLabel, TextField, Button, Box } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
-import KidzappFeed from "../Components/KidzappFeed";
+import KidzappFeed from '../../src/Components/KidzappFeed';
 function Getintouch() {
   return (
     <div className={style.body}>
