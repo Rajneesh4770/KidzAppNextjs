@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import style from "../styles/ComponentsCss/Navbar.module.css";
 import Link from "next/link";
+import HomeHandpicked from "./HomePageComponents/HomeHandpicked";
 import LoginIcon from "@mui/icons-material/Login";
 import {InputLabel,Select,MenuItem,FormControl} from "@mui/material"
 import SignIn from "../pages/Login/SignIn";
 import getResponseMessage from '../Language/multilingualServices'
-
+import Router from "next/router";
 import Backdrop from "@mui/material/Backdrop";
+
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -32,15 +34,17 @@ const style1 = {
 };
 export let constants = '';
 const Header = () => {
-  const [Language,setLanguage] = useState('en')
+  const [Language,setLanguage] = useState('ae')
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   console.log("language",Language);
   useEffect(()=>{
     constants = Language;
+    
     console.log("constant",constants)
   },[Language])
+ 
   return (
     <>
       <div className="container">
@@ -77,7 +81,7 @@ const Header = () => {
                     {/* <!-- NAVIGATION MENUS --> */}
                     <div className={`float-right ${style.menu}`}>
                       <li>
-                        <Link href="/FindActivities">FindActivities</Link>
+                        <Link href="/FindActivities">{getResponseMessage(constants).add_to_wishlist_access_profile}</Link>
                       </li>
                       <li>
                         <Link href="/Blog">Blog</Link>
@@ -99,14 +103,20 @@ const Header = () => {
                       <InputLabel id="demo-select-small">Language</InputLabel>
                             <Select className={style.languagebtn}
                             size="small"
-                              // value={Language}
+                              value={Language}
                               // defaultValue={10}
                               label="Language"
                             >
                               <MenuItem value="">
                               </MenuItem>
-                              <MenuItem value='EG' onClick={()=>setLanguage('eg')}>EG</MenuItem>
-                              <MenuItem value='UAE'onClick={()=>setLanguage('ar')}>UAE</MenuItem>
+                              <MenuItem value={'ar'} onClick={()=>{
+                                
+                                setLanguage('ar')
+                                
+                                }}>EG</MenuItem>
+                              <MenuItem value={'ae'}onClick={()=>{
+                                setLanguage('ae')
+                                }}>UAE</MenuItem>
                             </Select>
                             </FormControl>
                         </li>

@@ -51,7 +51,6 @@ function HomeHandpicked() {
       .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
         setData(res.data);
-        // console.log("Handpicked Button Data", res.data)
       })
       .catch((err) => console.log(err, "error"));
   }, []);
