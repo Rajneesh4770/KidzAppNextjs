@@ -4,9 +4,7 @@ import Link from "next/link";
 import HomeHandpicked from "./HomePageComponents/HomeHandpicked";
 import LoginIcon from "@mui/icons-material/Login";
 import {InputLabel,Select,MenuItem,FormControl} from "@mui/material"
-import SignIn from "../pages/Login/SignIn";
 import getResponseMessage from '../Language/multilingualServices'
-import Router from "next/router";
 import Backdrop from "@mui/material/Backdrop";
 
 import Box from "@mui/material/Box";
