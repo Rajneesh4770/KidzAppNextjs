@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Navbar from '../Components/Navbar'
+import Head from 'next/head'
 import Footer from '../Components/Footer'
 import '../styles/globals.css'
 import {Provider} from 'react-redux'
@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }) {
          {/* recaptcha cdn */}
         
       </Head>
+    
 
       {/* <Provider store={store}> */}
       <Navbar/>
