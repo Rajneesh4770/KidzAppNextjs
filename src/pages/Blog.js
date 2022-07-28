@@ -22,7 +22,6 @@ function Blog() {
     const scroll = (event) => {
       if (window.scrollY > 400) {
         setPageindex(pageindex +3);
-        // console.log('hello', pageindex)
       }
       if (window.scrollY > 1200) {
         setPageindex(pageindex + 6);
