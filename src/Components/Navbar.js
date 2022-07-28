@@ -34,14 +34,14 @@ const style1 = {
 };
 export let constants = '';
 const Header = () => {
+
   const [Language,setLanguage] = useState('ae')
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   console.log("language",Language);
   useEffect(()=>{
-    constants = Language;
-    
+    constants = localStorage.getItem('language') || "ae";
     console.log("constant",constants)
   },[Language])
  
@@ -81,7 +81,7 @@ const Header = () => {
                     {/* <!-- NAVIGATION MENUS --> */}
                     <div className={`float-right ${style.menu}`}>
                       <li>
-                        <Link href="/FindActivities">{getResponseMessage(constants).add_to_wishlist_access_profile}</Link>
+                        <Link href="/FindActivities">FindActivity</Link>
                       </li>
                       <li>
                         <Link href="/Blog">Blog</Link>
@@ -110,12 +110,15 @@ const Header = () => {
                               <MenuItem value="">
                               </MenuItem>
                               <MenuItem value={'ar'} onClick={()=>{
-                                
                                 setLanguage('ar')
-                                
+                                localStorage.setItem("language", "ar");
+                                window.location.reload("/");
                                 }}>EG</MenuItem>
                               <MenuItem value={'ae'}onClick={()=>{
                                 setLanguage('ae')
+                                localStorage.setItem("language", "ae");
+                                window.location.reload("/");
+
                                 }}>UAE</MenuItem>
                             </Select>
                             </FormControl>
