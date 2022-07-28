@@ -86,7 +86,7 @@ function HomeHandpicked() {
     ]
 
   };
-  const [newlanguage,setNewlanguage]=useState(constants);
+  const [newlanguage, setNewlanguage] = useState(constants);
   const [resData1, setResData1] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
@@ -100,10 +100,9 @@ function HomeHandpicked() {
       })
   }, [activeTab]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setNewlanguage(constants);
-  },[constants]);
-  console.log("new?????????????????",getResponseMessage(constants).add_to_wishlist_access_profile);
+  }, [constants]);
 
   const notify = () => toast('Successfully Booked.');
 
@@ -124,7 +123,7 @@ function HomeHandpicked() {
             <Slider {...settings}>
               {data?.map((item) => (
                 <div className={style.buttondiv}
-                key={item.id}>
+                  key={item.id}>
                   <button onClick={() => setActiveTab(item.internal_name)} className={style.button14} role="button">
                     {item.name}
                   </button>
@@ -141,7 +140,7 @@ function HomeHandpicked() {
             <Slider className={style.mainslider} {...settings1} >
               {resData1?.map((item) => (
                 <Card className={style.cards} sx={{ maxWidth: 300 }}
-                key={item.id}>
+                  key={item.id}>
                   <div className={style.imageDiv}>
                     <CardMedia className={style.cardImage}
                       component="img"
@@ -163,7 +162,7 @@ function HomeHandpicked() {
                   <CardActions className='pb-3 '>
                     &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                     <span className={style.span2}>AED 99</span>
-                    <Button className={style.cardbutton} size="small"  color="error"
+                    <Button className={style.cardbutton} size="small" color="error"
                       onClick={notify} >
                       Book Now
                     </Button>

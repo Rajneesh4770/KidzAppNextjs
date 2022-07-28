@@ -1,21 +1,33 @@
-.body{
-     background-color: #00aff4;
-     margin-top: 20px;
+.body {
+    background-color: #00aff4;
+    margin-top: 20px;
 }
- /* circle card ........... */
-.kidzappHeading{
-   padding-top: 40px !important;
-   font-size: 3rem;
-   font-weight: 700;
-   color: #fff;
-   font-family: system-ui;
+
+/* circle card ........... */
+.kidzappHeading {
+    padding-top: 40px !important;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: system-ui;
 }
 
 element.style {
     display: block;
 }
 
-.activityBox{
+.collectionSlider {
+    width: 600px;
+    margin: 0 auto;
+}
+
+@media(max-width:767.98px){
+    .collectionSlider {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.activityBox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +38,7 @@ element.style {
 }
 
 .activityBoxHeading {
-   margin: 0;
+    margin: 0;
     color: #fff;
     font-size: 20px;
     line-height: 74px;
@@ -38,16 +50,18 @@ element.style {
     width: 150px;
   overflow: hidden;
 }
+
 .slick-slide img {
-     display: initial !important;
+    display: initial !important;
 }
+
 .activityBoxImage {
-  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     border-radius: 50%;
     background-color: #fff;
     height: 145px;
     max-width: 100%;
-    width: 145px!important;
+    width: 145px !important;
     object-fit: contain;
     padding: 15px 15px 15px 25px;
     /* vertical-align: middle; */
@@ -55,39 +69,36 @@ element.style {
     display: block;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.activityBoxImage:hover{
+
+.activityBoxImage:hover {
     transform: translateY(-6px);
 }
 
-            /* collection boxs.......... */
+/* collection boxs.......... */
 
 
 .aprovedImg {
     border-radius: 50px;
-    height: 60px !important ;
+    height: 60px !important;
     width: 70px;
     margin: 0px 20px;
 }
-.aprovedP{
+
+.aprovedP {
     width: 100px;
- overflow: hidden;
- text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.conditionalCard{
-    margin:  0px auto 15px auto ;
+
+.conditionalCard {
+    margin: 0px auto 15px auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
     overflow: hidden;
 }
-.conditionalCard:hover{
-transform: translatey(-6px);
-}
-.slider2{
-    text-align: -webkit-center;
-}
-.collectionCard{
-    padding-bottom: 50px;
-    padding-top: 20px;
+
+.conditionalCard:hover {
+    transform: translatey(-6px);
 }
 
 /* .container{
@@ -96,7 +107,8 @@ transform: translatey(-6px);
 .cardP{
     padding: 1.5rem 0rem !important;
 }
-.backarrow{
+
+.backarrow {
     content: " " !important;
     display: block !important;
     color: white !important;
@@ -104,7 +116,8 @@ transform: translatey(-6px);
     margin-top: -43px !important;
     margin-left: -25px !important;
 }
-.forwardarrow{
+
+.forwardarrow {
     content: " " !important;
     display: block !important;
     color: white !important;
@@ -112,13 +125,14 @@ transform: translatey(-6px);
     margin-top: -43px !important;
     margin-left: 0px !important;
 }
-@media(max-width:425px){
-    .conditionalCard{
+
+@media(max-width:425px) {
+    .conditionalCard {
         width: 8rem !important;
         height: 171px !important;
     }
-    .kidzappHeading{
+
+    .kidzappHeading {
         font-weight: 600;
     }
 }
-

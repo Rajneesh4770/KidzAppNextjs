@@ -12,9 +12,7 @@ function HomeCrousel() {
       baseUrl +
         `experiences/curated-list/?list_name=featured_banner_uae&country_code=${language}&page=1&page_size=10&city=&website=1&lang=ar`
     ).then((res) => {
-      console.log(res.data.results);
       setData(res.data.results);
-      console.log("Home Crousel Data", res.data.results);
     });
   }, []);
 

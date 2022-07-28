@@ -16,7 +16,6 @@ const LANGUAGES = {
   const languageArray = Object.values(LANGUAGES);
  
  export default function getResponseMessage(language) {
-  console.log("multilanguage",language)
     switch (language) {
       case LANGUAGES.ENGLISH:
         return english.responseMessages;

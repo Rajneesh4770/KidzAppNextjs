@@ -37,10 +37,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  console.log("language",Language);
   useEffect(()=>{
     constants = localStorage.getItem('language') || "ae";
-    console.log("constant",constants)
   },[Language])
  
   return (
