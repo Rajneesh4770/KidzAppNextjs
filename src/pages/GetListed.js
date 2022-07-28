@@ -25,7 +25,6 @@ function Getintouch() {
                   fill out the form below and you'll hear back from us very
                   soon.{" "}
                 </h5>
-                
               </div>
             </div>
           </div>
