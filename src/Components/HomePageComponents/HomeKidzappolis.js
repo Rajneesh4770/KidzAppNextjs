@@ -129,7 +129,6 @@ function HomeKidzappolis() {
   useEffect(() => {
     axios.get(baseUrl + "categories?country_code=ae").then((res) => {
       setData(res.data);
-      console.log("kidzappolis data", data);
     });
   }, []);
   const [data2, setData2] = useState([]);
@@ -159,7 +158,6 @@ function HomeKidzappolis() {
       }
 
       setData2(kidzaprovedCollections);
-      console.log(data2, "kidzaproved collection");
     });
   }, []);
   return (

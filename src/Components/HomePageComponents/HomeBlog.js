@@ -22,7 +22,6 @@ function HomeBlog() {
       )
       .then((res) => {
         setData(res.data.results);
-        console.log("review's data", res.data.results);
       });
   }, []);
   return (
