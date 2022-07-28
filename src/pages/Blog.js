@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Axios from "axios";
-import { baseUrl } from "./config";
+import { baseUrl } from "../config";
 import styleblog from "../styles/Blog.module.css";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
@@ -10,7 +10,7 @@ import BubbleChartIcon from "@mui/icons-material/BubbleChart";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import KidzappFeed from "../Components/KidzappFeed";
+import KidzappFeed from '../../src/Components/KidzappFeed';
 import { Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -22,7 +22,6 @@ function Blog() {
     const scroll = (event) => {
       if (window.scrollY > 400) {
         setPageindex(pageindex +3);
-        // console.log('hello', pageindex)
       }
       if (window.scrollY > 1200) {
         setPageindex(pageindex + 6);
@@ -60,9 +59,6 @@ function Blog() {
                     placeholder="Type Here To Search Blog"
                     aria-label="Search"
                   />
-                  {/* <button className="btn btn-primary mt-4" type="submit">
-                Search
-              </button> */}
                 </form>
               </div>
             </div>
@@ -83,11 +79,9 @@ function Blog() {
                   className="changeBlogBackBtn"
                 >
                   <h6 className={styleblog.buttonback}>
-                    {" "}
                     <ArrowBackIcon /> Go Back
                   </h6>
                 </Button>
-                {/* </Link> */}
               </div>
             </div>
           </div>
@@ -149,7 +143,7 @@ function Blog() {
                           <div className={styleblog.cardbackgroundmain}>
                             <img src={item.cover_image} />
                             <div className={styleblog.cardbackgroundlayer}>
-                              <img src={item.cover_image} />
+                              <img className={styleblog.cardimg} src={item.cover_image} />
                             </div>
                           </div>
                         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css';
 import axios from 'axios';
-import  {baseUrl}  from '../../pages/config';
+import  {baseUrl}  from '../../config';
 import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
 // import getServerSideProps from '../../pages/index'

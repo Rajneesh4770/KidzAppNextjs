@@ -1,9 +1,9 @@
 import { style } from "@mui/system";
-import React, { useState, useEffect, useTransition } from "react";
+import { useState, useEffect, useTransition } from "react";
 import ReactDOM from "react-dom";
 import ReactPaginate from "react-paginate";
 import Axios from "axios";
-import { baseUrl } from "./config";
+import { baseUrl } from "../config";
 import style1 from "../styles/FindActivities.module.css";
 import { Rating, Button } from "@mui/material";
 import Stack from "@mui/material/Stack";

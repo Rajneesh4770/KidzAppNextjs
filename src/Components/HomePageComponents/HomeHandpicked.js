@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import getResponseMessage from '../../Language/multilingualServices';
+import { constants } from '../Navbar';
 import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew';
@@ -49,7 +51,6 @@ function HomeHandpicked() {
       .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
         setData(res.data);
-        // console.log("Handpicked Button Data", res.data)
       })
       .catch((err) => console.log(err, "error"));
   }, []);
@@ -85,20 +86,24 @@ function HomeHandpicked() {
     ]
 
   };
+  const [newlanguage,setNewlanguage]=useState(constants);
   const [resData1, setResData1] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
     axios.get(`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`)
       .then((res) => {
         setResData1(res.data.results)
-        // console.log("apiname", activeTab);
-        // console.log("Hanpicked card's Data", resData1)
       }
 
       ).catch(err => {
         console.log(err)
       })
   }, [activeTab]);
+
+  useEffect(()=>{
+    setNewlanguage(constants);
+  },[constants]);
+  console.log("new?????????????????",getResponseMessage(constants).add_to_wishlist_access_profile);
 
   const notify = () => toast('Successfully Booked.');
 
@@ -107,7 +112,7 @@ function HomeHandpicked() {
       {/* Headings */}
 
       <div className={`${style.headingDiv}`} >
-        <h1 className={style.heading}>Find the best places to take your kids in the UAE</h1>
+        <h1 className={style.heading}>{getResponseMessage(constants).add_to_wishlist_access_profile} </h1>
         <h1 className={style.heading}>kids in the UAE</h1>
         <h1 className={style.h1}>Handpicked Experiences</h1>
         <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
@@ -137,7 +142,6 @@ function HomeHandpicked() {
               {resData1?.map((item) => (
                 <Card className={style.cards} sx={{ maxWidth: 300 }}
                 key={item.id}>
-                  {/* <div className={style.newdealimg}><img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" alt="" width="50" height="50"/></div> */}
                   <div className={style.imageDiv}>
                     <CardMedia className={style.cardImage}
                       component="img"

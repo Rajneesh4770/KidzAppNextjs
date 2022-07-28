@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidsActivitiesReviews.module.css';
-import  {baseUrl}  from '../../pages/config';
+import  {baseUrl}  from '../../config';
 import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';

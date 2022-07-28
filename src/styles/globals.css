@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* direction: rtl; */
 }
 
 a {
@@ -17,33 +18,22 @@ a {
 
 /* Home Crousel Button css */
 .modifiedSlickBtn .slick-prev:before {
-  content: '←';
+  content: "←";
   display: none !important;
 }
 .modifiedSlickBtn .slick-next:before {
-  content: '←';
-   display: none!important;
- }
-/* .modifiedSlickBtn .slick-next:before {
- content: '';
-    border: solid #fff;
-    display: inline;
-    border-width: 0px 2px 2px 0px;
-    padding: 15px;
-    position: absolute;
-    top: calc(50% - 30px)!important;
-    transform: rotate(137deg);
-    left: -4px;
-  /* display: none!important; */
+  content: "←";
+  display: none !important;
+}
+
  
 /* Blog page top search bar global css */
-.blogsearchbarGlobalCss .form-control{
+.blogsearchbarGlobalCss .form-c {
   margin-left: auto !important;
   margin-right: auto !important;
   width: 50% !important;
-
 }
-p{
+p {
   font-size: 14px;
 }
 
@@ -52,3 +42,5 @@ p{
   max-width: 1170px !important;
 }
 } */
+
+

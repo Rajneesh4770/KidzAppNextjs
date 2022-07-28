@@ -1,0 +1,73 @@
+.body{
+    margin-top: 100px;
+}
+.section1{
+    margin-top: 100px;;
+}
+.topbackground{
+    background-image: url('https://beta.kidzapp.com/images/get-touch-banner.jpg');
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #EB5757;
+    background: -webkit-linear-gradient(to right, #000000, #EB5757);
+    background: linear-gradient(to right, #0a040194, #830909a1);
+}
+.fromcontent{
+    display: flex;
+    justify-content: center;
+}
+.TextField{
+    /* margin-right: 20px; */
+    padding-bottom: 20px;
+    width: 100%;
+}
+.Button{
+    background-color: #E35B26;
+}
+.Button:hover{
+    background-color: #da754d!important;
+
+}
+.ctext{
+    text-align: center;
+}
+.box{
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+    padding: 30px;
+}
+.box1{
+    padding: 70px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+    min-height: 248px;
+}
+@media(max-width:767.98px){
+    .box1{
+        margin-bottom: 50px;
+       
+    }
+}
+.cicon{
+    font-size: 24px;
+    color: #E35B26;
+}
+.headingcolor{
+    color: #E35B26;
+    text-transform: uppercase;
+
+}
+.formtitle{
+    text-align: center;
+}
+.FormLabel{
+    width: 100%;
+}

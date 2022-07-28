@@ -109,7 +109,7 @@ function Footer() {
 
             <ul>
               <h6 className='pt-3'>Legal</h6>
-              <Link href='/Policy '>
+              <Link href='/FooterPages/PrivacyPolicy '>
                 <li className={style.iconEffect}> Privacy Policy</li>
               </Link>
               <Link href='/Term '>
