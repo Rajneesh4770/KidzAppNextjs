@@ -421,7 +421,7 @@ module.exports.responseMessages = {
     find_best_place:                              "ابحث عن أفضل الأماكن لأخذ أطفالك إليها",
     find_best_place_egp:                          "ابحث عن أفضل أماكن أنشطة الأطفال في مصر",
     get_in_touch:                                 "تواصل معنا",
-    as_featured_in:                               "ظهور إعلامي ",
+    as_featured_In:                               "ظهور إعلامي",
     get_listed:                                   "انضم إلينا",
     act_with_kids_in_uae:                         "أنشطة لأطفال الإمارات",
     our_picks:                                    "اختيارنا لأفضل أنشطة الأطفال في",

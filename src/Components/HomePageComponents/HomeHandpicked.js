@@ -112,9 +112,9 @@ function HomeHandpicked() {
 
       <div className={`${style.headingDiv}`} >
         <h1 className={style.heading}>{getResponseMessage(constants).add_to_wishlist_access_profile} </h1>
-        <h1 className={style.heading}>kids in the UAE</h1>
-        <h1 className={style.h1}>Handpicked Experiences</h1>
-        <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
+        {/* <h1 className={style.heading}>kids in the UAE</h1> */}
+        <h1 className={style.h1}>{getResponseMessage(constants).hand_pick_exp}</h1>
+        <p className={style.p}>{getResponseMessage(constants). Our_pick_of_the_best_kids_activities_in_UAE}</p>
       </div>
 
       <div className={`container modifiedSlickBtn ${style.buttonRow}`}>

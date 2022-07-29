@@ -8,33 +8,8 @@ import { Card } from "react-bootstrap";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       onClick={onClick}
-//       className={className}
-//       style={{ ...style, display: "block", background: "red" }}
-//     >
-//       <i className="fa-solid fa-chevron-left"></i>
-//     </div>
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-
-//   return (
-//     <div
-//       onClick={onClick}
-//       className={className}
-//       style={{ ...style, display: "block", background: "red" }}
-//     >
-//       <i className="fa-solid fa-chevron-right"></i>
-//     </div>
-//   );
-// }
+import getResponseMessage from '../../Language/multilingualServices';
+import { constants } from '../Navbar';
 
 
 function HomeKidzappolis() {
@@ -180,7 +155,7 @@ function HomeKidzappolis() {
         <div className="container ">
           <center>
             <strong>
-              <h1 className={style.kidzappHeading}>Kidzappolis</h1>
+              <h1 className={style.kidzappHeading}>{getResponseMessage(constants).kidzappolis} </h1>
             </strong>
           </center>
           <br />
@@ -205,7 +180,7 @@ function HomeKidzappolis() {
         <div className="container">
           <center>
             <strong>
-              <h1 className={style.kidzappHeading}>Kidzapproved Collections</h1>
+              <h1 className={style.kidzappHeading}>{getResponseMessage(constants). kidzapproved_collection} </h1>
             </strong>
           </center>
           <br />

@@ -281,7 +281,7 @@ const responseMessages = {
     cashback_earned:                              "Cashback Earned",
     view_all:                                     "View All",
     kids_act_reviews_by_parents:                  "Kids Activities Reviews by Real Parents",
-    as_featured_in:                               "As Featured in",
+    as_featured_In:                               "As Featured in",
     venue:                                        "Venue",
     event:                                        "Event",
     view_results:                                 "View Results",
