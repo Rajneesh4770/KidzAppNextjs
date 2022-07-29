@@ -108,7 +108,7 @@ const Header = () => {
                         className={style.languagebtn}
                             
                             size="small"
-                            value={language}
+                            value={Language}
                             // {dropdownValue}
                             // {dropdownValue ? dropdownValue : "ae"}
                             // defaultValue={10}
