@@ -419,6 +419,8 @@ module.exports.responseMessages = {
     failed_desc:                                  "لقد فشل دفع الحجز الخاص بك ، يرجى إجراء حجز آخر. للعثور على تفاصيل الحجز الخاصة بك ، انتقل إلى الملف الشخصي -> حجوزاتي",
     created_on:                                   "تم إنشاؤها على:",
     find_best_place:                              "ابحث عن أفضل الأماكن لأخذ أطفالك إليها",
+    find_best_place_uae:                          ' اعثر على أفضل الأماكن لاصطحاب أطفالك في الإمارات العربية المتحدة',
+
     find_best_place_egp:                          "ابحث عن أفضل أماكن أنشطة الأطفال في مصر",
     get_in_touch:                                 "تواصل معنا",
     as_featured_In:                               "ظهور إعلامي",
@@ -475,7 +477,7 @@ module.exports.responseMessages = {
     stay_upto_date:                               "ابق على اطلاع على هذا",
     latest_offers_and_deals:                      "أحدث العروض والصفقات",
     field_warn:                                   "هذه الخانة مطلوبة",
-    subscribe:                                    "الإشتراك",
+    subscribe1:                                    "الإشتراك",
     dont_show_again:                              "لا تظهره مرة أخرى",
     login_signUp:                                 " دخول/ تسجيل مشترك جديد",
     it_take_30_min:                               "انتظر ثلاثين ثانية فقط",

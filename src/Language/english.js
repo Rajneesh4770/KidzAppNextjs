@@ -62,7 +62,7 @@ const responseMessages = {
     stay_upto_date:                               "Stay up to date on this",
     latest_offers_and_deals:                      "latest offers and deals",
     field_warn:                                   "This field is required",
-    subscribe:                                    "Subscribe",
+    subscribe1:                                    "Subscribe",
     no_reviews:                                   "No Reviews",
     dont_show_again:                              "Don't show me this again",
     login_signUp:                                 "Login / Signup",

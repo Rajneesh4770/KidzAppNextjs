@@ -27,7 +27,7 @@ function KidzappFeed() {
                           className={`form-control ${style.searchinput}`}
                           placeholder={getResponseMessage(constants). email_add}
                         />
-                        <button className={`btn ${style.searchbtn}`}>{getResponseMessage(constants).subscribe}</button>
+                        <button className={`btn ${style.searchbtn}`}>{getResponseMessage(constants).subscribe1}</button>
                       </div>
                     </div>
                   </div>
