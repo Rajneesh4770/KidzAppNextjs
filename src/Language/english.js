@@ -8,6 +8,7 @@ const responseMessages = {
     indoor_outdoor_kids_act:                      "Indoor / Outdoor Kids activity",
     kids_Act_by_cat:                              "Kids Activities by Category",
     find_act:                                     "Find Activities",
+    find_act1:                                     "FindActivity",
     blog:                                         "Blog",
     kidzapp_awards:                               "Kidzapp Awards",
     kidzapp_tv:                                   "Kidzapp TV",

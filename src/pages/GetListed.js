@@ -8,7 +8,7 @@ import {
   NativeSelect,
 } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
-import KidzappFeed from '../../src/Components/KidzappFeed';
+import KidzappFeed from "../../src/Components/KidzappFeed";
 function Getintouch() {
   return (
     <div className={style.body}>
@@ -44,7 +44,7 @@ function Getintouch() {
               </div>
             </div>
           </div>
-          
+
           <div className="row p-5">
             <div className={`col-lg-12 ${style.fromcontent}`}>
               <Box className={style.box} sx={{ width: 600 }}>
@@ -57,14 +57,11 @@ function Getintouch() {
                       >
                         Type
                       </InputLabel>
-                      <NativeSelect
-                        fullWidth
-                        defaultValue={null}
-                      >
+                      <NativeSelect fullWidth defaultValue={null}>
                         <option>Select..</option>
-                        <option >Course</option>
-                        <option >Venue</option>
-                        <option >Event</option>
+                        <option>Course</option>
+                        <option>Venue</option>
+                        <option>Event</option>
                       </NativeSelect>
                     </div>
                   </div>
@@ -81,7 +78,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
-                         <option>Select..</option>
+                        <option>Select..</option>
                         <option value={10}>Dubai</option>
                         <option value={20}>AI AIN</option>
                         <option value={30}>Abu Dhabi</option>
@@ -135,7 +132,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
-                         <option>Select..</option>
+                        <option>Select..</option>
                         <option value={10}>AE day</option>
                         <option value={20}>Fun day </option>
                         <option value={30}>After School Activity</option>
@@ -158,7 +155,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
-                         <option>Select..</option>
+                        <option>Select..</option>
                         <option value={10}>AE day</option>
                         <option value={20}>Fun day </option>
                         <option value={30}>After School Activity</option>
@@ -180,7 +177,8 @@ function Getintouch() {
                         className={style.TextField}
                       />
                     </div>
-                  </div><br/>
+                  </div>
+                  <br />
                   <h2>Contact Information</h2>
 
                   <div className="row pt-4">
@@ -269,7 +267,7 @@ function Getintouch() {
                           variant="contained"
                           sx={{ width: 200 }}
                         >
-                         Get Liested
+                          Get Liested
                         </Button>
                       </center>
                     </div>
@@ -282,7 +280,7 @@ function Getintouch() {
       </section>
 
       {/* second form  */}
-      
+
       <KidzappFeed />
     </div>
   );

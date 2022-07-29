@@ -356,7 +356,7 @@
 
 module.exports.responseMessages = {
     language:                                     "ar",
-    sign_in_register:                             "تسجيل الدخول / التسجيل لحجز أي تجربة - لا يستغرق الأمر وقتًا!",
+    s1ign_in_register:                             "تسجيل الدخول / التسجيل لحجز أي تجربة - لا يستغرق الأمر وقتًا!",
     arabic:                                       "عربى",
     book_now:                                     "احجز الآن",
     book_your_slot_for:                           "كتاب لك فتحة ل",
@@ -394,6 +394,7 @@ module.exports.responseMessages = {
     email_add:                                    "عنوان البريد الإلكتروني",
     kids_Act_by_cat:                              "البحث بالفئة عن أنشطة الأطفال",
     find_act:                                     "البحث عن الأنشطة",
+    find_act1:                                      " الاكتشاف",
     free_activity:                                "نشاط مجاني",
     confirm_order:                                "تأكيد الطلب",
     confirm_booking:                              "تأكيد الحجز",
@@ -792,3 +793,19 @@ module.exports.responseMessages = {
     please_visit_fawry:                           "يرجى زيارة موقع Fawry Cash لإتمام عملية الدفع. استخدم هذا الارتباط للعثور على موقع بالقرب منك"
 
 }
+
+// const language = {
+//     booking_completed: {
+//         en: '',
+//         ar: '',
+//     }
+// };
+
+
+// const redux = {
+//     key: 'en',
+// };
+
+// <p>{booking_completed[key]}</p>
+
+
