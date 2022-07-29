@@ -111,7 +111,7 @@ function HomeHandpicked() {
       {/* Headings */}
 
       <div className={`${style.headingDiv}`} >
-        <h1 className={style.heading}>{getResponseMessage(constants).add_to_wishlist_access_profile} </h1>
+        <h1 className={style.heading}>{getResponseMessage(constants).find_best_place_uae} </h1>
         {/* <h1 className={style.heading}>kids in the UAE</h1> */}
         <h1 className={style.h1}>{getResponseMessage(constants).hand_pick_exp}</h1>
         <p className={style.p}>{getResponseMessage(constants). Our_pick_of_the_best_kids_activities_in_UAE}</p>
