@@ -33,9 +33,9 @@ const style1 = {
 };
 export let constants = "";
 const Header = () => {
-  if (typeof window !== "undefined") {
-    var dropdownValue = localStorage.getItem("language");
-  }
+  // if (typeof window !== "undefined") {
+  //   var dropdownValue = localStorage.getItem("language");
+  // }
 
   const [Language, setLanguage] = useState("ae");
   const [open, setOpen] = useState(false);
@@ -108,9 +108,9 @@ const Header = () => {
                         className={style.languagebtn}
                             
                             size="small"
-                            value=
+                            value={language}
                             // {dropdownValue}
-                            {dropdownValue ? dropdownValue : "ae"}
+                            // {dropdownValue ? dropdownValue : "ae"}
                             // defaultValue={10}
                             label="Language"
                           >
