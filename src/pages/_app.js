@@ -3,7 +3,8 @@ import Head from 'next/head'
 import Footer from '../Components/Footer'
 import '../styles/globals.css'
 import {Provider} from 'react-redux'
-import store from '../Redux/Store'
+// import store from '../Redux/Store'
+import {wrapper} from '../Redux/Store'
 function MyApp({ Component, pageProps }) {
   // module.exports = {
   //   eslint: {
@@ -34,13 +35,13 @@ function MyApp({ Component, pageProps }) {
       </Head>
     
 
-      <Provider store={store}>
+      {/* <Provider store={store}> */}
       <Navbar/>
       <Component {...pageProps} />
       <Footer/>
-      </Provider>
+      {/* </Provider> */}
     </>
   );
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp)

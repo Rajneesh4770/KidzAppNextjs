@@ -1,0 +1,75 @@
+.section1{
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+.backbutton{
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+background: linear-gradient(to right, #0575E6, #00F260); 
+}
+.backbutton:hover{
+    transform: translateX(-2px);
+}
+.backicon:hover{
+    transform: translateX(-1px);
+}
+.leftimg1{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+}
+.leftimg1:hover{
+    transform: translateY(-2px);
+}
+.Bookingbtn{
+    float: right;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color: #e35b26;
+}
+.Bookingbtn:hover{
+    background-color: #e35b26;
+    transform: translateY(-2px);
+}
+.cardbutton2{
+    background: linear-gradient(to right, #0575E6, #00F260); 
+    color: white;
+}.cardbutton2:hover{
+    transform: translateY(-1px) ;
+}
+.agetext{
+    float: center;
+    font-weight: 600;
+    color: #19aff4;
+    font-size: 18px;
+}
+.timediv{
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 90px;
+    color: black;
+}
+.boxicon{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.paragraphdiv{
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 120px;
+    color: black;
+
+}
+.paragraphtext{
+    font-weight: 600;
+}
+.icons{
+    color: #e35b26;
+}

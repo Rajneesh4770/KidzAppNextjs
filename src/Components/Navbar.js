@@ -88,7 +88,8 @@ const Header = () => {
                         <Link href="/Blog">Blog</Link>
                       </li>
                       <li>
-                        <Link href="/">KidzAppAwards</Link>
+                        <Link href="/KidzappAward">
+                          KidzAppAwards</Link>
                       </li>
                       <li>
                         <Link href="/">KidzAppTV</Link>
