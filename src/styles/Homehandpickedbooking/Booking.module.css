@@ -166,5 +166,5 @@ background: linear-gradient(to right, #0575E6, #00F260);
 .submitbtn{
     width: 100% !important;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
