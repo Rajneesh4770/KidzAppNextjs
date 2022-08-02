@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 const Booking = () => {
+    
+
   return (
     <>
       <section className={style.section1}>
@@ -34,11 +36,7 @@ const Booking = () => {
                     <div className="col-6">
                       <h1>Dubai Miracle Garden</h1>
                     </div>
-                    <div className="col-6">
-                      <Button className={style.Bookingbtn} variant="contained">
-                        Book Now
-                      </Button>
-                    </div>
+                    
                   </div>
                   {/* second row in col-6 */}
                   <div className="row mt-4">
@@ -85,7 +83,9 @@ const Booking = () => {
                 {/* right cards */}
                 <div className="col-lg-4 col-sm-12">
                   <div className={style.rightsection}>
-                    <div className={`row pt-3 container ${style.rightsectiondiv}`}>
+                    <div
+                      className={`row pt-3 container ${style.rightsectiondiv}`}
+                    >
                       <div className="col-6 ">
                         <p className={style.datetimecontent}>
                           Select Desired Date & Time
@@ -96,6 +96,23 @@ const Booking = () => {
                           <DateRangeIcon />
                           view schedule
                         </button>
+                      </div>
+                      <div className="row mt-4">
+                        <div className="col-lg-12">
+                          <div
+                            id="date-picker-example"
+                            class="md-form md-outline input-with-post-icon datepicker"
+                            inline="true"
+                          >
+                            <input
+                              placeholder="Select date "
+                              type="date"
+                              id="example"
+                              class="form-control"
+                            />
+                            
+                          </div>
+                        </div>
                       </div>
                       <div className="row mt-4 container">
                         <div className="col-12">
@@ -122,27 +139,40 @@ const Booking = () => {
                       </div>
                       <div className="row mt-4">
                         <div className="col-12">
-                        <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-  <label class="form-check-label" for="flexCheckDefault">
-    I agree to the 
-    <Link href="/FooterPages/PrivacyPolicy"> 
-    <span className={style.checkboxlink}> term & conditions  </span></Link>
-    , and to the below  aditional term.
-  </label>
-</div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                              I agree to the
+                              <Link href="/FooterPages/PrivacyPolicy">
+                                <span className={style.checkboxlink}>
+                                  {" "}
+                                  term & conditions{" "}
+                                </span>
+                              </Link>
+                              , and to the below aditional term.
+                            </label>
+                          </div>
                         </div>
-
                       </div>
                       <div className="row">
                         <div className="col-lg-12">
-                        <Button variant="contained" color="success" className={style.submitbtn}>
-  Submit
-</Button>
+                          <Button
+                            variant="contained"
+                            color="success"
+                            className={style.submitbtn}
+                          >
+                            Submit
+                          </Button>
                         </div>
-
                       </div>
-
                     </div>
                   </div>
                 </div>

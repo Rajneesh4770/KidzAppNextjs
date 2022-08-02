@@ -132,8 +132,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
     margin: auto !important;
 }
 .schedulebutton{
-    /* float: right; */
-    /* margin-right: 10px; */
+    
     margin-top: -3px !important;
     border: none;
     background-color: white;
