@@ -100,7 +100,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
  box-shadow: rgb(0, 0, 0)0px  2px 4px;
 }
 .icon{
-    font-size: 34px;
+    font-size: 34px !important;
 }
 .icon:hover{
     transform: translateY(-2px);
