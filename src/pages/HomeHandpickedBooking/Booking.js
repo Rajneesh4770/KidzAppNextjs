@@ -41,9 +41,10 @@ const Booking = () => {
                       <h1>Dubai Miracle Garden</h1>
                     </div>
                     <div className="col-6">
+                    <Link href="/HomeHandpickedBooking/Booking2">
                       <Button className={style.Bookingbtn} variant="contained">
                         Book Now
-                      </Button>
+                      </Button></Link>
                     </div>
                   </div>
                   {/* second row in col-6 */}

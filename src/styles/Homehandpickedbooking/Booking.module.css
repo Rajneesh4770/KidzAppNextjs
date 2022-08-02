@@ -120,3 +120,52 @@ background: linear-gradient(to right, #0575E6, #00F260);
 .card:hover{
     transform: translateY(-2px);
 }
+/* booking2  */
+
+.rightsection{
+    border-radius: 10px !important;
+    background-color: #F6F6F6;
+    width: 100%;
+    
+}
+.rightsectiondiv{
+    margin: auto !important;
+}
+.schedulebutton{
+    /* float: right; */
+    /* margin-right: 10px; */
+    margin-top: -3px !important;
+    border: none;
+    background-color: white;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+}
+.schedulebutton:hover{
+    transform: translateY(-1px);
+}
+
+.pricediv{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+    height: 50px;
+}
+.totalprice{
+    padding: 10px;
+    float: left;
+}
+.aedprice{
+    padding: 10px;
+    float: right;
+    color: red;
+}
+.checkboxlink{
+    color: rgb(196, 54, 54);
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.submitbtn{
+    width: 100% !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
