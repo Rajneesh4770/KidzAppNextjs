@@ -48,7 +48,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
     font-size: 18px;
 }
 .timediv{
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     border-radius: 10px;
     box-shadow: rgb(0, 0, 0)0px 3px 6px;
     height: 90px;
@@ -56,11 +56,12 @@ background: linear-gradient(to right, #0575E6, #00F260);
 }
 .boxicon{
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 10px;
 }
 .paragraphdiv{
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
+   
     border-radius: 10px;
     box-shadow: rgb(0, 0, 0)0px 3px 6px;
     height: 120px;
@@ -68,8 +69,54 @@ background: linear-gradient(to right, #0575E6, #00F260);
 
 }
 .paragraphtext{
+    padding-top: 10px;
     font-weight: 600;
 }
 .icons{
     color: #e35b26;
+}
+.priceoffer{
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 100px;
+
+}
+.delprice{
+    color: #525353;
+}
+.price{
+    color: red;
+}
+.socialicon{
+    display: flex;
+    gap: 10%;
+ background-color: #F6F6F6;
+ padding: 20px;
+ justify-content: center;
+ border-radius: 10px;
+ color: #19aff4;
+ font-size: 34px;
+ box-shadow: rgb(0, 0, 0)0px  2px 4px;
+}
+.icon{
+    font-size: 34px;
+}
+.icon:hover{
+    transform: translateY(-2px);
+}
+.iconheading{
+    color: black;
+}
+.secondheading{
+    color: #9C5CA7;
+}
+.card{
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+}
+.card:hover{
+    transform: translateY(-2px);
 }
