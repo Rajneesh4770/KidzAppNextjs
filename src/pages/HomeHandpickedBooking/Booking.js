@@ -404,6 +404,7 @@ const Booking = () => {
 
                   <div className={`card mt-5 ${style.card}`}>
                     <img
+                    className={style.cardimg}
                       src="https://testimages.kidzapp.com/media/venues/48f0fe2b-65ab-48d9-8dd8-845227c7d5a8/the-ice-factory.jpg"
                       class="card-img-top"
                       alt="..."

@@ -191,7 +191,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
 .socialicondiv{
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background-color: #F6F6F6;
-    width: 100%;
+    width: 90%;
     float: right;
     border-radius: 10px;
 }
@@ -212,6 +212,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
 }
 .iconheading{
     color: #e35b26;
+   
 }
 .secondheading{
     color: #9C5CA7;
@@ -221,8 +222,11 @@ background: linear-gradient(to right, #0575E6, #00F260);
     overflow: hidden;
     border: none !important;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    /* width: 80%; */
+    width: 90%;
     float: right;
+}
+.cardimg{
+    height: 230px !important;
 }
 .card:hover{
     transform: translateY(-2px);
