@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 const Booking = () => {
-    
 
   return (
     <>

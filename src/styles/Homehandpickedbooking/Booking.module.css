@@ -1,5 +1,5 @@
 .section1{
-    margin-top: 110px;
+    margin-top: 150px;
     margin-bottom: 50px;
 }
 .backbutton{
@@ -19,7 +19,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
     width: 100%;
     border-radius: 15px;
     margin-bottom: 10px;
-    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)
 }
 .leftimg1:hover{
     transform: translateY(-2px);
@@ -47,12 +47,14 @@ background: linear-gradient(to right, #0575E6, #00F260);
     color: #19aff4;
     font-size: 18px;
 }
-.timediv{
-    /* border: 1px solid grey; */
+.rating{
+    width: 100px;
+    justify-content: center;
     border-radius: 10px;
-    box-shadow: rgb(0, 0, 0)0px 3px 6px;
-    height: 90px;
-    color: black;
+    display: flex;
+    padding: 5px;
+    background-color: #e35b26;
+    color: white;
 }
 .boxicon{
     text-align: center;
@@ -69,11 +71,43 @@ background: linear-gradient(to right, #0575E6, #00F260);
 
 }
 .paragraphtext{
-    padding-top: 10px;
+    /* padding-top: 10px; */
     font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-.icons{
+.paragraphtext1{
+    font-weight: 600;
+    margin-top: 10px;
+}
+.staricons{
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+
+}
+.timeicons{
     color: #e35b26;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+
+}
+.timediv{
+    margin-top: 10px;
+    display: flex;
+}
+.locationicons{
+    color: #e35b26;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+
+}
+.locationdiv{
+    display: flex;
+    margin-top: 10px;
 }
 .priceoffer{
     /* border: 1px solid grey; */
@@ -85,19 +119,90 @@ background: linear-gradient(to right, #0575E6, #00F260);
 .delprice{
     color: #525353;
 }
+.blog_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.blogSpan{
+    margin:0px 25px 0 0;
+}
+.blog_rating{
+    background-color: #e35b26;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+.blog_age{
+    border: 1px solid #00adee;
+    padding: 5px 15px;
+    color: #00adee;
+    border-radius: 5px;
+}
+.blog_cat{
+    border: 1px solid #e35b26;
+    padding: 5px 15px;
+    color: #e35b26;
+    border-radius: 5px;
+}
+.price_title{
+    background-color: #e8ebef;
+    color: #000;
+}
+.price_txt{
+    color: #000!important;
+    margin: 0;
+    padding: 10px;
+
+}
+.blog_title1{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.blog_title2{
+    font-size: 18px;
+    font-weight: 500;
+}
+.map{
+    width:100%;
+    height:450px;
+    border:none;
+}
+.days{
+    font-size: 20px;
+    background: #00adee;
+    padding: 16px;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+}
+.b_icon {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
 .price{
     color: red;
+}
+.socialicondiv{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: #F6F6F6;
+    width: 100%;
+    float: right;
+    border-radius: 10px;
 }
 .socialicon{
     display: flex;
     gap: 10%;
- background-color: #F6F6F6;
  padding: 20px;
  justify-content: center;
- border-radius: 10px;
- color: #19aff4;
+ color: #222;
  font-size: 34px;
- box-shadow: rgb(0, 0, 0)0px  2px 4px;
+ 
 }
 .icon{
     font-size: 34px !important;
@@ -106,7 +211,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
     transform: translateY(-2px);
 }
 .iconheading{
-    color: black;
+    color: #e35b26;
 }
 .secondheading{
     color: #9C5CA7;
@@ -115,7 +220,9 @@ background: linear-gradient(to right, #0575E6, #00F260);
     border-radius: 10px !important;
     overflow: hidden;
     border: none !important;
-    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    /* width: 80%; */
+    float: right;
 }
 .card:hover{
     transform: translateY(-2px);
@@ -132,7 +239,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
     margin: auto !important;
 }
 .schedulebutton{
-    
+    border-radius: 3px !important;
     margin-top: -3px !important;
     border: none;
     background-color: white;
@@ -144,7 +251,7 @@ background: linear-gradient(to right, #0575E6, #00F260);
 
 .pricediv{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: rgb(0, 0, 0)0px 2px 4px;
     height: 50px;
 }
