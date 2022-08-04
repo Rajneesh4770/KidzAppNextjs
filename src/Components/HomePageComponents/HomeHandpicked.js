@@ -68,9 +68,15 @@ function HomeHandpicked() {
     autoplaySpeed: 1000,
 
     responsive: [{
+      breakpoint:1500,
+      settings:{
+slidesToShow:2,
+      }
+    },
+    {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
       }
     },
     {

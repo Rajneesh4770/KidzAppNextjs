@@ -16,3 +16,25 @@
     font-weight: 600;
     line-height: 46px;
 }
+.ul{
+    display: flex;
+    gap: 90px;
+    margin-top: 25px;
+}
+.ul li{
+    list-style: none;
+
+}
+.circleimgtext{
+    border: 4px solid #48B57C;
+    border-radius: 12px;
+    text-align: center;
+    padding: 6px;
+}
+
+.circlesection::before{
+    background-image: url("https://kidzapp.com/images/before-back-image.png");
+    background-repeat: repeat;
+    height: 20px;
+    width: 100%;
+}

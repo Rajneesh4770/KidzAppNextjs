@@ -5,7 +5,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import {Rating} from "@mui/material"
-
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Slider from "react-slick";
 const Booking = () => {
   const Setting = {
@@ -24,6 +24,7 @@ const Booking = () => {
               <div className="row">
                 <div className="col-lg-8 col-sm-12">
                   <Slider {...Setting}>
+      
                     <img
                       className={style.leftimg1}
                       src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg"
@@ -62,18 +63,18 @@ const Booking = () => {
                     <div className="col-lg-12">
                       <div className="location pt-3 pb-3">
                         <span>
-                          <i class="fa-solid fa-location-dot"></i>
+                          <i class="fa-solid fa-location-dot" style={{color:"#19aff4", fontSize:"22px"}}></i>
                         </span>
-                        &nbsp;
+                        &nbsp; &nbsp;
                         <span>
                           The Dubai Mall, Downtown, Downtown / Business Bay{" "}
                         </span>
                       </div>
                       <div className="time pb-3">
                         <span>
-                          <i class="fa-solid fa-clock"></i>
+                          <i class="fa-solid fa-clock" style={{color:"#19aff4", fontSize:"22px"}}></i>
                         </span>
-                        &nbsp;
+                        &nbsp; &nbsp;
                         <span>Daily 10:00 to 22:00</span>
                       </div>
                     </div>
@@ -404,6 +405,7 @@ const Booking = () => {
                       alt="..."
                     />
                     <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
+                    <img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg" className={style.dealimg}/>
                     <div className="card-body">
                       <h5 className="card-title">KidZania Dubai</h5>
 
@@ -427,6 +429,7 @@ const Booking = () => {
                       <h6 className={`card-title ${style.secondheading} pt-2`}>
                       round Level, Gate Avenue, DIFC, Dubai
                       </h6>
+                      <span><del>AED 199</del></span> &nbsp; <span style={{color:'red'}}> AED 179</span>
                     </div>
                   </div>
                   <div className={`card mt-5 ${style.card}`}>
@@ -444,6 +447,7 @@ const Booking = () => {
                       <h6 className={`card-title ${style.secondheading} pt-2`}>
                       The Dubai Mall
                       </h6>
+                      <span><del>AED 99</del></span> &nbsp; <span style={{color:'red'}}> AED 79</span>
                     </div>
                   </div>
                 </div>
