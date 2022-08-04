@@ -132,6 +132,9 @@ font-size: 14px;
     color: #E35B26;
     width: 40%;
   }
+  .mapCards h2{
+   padding-top: 1.25rem;
+  }
   .location p:last-child{
     width: 60%;
   }

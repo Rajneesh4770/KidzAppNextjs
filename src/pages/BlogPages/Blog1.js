@@ -127,7 +127,7 @@ const Blog1 = () => {
        {i%2===0?
            <div className={`row ${style.cardRow}`}>
            <div className="col-lg-7 col-md-6">
-             <h2 className="pt-4">{item.mainHeading}</h2>
+             <h2>{item.mainHeading}</h2>
 
              <p>{item.detail ? item.detail : ""}</p>
              <p>{item.explanation}</p>
@@ -197,7 +197,7 @@ const Blog1 = () => {
            </div>
          </div>
          <div className="col-lg-7 col-md-6">
-           <h2 className="pt-4">{item.mainHeading}</h2>
+           <h2>{item.mainHeading}</h2>
 
            <p>{item.detail ? item.detail : ""}</p>
            <p>{item.explanation}</p>
