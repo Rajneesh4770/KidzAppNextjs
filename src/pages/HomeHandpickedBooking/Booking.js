@@ -437,6 +437,7 @@ const Booking = () => {
                       alt="..."
                     />
                     <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
+                    
                     <div className="card-body">
                       <h5 className="card-title">Rage Store & Skate Bowl</h5>
 
