@@ -110,7 +110,7 @@ function HomeKidsActivitiesReviews() {
                             </div>
 
                             <div className=" col-6">
-                              <div className={`${style.starRate} ${style.rightText} ${style.textright}   absolute-center`}>
+                              <div className={`${style.starRate} ${style.rightText} ${style.textright}  absolute-center`}>
                                 <img
                                 className={style.starRateimg}
                                   src="https://drfsb8fjssbd3.cloudfront.net/images/new-white-star.svg"
