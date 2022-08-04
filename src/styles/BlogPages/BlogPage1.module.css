@@ -1,0 +1,68 @@
+.blog1{
+    margin-top: 100px;
+}
+.searchAndBanner{
+    background-image: url(https://kidzapp.com/images/blog-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0;
+}
+.container{
+    max-width: 600px;;
+}
+ .searchInput {
+    padding:10px 22px;
+    border-radius: 12px;
+  }
+ .searchBtn{
+    margin-left: 10px;
+    background-color: #00aff4;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 20px;
+    border-radius: 12px;
+  }
+   .goBackBtn{
+    font-weight: 700 ;
+  }
+ 
+  .mainImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .mainText h1{
+    color: #E35B26;
+    font-weight: 700;
+  }
+  .textSearchButton{
+    text-align: right;
+  }
+  .mainText h6{
+    margin-right: 20px;
+  }
+  .leftContent i{
+color: #965DA5;
+margin-right: 8px;
+  }
+  .mainText p{
+    padding: 10px 0 !important;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+.elementorDivider{
+  padding-top: 32px;
+  line-height: 0;
+  font-size: 0;
+  padding-bottom: 28px;
+}
+.elementorDividerSeparator{
+  display: inline-block;
+  border-top-style: dotted;
+  border-top-width: 3px;
+  border-top-color: #14bbef;
+  width: 100%;
+}
