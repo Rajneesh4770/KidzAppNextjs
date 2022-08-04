@@ -5,8 +5,13 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../../Redux/index'
 
 const Booking = () => {
+    const count = useSelector((state) => state.counter.value)
+    const dispatch = useDispatch()
+  
     const [date,setDate] = useState(false);
     const Setting = {
         slidesToShow: 1,
@@ -235,13 +240,13 @@ const Booking = () => {
                                                                 <span>Per child</span>
                                                             </div>
                                                             <div className={`  ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onclick="quantityMinus(5114,57,1477,0)" id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value="0"
+                                                                    value={count}
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
@@ -249,7 +254,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onclick="quantityPlus(5114,57,1477,0)" id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
                                                             </div>
                                                             <div className={`  ${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
@@ -269,13 +274,13 @@ const Booking = () => {
                                                                 <span>Per person</span>
                                                             </div>
                                                             <div className={`  ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onclick="quantityMinus(5114,57,1477,0)" id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value="0"
+                                                                    value={count}
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
@@ -283,7 +288,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onclick="quantityPlus(5114,57,1477,0)" id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
                                                             </div>
                                                             <div className={`${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
@@ -303,13 +308,13 @@ const Booking = () => {
                                                                 <span>1 Adult</span>
                                                             </div>
                                                             <div className={` ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onclick="quantityMinus(5114,57,1477,0)" id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value="0"
+                                                                    value={count}
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
@@ -317,7 +322,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onclick="quantityPlus(5114,57,1477,0)" id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
                                                             </div>
                                                             <div className={` ${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
