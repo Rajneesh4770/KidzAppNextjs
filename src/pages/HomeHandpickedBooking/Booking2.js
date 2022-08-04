@@ -290,7 +290,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+" id="increment-btn5114" />
                                                             </div>
                                                             <div className={`${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
@@ -310,7 +310,7 @@ const Booking = () => {
                                                                 <span>1 Adult</span>
                                                             </div>
                                                             <div className={` ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-" id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
@@ -324,7 +324,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+" id="increment-btn5114" />
                                                             </div>
                                                             <div className={` ${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
