@@ -10,9 +10,9 @@ import { decrement, increment } from '../../Redux/index'
 import { decrementAdult, incrementAdult } from '../../Redux/index'
 
 const Booking = () => {
-    const count = useSelector((state) => state.counter.value)
+    // const count = useSelector((state) => state.counter.value)
     // const count2 =useSelector((state) => state.counterAdult.value1)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
   
     const [date,setDate] = useState(false);
     const Setting = {
@@ -242,13 +242,13 @@ const Booking = () => {
                                                                 <span>Per child</span>
                                                             </div>
                                                             <div className={`  ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-"  id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value={count}
+                                                                    value='0'
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
@@ -256,7 +256,7 @@ const Booking = () => {
                                                                     required=""
                                                                     readonly=""
                                                                 />
-                                                                <input type="button" className={style.increment_btn} value="+" onClick={() => dispatch(increment())} id="increment-btn5114" />
+                                                                <input type="button" className={style.increment_btn} value="+"  id="increment-btn5114" />
                                                             </div>
                                                             <div className={`  ${style.pName}`}>
                                                                 <p className={` m-0 ${style.ptext}`}>AED 0.00</p>
@@ -276,13 +276,13 @@ const Booking = () => {
                                                                 <span>Per person</span>
                                                             </div>
                                                             <div className={`  ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-" onClick={() => dispatch(decrement())} id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-"  id="decrement-btn5114" />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value={count}
+                                                                    value='0'
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
@@ -316,7 +316,7 @@ const Booking = () => {
                                                                     name="adPrice1"
                                                                     id="people-count5114"
                                                                     className={style.people_count}
-                                                                    value={count}
+                                                                    value='0'
                                                                     data-type="Unicorn Box"
                                                                     data-max="5"
                                                                     data-price="0.1"
