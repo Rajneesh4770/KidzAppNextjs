@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../Redux/index'
-import { decrementAdult, incrementAdult } from '../../Redux/index'
+// import { useSelector, useDispatch } from 'react-redux'
+// import { decrement, increment } from '../../Redux/index'
+// import { decrementAdult, incrementAdult } from '../../Redux/index'
 
 const Booking = () => {
     // const count = useSelector((state) => state.counter.value)
