@@ -276,7 +276,7 @@ const Booking = () => {
                                                                 <span>Per person</span>
                                                             </div>
                                                             <div className={`  ${style.pInput}`}>
-                                                                <input type="button" className={style.decrement_btn} value="-"  id="decrement-btn5114" />
+                                                                <input type="button" className={style.decrement_btn} value="-"  id="decrement-btn5114 " />
                                                                 <input
                                                                     type="text"
                                                                     name="adPrice1"
