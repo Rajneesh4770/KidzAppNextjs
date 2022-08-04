@@ -1,18 +1,13 @@
+import react,{useState} from 'react'
 import style from "../../styles/Homehandpickedbooking/Booking.module.css";
 import Router from "next/router";
 import Link from "next/link";
 import { Button } from "@mui/material";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import StarBorderPurple500Icon from "@mui/icons-material/StarBorderPurple500";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
 
 const Booking = () => {
+    const [date,setDate] = useState(false);
     const Setting = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -209,12 +204,13 @@ const Booking = () => {
                                         <div className="row mt-4">
                                             <div className="col-lg-6">
                                                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-                                                    <input placeholder="Select date " type="date" id="example" class="form-control" />
+                                                    <input placeholder="Select date " type="date" id="example" class="form-control" onChange={(e)=>{setDate(e)}}/>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6"></div>
                                         </div>
-
+                                    {date ? 
+                                    <>
                                         <div className="row mt-4">
                                             <div className="col-lg-12">
                                                 <div className={style.payApp}>
@@ -347,7 +343,8 @@ const Booking = () => {
                                                 </div>
                                             </div>
                                         </div>
-
+                                        </>
+: <div></div>}
                                         <div className="row mt-4">
                                             <div className="col-lg-12">
                                                 <div className={`${style.payApp} ${style.payApp1} ${style.payApp2}`}>
@@ -360,7 +357,7 @@ const Booking = () => {
                                                 </div>
                                             </div>
                                         </div>
-
+                                       
                                         <div className="row mt-4">
                                             <div className="col-12">
                                                 <div class="form-outline">
@@ -368,7 +365,7 @@ const Booking = () => {
                                                 </div>
                                             </div>
                                         </div>
-
+                                       
                                         <div className="row mt-4">
                                             <div className="col-12">
                                                 <div class="form-check">

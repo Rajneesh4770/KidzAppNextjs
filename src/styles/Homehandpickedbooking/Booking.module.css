@@ -23,13 +23,7 @@
     width: 100%;
     border-radius: 15px;
     margin-bottom: 10px;
-<<<<<<< HEAD
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    /* position: relative; */
-    
-=======
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
->>>>>>> 06b1026f64025e1e532fd046b3e71ffde366d9d1
 }
 
 .leftimg1:hover {
@@ -152,8 +146,11 @@
 .blog_title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     margin: 15px 0;
+}
+.blog_title h4{
+    text-align: right;
 }
 
 .startext {
@@ -301,19 +298,14 @@
     position: absolute;
     right: 0;
 }
-<<<<<<< HEAD
 .dealimg{
     position: absolute;
-    width: 50px;
-    height: 50px;
+    height: 15%;
+    width: 15%;
     padding: 5px;
-
 }
-.card:hover{
-=======
 
 .card:hover {
->>>>>>> 06b1026f64025e1e532fd046b3e71ffde366d9d1
     transform: translateY(-2px);
 }
 

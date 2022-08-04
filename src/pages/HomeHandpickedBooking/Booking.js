@@ -39,8 +39,16 @@ const Booking = () => {
                     <div className="col-12">
                       <div className={style.blog_title}>
                         <h2>Special Offer: KidZania Dubai</h2>
-                        <h4>AED 79</h4>
+                        <div> <h4>AED 79</h4>
+                        <Link href="/HomeHandpickedBooking/Booking2">
+                        <button className={style.blog_rating}>
+                          Book Now
+                        </button></Link>
+                        </div>
+                       
+                        
                       </div>
+             
                       <p>Theme Parks, Fun & Play</p>
                       <div className={style.blog_btn}>
                         <span
