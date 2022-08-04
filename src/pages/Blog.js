@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Axios from "axios";
+import Link from "next/link"
 import { baseUrl } from "../config";
 import styleblog from "../styles/Blog.module.css";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
@@ -135,6 +136,7 @@ function Blog() {
           <div className="row">
             {data?.map((item) => {
               return (
+                <Link href="/BlogPages/Blog1">
                 <div className="col-lg-4 col-md-6 col-sm-6" key={item.id}>
                   <div className=" m-2">
                     <article className={` ${styleblog.blogcard}`}>
@@ -171,6 +173,7 @@ function Blog() {
                     </article>
                   </div>
                 </div>
+                </Link>
               );
             })}
           </div>

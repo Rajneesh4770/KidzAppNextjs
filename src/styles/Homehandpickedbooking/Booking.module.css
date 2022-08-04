@@ -1,0 +1,170 @@
+.section1{
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+.backbutton{
+    cursor: pointer;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+background: linear-gradient(to right, #0575E6, #00F260); 
+}
+.backbutton:hover{
+    transform: translateX(-2px);
+}
+.backicon:hover{
+    transform: translateX(-1px);
+}
+.leftimg1{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+}
+.leftimg1:hover{
+    transform: translateY(-2px);
+}
+.Bookingbtn{
+    float: right;
+    border-radius: 10px !important;
+    margin-top: 10px !important;
+    color: white;
+    background-color: #e35b26;
+}
+.Bookingbtn:hover{
+    background-color: #e35b26;
+    transform: translateY(-2px);
+}
+.cardbutton2{
+    background: linear-gradient(to right, #0575E6, #00F260); 
+    color: white;
+}.cardbutton2:hover{
+    transform: translateY(-1px) ;
+}
+.agetext{
+    float: center;
+    font-weight: 600;
+    color: #19aff4;
+    font-size: 18px;
+}
+.timediv{
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 90px;
+    color: black;
+}
+.boxicon{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.paragraphdiv{
+    /* border: 1px solid grey; */
+   
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 120px;
+    color: black;
+
+}
+.paragraphtext{
+    padding-top: 10px;
+    font-weight: 600;
+}
+.icons{
+    color: #e35b26;
+}
+.priceoffer{
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 3px 6px;
+    height: 100px;
+
+}
+.delprice{
+    color: #525353;
+}
+.price{
+    color: red;
+}
+.socialicon{
+    display: flex;
+    gap: 10%;
+ background-color: #F6F6F6;
+ padding: 20px;
+ justify-content: center;
+ border-radius: 10px;
+ color: #19aff4;
+ font-size: 34px;
+ box-shadow: rgb(0, 0, 0)0px  2px 4px;
+}
+.icon{
+    font-size: 34px !important;
+}
+.icon:hover{
+    transform: translateY(-2px);
+}
+.iconheading{
+    color: black;
+}
+.secondheading{
+    color: #9C5CA7;
+}
+.card{
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+}
+.card:hover{
+    transform: translateY(-2px);
+}
+/* booking2  */
+
+.rightsection{
+    border-radius: 10px !important;
+    background-color: #F6F6F6;
+    width: 100%;
+    
+}
+.rightsectiondiv{
+    margin: auto !important;
+}
+.schedulebutton{
+    
+    margin-top: -3px !important;
+    border: none;
+    background-color: white;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+}
+.schedulebutton:hover{
+    transform: translateY(-1px);
+}
+
+.pricediv{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0)0px 2px 4px;
+    height: 50px;
+}
+.totalprice{
+    padding: 10px;
+    float: left;
+}
+.aedprice{
+    padding: 10px;
+    float: right;
+    color: red;
+}
+.checkboxlink{
+    color: rgb(196, 54, 54);
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.submitbtn{
+    width: 100% !important;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Link from "next/link"
 import getResponseMessage from '../../Language/multilingualServices';
 import { constants } from '../Navbar';
 import toast, { Toaster } from 'react-hot-toast';
@@ -104,15 +105,14 @@ function HomeHandpicked() {
   useEffect(() => {
     setNewlanguage(constants);
   }, [constants]);
-  const notify = () => toast('Successfully Booked.');
+  const notify = () => toast('Login & Book here');
 
   return (
-    <>
+    < div className={style.background}>
       {/* Headings */}
 
       <div className={`${style.headingDiv}`} >
         <h1 className={style.heading}>{getResponseMessage(constants).find_best_place_uae} </h1>
-        {/* <h1 className={style.heading}>kids in the UAE</h1> */}
         <h1 className={style.h1}>{getResponseMessage(constants).hand_pick_exp}</h1>
         <p className={style.p}>{getResponseMessage(constants). Our_pick_of_the_best_kids_activities_in_UAE}</p>
       </div>
@@ -162,10 +162,12 @@ function HomeHandpicked() {
                   <CardActions className='pb-3 '>
                     &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                     <span className={style.span2}>AED 99</span>
+                    <Link href="/HomeHandpickedBooking/Booking">
                     <Button className={style.cardbutton} size="small" color="error"
                       onClick={notify} >
                       Book Now
                     </Button>
+                    </Link>
                   </CardActions>
                 </Card>
 
@@ -183,7 +185,7 @@ function HomeHandpicked() {
       </div>
 
       <Toaster />
-    </>
+    </div>
   )
 }
 
