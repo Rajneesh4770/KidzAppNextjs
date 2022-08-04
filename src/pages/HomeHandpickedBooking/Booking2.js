@@ -7,9 +7,11 @@ import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../Redux/index'
+import { decrementAdult, incrementAdult } from '../../Redux/index'
 
 const Booking = () => {
     const count = useSelector((state) => state.counter.value)
+    // const count2 =useSelector((state) => state.counterAdult.value1)
     const dispatch = useDispatch()
   
     const [date,setDate] = useState(false);
@@ -86,7 +88,7 @@ const Booking = () => {
                                                         <div class="accordion-body">
                                                             <p>- The entry ticket allows you access for up to 2.5 hours max.</p>
                                                             <p>- Kids under 5 need to be accompanied by an adult.</p>
-                                                            <p>- This offer is not valid on public holidays.</p>
+                                                            <p>- This offer is notimport  valid on public holidays.</p>
                                                         </div>
                                                     </div>
                                                 </div>
