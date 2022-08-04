@@ -86,9 +86,9 @@ const Booking = () => {
                                                     </h2>
                                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                         <div class="accordion-body">
-                                                            <p>- The entry ticket allows you access for up to 2.5 hours max.</p>
-                                                            <p>- Kids under 5 need to be accompanied by an adult.</p>
-                                                            <p>- This offer is notimport  valid on public holidays.</p>
+                                                            <p> The entry ticket allows you access for up to 2.5 hours max.</p>
+                                                            <p> Kids under 5 need to be accompanied by an adult.</p>
+                                                            <p> This offer is notimport  valid on public holidays.</p>
                                                         </div>
                                                     </div>
                                                 </div>
