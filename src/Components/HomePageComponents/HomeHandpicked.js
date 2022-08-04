@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Link from "next/link"
 import getResponseMessage from '../../Language/multilingualServices';
 import { constants } from '../Navbar';
 import toast, { Toaster } from 'react-hot-toast';
@@ -57,13 +58,14 @@ function HomeHandpicked() {
 
   const settings1 = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     slideToRepeat: true,
-    autoplaySpeed: 2000,
+    autoplay:true,
+    autoplaySpeed: 1000,
 
     responsive: [{
       breakpoint: 1024,
@@ -103,18 +105,16 @@ function HomeHandpicked() {
   useEffect(() => {
     setNewlanguage(constants);
   }, [constants]);
-
-  const notify = () => toast('Successfully Booked.');
+  const notify = () => toast('Login & Book here');
 
   return (
-    <>
+    < div className={style.background}>
       {/* Headings */}
 
       <div className={`${style.headingDiv}`} >
-        <h1 className={style.heading}>{getResponseMessage(constants).add_to_wishlist_access_profile} </h1>
-        <h1 className={style.heading}>kids in the UAE</h1>
-        <h1 className={style.h1}>Handpicked Experiences</h1>
-        <p className={style.p}>Our pick of the best kids activities in Dubai, Abu Dhabi and the rest of the UAE</p>
+        <h1 className={style.heading}>{getResponseMessage(constants).find_best_place_uae} </h1>
+        <h1 className={style.h1}>{getResponseMessage(constants).hand_pick_exp}</h1>
+        <p className={style.p}>{getResponseMessage(constants). Our_pick_of_the_best_kids_activities_in_UAE}</p>
       </div>
 
       <div className={`container modifiedSlickBtn ${style.buttonRow}`}>
@@ -162,10 +162,12 @@ function HomeHandpicked() {
                   <CardActions className='pb-3 '>
                     &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                     <span className={style.span2}>AED 99</span>
+                    <Link href="/HomeHandpickedBooking/Booking">
                     <Button className={style.cardbutton} size="small" color="error"
                       onClick={notify} >
                       Book Now
                     </Button>
+                    </Link>
                   </CardActions>
                 </Card>
 
@@ -183,7 +185,7 @@ function HomeHandpicked() {
       </div>
 
       <Toaster />
-    </>
+    </div>
   )
 }
 

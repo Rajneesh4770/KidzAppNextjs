@@ -356,7 +356,7 @@
 
 module.exports.responseMessages = {
     language:                                     "ar",
-    sign_in_register:                             "تسجيل الدخول / التسجيل لحجز أي تجربة - لا يستغرق الأمر وقتًا!",
+    s1ign_in_register:                             "تسجيل الدخول / التسجيل لحجز أي تجربة - لا يستغرق الأمر وقتًا!",
     arabic:                                       "عربى",
     book_now:                                     "احجز الآن",
     book_your_slot_for:                           "كتاب لك فتحة ل",
@@ -394,6 +394,7 @@ module.exports.responseMessages = {
     email_add:                                    "عنوان البريد الإلكتروني",
     kids_Act_by_cat:                              "البحث بالفئة عن أنشطة الأطفال",
     find_act:                                     "البحث عن الأنشطة",
+    find_act1:                                      " الاكتشاف",
     free_activity:                                "نشاط مجاني",
     confirm_order:                                "تأكيد الطلب",
     confirm_booking:                              "تأكيد الحجز",
@@ -419,9 +420,11 @@ module.exports.responseMessages = {
     failed_desc:                                  "لقد فشل دفع الحجز الخاص بك ، يرجى إجراء حجز آخر. للعثور على تفاصيل الحجز الخاصة بك ، انتقل إلى الملف الشخصي -> حجوزاتي",
     created_on:                                   "تم إنشاؤها على:",
     find_best_place:                              "ابحث عن أفضل الأماكن لأخذ أطفالك إليها",
+    find_best_place_uae:                          ' اعثر على أفضل الأماكن لاصطحاب أطفالك في الإمارات العربية المتحدة',
+
     find_best_place_egp:                          "ابحث عن أفضل أماكن أنشطة الأطفال في مصر",
     get_in_touch:                                 "تواصل معنا",
-    as_featured_in:                               "ظهور إعلامي ",
+    as_featured_In:                               "ظهور إعلامي",
     get_listed:                                   "انضم إلينا",
     act_with_kids_in_uae:                         "أنشطة لأطفال الإمارات",
     our_picks:                                    "اختيارنا لأفضل أنشطة الأطفال في",
@@ -475,7 +478,7 @@ module.exports.responseMessages = {
     stay_upto_date:                               "ابق على اطلاع على هذا",
     latest_offers_and_deals:                      "أحدث العروض والصفقات",
     field_warn:                                   "هذه الخانة مطلوبة",
-    subscribe:                                    "الإشتراك",
+    subscribe1:                                    "الإشتراك",
     dont_show_again:                              "لا تظهره مرة أخرى",
     login_signUp:                                 " دخول/ تسجيل مشترك جديد",
     it_take_30_min:                               "انتظر ثلاثين ثانية فقط",
@@ -790,3 +793,19 @@ module.exports.responseMessages = {
     please_visit_fawry:                           "يرجى زيارة موقع Fawry Cash لإتمام عملية الدفع. استخدم هذا الارتباط للعثور على موقع بالقرب منك"
 
 }
+
+// const language = {
+//     booking_completed: {
+//         en: '',
+//         ar: '',
+//     }
+// };
+
+
+// const redux = {
+//     key: 'en',
+// };
+
+// <p>{booking_completed[key]}</p>
+
+

@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css";
 function HomeCrousel() {
   const [data, setData] = useState([]);
-  const [language, setLanguage] = useState("eg");
+  const [language, setLanguage] = useState("ae");
   useEffect(() => {
     Axios.get(
       baseUrl +
@@ -51,7 +51,7 @@ function HomeCrousel() {
           <img
             className={style.crouselImages}
             src="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
-            alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+            alt="Loading....."
           />
           <Carousel.Caption>
             <h1 className={style.crouselHeading}></h1>

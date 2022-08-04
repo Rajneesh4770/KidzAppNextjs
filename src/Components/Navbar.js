@@ -3,12 +3,9 @@ import style from "../styles/ComponentsCss/Navbar.module.css";
 import Link from "next/link";
 import HomeHandpicked from "./HomePageComponents/HomeHandpicked";
 import LoginIcon from "@mui/icons-material/Login";
-import {InputLabel,Select,MenuItem,FormControl} from "@mui/material"
-import SignIn from "../pages/Login/SignIn";
-import getResponseMessage from '../Language/multilingualServices'
-import Router from "next/router";
+import { InputLabel, Select, MenuItem, FormControl } from "@mui/material";
+import getResponseMessage from "../Language/multilingualServices";
 import Backdrop from "@mui/material/Backdrop";
-
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -16,6 +13,8 @@ import Typography from "@mui/material/Typography";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
+import { useSelector, useDispatch } from 'react-redux'
+import { ar, ae } from '../Redux/Langauge'
 
 const style1 = {
   position: "absolute",
@@ -32,17 +31,21 @@ const style1 = {
   alignItems: "center",
   flexDirection: "column",
 };
-export let constants = '';
+export let constants = "";
 const Header = () => {
+  // if (typeof window !== "undefined") {
+  //   var dropdownValue = localStorage.getItem("language");
+  // }
 
-  const [Language,setLanguage] = useState('ae')
+  const [Language, setLanguage] = useState("ae");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  useEffect(()=>{
-    constants = localStorage.getItem('language') || "ae";
-  },[Language])
- 
+
+  useEffect(() => {
+    constants = localStorage.getItem("language") || "ae";
+  }, [Language]);
+  const dispatch = useDispatch()
   return (
     <>
       <div className="container">
@@ -79,13 +82,14 @@ const Header = () => {
                     {/* <!-- NAVIGATION MENUS --> */}
                     <div className={`float-right ${style.menu}`}>
                       <li>
-                        <Link href="/FindActivities">FindActivity</Link>
+                        <Link href="/FindActivities">{getResponseMessage(constants).find_act1}</Link>
                       </li>
                       <li>
                         <Link href="/Blog">Blog</Link>
                       </li>
                       <li>
-                        <Link href="/">KidzAppAwards</Link>
+                        <Link href="/KidzappAward">
+                          KidzAppAwards</Link>
                       </li>
                       <li>
                         <Link href="/">KidzAppTV</Link>
@@ -97,30 +101,45 @@ const Header = () => {
                         <Link href="/GetListed">GetListed</Link>
                       </li>
                       <li>
-                      <FormControl  >
-                      <InputLabel id="demo-select-small">Language</InputLabel>
-                            <Select className={style.languagebtn}
+                        <FormControl >
+                          <InputLabel id="demo-select-small">
+                            Language
+                          </InputLabel>
+                          <Select
+                        className={style.languagebtn}
+                            
                             size="small"
-                              value={Language}
-                              // defaultValue={10}
-                              label="Language"
-                            >
-                              <MenuItem value="">
-                              </MenuItem>
-                              <MenuItem value={'ar'} onClick={()=>{
-                                setLanguage('ar')
-                                localStorage.setItem("language", "ar");
-                                window.location.reload("/");
-                                }}>EG</MenuItem>
-                              <MenuItem value={'ae'}onClick={()=>{
-                                setLanguage('ae')
+                            value={Language}
+                            // {dropdownValue}
+                            // {dropdownValue ? dropdownValue : "ae"}
+                            // defaultValue={10}
+                            label="Language"
+                          >
+                            
+                            <MenuItem
+                              value={"ae"}
+                              onClick={() => {
+                                setLanguage("ae");
                                 localStorage.setItem("language", "ae");
                                 window.location.reload("/");
-
-                                }}>UAE</MenuItem>
-                            </Select>
-                            </FormControl>
-                        </li>
+                              }}
+                            >
+                              UAE
+                            </MenuItem>
+                            <MenuItem value=""></MenuItem>
+                            <MenuItem
+                              value={"ar"}
+                              onClick={() => {
+                                setLanguage("ar");
+                                localStorage.setItem("language", "ar");
+                                window.location.reload("/");
+                              }}
+                            >
+                              EG
+                            </MenuItem>
+                          </Select>
+                        </FormControl>
+                      </li>
                       <li className={style.LoginIcon}>
                         <LoginIcon
                           onClick={handleOpen}
@@ -129,9 +148,6 @@ const Header = () => {
                       </li>
                     </div>
                   </ul>
-                  {/* try */}
-                  
-                  {/* try end */}
                 </div>
 
                 {/* <!-- NAVIGATION MENU --> */}

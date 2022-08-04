@@ -1,4 +1,3 @@
-
 import  english from"./english";
 import  arabic from'./arabic';
 // export getResponseMessage          =  getResponseMessage;
@@ -12,9 +11,7 @@ const LANGUAGES = {
     'en'     : "English",
     'ar'     : "Arabic"
   };
-  
   const languageArray = Object.values(LANGUAGES);
- 
  export default function getResponseMessage(language) {
     switch (language) {
       case LANGUAGES.ENGLISH:

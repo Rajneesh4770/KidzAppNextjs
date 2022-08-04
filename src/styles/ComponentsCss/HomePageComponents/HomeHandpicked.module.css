@@ -25,8 +25,8 @@
 
 .cardbutton:hover {
   text-decoration: none;
-  background-color: #e35b26;
-  color: #fff;
+  background-color: #e35b26 !important;
+  color: #fff !important;
 }
 
 .h1 {

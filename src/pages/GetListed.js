@@ -8,7 +8,7 @@ import {
   NativeSelect,
 } from "@mui/material";
 import Recaptcha from "react-google-recaptcha";
-import KidzappFeed from '../../src/Components/KidzappFeed';
+import KidzappFeed from "../../src/Components/KidzappFeed";
 function Getintouch() {
   return (
     <div className={style.body}>
@@ -44,6 +44,7 @@ function Getintouch() {
               </div>
             </div>
           </div>
+
           <div className="row p-5">
             <div className={`col-lg-12 ${style.fromcontent}`}>
               <Box className={style.box} sx={{ width: 600 }}>
@@ -56,13 +57,11 @@ function Getintouch() {
                       >
                         Type
                       </InputLabel>
-                      <NativeSelect
-                        fullWidth
-                        defaultValue={null}
-                      >
-                        <option >Course</option>
-                        <option >Venue</option>
-                        <option >Event</option>
+                      <NativeSelect fullWidth defaultValue={null}>
+                        <option>Select..</option>
+                        <option>Course</option>
+                        <option>Venue</option>
+                        <option>Event</option>
                       </NativeSelect>
                     </div>
                   </div>
@@ -79,6 +78,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
+                        <option>Select..</option>
                         <option value={10}>Dubai</option>
                         <option value={20}>AI AIN</option>
                         <option value={30}>Abu Dhabi</option>
@@ -132,6 +132,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
+                        <option>Select..</option>
                         <option value={10}>AE day</option>
                         <option value={20}>Fun day </option>
                         <option value={30}>After School Activity</option>
@@ -154,6 +155,7 @@ function Getintouch() {
                         fullWidth
                         // defaultValue={}
                       >
+                        <option>Select..</option>
                         <option value={10}>AE day</option>
                         <option value={20}>Fun day </option>
                         <option value={30}>After School Activity</option>
@@ -176,45 +178,9 @@ function Getintouch() {
                       />
                     </div>
                   </div>
+                  <br />
+                  <h2>Contact Information</h2>
 
-                  <div className="row pt-5">
-                    <div className={`col-lg-12`}>
-                      <center>
-                        <Button
-                          className={style.Button}
-                          variant="contained"
-                          sx={{ width: 200 }}
-                        >
-                          Send
-                        </Button>
-                      </center>
-                    </div>
-                  </div>
-                </FormLabel>
-              </Box>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* second form  */}
-      <section className={style.section2}>
-        <div className="container mt-5 mb-5">
-          <div className="row">
-            <div className={`col-lg-12 ${style.fromcontent}`}>
-              <div className={style.formtitle}>
-                <h3>
-                  <span className={style.headingcolor}>
-                    Contact Information
-                  </span>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className="row p-5">
-            <div className={`col-lg-12 ${style.fromcontent}`}>
-              <Box className={style.box} sx={{ width: 600 }}>
-                <FormLabel className={style.FormLabel}>
                   <div className="row pt-4">
                     <div className={`col-lg-12`}>
                       <InputLabel
@@ -312,6 +278,8 @@ function Getintouch() {
           </div>
         </div>
       </section>
+
+      {/* second form  */}
 
       <KidzappFeed />
     </div>

@@ -4,7 +4,8 @@ import axios from 'axios';
 import  {baseUrl}  from '../../config';
 import CardMedia from '@mui/material/CardMedia';
 import HomeButton from './HomeButton';
-// import getServerSideProps from '../../pages/index'
+import getResponseMessage from '../../Language/multilingualServices';
+import { constants } from '../Navbar';
 import {
   CardActionArea,
   CardContent,
@@ -27,7 +28,7 @@ function HomeBlog() {
   return (
     <div className={style.maindiv}>
       <center>
-        <h1 className={style.heading}>Our Blog Pics</h1>
+        <h1 className={style.heading}>{getResponseMessage(constants).our_blog_picks}</h1>
         <br />
       </center>
       <div className={`container ${style.container}`}>

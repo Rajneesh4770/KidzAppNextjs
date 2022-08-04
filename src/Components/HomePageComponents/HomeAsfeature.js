@@ -1,6 +1,8 @@
 import React from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeAsfeature.module.css';
 import Slider from 'react-slick';
+import getResponseMessage from '../../Language/multilingualServices';
+import { constants } from '../Navbar';
 function HomeAsfeature() {
   const settings ={
     dots:false,
@@ -54,7 +56,7 @@ function HomeAsfeature() {
       ));
   return (
     <>
-    <h1 className={style.heading}>As Featured In</h1>
+    <h1 className={style.heading}>{getResponseMessage(constants).as_featured_In}</h1>
     <div className="container">
               <div className="col-lg ">
       <Slider {...settings}>
