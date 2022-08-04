@@ -124,6 +124,10 @@ background: linear-gradient(to right, #0575E6, #00F260);
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
+}.startext{
+    font-size: 70px;
+    margin: 0;
+margin-top: -25px;
 }
 .blogSpan{
     margin:0px 25px 0 0;
@@ -134,6 +138,13 @@ background: linear-gradient(to right, #0575E6, #00F260);
     color: #fff;
     border-radius: 5px;
     border: none;
+}
+.fivestar{
+    font-size: 24px;
+    gap: 5px;
+}
+.blog_star{
+    margin-top: -24px;
 }
 .blog_age{
     border: 1px solid #00adee;
@@ -227,6 +238,13 @@ background: linear-gradient(to right, #0575E6, #00F260);
 }
 .cardimg{
     height: 230px !important;
+    position: relative;
+}
+.cardimg2{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 0;
 }
 .card:hover{
     transform: translateY(-2px);

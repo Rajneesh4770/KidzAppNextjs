@@ -1,14 +1,11 @@
 import style from "../../styles/Homehandpickedbooking/Booking.module.css";
-import Router from "next/router";
 import Link from "next/link";
-import { Button } from "@mui/material";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import StarBorderPurple500Icon from "@mui/icons-material/StarBorderPurple500";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import {Rating} from "@mui/material"
+
 import Slider from "react-slick";
 const Booking = () => {
   const Setting = {
@@ -29,11 +26,11 @@ const Booking = () => {
                   <Slider {...Setting}>
                     <img
                       className={style.leftimg1}
-                      src="https://testimages.kidzapp.com/media/CACHE/images/venues/b00dc740-c214-4528-8b6b-025fe2942656/dubai-miracle-garden.jpg"
+                      src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg"
                     />
                     <img
                       className={style.leftimg1}
-                      src="https://testimages.kidzapp.com/media/CACHE/images/venues/b00dc740-c214-4528-8b6b-025fe2942656/dubai-miracle-garden.jpg"
+                      src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg"
                     />
                   </Slider>
                   {/* heading and button section row */}
@@ -265,17 +262,14 @@ const Booking = () => {
                         <div className="row mt-5">
                           <div className="col-4">
                             <div className={style.blog_title}>
-                              <p>5.0</p>
+                              <p className={style.startext}>5.0</p>
                             </div>
                             <div className={style.blog_star}>
                               <div>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                              <Rating name="size-large" defaultValue={5} size="large" />
                               </div>
 
-                              <p>4,2556435</p>
+                              <p style={{fontSize:"18px"}}>4,2556435</p>
                             </div>
                           </div>
                           <div className="col-8">
@@ -383,7 +377,7 @@ const Booking = () => {
                           <FacebookIcon className={style.icon} />
                         </h4>
                       </Link>
-                      <Link href="/https://twitter.com/intent/tweet?text=&url=https://testlink.kidzapp.com/Gu2I8OYJ9rb">
+                      <Link href="https://twitter.com/intent/tweet?text=&url=https://testlink.kidzapp.com/Gu2I8OYJ9rb">
                         <h4>
                           <TwitterIcon className={style.icon} />
                         </h4>
@@ -404,16 +398,51 @@ const Booking = () => {
 
                   <div className={`card mt-5 ${style.card}`}>
                     <img
-                    className={style.cardimg}
-                      src="https://testimages.kidzapp.com/media/venues/48f0fe2b-65ab-48d9-8dd8-845227c7d5a8/the-ice-factory.jpg"
+                      className={style.cardimg}
+                      src="https://images.kidzapp.com/media/venues/d7535285-797c-4114-a306-164a81d648de/kidzania-dubai.jpeg"
                       class="card-img-top"
                       alt="..."
                     />
+                    <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
                     <div className="card-body">
-                      <h5 className="card-title">The Ice factory</h5>
+                      <h5 className="card-title">KidZania Dubai</h5>
 
-                      <h6 className={`card-title ${style.secondheading}`}>
-                        The Walk Jbr
+                      <h6 className={`card-title ${style.secondheading} pt-2`}>
+                      The Dubai Mall, Downtown
+                      </h6>
+                <span><del>AED 99</del></span> &nbsp; <span style={{color:'red'}}> AED 79</span>
+                    </div>
+                  </div>
+                  <div className={`card mt-5 ${style.card}`}>
+                    <img
+                      className={style.cardimg}
+                      src="https://images.kidzapp.com/media/venues/9ed313e0-d392-4668-b191-6744431127ad/fiafia-kids-play-and-cafe.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
+                    <div className="card-body">
+                      <h5 className="card-title">TFiafia Kids Play and Cafe</h5>
+
+                      <h6 className={`card-title ${style.secondheading} pt-2`}>
+                      round Level, Gate Avenue, DIFC, Dubai
+                      </h6>
+                    </div>
+                  </div>
+                  <div className={`card mt-5 ${style.card}`}>
+                    <img
+                      className={style.cardimg}
+                      src="https://images.kidzapp.com/media/venues/f90a429a-9b22-4348-a28a-38db0c223941/rage-store-skate-bowl.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
+                    
+                    <div className="card-body">
+                      <h5 className="card-title">Rage Store & Skate Bowl</h5>
+
+                      <h6 className={`card-title ${style.secondheading} pt-2`}>
+                      The Dubai Mall
                       </h6>
                     </div>
                   </div>
@@ -423,7 +452,6 @@ const Booking = () => {
           </div>
         </div>
       </section>
-      
     </>
   );
 };
