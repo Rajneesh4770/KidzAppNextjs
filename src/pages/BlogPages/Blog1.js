@@ -122,47 +122,90 @@ const Blog1 = () => {
         </div>
       </section>
       <section className={`${style.mapCards} container`}>
-        {data.map((item) => (
+        {data.map((item,i) => (
           <div key={item.id} className="my-5">
-            <div className={`row ${style.cardRow}`}>
-              <div className="col-md-7">
-                <h2>{item.mainHeading}</h2>
+       {i%2===0?
+           <div className={`row ${style.cardRow}`}>
+           <div className="col-lg-7 col-md-6">
+             <h2 className="pt-4">{item.mainHeading}</h2>
 
-                <p>{item.detail ? item.detail : ""}</p>
-                <p>{item.explanation}</p>
-                <p>{item.text ? item.text : ""}</p>
-              </div>
-              <div className="col-md-5">
-                <div class={`card ${style.cardClass}`}>
-                  <img src={item.cardImg} class="card-img-top" alt="..." />
-                  <div class={`card-body ${style.cardBody}`}>
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className={style.location}>
-                          <p ><b>Location:</b></p>
-                          <p>{item.location}</p>
-                        </div>
-                        <div className={style.location}>
-                          <p><b>Working-Hours :</b></p>
-                          <p>{item.workingHours}</p>
-                        </div>
-                        <div className={style.location}>
-                          <p><b>Prices : </b></p>
-                          <p>{item.prices}</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                   
-                    <div className="row">
-                    <button className={`${style1.blog_rating} ${style.CardButton}`}>
-                          Read More
-                        </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+             <p>{item.detail ? item.detail : ""}</p>
+             <p>{item.explanation}</p>
+             <p>{item.text ? item.text : ""}</p>
+           </div>
+           <div className="col-lg-5 col-md-6">
+             <div class={`card ${style.cardClass}`}>
+               <img src={item.cardImg} class="card-img-top" alt="..." />
+               <div class={`card-body ${style.cardBody}`}>
+                 <div className="row">
+                   <div className="col-lg-12">
+                     <div className={style.location}>
+                       <p ><b>Location:</b></p>
+                       <p>{item.location}</p>
+                     </div>
+                     <div className={style.location}>
+                       <p><b>Working-Hours :</b></p>
+                       <p>{item.workingHours}</p>
+                     </div>
+                     <div className={style.location}>
+                       <p><b>Prices : </b></p>
+                       <p>{item.prices}</p>
+                     </div>
+                   </div>
+                 </div>
+                 
+                
+                 <div className="row">
+                 <button className={`${style1.blog_rating} ${style.CardButton}`}>
+                       Read More
+                     </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         :
+         <div className={`row ${style.cardRow} ${style.cardRow2}`}>
+            <div className="col-lg-5 col-md-6">
+           <div class={`card ${style.cardClass}`}>
+             <img src={item.cardImg} class="card-img-top" alt="..." />
+             <div class={`card-body ${style.cardBody}`}>
+               <div className="row">
+                 <div className="col-lg-12">
+                   <div className={style.location}>
+                     <p ><b>Location:</b></p>
+                     <p>{item.location}</p>
+                   </div>
+                   <div className={style.location}>
+                     <p><b>Working-Hours :</b></p>
+                     <p>{item.workingHours}</p>
+                   </div>
+                   <div className={style.location}>
+                     <p><b>Prices : </b></p>
+                     <p>{item.prices}</p>
+                   </div>
+                 </div>
+               </div>
+               
+              
+               <div className="row">
+               <button className={`${style1.blog_rating} ${style.CardButton}`}>
+                     Read More
+                   </button>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div className="col-lg-7 col-md-6">
+           <h2 className="pt-4">{item.mainHeading}</h2>
+
+           <p>{item.detail ? item.detail : ""}</p>
+           <p>{item.explanation}</p>
+           <p>{item.text ? item.text : ""}</p>
+         </div>
+       
+       </div> 
+      }
           </div>
         ))}
       </section>
