@@ -41,17 +41,16 @@
   }
   .mainText h6{
     margin-right: 20px;
+    color: #666;
   }
   .leftContent i{
-color: #965DA5;
+color: #000;
 margin-right: 8px;
   }
   .mainText p{
     padding: 10px 0 !important;
-    font-size: 18px;
     color: #666;
     margin-bottom: 20px;
-    font-weight: 500;
   }
 .elementorDivider{
   padding-top: 32px;
@@ -65,4 +64,97 @@ margin-right: 8px;
   border-top-width: 3px;
   border-top-color: #14bbef;
   width: 100%;
+}
+.mapCards h2{
+  color: #E35B26;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.cardRow{
+  justify-content: center;
+  align-items: center;
+}
+.mapCards p{
+  color: #666;
+    font-size: 16px;
+    /* font-weight: 500; */
+    line-height: 28px;
+    margin-bottom: 15px;
+    letter-spacing: -.2px;
+    text-align: justify;
+}
+.cardClass{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+}
+.cardClass img{
+  height: 200px;
+}
+.cardBody h6{
+  color: #965DA5;
+  font-weight: 700;
+  font-size: 15px;
+  /* font-size: 18px; */
+}
+
+.cardBody p{
+  /* color: black; */
+  font-size: 15px;
+  /* margin-bottom: 10px; */
+}
+.CardButton{
+width: 25%;
+margin: 10px auto 0px auto;
+font-size: 14px;
+}
+.location{
+  display: flex;
+
+}
+.location p{
+  margin: 0px !important;
+  line-height: 25px !important;
+}
+.location p:first-child{
+  color: #E35B26;
+  width: 35%;
+}
+.location p:last-child{
+  width: 65%;
+}
+
+@media(max-width:991.98px){
+  .location p:first-child{
+    color: #E35B26;
+    width: 40%;
+  }
+  .mapCards h2{
+   padding-top: 1.25rem;
+  }
+  .location p:last-child{
+    width: 60%;
+  }
+  .CardButton{
+    width: 35%;
+   
+    }
+}
+@media(max-width:575.98px){
+  .location p:first-child{
+    color: #E35B26;
+    width: 50%;
+  }
+  .location p:last-child{
+    width: 50%;
+  }
+  .textSearchButton{
+    text-align: left;
+  }
+  .cardRow2{
+    flex-direction: column-reverse;
+  }
 }
