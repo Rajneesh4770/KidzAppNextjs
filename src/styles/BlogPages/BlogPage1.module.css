@@ -108,12 +108,9 @@ margin-right: 8px;
   /* margin-bottom: 10px; */
 }
 .CardButton{
-  color: #E35B26;
-  font-weight: 700;
-  font-size: 18px;
-  /* bottom: 10px; */
-  /* position: absolute; */
-  cursor: pointer;
+width: 25%;
+margin: 10px auto 0px auto;
+font-size: 14px;
 }
 .location{
   display: flex;

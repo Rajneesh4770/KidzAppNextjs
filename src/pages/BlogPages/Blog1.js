@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../../styles/BlogPages/BlogPage1.module.css";
+import style1 from "../../styles/Homehandpickedbooking/Booking.module.css"
 const Blog1 = () => {
   const data = [
     {
@@ -76,6 +77,7 @@ const Blog1 = () => {
               </div>
             </div>
           </div>
+
         </div>
         <div className="container mainContentSection">
           <button className={`btn px-0 my-3 ${style.goBackBtn}`}>
@@ -153,10 +155,9 @@ const Blog1 = () => {
                     
                    
                     <div className="row">
-                      <a href="#" className={`btn ${style.CardButton}`}>
-                        {" "}
-                 
-                      </a>
+                    <button className={`${style1.blog_rating} ${style.CardButton}`}>
+                          Read More
+                        </button>
                     </div>
                   </div>
                 </div>

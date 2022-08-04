@@ -1,15 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { createWrapper } from "next-redux-wrapper";
-import counterReducer from './index'
-import changeLanguageReducer from './Langauge'
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './index';
 
-export const store =()=> configureStore ({
-  
-    reducer: {
-        counter: counterReducer,
-      },
-      reducer: {
-        changeLanguage: changeLanguageReducer,
-      }
-});
-export const  wrapper = createWrapper(store);
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
