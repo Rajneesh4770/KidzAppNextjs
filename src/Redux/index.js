@@ -19,27 +19,26 @@ export const counterSlice = createSlice({
       state.value -= 1
     },
   },
+});
+export const counterSlice2 = createSlice({
+  name: 'counterAdult',
+  initialState2,
+  reducers: {
+    incrementAdult: (state) => {
+      
+      state.value += 1
+    },
+    decrementAdult: (state) => {
+      state.value -= 1
+    },
+  },
 })
 
 
 
 export const { increment, decrement } = counterSlice.actions
 
+export const { incrementAdult, decrementAdult } = counterSlice.actions
 
-
-// export const counterSlice2 = createSlice({
-//   name: 'counterAdult',
-//   initialState2,
-//   reducers: {
-//     incrementAdult: (state) => {
-      
-//       state.value1 += 1
-//     },
-//     decrementAdult: (state) => {
-//       state.value1 -= 1
-//     },
-//   },
-// })
-// export const { incrementAdult, decrementAdult } = counterSlice2.actions
 
 export default counterSlice.reducer 

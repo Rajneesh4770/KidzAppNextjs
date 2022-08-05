@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../styles/ComponentsCss/Footer.module.css';
+import style from '../styles/Footer.module.css';
 import Link from 'next/link';
 import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
@@ -109,7 +109,7 @@ function Footer() {
 
             <ul>
               <h6 className='pt-3'>Legal</h6>
-              <Link href='/FooterPages/PrivacyPolicy '>
+              <Link href='/PrivacyPolicy '>
                 <li className={style.iconEffect}> Privacy Policy</li>
               </Link>
               <Link href='/Term '>

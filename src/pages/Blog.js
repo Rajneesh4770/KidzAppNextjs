@@ -136,7 +136,7 @@ function Blog() {
           <div className="row">
             {data?.map((item) => {
               return (
-                <Link href="/BlogPages/Blog1">
+                <Link href="/BlogDetail">
                 <div className="col-lg-4 col-md-6 col-sm-6" key={item.id}>
                   <div className=" m-2">
                     <article className={` ${styleblog.blogcard}`}>

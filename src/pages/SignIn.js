@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../styles/LoginCss/signIn.module.css'
+import style from '../../styles/signIn.module.css'
 function signIn() {
   return (
     <div className={style.body}>signIn

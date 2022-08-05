@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "../styles/ComponentsCss/Navbar.module.css";
+import style from "../styles/Navbar.module.css";
 import Link from "next/link";
 import HomeHandpicked from "./HomePageComponents/HomeHandpicked";
 import LoginIcon from "@mui/icons-material/Login";
