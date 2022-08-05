@@ -379,7 +379,7 @@ const Booking = () => {
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                                     <label className="form-check-label mb-3">
                                                         I agree to the
-                                                        <Link href="/FooterPages/PrivacyPolicy">
+                                                        <Link href="/PrivacyPolicy">
                                                             <span className={style.checkboxlink}> term & conditions </span>
                                                         </Link>
                                                         , and to the below aditional term.

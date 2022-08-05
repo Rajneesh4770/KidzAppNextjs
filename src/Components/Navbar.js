@@ -92,7 +92,7 @@ const Header = () => {
                           KidzAppAwards</Link>
                       </li>
                       <li>
-                        <Link href="/">KidzAppTV</Link>
+                        <Link href="/KidzappTv">KidzAppTV</Link>
                       </li>
                       <li>
                         <Link href="/Getintouch">GetInTouch</Link>

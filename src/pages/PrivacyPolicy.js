@@ -1,4 +1,4 @@
-import style from "../../styles/PrivacyPolicy.module.css";
+import style from "../styles/PrivacyPolicy.module.css";
 import KidzappFeed from "../Components/KidzappFeed";
 function PrivacyPolicy() {
   return (
