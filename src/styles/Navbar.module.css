@@ -177,3 +177,39 @@
     margin-left: 100px;
   }
 }
+
+/* arjun css Start  */
+
+.top_bar{
+  background-color: #e35b26;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.top_nav {
+  background: #e35b26;
+}
+.nav_ul{
+  margin-left: auto!important;
+}
+
+.navlogo{
+  width: 50%;
+}
+.main_nav{
+  background-color: #fff;
+}
+.toggle_focus:focus{
+  box-shadow: 0 0 0 0.0!important;
+    border: none;
+    background-color: transparent;
+}
+.toggle_focus span i{
+  font-size: 25px;
+}
+.dropdownLang{
+  background-color: #fff!important;
+  border-radius: 100px;
+  outline: none;
+  box-shadow: 0 0 0 .0remrgba(13,110,253,.25)!important
+}
