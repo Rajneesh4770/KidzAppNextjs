@@ -32,18 +32,18 @@ function FindActivities() {
 
   useEffect(() => {
 
-      Axios.get(
-        baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
-      )
-        .then((res) => {
-          console.log("findActivity page search result", res.data.results);
-          loaderHandler(() => setData(res.data.results));
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    
-    
+    Axios.get(
+      baseUrl + `experiences/?country_code=ae&page=1&page_size=${pageindex}`
+    )
+      .then((res) => {
+        console.log("findActivity page search result", res.data.results);
+        loaderHandler(() => setData(res.data.results));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+
   }, [pageindex]);
 
   //         right side section api
@@ -179,9 +179,8 @@ function FindActivities() {
                                 alt="..."
                               />
                               <div
-                                className={`${
-                                  !card.newDealImg ? "d-none" : style1.newdeal
-                                }`}
+                                className={`${!card.newDealImg ? "d-none" : style1.newdeal
+                                  }`}
                               >
                                 <img
                                   src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
@@ -214,7 +213,7 @@ function FindActivities() {
                                   {card.ages_display[0]} -{" "}
                                   {
                                     card.ages_display[
-                                      card.ages_display.length - 1
+                                    card.ages_display.length - 1
                                     ]
                                   }
                                 </span>
