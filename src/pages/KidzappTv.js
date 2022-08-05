@@ -1,6 +1,15 @@
 import React from "react";
+import Slider from "react-slick";
 import style from "../styles/KidzappTv.module.css";
 const KidzappTv = () => {
+    const setting = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+    }
   return (
     <>
       <section className={style.section1}>
@@ -37,9 +46,14 @@ const KidzappTv = () => {
 <div className="container">
     <div className="row">
         <div className="col-lg-12">
-            <h2>
-                
-            </h2>
+            <center><h1>
+            Kidzapp TV- Kids Activities
+            </h1></center>
+            <Slider {...setting}>
+            <div>
+            
+            </div>
+            </Slider>
 
         </div>
 
