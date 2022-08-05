@@ -13,7 +13,7 @@ export default function Counter() {
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
-          Incrementnoxde 
+          Increment
         </button>
         <span>{count}</span>
         <button
