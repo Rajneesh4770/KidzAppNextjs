@@ -1,6 +1,6 @@
 import React from "react";
-import style from "../../styles/BlogPages/BlogPage1.module.css";
-import style1 from "../../styles/Homehandpickedbooking/Booking.module.css"
+import style from "../styles/BlogDetail.module.css";
+import style1 from "../../styles/Booking.module.css"
 const Blog1 = () => {
   const data = [
     {

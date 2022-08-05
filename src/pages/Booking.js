@@ -1,4 +1,4 @@
-import style from "../../styles/Homehandpickedbooking/Booking.module.css";
+import style from "../../src/styles/Booking.module.css";
 import Link from "next/link";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -40,7 +40,7 @@ const Booking = () => {
                       <div className={style.blog_title}>
                         <h2>Special Offer: KidZania Dubai</h2>
                         <div> <h4>AED 79</h4>
-                        <Link href="/HomeHandpickedBooking/Booking2">
+                        <Link href="/Booking2">
                         <button className={style.blog_rating}>
                           Book Now
                         </button></Link>
@@ -54,14 +54,14 @@ const Booking = () => {
                         <span
                           className={`${style.blogSpan} ${style.blog_rating}`}
                         >
-                          <i class="fa-solid fa-star"></i>&nbsp; 4.5
+                          <i className="fa-solid fa-star"></i>&nbsp; 4.5
                         </span>
                         <span className={`${style.blogSpan} ${style.blog_age}`}>
-                          <i class="fa-solid fa-calendar-days"></i> &nbsp; Ages4
+                          <i className="fa-solid fa-calendar-days"></i> &nbsp; Ages4
                           - Adults
                         </span>
                         <span className={`${style.blogSpan} ${style.blog_cat}`}>
-                          <i class="fa-solid fa-child"></i> &nbsp; Kids Only
+                          <i className="fa-solid fa-child"></i> &nbsp; Kids Only
                         </span>
                       </div>
                     </div>
@@ -71,7 +71,7 @@ const Booking = () => {
                     <div className="col-lg-12">
                       <div className="location pt-3 pb-3">
                         <span>
-                          <i class="fa-solid fa-location-dot" style={{color:"#19aff4", fontSize:"22px"}}></i>
+                          <i className="fa-solid fa-location-dot" style={{color:"#19aff4", fontSize:"22px"}}></i>
                         </span>
                         &nbsp; &nbsp;
                         <span>
@@ -80,7 +80,7 @@ const Booking = () => {
                       </div>
                       <div className="time pb-3">
                         <span>
-                          <i class="fa-solid fa-clock" style={{color:"#19aff4", fontSize:"22px"}}></i>
+                          <i className="fa-solid fa-clock" style={{color:"#19aff4", fontSize:"22px"}}></i>
                         </span>
                         &nbsp; &nbsp;
                         <span>Daily 10:00 to 22:00</span>
@@ -89,11 +89,11 @@ const Booking = () => {
                   </div>
                   <div className="row">
                     <div className="col-lg-12">
-                      <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
+                      <div className="accordion" id="accordionExample">
+                        <div className="accordion-item">
+                          <h2 className="accordion-header" id="headingOne">
                             <button
-                              class="accordion-button"
+                              className="accordion-button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseOne"
@@ -105,11 +105,11 @@ const Booking = () => {
                           </h2>
                           <div
                             id="collapseOne"
-                            class="accordion-collapse collapse show"
+                            className="accordion-collapse collapse show"
                             aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample"
                           >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                               KidZania is an activity-packed indoor city where
                               learning and play collide for a day out your
                               children will never forget. The 7,000m² scaled
@@ -120,14 +120,14 @@ const Booking = () => {
                               exciting role-play, while developing
                               decision-making, teamwork, creativity and social
                               skills in ways that can't be taught in a
-                              classroom.
+                              classNameroom.
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingTwo">
+                        <div className="accordion-item">
+                          <h2 className="accordion-header" id="headingTwo">
                             <button
-                              class="accordion-button collapsed"
+                              className="accordion-button collapsed"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseTwo"
@@ -139,11 +139,11 @@ const Booking = () => {
                           </h2>
                           <div
                             id="collapseTwo"
-                            class="accordion-collapse collapse"
+                            className="accordion-collapse collapse"
                             aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample"
                           >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                               KNOW BEFORE YOU GO ----- Children under 120cm need
                               to be accompanied by a guardian 18 years or over.
                               Though your kids from 6 months old and up can
@@ -210,7 +210,7 @@ const Booking = () => {
                         <div className="row mt-5">
                           <div className="col-3">
                             <div className={style.b_icon}>
-                              <i class={`fa-solid fa-phone ${style.days}`}></i>
+                              <i className={`fa-solid fa-phone ${style.days}`}></i>
                             </div>
                             <div className={style.blog_title1}>
                               <p className={style.blog_title2}>
@@ -220,7 +220,7 @@ const Booking = () => {
                           </div>
                           <div className="col-3">
                             <div className={style.b_icon}>
-                              <i class={`fa-solid fa-globe ${style.days}`}></i>
+                              <i className={`fa-solid fa-globe ${style.days}`}></i>
                             </div>
                             <div className={style.blog_title1}>
                               <p className={style.blog_title2}>Visit Website</p>
@@ -229,7 +229,7 @@ const Booking = () => {
                           <div className="col-3">
                             <div className={style.b_icon}>
                               <i
-                                class={`fa-solid fa-calendar-days ${style.days}`}
+                                className={`fa-solid fa-calendar-days ${style.days}`}
                               ></i>
                             </div>
                             <div className={style.blog_title1}>
@@ -239,7 +239,7 @@ const Booking = () => {
                           <div className="col-3">
                             <div className={style.b_icon}>
                               <i
-                                class={`fa-solid fa-calendar-days ${style.days}`}
+                                className={`fa-solid fa-calendar-days ${style.days}`}
                               ></i>
                             </div>
                             <div className={style.blog_title1}>
@@ -282,9 +282,9 @@ const Booking = () => {
                             </div>
                           </div>
                           <div className="col-8">
-                            <div class="progress mb-3">
+                            <div className="progress mb-3">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 aria-label="Basic example"
                                 style={{
@@ -296,9 +296,9 @@ const Booking = () => {
                                 aria-valuemax="100"
                               ></div>
                             </div>
-                            <div class="progress mb-3">
+                            <div className="progress mb-3">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 aria-label="Basic example"
                                 style={{
@@ -310,9 +310,9 @@ const Booking = () => {
                                 aria-valuemax="100"
                               ></div>
                             </div>
-                            <div class="progress mb-3">
+                            <div className="progress mb-3">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 aria-label="Basic example"
                                 style={{
@@ -324,9 +324,9 @@ const Booking = () => {
                                 aria-valuemax="100"
                               ></div>
                             </div>
-                            <div class="progress mb-3">
+                            <div className="progress mb-3">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 aria-label="Basic example"
                                 style={{
@@ -338,9 +338,9 @@ const Booking = () => {
                                 aria-valuemax="100"
                               ></div>
                             </div>
-                            <div class="progress mb-3">
+                            <div className="progress mb-3">
                               <div
-                                class="progress-bar"
+                                className="progress-bar"
                                 role="progressbar"
                                 aria-label="Basic example"
                                 style={{
@@ -407,9 +407,8 @@ const Booking = () => {
 
                   <div className={`card mt-5 ${style.card}`}>
                     <img
-                      className={style.cardimg}
+                      className={`card-img-top ${style.cardimg}`}
                       src="https://images.kidzapp.com/media/venues/d7535285-797c-4114-a306-164a81d648de/kidzania-dubai.jpeg"
-                      class="card-img-top"
                       alt="..."
                     />
                     <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
@@ -425,9 +424,8 @@ const Booking = () => {
                   </div>
                   <div className={`card mt-5 ${style.card}`}>
                     <img
-                      className={style.cardimg}
+                      className={`card-img-top ${style.cardimg}`}
                       src="https://images.kidzapp.com/media/venues/9ed313e0-d392-4668-b191-6744431127ad/fiafia-kids-play-and-cafe.jpg"
-                      class="card-img-top"
                       alt="..."
                     />
                     <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>
@@ -442,9 +440,8 @@ const Booking = () => {
                   </div>
                   <div className={`card mt-5 ${style.card}`}>
                     <img
-                      className={style.cardimg}
+                      className={`card-img-top ${style.cardimg}`}
                       src="https://images.kidzapp.com/media/venues/f90a429a-9b22-4348-a28a-38db0c223941/rage-store-skate-bowl.jpg"
-                      class="card-img-top"
                       alt="..."
                     />
                     <img src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.cardimg2}/>

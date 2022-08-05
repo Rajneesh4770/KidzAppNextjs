@@ -168,7 +168,7 @@ slidesToShow:2,
                   <CardActions className='pb-3 '>
                     &nbsp; &nbsp;<span className={` ${style.span1}`}><del>AED 120</del></span> &nbsp;
                     <span className={style.span2}>AED 99</span>
-                    <Link href="/HomeHandpickedBooking/Booking">
+                    <Link href="/Booking">
                     <Button className={style.cardbutton} size="small" color="error"
                       onClick={notify} >
                       Book Now

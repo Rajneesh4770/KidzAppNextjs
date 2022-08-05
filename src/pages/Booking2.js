@@ -1,17 +1,17 @@
 import react,{useState} from 'react'
-import style from "../../styles/Homehandpickedbooking/Booking.module.css";
+import style from "../../src/styles/Booking.module.css";
 import Router from "next/router";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../Redux/index'
-// import { decrementAdult, incrementAdult } from '../../Redux/index'
+import { decrement, increment } from '../../src/Redux/index'
+import { decrementAdult, incrementAdult } from '../../src/Redux/index'
 
 const Booking = () => {
     const count = useSelector((state) => state.counter.value)
-    // const count2 =useSelector((state) => state.counterAdult.value1)
+    const count2 =useSelector((state) => state.counter2.value1)
     const dispatch = useDispatch()
   
     const [date,setDate] = useState(false);
@@ -48,44 +48,44 @@ const Booking = () => {
                                         <div className="col-lg-12">
                                             <div className="location pt-3 pb-3">
                                                 <span>
-                                                    <i class="fa-solid fa-location-dot"></i>
+                                                    <i className="fa-solid fa-location-dot"></i>
                                                 </span>
-                                                &nbsp;
+                                                &nbsp;&nbsp;
                                                 <span>The Dubai Mall, Downtown, Downtown / Business Bay </span>
                                             </div>
                                             <div className="time pb-3">
                                                 <span>
-                                                    <i class="fa-solid fa-clock"></i>
+                                                    <i className="fa-solid fa-clock"></i>
                                                 </span>
-                                                &nbsp;
+                                                &nbsp;&nbsp;
                                                 <span>Daily 10:00 to 22:00</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <div class="accordion" id="accordionExample">
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingOne">
-                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div className="accordion" id="accordionExample">
+                                                <div className="accordion-item">
+                                                    <h2 className="accordion-header" id="headingOne">
+                                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                             Description
                                                         </button>
                                                     </h2>
-                                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
+                                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div className="accordion-body">
                                                             Spend the day at a temperature controlled indoor aqua park, complete with eight slide beams, waterfall buckets, forest and more for your little splashers. Your boys and girls are
                                                             sure to love it, and it's a fantastic spot for you and your kiddos to play and stay cool all year round.
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <div className="accordion-item">
+                                                    <h2 className="accordion-header" id="headingTwo">
+                                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                             Information
                                                         </button>
                                                     </h2>
-                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">
+                                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                        <div className="accordion-body">
                                                             <p> The entry ticket allows you access for up to 2.5 hours max.</p>
                                                             <p> Kids under 5 need to be accompanied by an adult.</p>
                                                             <p> This offer is notimport  valid on public holidays.</p>
@@ -116,9 +116,9 @@ const Booking = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-8">
-                                                        <div class="progress mb-3">
+                                                        <div className="progress mb-3">
                                                             <div
-                                                                class="progress-bar"
+                                                                className="progress-bar"
                                                                 role="progressbar"
                                                                 aria-label="Basic example"
                                                                 style={{
@@ -130,9 +130,9 @@ const Booking = () => {
                                                                 aria-valuemax="100"
                                                             ></div>
                                                         </div>
-                                                        <div class="progress mb-3">
+                                                        <div className="progress mb-3">
                                                             <div
-                                                                class="progress-bar"
+                                                                className="progress-bar"
                                                                 role="progressbar"
                                                                 aria-label="Basic example"
                                                                 style={{
@@ -144,9 +144,9 @@ const Booking = () => {
                                                                 aria-valuemax="100"
                                                             ></div>
                                                         </div>
-                                                        <div class="progress mb-3">
+                                                        <div className="progress mb-3">
                                                             <div
-                                                                class="progress-bar"
+                                                                className="progress-bar"
                                                                 role="progressbar"
                                                                 aria-label="Basic example"
                                                                 style={{
@@ -158,9 +158,9 @@ const Booking = () => {
                                                                 aria-valuemax="100"
                                                             ></div>
                                                         </div>
-                                                        <div class="progress mb-3">
+                                                        <div className="progress mb-3">
                                                             <div
-                                                                class="progress-bar"
+                                                                className="progress-bar"
                                                                 role="progressbar"
                                                                 aria-label="Basic example"
                                                                 style={{
@@ -172,9 +172,9 @@ const Booking = () => {
                                                                 aria-valuemax="100"
                                                             ></div>
                                                         </div>
-                                                        <div class="progress mb-3">
+                                                        <div className="progress mb-3">
                                                             <div
-                                                                class="progress-bar"
+                                                                className="progress-bar"
                                                                 role="progressbar"
                                                                 aria-label="Basic example"
                                                                 style={{
@@ -201,7 +201,7 @@ const Booking = () => {
                                                     <p className={` m-0 ${style.datetimecontent}`}>Select Desired Date & Time</p>
                                                     <button className={style.schedulebutton}>
                                                         <span className={`${style.blogSpan} ${style.blog_age}`}>
-                                                            <i class="fa-solid fa-calendar-days"></i> &nbsp; View Schedule
+                                                            <i className="fa-solid fa-calendar-days"></i> &nbsp; View Schedule
                                                         </span>
                                                     </button>
                                                 </div>
@@ -210,8 +210,8 @@ const Booking = () => {
 
                                         <div className="row mt-4">
                                             <div className="col-lg-6">
-                                                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-                                                    <input placeholder="Select date " type="date" id="example" class="form-control" onChange={(e)=>{setDate(e)}}/>
+                                                <div id="date-picker-example" className="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                                    <input placeholder="Select date " type="date" id="example" className="form-control" onChange={(e)=>{setDate(e)}}/>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6"></div>
@@ -367,7 +367,7 @@ const Booking = () => {
                                        
                                         <div className="row mt-4">
                                             <div className="col-12">
-                                                <div class="form-outline">
+                                                <div className="form-outline">
                                                     <TextField id="demo-helper-text-misaligned-no-helper " multiline rows={4} fullWidth label="Special Request :" />
                                                 </div>
                                             </div>
@@ -375,9 +375,9 @@ const Booking = () => {
                                        
                                         <div className="row mt-4">
                                             <div className="col-12">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label mb-3" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label mb-3">
                                                         I agree to the
                                                         <Link href="/FooterPages/PrivacyPolicy">
                                                             <span className={style.checkboxlink}> term & conditions </span>

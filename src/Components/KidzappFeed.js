@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/ComponentsCss/KidzappFeed.module.css';
+import style from '../styles/KidzappFeed.module.css';
 import getResponseMessage from '../Language/multilingualServices';
 import { constants } from './Navbar';
 function KidzappFeed() {
