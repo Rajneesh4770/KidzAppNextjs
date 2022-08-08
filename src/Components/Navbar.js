@@ -33,6 +33,22 @@ const style1 = {
 };
 export let constants = "";
 const Header = () => {
+
+  const [show, setShow] = useState(false)
+  const controlNavbar = () => {
+      if (window.scrollY > 250 ) {
+          setShow(true)
+      }else{
+        setShow(false)
+      }
+  }
+
+  useEffect(() => {
+      window.addEventListener('scroll', controlNavbar)
+      return () => {
+          window.removeEventListener('scroll', controlNavbar)
+      }
+  }, [])
   // if (typeof window !== "undefined") {
   //   var dropdownValue = localStorage.getItem("language");
   // }
@@ -54,7 +70,7 @@ const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <div className={style.top_bar}>
+                <div className={`${style.top_bar}`}>
                   <div className={style.top_lang}>
                     <div className={` dropdown ${style.dropdownLang}`}>
                       <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,41 +93,50 @@ const Header = () => {
             </div>
           </div>
         </section>
-        <section className={style.main_nav}>
+        <section className={` ${style.main_nav} `}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <nav class="navbar navbar-expand-lg ">
+                <nav class={`navbar navbar-expand-lg  ${style.nav2} `}>
                   <div class="container-fluid p-1">
-                    <a class="navbar-brand" className={style.navlogo1} href="#">
+                    <Link href="/">
+                    <a class="navbar-brand" className={style.navlogo1} >
                       <img className={style.navlogo} src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png" />
                     </a>
+                    </Link>
                     <button class="navbar-toggler" className={style.toggle_focus} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mb-2 mb-lg-0">
+                      <ul class={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
+                        <Link href="/FindActivities">
                         <li class="nav-item">
                           <a class="nav-link active" aria-current="page" href="#">Find Activities</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/Blog">
                         <li class="nav-item">
                           <a class="nav-link" href="#">Blog</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/KidzappAward">
                         <li class="nav-item">
                           <a class="nav-link ">Kidzapp Awards</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/KidzappTv">
                         <li class="nav-item">
                           <a class="nav-link ">Kidzapp TV</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/Getintouch">
                         <li class="nav-item">
                           <a class="nav-link ">Get In Touch</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/GetListed">
                         <li class="nav-item">
                           <a class="nav-link ">Get Listed</a>
-                        </li>
+                        </li></Link>
+                        <Link href="/">
                         <li class="nav-item">
                           <a class="nav-link ">Login</a>
-                        </li>
+                        </li></Link>
                         {/* <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown

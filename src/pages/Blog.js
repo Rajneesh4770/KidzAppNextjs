@@ -11,7 +11,7 @@ import BubbleChartIcon from "@mui/icons-material/BubbleChart";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import KidzappFeed from '../../src/Components/KidzappFeed';
+import KidzappFeed from '../Components/KidzappFeed';
 import { Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -52,16 +52,20 @@ function Blog() {
         <div className={`container`}>
           <div className="row">
             <div className="col-lg-12 md-12 sm-12 ">
-              <div className="search-img">
-                <form className={`blogsearchbarGlobalCss d-flex search-bar`}>
-                  <input
-                    className={` form-control  mt-4`}
-                    type="search"
-                    placeholder="Type Here To Search Blog"
-                    aria-label="Search"
-                  />
-                </form>
-              </div>
+            <div className={`form-control ${styleblog.searchbar}`}>
+                        <div className="input-group">
+                          <input
+                            type="search"
+                            class="form-control rounded"
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="search-addon"
+                          />
+                          <button type="button" class="btn btn-outline-primary">
+                            search
+                          </button>
+                        </div>
+                      </div>
             </div>
           </div>
         </div>

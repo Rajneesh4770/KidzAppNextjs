@@ -159,11 +159,12 @@ function FindActivities() {
     </Stack>} */}
                 {isPending || !data.length && (
                   <Stack
-                    sx={{ alignItems: "center" }}
+                    sx={{ alignItems: "center", marginLeft:"auto" , marginRight:"auto"}}
                     spacing={2}
                     direction="row"
                   >
-                    <CircularProgress color="success" />
+                    <CircularProgress color="success" 
+                    sx={{ alignItems:'center', marginLeft:'auto' , marginRight:'auto'}}/>
                   </Stack>
                 )}
                 {data &&
