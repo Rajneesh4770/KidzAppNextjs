@@ -18,8 +18,7 @@ const Blog1 = () => {
       id: 2,
       mainHeading: "Up to 20% off Entry at Air Maniax",
       detail:
-        "Air Maniax is the ultimate fun-filled destination that has something for everyone!",
-     text: "Enjoy up to 20% OFF Entry Tickets at Air Maniax Dubai & Abu Dhabi!",
+        "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
       cardImg:
         "https://images.kidzapp.com/media/CACHE/images/venues/2f6f9b2e-39be-4a29-8219-1c284fe8c9aa/up-to-20-off-entry-at-air-maniax-dubai.jpg",
       location: "Air Maniax, Al Quoz",
@@ -29,7 +28,9 @@ const Blog1 = () => {
     {
       id: 3,
       mainHeading: "TR88HOUSE Family Entertainment Center",
-      text: "Get 10% OFF all Fun and Play.",
+      detail:
+      "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
+ 
       cardImg:
         "https://images.kidzapp.com/media/CACHE/images/venues/66183f7e-210b-4874-94ba-8a52a884f37a/tr88house-family-entertainment-center.jpeg",
       location: "No. EB1, Entrance 8 - Bluewaters Island - Dubai",
@@ -40,8 +41,7 @@ const Blog1 = () => {
       id: 4,
       mainHeading: "Aqua Parks Leisure",
       detail:
-        "Aqua Parks Leisure is a hidden gem located on Kite Beach - Dubai's first fresh water swimming pool waterpark! ",
-     text: "Enjoy a great offer with over 15% OFF Entry Tickets OR Buy 1 Hour Get 1 Hour FREE on weekdays!",
+        "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
       cardImg:
         "https://images.kidzapp.com/media/CACHE/images/venues/06f03fbd-c981-4351-b1e1-53faba1ecf0e/aqua-parks-leisure.jpeg",
       location: "Kite Beach, Umm Suqqueim 2, Dubai",
@@ -166,16 +166,15 @@ const Blog1 = () => {
           <div key={item.id} className="my-5">
        {i%2===0?
            <div className={`row ${style.contentRow}`}>
-           <div className={`col-lg-7  ${style.columnn}`}>
+           <div className={`col-lg-7 col-md-7 col-sm-12  ${style.columnn}`}>
             <div className={style.contentImage}>
               <img src={item.cardImg} alt="mainImg" />
             </div>
            </div>
-           <div className={`col-lg-5  ${style.columnn}`}>
+           <div className={`col-lg-5 col-md-5 col-sm-12 ${style.columnn}`}>
           <div className={style.mainColumnDiv}>
           <h2>{item.mainHeading}</h2>
 <p>{item.detail ? item.detail : ""}</p>
-<p>{item.text ? item.text : ""}</p>
 <div className={`row ${style.cardBody}`}>
                  <div className="col-lg-12">
                    <div className={style.location}>
@@ -203,11 +202,10 @@ const Blog1 = () => {
          :
          <div className={`row ${style.contentRow2}`}>
         
-         <div className={`col-lg-5   ${style.columnn2}`}>
+         <div className={`col-lg-5 col-md-5 col-sm-12  ${style.columnn2}`}>
         <div className={style.mainColumnDiv2}>
         <h2>{item.mainHeading}</h2>
 <p>{item.detail ? item.detail : ""}</p>
-<p>{item.text ? item.text : ""}</p>
 <div className={`row ${style.cardBody2}`}>
                <div className="col-lg-12">
                  <div className={style.location}>
@@ -231,7 +229,7 @@ const Blog1 = () => {
              </div>
         </div>
          </div>
-         <div className={`col-lg-7  ${style.columnn}`}>
+         <div className={`col-lg-7 col-md-7 col-sm-12  ${style.columnn}`}>
           <div className={style.contentImage}>
             <img src={item.cardImg} alt="mainImg" />
           </div>

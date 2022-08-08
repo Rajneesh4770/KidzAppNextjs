@@ -239,12 +239,32 @@ object-fit: cover;
   .cardRow2{
     flex-direction: column-reverse;
   }
-  /* .mainColumnDiv{
-    padding: 0px;
+  .contentImage {
+    height: 100%;
+    width:100%;
+  }
+  .mainColumnDiv{
+    position: inherit;
+    margin: 10px 0px;
+    top:0%;
+    right: 0%;
+    transform: translate(0px,0px);
     width: 100%;
   }
   .mainColumnDiv2{
-    padding: 0px;
+position: inherit;
+margin: 10px 0px;
+top:0%;
+left: 0%;
     width: 100%;
-  } */
+    transform: translate(0px,0px);
+  }
+  .contentRow2{
+    flex-direction: column-reverse;
+  }
+
+  .secondViewImgContainer {
+    height: 100%;
+    width:100%;
+  }
 }
