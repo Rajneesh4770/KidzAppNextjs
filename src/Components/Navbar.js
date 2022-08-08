@@ -48,114 +48,90 @@ const Header = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 col-md-6 ">
-            <nav className={` ${style.navbar1} fixed-top `}>
-              {/* <!-- LOGO --> */}
-              <div className={`row ${style.navRow}`}>
-                <div className={`col-sm-6 ${style.tglBTN} `}>
-                  <span className={` ${style.logo}`}>
-                    <Link href="/">
-                      <img
-                        className={style.logoimage}
-                        src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
-                      ></img>
-                    </Link>
-                  </span>
-                </div>
-                <div className={`col-sm-6 ${style.tglBTN} `}>
-                  <ul className={style.navlinks}>
-                    {/* <!-- USING CHECKBOX HACK --> */}
+      <header>
 
-                    <input
-                      type="checkbox"
-                      id="checkbox_toggle"
-                      className={style.hamburgercheck}
-                    />
-                    <label
-                      htmlFor="checkbox_toggle"
-                      className={style.hamburger}
-                    >
-                      &#9776;
-                    </label>
-                    {/* <!-- NAVIGATION MENUS --> */}
-                    <div className={`float-right ${style.menu}`}>
-                      <li>
-                        <Link href="/FindActivities">{getResponseMessage(constants).find_act1}</Link>
-                      </li>
-                      <li>
-                        <Link href="/Blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link href="/KidzappAward">
-                          KidzAppAwards</Link>
-                      </li>
-                      <li>
-                        <Link href="/">KidzAppTV</Link>
-                      </li>
-                      <li>
-                        <Link href="/Getintouch">GetInTouch</Link>
-                      </li>
-                      <li>
-                        <Link href="/GetListed">GetListed</Link>
-                      </li>
-                      <li>
-                        <FormControl >
-                          <InputLabel id="demo-select-small">
-                            Language
-                          </InputLabel>
-                          <Select
-                        className={style.languagebtn}
-                            
-                            size="small"
-                            value={Language}
-                            // {dropdownValue}
-                            // {dropdownValue ? dropdownValue : "ae"}
-                            // defaultValue={10}
-                            label="Language"
-                          >
-                            
-                            <MenuItem
-                              value={"ae"}
-                              onClick={() => {
-                                setLanguage("ae");
-                                localStorage.setItem("language", "ae");
-                                window.location.reload("/");
-                              }}
-                            >
-                              UAE
-                            </MenuItem>
-                            <MenuItem value=""></MenuItem>
-                            <MenuItem
-                              value={"ar"}
-                              onClick={() => {
-                                setLanguage("ar");
-                                localStorage.setItem("language", "ar");
-                                window.location.reload("/");
-                              }}
-                            >
-                              EG
-                            </MenuItem>
-                          </Select>
-                        </FormControl>
-                      </li>
-                      <li className={style.LoginIcon}>
-                        <LoginIcon
-                          onClick={handleOpen}
-                          className={style.LoginIcon1}
-                        />
-                      </li>
+        <section className={style.top_nav}>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className={style.top_bar}>
+                  <div className={style.top_lang}>
+                    <div className={` dropdown ${style.dropdownLang}`}>
+                      <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lang
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">UAE</a></li>
+                        <li><a class="dropdown-item" href="#">EG</a></li>
+                      </ul>
                     </div>
-                  </ul>
+                  </div>
+                  <div className={style.top_search}>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                      <button class="btn" type="submit"><i class="fa fa-solid fa-magnifying-glass"></i> </button>
+                    </form>
+                  </div>
                 </div>
-
-                {/* <!-- NAVIGATION MENU --> */}
               </div>
-            </nav>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <section className={` ${style.main_nav} fixed`}>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <nav class="navbar navbar-expand-lg  ">
+                  <div class="container-fluid p-1">
+                    <a class="navbar-brand" className={style.navlogo1} href="#">
+                      <img className={style.navlogo} src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png" />
+                    </a>
+                    <button class="navbar-toggler" className={style.toggle_focus} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Find Activities</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ">Kidzapp Awards</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ">Kidzapp TV</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ">Get In Touch</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ">Get Listed</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link ">Login</a>
+                        </li>
+                        {/* <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li> */}
+                      </ul>
+
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
 
       <Modal
         aria-labelledby="transition-modal-title"
@@ -204,6 +180,10 @@ const Header = () => {
           </Box>
         </Fade>
       </Modal>
+
+
+
+
     </>
   );
 };

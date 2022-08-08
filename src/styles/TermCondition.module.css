@@ -1,0 +1,36 @@
+.section1{
+    margin-top: 100px;
+}
+.topbackground{
+    height: 200px;
+   position: relative;
+    background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+.mainheading{
+    color: white;
+    font-weight: 600;
+    font-size: 46px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.secondheading{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.section2 h2{
+    color: #e35b26;
+}
+@media(max-width:480px){
+    .secondheading{
+        font-size: 10px;
+    }
+    .mainheading{
+        font-size: 34px;
+    }
+}

@@ -112,7 +112,7 @@ function Footer() {
               <Link href='/PrivacyPolicy '>
                 <li className={style.iconEffect}> Privacy Policy</li>
               </Link>
-              <Link href='/Term '>
+              <Link href='/TermCondition '>
                 <li className={style.iconEffect}> Term & Conditions</li>
               </Link>
               <Link href='/Cancellation '>
