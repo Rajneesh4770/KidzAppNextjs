@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../../styles/Booking.module.css"
+import style from "../../styles/Booking.module.css"
 import { Button } from "@mui/material";
 function Bookingreview() {
   return (
@@ -12,29 +12,14 @@ function Bookingreview() {
                 <p className={` m-0 ${style.datetimecontent}`}>
                 Please confirm your booking details
                 </p>
-                
-                <button className={style.schedulebutton}>
-                  <span className={`${style.blogSpan} ${style.blog_age}`}>
-                    <i className="fa-solid fa-calendar-days"></i> &nbsp; View
-                    Schedule
-                  </span>
-                </button>
+                <p></p>
               </div>
             </div>
           </div>
-
-          
-          
-         
-        
-
-      
-
-          
           <div className="row">
             <div className="col-lg-12">
               <Button variant="contained" className={style.submitbtn}>
-                Submit
+               Confirm and pay now
               </Button>
             </div>
           </div>

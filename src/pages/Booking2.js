@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
-import Bookingreview from '../styles/ComponentsCss/BookingComponet/Bookingreview';
+import Bookingreview from '../Components/BookingComponet/Bookingreview';
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../src/Redux/index'
 import { decrementAdult, incrementAdult } from '../../src/Redux/index'
