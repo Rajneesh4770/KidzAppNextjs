@@ -181,13 +181,13 @@
 /* arjun css Start  */
 
 .top_bar{
-  background-color: #e35b26;
+  background-color: #00adee;
   padding: 5px;
   display: flex;
   justify-content: space-between;
 }
 .top_nav {
-  background: #e35b26;
+  background: #00adee;
 }
 .nav_ul{
   margin-left: auto!important;
