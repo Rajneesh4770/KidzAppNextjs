@@ -48,7 +48,14 @@ a {
 p {
   font-size: 16px;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header{
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
 /* @media(min-width:1200px){
 .container {
   max-width: 1170px !important;
@@ -66,6 +73,10 @@ header {
   background: #fff;
   z-index: 1;
 }
+.widthset{
+  width: auto!important;
+  min-width: 0!important;
+}
 @media (min-width:992px) and (max-width:1199.98px) {
   .nav-link{
     font-size:14px!important;
@@ -75,7 +86,14 @@ header {
   }
 }
 
-
+@media(max-width:911.98px){
+  a.carousel-control-prev {
+    display: none;
+}
+a.carousel-control-next {
+  display: none;
+}
+}
 
 @media(max-width:575.98px){
   .navbar-brand{
