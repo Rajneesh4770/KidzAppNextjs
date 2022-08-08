@@ -211,5 +211,9 @@
   background-color: #fff!important;
   border-radius: 100px;
   outline: none;
-  box-shadow: 0 0 0 .0remrgba(13,110,253,.25)!important
+  box-shadow: 0 0 0 .0rem rgba(13,110,253,.25)!important;
 }
+.ul li{
+  cursor: pointer;
+}
+

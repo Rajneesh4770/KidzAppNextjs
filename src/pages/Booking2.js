@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
+import Bookingreview from '../styles/ComponentsCss/BookingComponet/Bookingreview';
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../src/Redux/index'
 import { decrementAdult, incrementAdult } from '../../src/Redux/index'
@@ -15,6 +16,7 @@ const Booking = () => {
     const dispatch = useDispatch()
   
     const [date,setDate] = useState(false);
+    const [review,setReview] = useState(true);
     const Setting = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -192,7 +194,8 @@ const Booking = () => {
                                         </div>
                                     </div>
                                 </div>
-
+                         {review? 
+                         <>
                                 <div className="col-lg-6 col-sm-12">
                                     <div className={style.rightsection}>
                                           <div className="row mt-4">
@@ -392,13 +395,17 @@ const Booking = () => {
                                         </div>
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <Button variant="contained" className={style.submitbtn}>
+                                                <Button variant="contained" className={style.submitbtn} onClick={()=>setReview(false)}>
                                                     Submit
                                                 </Button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                </>
+                                : <Bookingreview/>}
+
                             </div>
                         </div>
                     </div>
