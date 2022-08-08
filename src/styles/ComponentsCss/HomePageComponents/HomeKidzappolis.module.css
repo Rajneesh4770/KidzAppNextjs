@@ -64,7 +64,6 @@ element.style {
     width: 145px !important;
     object-fit: contain;
     padding: 15px 15px 15px 25px;
-    /* vertical-align: middle; */
     border-style: none;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -105,7 +104,13 @@ element.style {
     max-width: 970px;
 } */
 .cardP{
-    padding: 1.5rem 0rem !important;
+    padding: 1.5rem 1rem !important;
+    display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
 }
 
 .backarrow {
