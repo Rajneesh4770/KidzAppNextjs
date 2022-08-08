@@ -179,12 +179,15 @@
 }
 
 /* arjun css Start  */
-
+.dropdownLang>a{
+  color: #fff;
+}
 .top_bar{
   background-color: #00adee;
   padding: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .top_nav {
   background: #00adee;
@@ -208,7 +211,7 @@
   font-size: 25px;
 }
 .dropdownLang{
-  background-color: #fff!important;
+  /* background-color: #fff!important; */
   border-radius: 100px;
   outline: none;
   box-shadow: 0 0 0 .0rem rgba(13,110,253,.25)!important;

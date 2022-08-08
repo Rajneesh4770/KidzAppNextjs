@@ -426,3 +426,13 @@
         padding: 0;
     }
 }
+
+/* confirmation page css */
+
+/* .priceconfrm{
+}  */
+.priceconfrm {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
