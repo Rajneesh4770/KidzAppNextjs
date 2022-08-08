@@ -15,7 +15,7 @@ function Bookingreview() {
 						<div className="col-lg-12">
 							<div className={style.rightsectiondiv}>
 								<p className={` m-0 ${style.datetimecontent}`}>
-									Please confirm your booking details
+									Please confirm your booking detailssssss
 								</p>
 								<p></p>
 							</div>
