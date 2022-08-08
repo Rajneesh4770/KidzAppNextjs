@@ -13,8 +13,8 @@ import Typography from "@mui/material/Typography";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
-import { useSelector, useDispatch } from 'react-redux'
-import { ar, ae } from '../Redux/Langauge'
+import { useSelector, useDispatch } from "react-redux";
+import { ar, ae } from "../Redux/Langauge";
 
 const style1 = {
   position: "absolute",
@@ -33,22 +33,21 @@ const style1 = {
 };
 export let constants = "";
 const Header = () => {
-
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   const controlNavbar = () => {
-      if (window.scrollY > 250 ) {
-          setShow(true)
-      }else{
-        setShow(false)
-      }
-  }
+    if (window.scrollY > 250) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
 
   useEffect(() => {
-      window.addEventListener('scroll', controlNavbar)
-      return () => {
-          window.removeEventListener('scroll', controlNavbar)
-      }
-  }, [])
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
   // if (typeof window !== "undefined") {
   //   var dropdownValue = localStorage.getItem("language");
   // }
@@ -61,11 +60,27 @@ const Header = () => {
   useEffect(() => {
     constants = localStorage.getItem("language") || "ae";
   }, [Language]);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+  }, []);
   return (
     <>
-      <header>
-
+      <header >
         <section className={style.top_nav}>
           <div className="container">
             <div className="row">
@@ -73,70 +88,123 @@ const Header = () => {
                 <div className={`${style.top_bar}`}>
                   <div className={style.top_lang}>
                     <div className={` dropdown ${style.dropdownLang}`}>
-                      <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a
+                        class="btn dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         Lang
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">UAE</a></li>
-                        <li><a class="dropdown-item" href="#">EG</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            UAE
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            EG
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
                   <div className={style.top_search}>
                     <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                      <button class="btn" type="submit"><i class="fa fa-solid fa-magnifying-glass"></i> </button>
+                      <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <button class="btn" type="submit">
+                        <i class="fa fa-solid fa-magnifying-glass"></i>{" "}
+                      </button>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
         </section>
-        <section className={` ${style.main_nav} `}>
+        <section className={`header ${style.main_nav} `}  id="myHeader"> 
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <nav class={`navbar navbar-expand-lg  ${style.nav2} `}>
                   <div class="container-fluid p-1">
                     <Link href="/">
-                    <a class="navbar-brand" className={style.navlogo1} >
-                      <img className={style.navlogo} src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png" />
-                    </a>
+                      <a class="navbar-brand" className={style.navlogo1}>
+                        <img
+                          className={style.navlogo}
+                          src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
+                        />
+                      </a>
                     </Link>
-                    <button class="navbar-toggler" className={style.toggle_focus} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+                    <button
+                      class="navbar-toggler"
+                      className={style.toggle_focus}
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                      </span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div
+                      class="collapse navbar-collapse"
+                      id="navbarSupportedContent"
+                    >
                       <ul class={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
                         <Link href="/FindActivities">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Find Activities</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="#"
+                            >
+                              Find Activities
+                            </a>
+                          </li>
+                        </Link>
                         <Link href="/Blog">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Blog</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                              Blog
+                            </a>
+                          </li>
+                        </Link>
                         <Link href="/KidzappAward">
-                        <li class="nav-item">
-                          <a class="nav-link ">Kidzapp Awards</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link ">Kidzapp Awards</a>
+                          </li>
+                        </Link>
                         <Link href="/KidzappTv">
-                        <li class="nav-item">
-                          <a class="nav-link ">Kidzapp TV</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link ">Kidzapp TV</a>
+                          </li>
+                        </Link>
                         <Link href="/Getintouch">
-                        <li class="nav-item">
-                          <a class="nav-link ">Get In Touch</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link ">Get In Touch</a>
+                          </li>
+                        </Link>
                         <Link href="/GetListed">
-                        <li class="nav-item">
-                          <a class="nav-link ">Get Listed</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link ">Get Listed</a>
+                          </li>
+                        </Link>
                         <Link href="/">
-                        <li class="nav-item">
-                          <a class="nav-link ">Login</a>
-                        </li></Link>
+                          <li class="nav-item">
+                            <a class="nav-link ">Login</a>
+                          </li>
+                        </Link>
                         {/* <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
@@ -148,7 +216,6 @@ const Header = () => {
                           </ul>
                         </li> */}
                       </ul>
-
                     </div>
                   </div>
                 </nav>
@@ -205,10 +272,6 @@ const Header = () => {
           </Box>
         </Fade>
       </Modal>
-
-
-
-
     </>
   );
 };

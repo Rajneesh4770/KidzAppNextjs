@@ -426,3 +426,12 @@
         padding: 0;
     }
 }
+
+/* confirmation page css */
+
+/* .priceconfrm{
+}  */
+.priceconfrm h6{
+    float: right;
+    padding: 5px;
+}

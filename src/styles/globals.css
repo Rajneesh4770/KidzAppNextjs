@@ -46,7 +46,14 @@ a {
 p {
   font-size: 16px;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header{
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
 /* @media(min-width:1200px){
 .container {
   max-width: 1170px !important;
