@@ -36,8 +36,9 @@ function Bookingreview() {
                   &nbsp; rajneesh@gmail.com
                 </h6>
               </div>
+              <p className="pt-3">Price Details</p>
               <div className=" pDetails p-3">
-                <p>Price Details</p>
+                
                 <h4>124th Floor tickets(non prime hours)</h4>
                 <h6>Time Slot : 12:00 PM - 12:30 PM</h6>
                 <div className={`pt-2 ${style.priceconfrm}`}>
@@ -66,6 +67,10 @@ function Bookingreview() {
                 </div>
               </div>
               <hr></hr>
+        
+              <p>Promocode </p>
+              <input for='text' placeholder="promocode"></input>
+
 
             </div>
           </div>
