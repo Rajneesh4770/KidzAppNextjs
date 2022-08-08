@@ -4,7 +4,9 @@ body {
   margin: 0;
   font-family: 'Roboto';
 }
-
+.mainStyle{
+  min-height: 400px;
+}
 
 a {
   color: inherit;
