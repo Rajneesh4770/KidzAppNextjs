@@ -89,7 +89,7 @@ const Header = () => {
                   <div className={style.top_lang}>
                     <div className={` dropdown ${style.dropdownLang}`}>
                       <a
-                        class="btn dropdown-toggle"
+                        class=" dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -97,7 +97,7 @@ const Header = () => {
                       >
                         Lang
                       </a>
-                      <ul class="dropdown-menu">
+                      <ul class="dropdown-menu widthset">
                         <li>
                           <a class="dropdown-item" href="#">
                             UAE

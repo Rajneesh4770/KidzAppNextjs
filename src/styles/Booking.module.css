@@ -431,7 +431,8 @@
 
 /* .priceconfrm{
 }  */
-.priceconfrm h6{
-    float: right;
-    padding: 5px;
+.priceconfrm {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }

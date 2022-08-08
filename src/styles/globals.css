@@ -73,6 +73,10 @@ header {
   background: #fff;
   z-index: 1;
 }
+.widthset{
+  width: auto!important;
+  min-width: 0!important;
+}
 @media (min-width:992px) and (max-width:1199.98px) {
   .nav-link{
     font-size:14px!important;
@@ -82,7 +86,14 @@ header {
   }
 }
 
-
+@media(max-width:911.98px){
+  a.carousel-control-prev {
+    display: none;
+}
+a.carousel-control-next {
+  display: none;
+}
+}
 
 @media(max-width:575.98px){
   .navbar-brand{
