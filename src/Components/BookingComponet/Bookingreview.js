@@ -72,8 +72,17 @@ function Bookingreview() {
               <hr></hr>
         
               <p>Promocode </p>
-              <input for='text' placeholder="promocode"></input>
+              <div className="row">
+                <div className="col-lg-9">
 
+                
+              <input for='text' className ="form-control" placeholder="promocode"></input>
+              </div>
+            
+                <div className="col-lg-3">
+    <button className="btn btn-primary">Add Promo</button>
+                </div>
+              </div>
 
             </div>
           </div>
