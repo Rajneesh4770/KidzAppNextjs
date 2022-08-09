@@ -1,13 +1,12 @@
 import HomeCrousel from "../Components/HomePageComponents/HomeCrousel";
 import HomeHandpicked from "../Components/HomePageComponents/HomeHandpicked";
 import HomeKidzappolis from "../Components/HomePageComponents/HomeKidzappolis";
-import HomeBlog from "../Components/HomePageComponents/HomeBlog";
 import HomeKidsActivitiesReviews from "../Components/HomePageComponents/HomeKidsActivitiesReviews";
 import HomeAsfeature from "../Components/HomePageComponents/HomeAsfeature";
 import KidzappFeed from "../Components/KidzappFeed";
 import style from '../styles/Index.module.css';
 import apiData from '../Components/HomePageComponents/HomeBlog'
-import Homeblog2 from "../Components/HomePageComponents/Homeblog2";
+import HomeBlog from '../Components/HomePageComponents/HomeBlog'
 function index() {
   return (
     <div className={style.body}>
@@ -25,7 +24,7 @@ function index() {
       <HomeKidzappolis />
 
       {/* Homeblog component of Home page */}
-      <Homeblog2 />
+      <HomeBlog />
 
       {/*  HomeKidsActivitiesReviews component of Home Page */}
       <HomeKidsActivitiesReviews/>

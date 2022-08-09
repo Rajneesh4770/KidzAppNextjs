@@ -1,88 +1,60 @@
-import React, { useState, useEffect } from 'react'
-import style from '../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css';
-import axios from 'axios';
-import  {baseUrl}  from '../../config';
-import CardMedia from '@mui/material/CardMedia';
-import HomeButton from './HomeButton';
-import getResponseMessage from '../../Language/multilingualServices';
-import { constants } from '../Navbar';
-import {
-  CardActionArea,
-  CardContent,
-  Card,
-  CardActions,
-  Typography,
-} from '@mui/material';
-function HomeBlog() {
-
+import React, { useState, useEffect } from "react";
+import style from "../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css";
+import { baseUrl } from "../../config";
+import axios from "axios";
+import Link from "next/link";
+import HomeButton from "./HomeButton";
+function Homeblog2() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios
-      .get(
-        baseUrl+'blogs?page=1&limit=10&country_code=ae',
-      )
-      .then((res) => {
-        setData(res.data.results);
-      });
+    axios.get(baseUrl + "blogs?page=1&limit=9&country_code=ae").then((res) => {
+      setData(res.data.results);
+    });
   }, []);
   return (
-    <div className={style.maindiv}>
-      <center>
-        <h1 className={style.heading}>{getResponseMessage(constants).our_blog_picks}</h1>
-        <br />
-      </center>
-      <div className={`container ${style.container}`}>
-        <div className='row'>
-          {data.map((item, i) => {
-            return (
-              <div key={item.id}
-                className={`${i === 0 || i === 5 ? `col-md-8 ` : i ===1 || i === 6 ? `col-md-4 ${style.smcard}` : `col-md-4 mb-5 ${style.bigcard}`
-                  }  col-sm-12 ${style.blogCardHome}` }
-              >
-                <Card
-                className={style.card} sx={{ maxWidth: 850 }}>
-                  <CardActionArea>
-                    <div className={style.imageDiv}>
-                    <CardMedia
-                    className={style.image}
-                      component='img'
-                      max-height='370'
-                      image={item.cover_image}
-                      alt=''
-                    /></div>
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant='h5'
-                        color='#002240'
-                        component='div'
-                        className={`${i===0 || i===5 ? `${style.titleBlog}` : `${style.titleBlog1}`}`}
-                      >
-                        {item.meta_title}
-                      </Typography>
-                      <br />
-                      <hr 
-                      className={`${i===0 || i===5 ? style.hr :style.hr1 }`}
-                      >
-
-                      </hr>
+    <>
+      <section className={style.section1}>
+        <div className="container">
+          <center>
+            <h1 className={style.heading}>Our Blog Picks</h1>
+          </center>
+          <div className="row mb-4">
+            {data.map((item, i) => {
+              return (
+                <div
+                  key={item.id}
+                  className={`${
+                    i === 0 || i === 5 || i === 6
+                      ? `col-md-6 `
+                      : `col-md-3  ${style.smcard}`
+                  }  col-sm-12 ${style.blogCardHome}`}
+                >
+                  <div className={`card ${style.card1} mb-4`}>
+                    <img
+                      src={item.cover_image}
+                      className={`card-img`}
+                      alt="..."
+                    />
+                    <div className={`card-img-overlay ${style.card1body}`}>
+                      <h5 className="card-title"> {item.meta_title}</h5>
                       
-                      <Typography variant='h6' color='#9F57A9'>
-                        {item.auther_name}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions></CardActions>
-                </Card>
-              </div>
-            );
-          })}
+                      <p className="card-text">{item.auther_name}</p>
+                   
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <Link href="/Blog">
+        <center><button className={style.button}>View All</button></center>
+        </Link>
+        <br />
         </div>
-      </div><br />
-      <HomeButton></HomeButton><br />
-    </div>
+       
+      </section>
+    </>
   );
-
 }
 
-export default HomeBlog
+export default Homeblog2;
