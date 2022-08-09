@@ -6,7 +6,7 @@ function Homeblog2() {
     <>
       <section className={style.section1}>
         <div className="container">
-           <center><h1 className="pb-4" style={{color:'white'}}>Blogs</h1></center> 
+           <center><h1 className={style.heading} >Blogs</h1></center> 
           <div className="row mb-4">
             <div className="col-lg-6">
               <div className={`card ${style.card1}`}>

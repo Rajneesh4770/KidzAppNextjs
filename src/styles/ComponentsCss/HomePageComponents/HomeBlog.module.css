@@ -97,13 +97,20 @@ margin: 0px !important;
     padding: 15px;
     margin-bottom: 35px;
 }
+.heading{
+    padding-top: 40px !important;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: system-ui;
+}
 .card1::before {
     content: '';
     display: block;
     height: 100%;
     width: 100%;
-    background-color: #2c272752;
     position: absolute;
+    background: linear-gradient(to top, #00adeec9, #fff0)
 }
 .card1{
     color: #fff;
