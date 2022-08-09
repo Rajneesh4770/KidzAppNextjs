@@ -20,16 +20,7 @@ element.style {
     width: 600px;
     margin: 0 auto;
 }
-.aprovedP{
-   color: red;
-}
-.cardP{
-    display: -webkit-box;
-    max-width: auto;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+
 /* new */
 .collectioncard{
     background-color: #fff;
@@ -41,7 +32,11 @@ element.style {
   display: grid;
   grid-auto-flow: column;
   margin: 15px auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 
+}
+.collectioncard:hover{
+    transform: translateY(-2px);
 }
 .imgtext{
     justify-content: center;
@@ -55,7 +50,7 @@ element.style {
 }
 .collectioncard img{
     object-fit: cover;
-    width: 50%;
+    width: 60%;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -127,11 +122,7 @@ element.style {
     margin: 0px 20px;
 }
 
-.aprovedP {
-    width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 
 .conditionalCard {
     margin: 0px auto 15px auto;
@@ -144,18 +135,7 @@ element.style {
     transform: translatey(-6px);
 }
 
-/* .container{
-    max-width: 970px;
-} */
-.cardP{
-    padding: 1.5rem 1rem !important;
-    display: -webkit-box;
-  max-width: auto;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 
-}
 
 .backarrow {
     content: " " !important;

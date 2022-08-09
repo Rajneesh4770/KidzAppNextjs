@@ -8,9 +8,8 @@ import { Card } from "react-bootstrap";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
-import getResponseMessage from '../../Language/multilingualServices';
-import { constants } from '../Navbar';
-
+import getResponseMessage from "../../Language/multilingualServices";
+import { constants } from "../Navbar";
 
 function HomeKidzappolis() {
   const settings = {
@@ -18,12 +17,20 @@ function HomeKidzappolis() {
     infinite: true,
     autoplay: true,
     speed: 500,
-    slidesToShow: 5,  
+    slidesToShow: 6,
     slidesToScroll: 1,
-   
+
     autoplaySpeed: 3000,
-    prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
-    nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
+    prevArrow: (
+      <Typography className={style.typography}>
+        <ArrowBackIosNewIcon className={style.backarrow} />
+      </Typography>
+    ),
+    nextArrow: (
+      <Typography className={style.typography}>
+        <ArrowForwardIosIcon className={style.forwardarrow} />
+      </Typography>
+    ),
     responsive: [
       {
         breakpoint: 1200,
@@ -153,24 +160,30 @@ function HomeKidzappolis() {
         <div className="container ">
           <center>
             <strong>
-              <h1 className={style.kidzappHeading}>{getResponseMessage(constants).kidzappolis} </h1>
+              <h1 className={style.kidzappHeading}>
+                {getResponseMessage(constants).kidzappolis}{" "}
+              </h1>
             </strong>
           </center>
           <br />
           <div className={`container modifiedSlickBtn ${style.container}`}>
-            <Slider {...settings}>
-              {data.map((item) => (
-                <div key={item.id}>
-                  <div className={`item ${style.activityBox}`}>
-                    <img
-                      className={style.activityBoxImage}
-                      src={item.image_url}
-                    />
-                    <p className={style.activityBoxHeading}>{item.name}</p>
-                  </div>
-                </div>
-              ))}
-            </Slider>
+            <div className="row">
+              <div className="col-lg-12">
+                <Slider {...settings}>
+                  {data.map((item) => (
+                    <div key={item.id}>
+                      <div className={`item ${style.activityBox}`}>
+                        <img
+                          className={style.activityBoxImage}
+                          src={item.image_url}
+                        />
+                        <p className={style.activityBoxHeading}>{item.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
           </div>
         </div>
         <br />
@@ -178,44 +191,28 @@ function HomeKidzappolis() {
         <div className="container">
           <center>
             <strong>
-              <h1 className={style.kidzappHeading}>{getResponseMessage(constants). kidzapproved_collection} </h1>
+              <h1 className={style.kidzappHeading}>
+                {getResponseMessage(constants).kidzapproved_collection}{" "}
+              </h1>
             </strong>
           </center>
           <br />
           <div className={`${style.slider2} ${style.collectionSlider}`}>
-
             <Slider {...settings2}>
               {data2.map((item1) => (
-                // <div key={item1.id} className={` ${style.collectionCard}`}>
-                //   <Card
-                //     className={style.conditionalCard}
-                //     style={{ width: "10rem" }}
-                //   >
-                //     <Card.Img
-                //       variant="top"
-                //       src={
-                //         item1.image_url
-                //           ? item1.image_url
-                //           : "https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg"
-                //       }
-                //       className={style.approvedImg}
-                //       alt="image is not available"
-                //     />
-                //     <Card.Body className={style.cardP}>
-                //       <p className={style.approvedP}>
-                //         {item1.name}
-                //       </p>
-                //     </Card.Body>
-                //   </Card>
-                // </div>
-                <div key={item1.id} className={`collection-slides ${style.collectioncard}`} >
-                <div className={style.imgtext}>
-                  <div className={style.image}>
-                    <img className="" src={item1.thumbnail_url} alt=".." />
-                    <span className={style.collectioncardtext}>{item1.name}</span>
+                <div
+                  key={item1.id}
+                  className={`collection-slides ${style.collectioncard}`}
+                >
+                  <div className={style.imgtext}>
+                    <div className={style.image}>
+                      <img className="" src={item1.thumbnail_url} alt=".." />
+                      <span className={style.collectioncardtext}>
+                        {item1.name}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
               ))}
             </Slider>
           </div>

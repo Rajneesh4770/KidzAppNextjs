@@ -167,7 +167,7 @@ function HomeHandpicked() {
 
                 <Card
                   className={style.cards}
-                  sx={{ maxWidth: 350 }}
+                  sx={{ maxWidth: 300 }}
                   key={item.id}
                 >
                   <div className={style.imageDiv}>
