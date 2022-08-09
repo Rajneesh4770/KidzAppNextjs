@@ -426,11 +426,20 @@
         padding: 0;
     }
 }
+/* payment section css */
+
+.money {
+	color: #e35b26;
+    float: right;
+    padding: 5px;
+}
+.moneyTop {
+	background-color: #fff;
+	width: 100%;
+}
 
 /* confirmation page css */
 
-/* .priceconfrm{
-}  */
 .priceconfrm {
    display: flex;
    justify-content: space-between;
