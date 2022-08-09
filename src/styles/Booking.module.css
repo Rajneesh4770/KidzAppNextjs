@@ -398,7 +398,7 @@
 .submitbtn {
 	width: 100% !important;
 	margin-top: 20px;
-	margin-bottom: 20px !important;
+	margin-bottom: 10px !important;
 	background-color: #e35b26;
 }
 
@@ -417,11 +417,13 @@
 }
 .money {
 	color: #e35b26;
-    float: right;
-    padding: 5px;
+	float: right;
 }
 .moneyTop {
 	/* display: flex; */
 	background-color: #fff;
 	width: 100%;
+}
+.moneyheading {
+	padding: 5px 5px 0px 5px;
 }
