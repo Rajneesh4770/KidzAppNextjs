@@ -80,7 +80,6 @@ function HomeHandpicked() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    // slideToRepeat: true,
     autoplay: true,
     autoplaySpeed: 2000,
 
@@ -164,11 +163,11 @@ function HomeHandpicked() {
         <div className="row">
             <Slider className={style.mainslider} {...settings1}>
               {resData1?.map((item) => (
-          <div className="col-lg-3" key={item.id}>
+          <div className="col-lg-12" key={item.id}>
 
                 <Card
                   className={style.cards}
-                  sx={{ maxWidth: 300 }}
+                  sx={{ maxWidth: 350 }}
                   key={item.id}
                 >
                   <div className={style.imageDiv}>

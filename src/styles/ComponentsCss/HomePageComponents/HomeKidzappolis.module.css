@@ -30,7 +30,41 @@ element.style {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+/* new */
+.collectioncard{
+    background-color: #fff;
+  width: 140px !important;
+  height: 150px !important;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 15px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  margin: 15px auto;
 
+}
+.imgtext{
+    justify-content: center;
+  display: flex;
+}
+.image{
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.collectioncard img{
+    object-fit: cover;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.collectioncardtext{
+    font-weight: 500;
+  font-size: 15px;
+  color: #002240;
+}
 @media(max-width:767.98px){
     .collectionSlider {
         width: 100%;

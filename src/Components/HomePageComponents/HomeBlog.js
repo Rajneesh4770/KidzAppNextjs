@@ -7,7 +7,7 @@ import HomeButton from "./HomeButton";
 function Homeblog2() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get(baseUrl + "blogs?page=1&limit=9&country_code=ae").then((res) => {
+    axios.get(baseUrl + "blogs?page=1&limit=6&country_code=ae").then((res) => {
       setData(res.data.results);
     });
   }, []);

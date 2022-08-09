@@ -186,28 +186,36 @@ function HomeKidzappolis() {
 
             <Slider {...settings2}>
               {data2.map((item1) => (
-                <div key={item1.id} className={` ${style.collectionCard}`}>
-                  <Card
-                    className={style.conditionalCard}
-                    style={{ width: "10rem" }}
-                  >
-                    <Card.Img
-                      variant="top"
-                      src={
-                        item1.image_url
-                          ? item1.image_url
-                          : "https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg"
-                      }
-                      className={style.approvedImg}
-                      alt="image is not available"
-                    />
-                    <Card.Body className={style.cardP}>
-                      <p className={style.approvedP}>
-                        {item1.name}
-                      </p>
-                    </Card.Body>
-                  </Card>
+                // <div key={item1.id} className={` ${style.collectionCard}`}>
+                //   <Card
+                //     className={style.conditionalCard}
+                //     style={{ width: "10rem" }}
+                //   >
+                //     <Card.Img
+                //       variant="top"
+                //       src={
+                //         item1.image_url
+                //           ? item1.image_url
+                //           : "https://testimages.kidzapp.com/media/lists/All%20Kidzapp%20Deals_0412913e-96dc-410b-b414-db1469e65065.jpg"
+                //       }
+                //       className={style.approvedImg}
+                //       alt="image is not available"
+                //     />
+                //     <Card.Body className={style.cardP}>
+                //       <p className={style.approvedP}>
+                //         {item1.name}
+                //       </p>
+                //     </Card.Body>
+                //   </Card>
+                // </div>
+                <div key={item1.id} className={`collection-slides ${style.collectioncard}`} >
+                <div className={style.imgtext}>
+                  <div className={style.image}>
+                    <img className="" src={item1.thumbnail_url} alt=".." />
+                    <span className={style.collectioncardtext}>{item1.name}</span>
+                  </div>
                 </div>
+              </div>
               ))}
             </Slider>
           </div>

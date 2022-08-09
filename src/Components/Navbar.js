@@ -202,19 +202,10 @@ const Header = () => {
                         </Link>
                         <Link href="/">
                           <li class="nav-item">
-                            <a class="nav-link ">Login</a>
+                            <a class="nav-link " onClick={handleOpen}>Login</a>
                           </li>
                         </Link>
-                        {/* <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
-                        </li> */}
+                       
                       </ul>
                     </div>
                   </div>
