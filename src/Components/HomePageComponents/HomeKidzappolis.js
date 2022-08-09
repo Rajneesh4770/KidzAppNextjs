@@ -22,9 +22,6 @@ function HomeKidzappolis() {
     slidesToScroll: 1,
    
     autoplaySpeed: 3000,
-    // arrows:true,
-    // prevArrow: <SamplePrevArrow />,
-    // nextArrow: <SampleNextArrow />,
     prevArrow: <Typography className={style.typography}><ArrowBackIosNewIcon  className={style.backarrow}/></Typography>,
     nextArrow: <Typography className={style.typography}><ArrowForwardIosIcon className={style.forwardarrow}/></Typography>,
     responsive: [
@@ -205,9 +202,9 @@ function HomeKidzappolis() {
                       alt="image is not available"
                     />
                     <Card.Body className={style.cardP}>
-                      <Card.Text className={style.approvedP}>
+                      <p className={style.approvedP}>
                         {item1.name}
-                      </Card.Text>
+                      </p>
                     </Card.Body>
                   </Card>
                 </div>

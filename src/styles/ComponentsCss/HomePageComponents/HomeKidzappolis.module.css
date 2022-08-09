@@ -21,6 +21,9 @@ element.style {
     margin: 0 auto;
 }
 .aprovedP{
+   color: red;
+}
+.cardP{
     display: -webkit-box;
     max-width: auto;
     -webkit-line-clamp: 1;

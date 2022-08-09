@@ -132,9 +132,9 @@ function Blog() {
       </section>
 
       <div className={styleblog.map1}>
-        {/* {loader ? getData() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
-      <CircularProgress color="success" />
-    </Stack>} */}
+        {loader ? getData() :<Stack sx={{ alignItems: 'center' }} spacing={2} direction="row">
+      <CircularProgress color="success" sx={{marginLeft:'auto' , marginRight:'auto'}}/>
+    </Stack>}
 
         <div className="container" >
           <div className="row">
