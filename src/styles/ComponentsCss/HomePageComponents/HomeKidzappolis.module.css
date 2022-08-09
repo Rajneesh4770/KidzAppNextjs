@@ -20,6 +20,13 @@ element.style {
     width: 600px;
     margin: 0 auto;
 }
+.aprovedP{
+    display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 @media(max-width:767.98px){
     .collectionSlider {

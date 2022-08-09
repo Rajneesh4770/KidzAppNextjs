@@ -50,7 +50,7 @@ function HomeCrousel() {
         <Carousel.Item>
           <img
             className={style.crouselImages}
-            src="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+            src="https://testimages.kidzapp.com/media/CACHE/images/venues/65b8c9af-55be-492f-95cf-13e3eb19cdbe/dpr-test.jpeg"
             alt="Loading....."
           />
           <Carousel.Caption>
