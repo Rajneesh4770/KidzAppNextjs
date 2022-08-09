@@ -397,12 +397,12 @@
 
 .submitbtn {
 	width: 100% ;
-	margin-top: 20px;
-	margin-bottom: 10px ;
-	background-color: #e35b26;
+	margin-top: 20px !important;
+	margin-bottom: 10px !important ;
+	background-color: #e35b26 !important;
 }
 .submitbtn:hover{
-	background-color: #19ADEE;
+	background-color: #19ADEE !important;
 }
 
 @media (max-width: 575.98px) {
