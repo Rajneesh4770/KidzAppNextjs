@@ -26,7 +26,6 @@
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
-    filter: brightness(75%);
 
 }
 .card1 p{
@@ -44,6 +43,9 @@ top: inherit!important;
 }
 .smcard img{
     height: 308px ;
+}
+.bigcard img{
+    height: 308px;
 }
 .button{
     border: none;

@@ -99,12 +99,12 @@ const Header = () => {
                       </a>
                       <ul class="dropdown-menu widthset">
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item" onClick={()=>(setLanguage(ae))}>
                             UAE
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
+                          <a class="dropdown-item" onClick={()=>(setLanguage(ar))}>
                             EG
                           </a>
                         </li>
@@ -205,7 +205,6 @@ const Header = () => {
                             <a class="nav-link " onClick={handleOpen}>Login</a>
                           </li>
                         </Link>
-                       
                       </ul>
                     </div>
                   </div>
@@ -215,7 +214,6 @@ const Header = () => {
           </div>
         </section>
       </header>
-
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

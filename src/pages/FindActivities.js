@@ -49,6 +49,8 @@ function FindActivities() {
   //         right side section api
   const [dataright, setDataright] = useState([]);
 
+  
+
   const rightcard = () => {
     Axios.get(
       "https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22"
@@ -72,17 +74,18 @@ function FindActivities() {
         <section className={style1.filter}>
           <div className="container py-4">
             <div className="row">
-              <div className="col-md-10">
+              <div className="col-md-10 ">
                 <div className="row leftContent">
-                  <div className={`col-md-2 ${style1.md2}`}>
+                  <div className={`col-md-2 col-sm-2 ${style1.md2}`}>
                     <input
                       className="form-control mr-sm-2"
                       type="search"
+                      id="myInput" 
                       placeholder="Search"
                       aria-label="Search"
                     />
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 sm-2">
                     <select
                       className="form-control"
                       id="exampleFormControlSelect1"
@@ -94,7 +97,7 @@ function FindActivities() {
                       <option>Ajman</option>
                     </select>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 sm-6">
                     <select
                       className="form-control"
                       id="exampleFormControlSelect1"
@@ -103,17 +106,16 @@ function FindActivities() {
                       <option>All Area</option>
                     </select>
                   </div>
-                  <div className="col-md-2">
-                    <select
-                      className="form-control"
+                  <div className="col-md-2 sm-6">
+                    <input
+                      className="form-control date"
+                      type='date'
                       id="exampleFormControlSelect1"
                     >
-                      <option value="">All Dates</option>
-                      <option>Today</option>
-                      <option>Weekend</option>
-                    </select>
+                      
+                    </input>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 sm-6">
                     <select
                       className="form-control"
                       id="exampleFormControlSelect1"
@@ -125,7 +127,7 @@ function FindActivities() {
                       <option>Play and Fun</option>
                     </select>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 sm-6">
                     <select
                       className="form-control"
                       id="exampleFormControlSelect1"
@@ -141,7 +143,7 @@ function FindActivities() {
                 </div>
               </div>
 
-              <div className="col-md-2 rightContent">
+              <div className="col-md-2 sm-6 rightContent">
                 <button className={style1.btn1}>More Filter</button>
               </div>
             </div>

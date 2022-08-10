@@ -219,4 +219,11 @@
 .ul li{
   cursor: pointer;
 }
+.ul li a:hover{
+  color: #19AFF4 !important;
+}
+.ul li a:checked{
+  color: #19AFF4 !important;
+}
+
 

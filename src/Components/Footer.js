@@ -15,16 +15,16 @@ function Footer() {
               <Link href='/FindActivities'>
                 <li className={style.iconEffect}> Exclusive on kidz app</li>
               </Link>
-              <Link href='/Spring Fun'>
+              <Link href='/FindActivities '>
                 <li className={style.iconEffect}> Spring Fun</li>
               </Link>
-              <Link href='/AfterSchool activities'>
+              <Link href='/FindActivities'>
                 <li className={style.iconEffect}> AfterSchool activities</li>
               </Link>
-              <Link href='/Animal Fun'>
+              <Link href='/FindActivities'>
                 <li className={style.iconEffect}> Animal Fun</li>
               </Link>
-              <Link href='/Art, Music & Dance'>
+              <Link href='/FindActivities'>
                 <li className={style.iconEffect}> Art, Music & Dance</li>
               </Link>
             </ul>

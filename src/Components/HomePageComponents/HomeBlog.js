@@ -25,8 +25,8 @@ function Homeblog2() {
                   key={item.id}
                   className={`${
                     i === 0 || i === 5 || i === 6
-                      ? `col-md-6 `
-                      : `col-md-3  ${style.smcard}`
+                      ? `col-lg-6 md-9 sm-12 ${style.bigcard}`
+                      : `col-lg-3  ${style.smcard}`
                   }  col-sm-12 ${style.blogCardHome}`}
                 >
                   <div className={`card ${style.card1} mb-4`}>

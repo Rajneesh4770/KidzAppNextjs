@@ -196,7 +196,7 @@
 
 /* new card */
 .card{
-  width: 75%;
+  width: 90%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -257,6 +257,10 @@
 @media (max-width: 767.98px) {
   .mainslider {
     width: 90%;
+  }
+  .card{
+    width: 100%;
+    justify-content: center;
   }
 }
 
