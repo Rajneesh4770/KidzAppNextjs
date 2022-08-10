@@ -204,13 +204,20 @@
   margin-left: auto;
   margin-right: auto;
 }
-.card img{
+.cardimage{
+  position: relative;
   padding: 8px;
     border: 1px solid white;
     border-radius: 20px 20px 0px 0px;
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
   filter: brightness(100%);
+}
+.dealimg{
+  width: 15%;
+  height: 15%;
+  position: absolute !important;
+  padding: 5px;
 }
 .card img:hover{
   filter: brightness(100%);
@@ -224,6 +231,11 @@
   color: white;
   background-color: #e35b26;
   border: none;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+}
+.imageDiv {
+  overflow: hidden;
 }
 
 .backarrow {

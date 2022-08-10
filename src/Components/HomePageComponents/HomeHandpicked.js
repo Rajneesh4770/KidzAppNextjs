@@ -223,11 +223,17 @@ function HomeHandpicked() {
                   </CardActions>
                 </Card> */}
                 <div className={`card ${style.card}`}>
+                  <div className={style.imageDiv}>
                   <img
-                    className="card-img-top"
+                    className={`card-img-top ${style.cardimage}`}
                     src={item.image_url}
                     alt="Card image cap"
                   />
+                  <img
+											src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+											className={style.dealimg}
+										/>
+                  </div>
                   <div className="card-body">
                     <h5 className={`card-title ${style.itemTitle} `}>
                       {item.title}
