@@ -217,7 +217,7 @@
   width: 15%;
   height: 15%;
   position: absolute !important;
-  padding: 5px;
+  margin: 10px;
 }
 .card img:hover{
   filter: brightness(100%);
