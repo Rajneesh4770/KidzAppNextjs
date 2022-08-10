@@ -159,13 +159,12 @@ function HomeHandpicked() {
         </div>
       </div>
 
-      <div className={`container ${style.cardSection}`}>
+      <div className={`container ${style.card1}`}>
         <div className="row">
-            <Slider className={style.mainslider} {...settings1}>
-              {resData1?.map((item) => (
-          <div className="col-lg-12" key={item.id}>
-
-                <Card
+          <Slider className={style.mainslider} {...settings1}>
+            {resData1?.map((item) => (
+              <div className="col-4" key={item.id}>
+                {/* <Card
                   className={style.cards}
                   sx={{ maxWidth: 300 }}
                   key={item.id}
@@ -222,11 +221,36 @@ function HomeHandpicked() {
                       </Button>
                     </Link>
                   </CardActions>
-                </Card>
-          </div>
-
-              ))}
-            </Slider>
+                </Card> */}
+                <div className={`card ${style.card}`}>
+                  <img
+                    className="card-img-top"
+                    src={item.image_url}
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h5 className={`card-title ${style.itemTitle} `}>
+                      {item.title}
+                    </h5>
+                    <p className="card-text">{item.brief_address}</p>
+                    <div>
+                      {" "}
+                      <Rating
+                        name="read-only"
+                        value={item.average_rating}
+                        readOnly
+                      />
+                    </div>
+                    <div >
+                      <span  style={{color:'red'}}><del><b>AED 120</b></del></span> &nbsp; <span><b>AED 99</b></span>
+                    <Link href="/Booking">
+                      <a className="btn btn-success float-end">Book Now</a>
+                    </Link></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
         <div className="row">
           <div className="col-lg-12">
@@ -243,7 +267,3 @@ function HomeHandpicked() {
 }
 
 export default HomeHandpicked;
-
-// 16.14.11
-
-// 14.16.0

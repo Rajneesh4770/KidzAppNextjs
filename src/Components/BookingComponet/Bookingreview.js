@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import style from "../../styles/Booking.module.css";
 import { Button } from "@mui/material";
+import Link from "next/link";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -12,7 +13,7 @@ function Bookingreview() {
     <>
     {payment ? 
       <div className="col-lg-6 col-sm-12">
-        <div className={style.rightsection}>
+        <div className={style.rightsection} id='rightTop'>
           <div className="row mt-4">
             <div className="col-lg-12">
               <div>
@@ -88,9 +89,10 @@ function Bookingreview() {
           </div>
           <div className="row">
             <div className="col-lg-12">
+              <Link href='#rightTop'>
               <Button variant="contained" className={style.submitbtn} onClick={()=>{setPayment(false)}}>
                 Confirm and pay now
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>

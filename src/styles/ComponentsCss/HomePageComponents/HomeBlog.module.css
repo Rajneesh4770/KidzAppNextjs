@@ -19,13 +19,14 @@
     width: 100%;
     position: absolute;
     background: linear-gradient(to top, #00adeec9, #fff0);
-}
+} 
 .card1{
     color: #fff;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
+    filter: brightness(75%);
 
 }
 .card1 p{
