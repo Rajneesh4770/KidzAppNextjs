@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { baseUrl } from "../../config";
+import Link from 'next/link';
 import Axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeCrousel.module.css";
@@ -31,12 +32,13 @@ function HomeCrousel() {
               <Carousel.Caption>
                 <h1 className={style.crouselHeading}>{item.title}</h1>
                 <p className={style.crouselParagraph}>{item.description}</p>
+                <Link href="/Booking">
                 <button
                   className={`btn ${style.button}`}
                   onClick={() => toast("Successfully Booked")}
                 >
                   Book Now
-                </button>
+                </button></Link>
               </Carousel.Caption>
             </Carousel.Item>
           );
