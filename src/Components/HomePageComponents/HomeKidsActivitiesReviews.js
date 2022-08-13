@@ -49,7 +49,7 @@ function HomeKidsActivitiesReviews() {
   const getReviewData = () => {
     axios
       .get(
-        baseUrl+"reviews/featured?page=1&page_size=20&country_code=ae"
+        baseUrl+"reviews/featured?page=1&page_size=9&country_code=ae"
       )
       .then((response) => {
         const myData = response.data;
