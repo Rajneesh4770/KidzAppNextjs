@@ -24,6 +24,9 @@
      /* height: 1; */
      min-height: 320px;
    }
+   .cardimg{
+    width: -webkit-fill-available;
+   }
  .cardTopPara {
      font-size: 16px;
      color: #955da4;
@@ -63,9 +66,9 @@
      transform: scale(0.9);
    }
    .bottomRow {
-     background-color: lightgray;
+     background-color: #fafafaf1;
      padding: 5px;
-     position: absolute;
+     /* position: absolute; */
      bottom: 25px;
      padding-right: 59px;
      border-radius: 10px;
@@ -102,6 +105,17 @@
    .review-comp .slick-list {
      padding: 10px;
    }
+   .button{
+    border: none;
+    padding: 7px 50px;
+    border-radius: 20px;
+    color: #e35b26;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0 ;
+}
+.button:hover{
+    transform: translateY(-2px);
+}
    
    @media (max-width: 1199.98px) {
      .reviewComp {

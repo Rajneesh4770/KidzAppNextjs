@@ -1,0 +1,36 @@
+.section1{
+    margin-top: 140px;
+    margin-bottom: 30px;
+}
+.firstcard{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.firstcard img{
+    width: -webkit-fill-available;
+    height:150px;
+    border-radius: 8px;
+}
+.secondcard{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.secondcard p{
+    color: #858484f1;
+}
+/* right section */
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.cardimg2 {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 0;
+}
+.secondheading {
+	color: #9c5ca7;
+}

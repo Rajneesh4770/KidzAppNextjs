@@ -7,6 +7,7 @@ import axios from 'axios';
 import HomeButton from "../HomePageComponents/HomeButton"
 import getResponseMessage from '../../Language/multilingualServices';
 import { constants } from '../Navbar';
+import Link from 'next/link';
 function HomeKidsActivitiesReviews() {
   const settings = {
     infinite: true,
@@ -92,7 +93,11 @@ function HomeKidsActivitiesReviews() {
                   className={`${i===1  ? style.index :style.index1 }`}>
                     <div className={style.reviewcard} style={{ width: "18rem" }}>
                       <div className={style.cardbody}>
-                        <p className={style.cardTopPara}> {slide.venue.title} </p>
+                      <img
+                          className={`${style.cardimg} mb-3`}
+                          src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
+                        />
+                        <p className={style.cardTopPara}><b> {slide.venue.title} </b></p>
                         <h5 className={style.cardtitle}>{slide.title} </h5>
                         <hr className={style.hr}/>
                         <p className={style.cardtext}>{slide.review}</p>
@@ -130,7 +135,9 @@ function HomeKidsActivitiesReviews() {
           </div>
         </div>
       </div><br/><br/>
-      <HomeButton/><br/>
+      <Link href="/AllReviews">
+        <center><button className={style.button}>View All</button></center>
+        </Link>
     </div>
   );
 }

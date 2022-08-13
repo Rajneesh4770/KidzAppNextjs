@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
 import style from "../styles/Navbar.module.css";
 import Link from "next/link";
-import HomeHandpicked from "./HomePageComponents/HomeHandpicked";
-import LoginIcon from "@mui/icons-material/Login";
 import { InputLabel, Select, MenuItem, FormControl } from "@mui/material";
 import getResponseMessage from "../Language/multilingualServices";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
-import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
-import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import { useSelector, useDispatch } from "react-redux";
 import { ar, ae } from "../Redux/Langauge";
+import {FaFacebookF} from 'react-icons/fa'
+import {HiOutlineMail} from 'react-icons/hi'
 
 const style1 = {
   position: "absolute",
@@ -227,37 +224,13 @@ const Header = () => {
       >
         <Fade in={open}>
           <Box sx={style1}>
-            <Typography id="transition-modal-title" variant="h3" component="h1">
-              Login
-            </Typography>
-            <TextField
-              id="standard-basic"
-              label="Email-ID"
-              variant="standard"
-              sx={{ width: 300 }}
-            />
-            <TextField
-              id="standard-basic"
-              label="Password"
-              variant="standard"
-              sx={{ width: 300 }}
-            />
-            <br></br>
-            <br />
             <Button variant="outlined" color="success" sx={{ width: 300 }}>
-              Sign in
+              LogIn With E-mail &nbsp; <HiOutlineMail/>
             </Button>
             <br />
-            <Typography>Forgot password? </Typography>
-            {/* <hr/>  */}
-            <Typography sx={{ width: 300 }}>
-              <HorizontalRuleIcon />
-            </Typography>
-            <Link href="/Login/SignIn">
               <Button variant="outlined" color="success" sx={{ width: 300 }}>
-                Sign Up
+                LogIn With Facebook &nbsp; <FaFacebookF/>
               </Button>
-            </Link>
           </Box>
         </Fade>
       </Modal>

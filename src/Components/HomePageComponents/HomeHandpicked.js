@@ -164,64 +164,7 @@ function HomeHandpicked() {
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
               <div className="col-4" key={item.id}>
-                {/* <Card
-                  className={style.cards}
-                  sx={{ maxWidth: 300 }}
-                  key={item.id}
-                >
-                  <div className={style.imageDiv}>
-                    <CardMedia
-                      className={style.cardImage}
-                      component="img"
-                      height="200"
-                      image={item.image_url}
-                      alt=" "
-                    />
-                  </div>
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="div"
-                      className={style.itemTitle}
-                    >
-                      {item.title}
-                    </Typography>
-                    <Typography
-                      variant="body4"
-                      color="purple"
-                      className="item-title"
-                    >
-                      {item.brief_address}
-                    </Typography>
-                  </CardContent>
-                  <Typography>
-                    &nbsp; &nbsp;
-                    <Rating
-                      name="read-only"
-                      value={item.average_rating}
-                      readOnly
-                    />
-                  </Typography>
-                  <CardActions className="pb-3 ">
-                    &nbsp; &nbsp;
-                    <span className={` ${style.span1}`}>
-                      <del>AED 120</del>
-                    </span>{" "}
-                    &nbsp;
-                    <span className={style.span2}>AED 99</span>
-                    <Link href="/Booking">
-                      <Button
-                        className={style.cardbutton}
-                        size="small"
-                        color="error"
-                        onClick={notify}
-                      >
-                        Book Now
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </Card> */}
+              
                 <div className={`card ${style.card}`}>
                   <img
                     className={`card-img-top ${style.cardimage}`}
@@ -258,9 +201,9 @@ function HomeHandpicked() {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <div className={style.viewAllBtn}>
-              <HomeButton></HomeButton>
-            </div>
+          <Link href="/AllReviews">
+        <center><button className={style.button}>View All</button></center>
+        </Link>
           </div>
         </div>
       </div>
