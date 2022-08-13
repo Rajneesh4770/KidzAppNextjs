@@ -49,6 +49,7 @@ top: inherit!important;
 }
 .button{
     border: none;
+    margin-bottom: 10px;
     padding: 7px 50px;
     border-radius: 20px;
     color: #e35b26;

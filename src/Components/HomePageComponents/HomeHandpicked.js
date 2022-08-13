@@ -163,7 +163,7 @@ function HomeHandpicked() {
         <div className="row">
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
-              <div className="col-4" key={item.id}>
+              <div className="col-lg-4" key={item.id}>
               
                 <div className={`card ${style.card}`}>
                   <img

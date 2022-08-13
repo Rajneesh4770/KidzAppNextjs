@@ -34,3 +34,17 @@
 .secondheading {
 	color: #9c5ca7;
 }
+.section1 button{
+    background-color: #00adee;
+    border: #00adee;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+
+}
+.section1 button:hover{
+    background-color: #00adee;
+}
+@media(max-width:767.98px){
+    .firstcard img{
+        height: 100px;
+    }
+}

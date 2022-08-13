@@ -256,6 +256,7 @@
 .button{
   border: none;
   padding: 7px 50px;
+  margin: 15px 0px;
   border-radius: 20px;
   color: #e35b26;
   background-color: #fff;

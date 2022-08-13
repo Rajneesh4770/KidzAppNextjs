@@ -216,7 +216,7 @@ function HomeKidzappolis() {
               ))}
             </Slider>
           </div>
-        </div>
+        </div><br/>
       </div>
     </>
   );
