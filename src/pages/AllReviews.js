@@ -94,7 +94,7 @@ const AllReviews = () => {
                 {/* rightg section */}
                 <div className='col-lg-3'>
                   <h5>Related Activities</h5>
-                  <div className={`card mt-2 ${style.card}`}>
+                  <div className={`card mt-3 ${style.card}`}>
 										<img
 											className={`card-img-top ${style.cardimg}`}
 											src="https://testimages.kidzapp.com/media/CACHE/images/venues/5c72b62f-aee5-4a99-af7c-334c106d483e/xdubai-skatepark.jpg"
@@ -109,6 +109,25 @@ const AllReviews = () => {
 											<h5 className="card-title"> XDubai SkatPark</h5>
 											<h6 className={`card-title ${style.secondheading} pt-2`}>
 												Kite Beach, Jumariah
+											</h6>
+											
+										</div>
+									</div>
+                   <div className={`card mt-4 ${style.card}`}>
+										<img
+											className={`card-img-top ${style.cardimg}`}
+											src="https://testimages.kidzapp.com/media/CACHE/images/venues/7e5c8430-62a5-4a1b-ae24-afb23643770f/safa-park-2.jpg"
+											alt="..."
+										/>
+										<img
+											src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg"
+											className={style.cardimg2}
+										/>
+										
+										<div className="card-body">
+											<h5 className="card-title"> Safa Park-2</h5>
+											<h6 className={`card-title ${style.secondheading} pt-2`}>
+												Ai Safa-2, Jumeirah
 											</h6>
 											
 										</div>
