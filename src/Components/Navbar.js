@@ -180,28 +180,32 @@ const Header = () => {
                         <Link href="/Blog">
                           <li class="nav-item">
                             <a class="nav-link" href="#">
-                              Blog
+                            { getResponseMessage(constants).blog}
                             </a>
                           </li>
                         </Link>
                         <Link href="/KidzappAward">
                           <li class="nav-item">
-                            <a class="nav-link ">Kidzapp Awards</a>
+                            <a class="nav-link ">
+                               { getResponseMessage(constants). kidzapp_awards}</a>
                           </li>
                         </Link>
                         <Link href="/KidzappTv">
                           <li class="nav-item">
-                            <a class="nav-link ">Kidzapp TV</a>
+                            <a class="nav-link ">
+                            { getResponseMessage(constants). kidzapp_tv} </a>
                           </li>
                         </Link>
                         <Link href="/Getintouch">
                           <li class="nav-item">
-                            <a class="nav-link ">Get In Touch</a>
+                            <a class="nav-link ">
+                            { getResponseMessage(constants). get_in_touch}</a>
                           </li>
                         </Link>
                         <Link href="/GetListed">
                           <li class="nav-item">
-                            <a class="nav-link ">Get Listed</a>
+                            <a class="nav-link ">
+                            { getResponseMessage(constants). get_listed}</a>
                           </li>
                         </Link>
                         <Link href="/">
