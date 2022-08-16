@@ -49,7 +49,6 @@ function FindActivities() {
   //         right side section api
   const [dataright, setDataright] = useState([]);
 
-  
 
   const rightcard = () => {
     Axios.get(

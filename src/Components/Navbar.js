@@ -7,8 +7,8 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import { Button } from "@mui/material";
-import { useSelector, useDispatch } from "react-redux";
-import { ar, ae } from "../Redux/Langauge";
+// import { useSelector, useDispatch } from "react-redux";
+// import { ar, ae } from "../Redux/Langauge";
 import {FaFacebookF} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 
@@ -56,7 +56,7 @@ const Header = () => {
   useEffect(() => {
     constants = localStorage.getItem("language") || "ae";
   }, [Language]);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(() => {
       window.onscroll = function () {
@@ -91,16 +91,24 @@ const Header = () => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Lang
+                        Lng<i class="fa-solid fa-language"></i>
                       </a>
                       <ul class="dropdown-menu widthset">
                         <li>
-                          <a class="dropdown-item" onClick={()=>(setLanguage(ae))}>
+                          <a class="dropdown-item"  onClick={() => {
+                                setLanguage("ae");
+                                localStorage.setItem("language", "ae");
+                                window.location.reload("/");
+                              }}>
                             UAE
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" onClick={()=>(setLanguage(ar))}>
+                          <a class="dropdown-item"  onClick={() => {
+                                setLanguage("ar");
+                                localStorage.setItem("language", "ar");
+                                window.location.reload("/");
+                              }}>
                             EG
                           </a>
                         </li>
@@ -141,7 +149,7 @@ const Header = () => {
                     </Link>
                     <button
                       class="navbar-toggler"
-                      className={style.toggle_focus}
+                      // className={style.toggle_focus}
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#navbarSupportedContent"
@@ -165,7 +173,7 @@ const Header = () => {
                               aria-current="page"
                               href="#"
                             >
-                              Find Activities
+                             { getResponseMessage(constants).find_act1}
                             </a>
                           </li>
                         </Link>
