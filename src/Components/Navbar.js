@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "../styles/Navbar.module.css";
 import Link from "next/link";
-import { InputLabel, Select, MenuItem, FormControl } from "@mui/material";
 import getResponseMessage from "../Language/multilingualServices";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";

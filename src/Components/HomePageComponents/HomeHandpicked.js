@@ -201,7 +201,7 @@ function HomeHandpicked() {
         </div>
         <div className="row">
           <div className="col-lg-12">
-          <Link href="/AllReviews">
+          <Link href="/Handpicked">
         <center><button className={style.button}>View All</button></center>
         </Link>
           </div>
