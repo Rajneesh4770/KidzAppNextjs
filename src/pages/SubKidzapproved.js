@@ -38,14 +38,18 @@ const SubKidzapproved = () => {
 											className={style.dealimg}
 										/>
 										<div className="card-body">
-											<h5 className="card-title">KidZania Dubai</h5>
-											<h6 className={`card-title ${style.secondheading} pt-2`}>
-												The Dubai Mall, Downtown
-											</h6>
-											<span>
-												<del>AED 99</del>
-											</span>{' '}
-											&nbsp; <span style={{ color: 'red' }}> AED 79</span>
+											<h5 className="card-title">25% off Science-Themed Birthdays</h5>
+                                            <div className='d-flex'>
+											<p className={`card-title  `}>
+												Birthdays
+											</p>
+											<p className={`${style.secondheading} `}>
+												Ages 4-16
+											</p>
+                                            <br/>
+                                            </div>
+                                           
+                                           
 										</div>
 									</div>
                 </div>

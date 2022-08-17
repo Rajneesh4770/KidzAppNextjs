@@ -10,8 +10,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
 import getResponseMessage from "../../Language/multilingualServices";
 import { constants } from "../Navbar";
-import { Link } from "next/link";
-
+import Link from "next/link";
 function HomeKidzappolis() {
   const settings = {
     dots: false,
@@ -202,8 +201,8 @@ function HomeKidzappolis() {
             <Slider {...settings2}>
               {data2.map((item1) => {
                 return(
+                <Link href='/SubKidzapproved'>
                 
-                  // <Link href="/BlogDetail">
                 <div
                   key={item1.id}
                   className={`collection-slides ${style.collectioncard}`}
@@ -217,7 +216,7 @@ function HomeKidzappolis() {
                     </div>
                   </div>
                 </div>
-                // </Link>
+                </Link>
                 
 )})}
             </Slider>
