@@ -7,15 +7,9 @@ import axios from "axios";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import Slider from "react-slick";
-import HomeButton from "./HomeButton";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css";
 import {
   Typography,
-  CardContent,
-  CardMedia,
-  CardActions,
-  Button,
-  Card,
   Rating,
 } from "@mui/material";
 function HomeHandpicked() {
