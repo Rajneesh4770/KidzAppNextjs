@@ -7,7 +7,25 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Rating } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Slider from 'react-slick';
+import { baseUrl } from '../config';
+import axios from 'axios';
+import { useEffect } from 'react';
+import { useState } from 'react';
 const Booking = () => {
+	const [data, setData] = useState();
+	useEffect(() => {
+		axios
+			.get(
+				baseUrl +
+					'experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=2&page_size=1&city=&website=1',
+			)
+			.then((res) => {
+				console.log(res.data.results);
+
+				setData(res.data.results);
+			});
+	}, []);
+
 	const Setting = {
 		slidesToShow: 1,
 		slidesToScroll: 1,
