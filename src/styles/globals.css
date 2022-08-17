@@ -100,3 +100,8 @@ a.carousel-control-next {
     width:75%!important;
   }
 }
+.dynamicCrousel .carousel-indicators [data-bs-target] {
+  width:15px !important;
+  height: 15px !important;
+  margin-top: 30px !important;
+}

@@ -4,6 +4,7 @@
 .background{
     background-image: url("https://kidzapp.com/images/blog-banner.jpg");
     height: 100px;
+    width:auto;
 }
 .searchbar{
     width: 50% !important;
@@ -13,3 +14,56 @@
 .section2{
     margin-top: 20px;
 }
+.cardHeading{
+    color: #007bfb;
+}
+.cardFooter{
+    display:inline-flex;
+    
+}
+.cardFooter .Badge{
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.28;
+    background-color: #3f3e3e;
+    border-radius: 12px;
+    padding: 4px 8px;
+    display: inline-block;
+    margin-left: 10px;
+    min-width: 40px;
+    text-align: center;
+}
+.cardText{
+    color:#965da4;
+}
+.playImage{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.videoShareIcon{
+    position: absolute;
+    top: 20px;
+    right:10px;
+}
+.videoLikeIcon{
+    position: absolute;
+    top:20px;
+    right: 60px;
+}
+.FormRow{
+    padding-top: 30px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.Container{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
