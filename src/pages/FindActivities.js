@@ -59,6 +59,7 @@ function FindActivities() {
 				),
 			);
 			loaderHandler(() =>
+      
 				setDataright(
 					dataright?.filter((val) =>
 						val.title.toLowerCase().includes(search.toLowerCase()),
