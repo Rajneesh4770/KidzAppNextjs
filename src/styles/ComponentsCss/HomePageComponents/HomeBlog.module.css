@@ -31,7 +31,7 @@
 .card1 p{
     text-decoration: underline;
 }
-.card1 :hover{
+.card1 img :hover{
     z-index: 999 !important;
     transform: scale(1.5);
 

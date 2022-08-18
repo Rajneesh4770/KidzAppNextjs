@@ -75,6 +75,7 @@ element.style {
     margin: 5px;
     height: 100%;
     padding-top: 10px;
+    cursor: pointer;
 }
 
 .activityBoxHeading {

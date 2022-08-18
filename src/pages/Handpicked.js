@@ -1,20 +1,34 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import style from "../styles/Handpicked.module.css";
 const Handpicked = () => {
   const [data, setData] = useState([]);
-  const [card, setCard] = useState("hearts_day_fun");
-  useEffect(() => {
-    axios
-      .get(
-        "https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=hearts_day_fun&country_code=&page=1&page_size=10&city=&website=1"
-      )
-      .then((res) => {
-        setData(res.data.results);
-		console.log(res.data.results);
-      });
+  const [card, setCard] = useState('');
+  let list =['hearts_day_fun','free_summer_fun','dev_lists_new'];
+  useEffect(()=>{
+    console.log(data,"test data");  
+  },[data])
+
+  
+  useMemo(() => {
+    if(data.length !== list.length)
+    list.forEach(async(x)=>{
+    try {
+      let res = await axios.get(
+        `https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${x}&country_code=&page=1&page_size=10&city=&website=1`
+      );
+      let New = {
+        title:x,
+        cards:res.data.results
+      }
+      setData(Old=>[...Old,New]);
+    } catch (error) {
+      console.log(error);
+    }
+  });
   }, []);
 
+  
   return (
     <>
       <section className={style.section1}>
@@ -31,10 +45,12 @@ const Handpicked = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row mt-3">
-			<h1>Hearts_Day_Fun</h1>
-            {data.map((item) => {
+            {data?.map((Item) => {
               return (
+                <div className="row mt-3">
+                  <h1>{Item.title}</h1>
+                {
+                Item.cards.map((item)=>
                 <div className="col-lg-4 sm-6">
                   <div className={`card mb-3  ${style.card}`}>
                     <img
@@ -62,10 +78,11 @@ const Handpicked = () => {
                     </div>
                   </div>
                 </div>
+                )}
+                </div>
               );
             })}
           </div>
-        </div>
       </section>
     </>
   );
