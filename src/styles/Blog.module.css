@@ -30,11 +30,6 @@
   padding: 15px 0px 15px 0px;
 }
 
-/* .map1 {
-  display: grid;
-  justify-content: space-around;
-  grid-template-columns: auto auto auto;
-} */
 
 .m2 {
   width: 100%;
@@ -144,7 +139,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: -webkit-fill-available;
-  /* width:'165px'; */
 }
 
 .button85:before {
@@ -255,14 +249,12 @@
   left: 0;
   width: -webkit-fill-available;
   height: 100%;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 
 }
 
 .blogcardbackground {
   padding: 15px;
   background: white;
-  /* border-style: groove; */
 }
 
 .cardbackgroundwrapper {

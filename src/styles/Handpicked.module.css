@@ -1,0 +1,92 @@
+.section1{
+    margin-top: 130px;
+}
+.topbackground{
+    height: 200px;
+   position: relative;
+    background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    padding-top: 3%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.effectiveheading{
+    position: relative;
+    justify-content: center;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  animation: typewriter 5s steps(44) 1s 50 normal both,
+    blinkTextCursor 600ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 20em;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: white;
+    }
+  
+    to {
+      border-right-color: black;
+    }
+  }
+  .card {
+	border-radius: 10px !important;
+	overflow: hidden;
+	border: none !important;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	width: 90%;
+	float: right;
+}
+
+.cardimg {
+	height: 230px !important;
+	position: relative;
+}
+
+.cardimg2 {
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	right: 0;
+}
+.dealimg {
+	position: absolute;
+	height: 15%;
+	width: 15%;
+	padding: 5px;
+}
+
+.card:hover {
+	transform: translateY(-2px);
+}
+.secondheading{
+  display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mainheadingofcard{
+  margin-left: 3%;
+  text-transform: uppercase;
+  color: #e35b26;
+}
+  

@@ -7,6 +7,11 @@
 }
 .section2{
     padding-top: 30px;
+    background-image: url("https://kidzapp.com/images/kiidzapp-awars-2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 57px 0 122px 0;
+    background-repeat: no-repeat;
 }
 .heading1{
      text-align: center;
@@ -38,3 +43,294 @@
     height: 20px;
     width: 100%;
 }
+
+.awardPartner{
+    width: 100%;
+    height: auto;
+    padding: 90px 0 70px 0;
+    text-align: center;
+}
+.awardPartnerContainer{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.awardPartnerRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center !important;
+}
+.awardPartnerCol{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.awardPartner h2{
+    text-align: center;
+    width: 100%;
+    color: #484848;
+    letter-spacing: 1.72px;
+    font-size: 42px;
+    font-weight:700;
+    line-height: 46px;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+.awardWinners{
+    background-color: #fafafa;
+    padding: 54px 0 57px;
+}
+.awardWinnersContainer{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.awardWinners h3{
+    text-align: center;
+    width: 100%;
+    color: #484848;
+    letter-spacing: 1.72px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.awardWinnersRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.winnersMainWrapper {
+    padding-top: 91px;
+    justify-content: center !important;
+}
+.awardWinnersCol{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.winnersOuterSection {
+    padding: 25px 23px 24px;
+    margin-bottom: 40px;
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    background: #fff;
+}
+.winnersOuterSection .categoryBadgeSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 9px;
+}
+.winnersOutersection img{
+    max-width: 100%;
+}
+.winnersOuterSection .categoryBadgeSection img {
+    width: 93px;
+    margin-right: 10px;
+    display: block;
+}
+.winnerSectionImg {
+    vertical-align: middle;
+    border-style: none;
+}
+.winnersOuterSection .categoryBadgeSection h2 {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: left;
+    margin-bottom: 5px;
+    letter-spacing: .3px;
+    color: #414141;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+.winnersOuterSection .winnerSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+.winnersOuterSection .winnerSectionInner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 37%;
+    max-width: 37%;
+    position: relative;
+    flex-wrap: nowrap;
+}
+.winnersOuterSection .winnerSection .leftBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.winnersOuterSection img {
+    max-width: 100%;
+}
+.winnerSectionImg{
+    vertical-align: middle;
+    border-style: none;
+}
+.winnersOuterSection .winnerSectionInner p {
+    color: grey;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 5px 0 10px;
+    text-transform: capitalize;
+    line-height: 23px;
+    font-weight: 600;
+}
+.winnerSectionInner span{
+    color: #d4af36;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+.winnersOuterSection .rightBlock{
+    width: 94px;
+}
+.goldBlock :after{
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 0.1px;
+    background: #b7b7b7;
+    right: -35%;
+    left: auto;
+    top: 0;
+}
+@media(max-width:768px){
+    .ul{
+        gap: 12px;
+    }
+    .ul li img{
+        width: 90px !important;
+    }
+    .circleimgtext{
+        font-size: 14px;
+        padding: 5px;
+    }
+    .winnersOutersection{
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+    .winnersOuterSection .categoryBadgeSection{
+        margin-bottom: 20px;
+    }
+    .winnersOuterSection .winnerSectionInner{
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    .winnersOuterSection .winnerSectionInner p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+@media(max-width: 1024px){
+    .ul{
+        gap: 13px;
+    }
+    .ul li img{
+        width: 150px;
+    }
+    .circleimgtext{
+        font-size: 24px;
+        padding: 3px;
+        font-weight: 400;
+    }
+}
+@media(max-width: 576px){
+    .ul{
+        gap: 8px;
+    }
+    .ul li img{
+        width: 60px !important;
+    }
+    .circleimgtext{
+        font-size: 10px;
+        padding: 3px;
+    }
+    .winnersOuterSection{
+        margin: 20px;
+    }
+    .winnersOuterSection .winnerSection{
+        flex-direction: column;
+    }
+    .winnersOuterSection .winnerSectionInner{
+        max-width: 70%;
+        justify-content: space-between;
+    }
+    .goldBlock :after{
+        display: none;
+    }
+    .goldBlock{
+        padding-top: 30px;
+        border-bottom: 1px solid gray;
+        width: 280px;
+    }
+}
+@media(max-width: 425px){
+    .ul{
+        gap: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ul li img{
+        width: 40px !important;
+    }
+    .circleimgtext{
+        font-size: 8px;
+        padding: 3px;
+    }
+    .winnersOuterSection{
+        margin: 20px;
+    }
+    .winnerSectionInner{
+        display: block;
+    }
+    .winnerSection .winnerSectionInner{
+        max-width: 80% !important;
+        justify-content: space-between !important;
+    }
+    .winnersOuterSection .winnerSectionInner{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .goldBlock :after{
+        display: none;
+    }
+    .goldBlock{
+        padding-top: 30px;
+        border-bottom: 1px solid gray;
+        width: 200px;
+    }
+    .heading1{
+        font-size: 20px;
+    }
+    .awardPartner{
+        padding: 0;
+    }
+    .section2{
+        padding: 0;
+    }
+    .winnersMainWrapper{
+        padding: 0;
+    }
+}
+
+

@@ -11,6 +11,10 @@
     height:150px;
     border-radius: 8px;
 }
+.firstcard img:hover{
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .secondcard{
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -24,6 +28,9 @@
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+}
+.card:hover{
+    transform: translateY(-2px);
 }
 .cardimg2 {
 	height: 50px;
