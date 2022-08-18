@@ -1,11 +1,12 @@
 import style from "../styles/Getintouch.module.css";
 import { FormLabel, TextField, Button, Box } from "@mui/material";
-import Recaptcha from "react-google-recaptcha";
 import KidzappFeed from '../../src/Components/KidzappFeed';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 import Image from "next/image";
+import Recaptcha from "../Components/Recaptcha";
+
 function Getintouch() {
 
   const initialValues = {
@@ -37,7 +38,7 @@ function Getintouch() {
 
 
   const onSubmit = () => {
-    toast.success('Register successfully')
+    // toast.success('Register successfully')
   }
 
   const formik = useFormik({
@@ -46,10 +47,15 @@ function Getintouch() {
     validationSchema,
   })
 
-  const submitHandler = () => {
-    toast.success('Register Successfully !!!')
-    console.log("Button");
-  }
+  // const submitHandler = () => {
+  //   toast.success('Register Successfully !!!')
+  //   console.log("Button");
+  // }
+
+
+  // function onChange(value){
+  //   console.log('captcha value:', value);
+  // }
 
   return (
     <div className={style.body}>
@@ -199,10 +205,8 @@ function Getintouch() {
                     </div>
                     <div className="row">
                       <div className={`col-lg-12`}>
-                        <div className="pb-2"><lable >Recaptcha</lable></div>
-                        <Recaptcha
-                          sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv"
-                        />
+                        <div className="pb-2"><label >Recaptcha</label></div>
+                          <Recaptcha />
                       </div>
                     </div>
 
@@ -213,7 +217,8 @@ function Getintouch() {
                             className={style.Button}
                             variant="contained"
                             type="submit"
-                            onClick={submitHandler}
+                            // onClick={submitHandler}
+                            onClick={() => toast("Successfully")}
                             sx={{ width: 200 }}
                           >
                             Send
@@ -228,7 +233,7 @@ function Getintouch() {
             <div className={`col-md-5 ${style.image}`}>
               <Image src="/getInTouch.png" alt="Picture"
                 width="600"
-                height="600"/>
+                height="600" />
             </div>
           </div>
         </div>
