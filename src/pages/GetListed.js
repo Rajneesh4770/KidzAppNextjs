@@ -21,8 +21,6 @@ function Getintouch() {
     phoneNumber: ''
   })
 
-  // const phoneRegExp =
-  //   /^((\\+[1-9]{1,4}[ \\-])|(\\([0-9]{2,3}\\)[ \\-])|([0-9]{2,4})[ \\-])?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
   const validationSchema = Yup.object({
     type: Yup.string()
@@ -50,14 +48,12 @@ function Getintouch() {
       .required('Email Required'),
     phoneNumber: Yup.string()
       .required('Phone number required')
-      .matches( 'Phone number is not valid')
-      .min(10, 'Too short')
-      .max(10, 'Too long')
-
   })
 
-  const handleSubmit = async () => {
-    window.confirm("Submit Successfully")
+  const handleSubmit = async (e) => { 
+    debugger;
+    alert("Submit Successfully")
+    console.log("Submitted",e);
   };
 
   return (
@@ -94,8 +90,8 @@ function Getintouch() {
 
                       <div className={style.formGroup}>
                         <label>Type*</label>
-                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }}>
-                          <option>-</option>
+                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }} name='type'>
+                          <option value>-</option>
                           <option>Course</option>
                           <option>Venue</option>
                           <option>Event</option>
@@ -107,8 +103,8 @@ function Getintouch() {
 
                       <div className={style.formGroup}>
                         <label>City*</label>
-                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }}>
-                          <option>-</option>
+                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }} name='city'>
+                          <option value>-</option>
                           <option>Dubai</option>
                           <option>AI Ain</option>
                           <option>Fujairah</option>
@@ -139,7 +135,7 @@ function Getintouch() {
                           type="text"
                           className={`${style.formControl} ${style.formInput}`}
                           id='ex_name'
-                          name='experience'
+                          name='experienceName'
                         />
                         <small className="text-danger m-2">
                           <ErrorMessage name="experienceName" />
@@ -152,7 +148,7 @@ function Getintouch() {
                           type="text"
                           className={`${style.formControl} ${style.formInput}`}
                           id='ex_name'
-                          name='experience'
+                          name='venueName'
                         />
                         <small className="text-danger m-2">
                           <ErrorMessage name="venueName" />
@@ -161,8 +157,8 @@ function Getintouch() {
 
                       <div className={style.formGroup}>
                         <label>Category*</label>
-                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }}>
-                          <option>-</option>
+                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }} name='category'>
+                          <option value>-</option>
                           <option>AE National Day</option>
                           <option>Spring Fun</option>
                           <option>Winter Fun</option>
@@ -190,8 +186,10 @@ function Getintouch() {
 
                       <div className={style.formGroup}>
                         <label>Subcategory*</label>
-                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }}>
-                          <option>-hh</option>
+                        <Field as="select" className={style.formControl} style={{ width: "100%", height: "45px" }} name='subCategory'>
+                          <option value>-</option>
+                          <option>hh</option>
+                          <option>ss</option>
                         </Field>
                         <small className="text-danger m-2">
                           <ErrorMessage name="subCategory" />
@@ -254,7 +252,7 @@ function Getintouch() {
                           type="text"
                           className={`${style.formControl} ${style.formInput}`}
                           id='phone-number'
-                          name='phone number'
+                          name='phoneNumber'
                         />
                         <small className="text-danger m-2">
                           <ErrorMessage name="phoneNumber" />
@@ -262,7 +260,7 @@ function Getintouch() {
                       </div>
                       <Recaptcha />
                   </div>
-                  <button type="submit" className={`mt-5 ${style.getListedButton}`}>GET LISTED</button>
+                  <button type="Submit" className={`mt-5 ${style.getListedButton}`}>GET LISTED</button>
 
                 </div>
               </div>
