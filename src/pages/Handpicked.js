@@ -2,32 +2,44 @@ import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 import style from "../styles/Handpicked.module.css";
 const Handpicked = () => {
+  const [title, settitle]=useState([]);
   const [data, setData] = useState([]);
-  const [card, setCard] = useState('');
-  let list =['hearts_day_fun','free_summer_fun','dev_lists_new'];
+
+  // var list =[
+  //   // 'hearts_day_fun','free_summer_fun','dev_lists_new'
+  //   // title.internal_name
+  // ];
+
+
+    
+
   useEffect(()=>{
     console.log(data,"test data");  
   },[data])
 
-  
   useMemo(() => {
-    if(data.length !== list.length)
-    list.forEach(async(x)=>{
+    if(data.length !== title.length)
+    title.forEach(async(x)=>{
     try {
       let res = await axios.get(
-        `https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${x}&country_code=&page=1&page_size=10&city=&website=1`
+        `https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${x.internal_name}&country_code=&page=1&page_size=10&city=&website=1`
       );
       let New = {
-        title:x,
+        title:x.internal_name,
         cards:res.data.results
       }
-      setData(Old=>[...Old,New]);
+      New.cards.length ?setData(Old=>[...Old,New]): null
     } catch (error) {
       console.log(error);
     }
   });
-  }, []);
-
+  }, [title]);
+  useEffect(()=>{
+    axios.get('https://api2.kidzapp.com/api/3.0/lists?country_code=ae').then((res)=>{
+      settitle(res.data);
+      
+    })
+  },[])
   
   return (
     <>
@@ -48,7 +60,7 @@ const Handpicked = () => {
             {data?.map((Item) => {
               return (
                 <div className="row mt-3">
-                  <h1>{Item.title}</h1>
+                  <h1 className={style.mainheadingofcard}>{Item.title}</h1>
                 {
                 Item.cards.map((item)=>
                 <div className="col-lg-4 sm-6">
@@ -67,9 +79,9 @@ const Handpicked = () => {
                       className={style.dealimg}
                     />
                     <div className="card-body">
-                      <h5 className="card-title">KidZania Dubai</h5>
+                      <h5 className="card-title">{item.title}</h5>
                       <h6 className={`card-title ${style.secondheading} pt-2`}>
-                        The Dubai Mall, Downtown
+                        {item.address}
                       </h6>
                       <span>
                         <del>AED 99</del>

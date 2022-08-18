@@ -8,10 +8,8 @@ import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import Slider from "react-slick";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css";
-import {
-  Typography,
-  Rating,
-} from "@mui/material";
+import { Typography, Rating } from "@mui/material";
+
 function HomeHandpicked() {
   const settings = {
     dots: false,
@@ -158,7 +156,6 @@ function HomeHandpicked() {
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
               <div className="col-lg-4" key={item.id}>
-              
                 <div className={`card ${style.card}`}>
                   <img
                     className={`card-img-top ${style.cardimage}`}
@@ -166,9 +163,9 @@ function HomeHandpicked() {
                     alt="Card image cap"
                   />
                   <img
-											src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-											className={style.dealimg}
-										/>
+                    src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+                    className={style.dealimg}
+                  />
                   <div className="card-body">
                     <h5 className={`card-title ${style.itemTitle} `}>
                       {item.title}
@@ -182,11 +179,20 @@ function HomeHandpicked() {
                         readOnly
                       />
                     </div>
-                    <div >
-                      <span  style={{color:'red'}}><del><b>AED 120</b></del></span> &nbsp; <span><b>AED 99</b></span>
-                    <Link href="/Booking">
-                      <a className="btn btn-success float-end">Book Now</a>
-                    </Link></div>
+                    <div>
+                      <span style={{ color: "red" }}>
+                        <del>
+                          <b>AED 120</b>
+                        </del>
+                      </span>{" "}
+                      &nbsp;{" "}
+                      <span>
+                        <b>AED 99</b>
+                      </span>
+                      <Link href="/Booking">
+                        <a className="btn btn-success float-end">Book Now</a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -195,9 +201,11 @@ function HomeHandpicked() {
         </div>
         <div className="row">
           <div className="col-lg-12">
-          <Link href="/Handpicked">
-        <center><button className={style.button}>View All</button></center>
-        </Link>
+            <Link href="/Handpicked">
+              <center>
+                <button className={style.button}>View All</button>
+              </center>
+            </Link>
           </div>
         </div>
       </div>

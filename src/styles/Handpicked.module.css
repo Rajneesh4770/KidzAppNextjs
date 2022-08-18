@@ -77,4 +77,16 @@
 .card:hover {
 	transform: translateY(-2px);
 }
+.secondheading{
+  display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mainheadingofcard{
+  margin-left: 3%;
+  text-transform: uppercase;
+  color: #e35b26;
+}
   
