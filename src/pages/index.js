@@ -7,7 +7,9 @@ import KidzappFeed from "../Components/KidzappFeed";
 import style from '../styles/Index.module.css';
 import apiData from '../Components/HomePageComponents/HomeBlog'
 import HomeBlog from '../Components/HomePageComponents/HomeBlog'
-function index() {
+import Test from "./test"
+import axios from "axios";
+function index(props) {
   return (
     <div className={style.body}>
      <div  className={`container ${style.sidenav}`}>
@@ -15,7 +17,8 @@ function index() {
    className={`fixed ${style.a}`}>Chat</a>
   </div>
       {/* Crousel component of Home page */}
-      <HomeCrousel />
+      {/* <HomeCrousel /> */}
+      <Test data={props.data}/>
 
       {/* Handpicked component of Home page */}
       <HomeHandpicked />
@@ -36,8 +39,15 @@ function index() {
 <KidzappFeed/>
 
     </div>
-  );
+
+  )
+};
+
+export async function getServerSideProps (){
+  let res = await axios.get('https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar');
+  let props = {
+    data:res.data.results
+   };
+   return { props}
 }
-
-
 export default index

@@ -1,6 +1,22 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import style from '../styles/SubKidzapproved.module.css'
 const SubKidzapproved = () => {
+const [data,setData]=useState([])
+  useEffect(() => {
+    axios
+      .get(
+        `https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=birthday_deals&country_code=&page=1&page_size=10&city=&website=1`
+      )
+      .then((res) => {
+        setData(res.data.results);
+        console.log("data",res.data.results)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
     <section className={style.section1}>
@@ -22,37 +38,42 @@ const SubKidzapproved = () => {
         </div>
         <div className='container'>
             <div className='row pt-4'>
-                <div className='col-lg-4 sm-6'>
-                <div className={`card mb-3  ${style.card}`}>
-										<img
-											className={`card-img-top ${style.cardimg}`}
-											src="https://images.kidzapp.com/media/venues/d7535285-797c-4114-a306-164a81d648de/kidzania-dubai.jpeg"
-											alt="..."
-										/>
-										<img
-											src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg"
-											className={style.cardimg2}
-										/>
-										<img
-											src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-											className={style.dealimg}
-										/>
-										<div className="card-body">
-											<h5 className="card-title">25% off Science-Themed Birthdays</h5>
-                                            <div className='d-flex'>
-											<p className={`card-title  `}>
-												Birthdays
-											</p>
-											<p className={`${style.secondheading} `}>
-												Ages 4-16
-											</p>
-                                            <br/>
-                                            </div>
-                                           
-                                           
-										</div>
-									</div>
-                </div>
+              {data.map((item)=>{
+                return(
+                  <div className='col-lg-4 sm-6'>
+                  <div className={`card mb-3  ${style.card}`}>
+                      <img
+                        className={`card-img-top ${style.cardimg}`}
+                        src={item.image_url}
+                        alt="..."
+                      />
+                      <img
+                        src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg"
+                        className={style.cardimg2}
+                      />
+                      <img
+                        src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+                        className={style.dealimg}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{item.title}</h5>
+                                              <div className='d-flex'>
+                        <p className={`card-title  `}>
+                          Birthdays
+                        </p>
+                        <p className={`${style.secondheading} `}>
+                          Ages 4-16
+                        </p>
+                                              <br/>
+                                              </div>
+                                             
+                                             
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+               
 
             </div>
 
