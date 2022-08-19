@@ -38,7 +38,7 @@
 }
 .playImage{
     position: absolute;
-    top:30%;
+    top:25%;
     left:50%;
     transform: translate(-50%,-50%);
     
@@ -95,24 +95,83 @@
     width: 100px;
     border-radius: 4px;
 }
+.SeeAllButton1{
+    background-color: white;
+    border: 1px solid #007bfb;
+    color:#007bfb;
+    width: 100px;
+    border-radius: 4px;
+}
 .SeeAllButton:hover{
     background-color: #007bfb;
     color: white;
 }
-
+.cards{
+    /* width:22rem; */
+    box-shadow:2px 2px 10px black;
+     border-radius:8px;
+     margin-bottom: 30px;
+}
+.imageStyle{
+    width: 22px;
+    height: 22px;
+}
 @media (max-width: 1199.98px) {
+    .imageStyle{
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 8px;
+        line-height:1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 4px;
+        display: inline-block;
+        margin-left: 3px;
+        min-width:30px;
+        text-align: center;
+    }
+     .colStyle{
+        padding-left:0px;
+        padding-right:0px;
+    }
 }
 
 @media (max-width: 991.98px) {
-  
+    .imageStyle{
+        width: 10px;
+        height: 10px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 8px;
+        line-height:1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 4px;
+        display: inline-block;
+        margin-left: 3px;
+        min-width:18px;
+        text-align: center;
+    }
+     .colStyle{
+        padding-left:0px;
+        padding-right:0px;
+    }
 }
 
 @media (max-width: 767.98px) {
-
+    
 }
 @media (max-width: 575.98px) {
     .heading2{
-        font-size: 20px;
+        font-size: 18px;
         color: #484848;
         font-weight: 500;
     }
@@ -131,6 +190,33 @@
         border-radius: 4px;
         margin-bottom: 10px;
     }
+    .playImage{
+        position: absolute;
+        top:30%;
+        width: 60px;
+        height: 60px;
+        left:50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .imageStyle{
+        width: 22px;
+        height: 22px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 8px;
+        display: inline-block;
+        margin-left: 10px;
+        min-width: 40px;
+        text-align: center;
+    }
+   
+    
     }
 
 

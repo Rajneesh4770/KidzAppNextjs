@@ -25,7 +25,7 @@ const KidzappTv = () => {
       {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 1
       }
@@ -312,20 +312,20 @@ const slider2Data=[{
       </section>
       <div className={style.section}>
         <Container className="my-5">
-        <Row className="mx-2">
-        <Col lg={6} xs={6} md={6}>
+        <Row className="mx-3">
+        <Col lg={6} xs={6} md={6} >
             <h1 className={style.heading2}>
             Demo Category
             </h1>
             </Col>
-            <Col lg={6} xs={6} md={6}  align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button></Col>
+            <Col lg={6} xs={6} md={6}  align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton1}`}>See All</Button></Col>
             </Row>
             <Row>
           {CardData.map((item)=>{ 
           return(
             <>
-            <Col align="center" xs={12} md={3} className="mx-5">
-            <Card key={item.id} style={{ width: '22rem' }} >
+            <Col  xs={12} md={4}  >
+            <Card key={item.id} className={`mx-3 ${style.cards}`} >
              <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
       <Card.Img variant="top" src={item.image} />
       <Card.Body>
@@ -336,20 +336,20 @@ const slider2Data=[{
         </Card.Text>
         <hr/>
         <Row >
-            <Col>
+            <Col xs={4} className={style.colStyle}>
             <div className={style.cardFooter}>
             <Image width="22px" height="22px" className='tvLikeImage' alt="like" src={item.bottomLikeIcon} />
             <div className={style.Badge}>14</div>
             </div>
             </Col>
-            <Col>
+            <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
               <Image width="22px" height="22px" src={item.commentIcon} />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
             
-            <Col>
+            <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
                   <p style={{color:"black"}}>Share</p>
                   <Image width="22px" height="22px"  src={item.shareIcon} alt="share" />
@@ -377,7 +377,7 @@ const slider2Data=[{
       
       <div>
 
-        <Container className="sliderContainer my-5">
+        <Container className="sliderContainer my-3">
             <Row className="mx-2">
             <Col xs={6} md={6} lg={6}>
             <h1 className={style.heading2}>
@@ -391,8 +391,8 @@ const slider2Data=[{
           {sliderData.map((item)=>{ 
           return(
             <>
-            <Col className="mx-4">
-            <Card key={item.id}  >
+            <Col>
+            <Card key={item.id}  xs={12} md={4} className={`mx-4 my-2 ${style.cards}`} >
       <Card.Img variant="top" src={item.image} />
       <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
       <Card.Body>
@@ -402,23 +402,23 @@ const slider2Data=[{
         </Card.Text>
         <hr/>
         <Row >
-            <Col>
+            <Col xs={4}>
             <div className={style.cardFooter}>
-            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src={item.bottomLikeIcon} />
+            <Image className={style.imageStyle} src={item.bottomLikeIcon} />
             <div className={style.Badge}>14</div>
             </div>
             </Col>
-            <Col>
+            <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src={item.commentIcon} />
+              <Image className={style.imageStyle} src={item.commentIcon} />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
             
-            <Col>
+            <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
-                  <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src={item.shareIcon} alt="share" />
+                  <p className={style.Badge}>Share</p>
+                  <Image className={style.imageStyle}  src={item.shareIcon} alt="share" />
                </div> 
             </Col>
         </Row>
@@ -452,8 +452,8 @@ const slider2Data=[{
           {slider2Data.map((item)=>{ 
           return(
             <>
-            <Col className="mx-4">
-            <Card key={item.id}  >
+            <Col >
+            <Card  xs={12} md={4} className={`mx-4 my-2 ${style.cards}`} >
       <Card.Img  variant="top" src={item.image} />
       <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
       <Card.Body>
@@ -463,27 +463,26 @@ const slider2Data=[{
         </Card.Text>
         <hr/>
         <Row >
-            <Col>
+            <Col xs={4}>
             <div className={style.cardFooter}>
-            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src={item.bottomLikeIcon} />
+            <Image className={style.imageStyle} src={item.bottomLikeIcon} />
             <div className={style.Badge}>14</div>
             </div>
             </Col>
-            <Col>
+            <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src={item.commentIcon} />
+              <Image className={style.imageStyle} src={item.commentIcon} />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
             
-            <Col>
+            <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
-                  <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src={item.shareIcon} alt="share" />
+                  <p className={style.Badge}>Share</p>
+                  <Image className={style.imageStyle}  src={item.shareIcon} alt="share" />
                </div> 
             </Col>
         </Row>
-       
       </Card.Body>
     </Card>
             </Col>
