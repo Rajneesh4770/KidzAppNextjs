@@ -31,14 +31,17 @@
 .card1 p{
     text-decoration: underline;
 }
-.card1 img {
+.cardimage{
     filter: brightness(70%);
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
 }
-.card1 img :hover{
-    transform: scale(1.5);
+.cardimage:hover{
+    transform: scale(1.3);
 }
+/* .card1 img :hover{
+    transform: scale(1.5);
+} */
 .card1body{
 position: absolute;
 bottom: 0!important;

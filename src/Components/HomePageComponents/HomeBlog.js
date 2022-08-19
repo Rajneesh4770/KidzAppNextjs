@@ -31,7 +31,7 @@ function Homeblog2() {
                   <div className={`card ${style.card1} mb-4`}>
                     <img
                       src={item.cover_image}
-                      className={`card-img`}
+                      className={style.cardimage}
                       alt="..."
                     />
                     <div className={`card-img-overlay ${style.card1body}`}>
