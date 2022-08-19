@@ -154,14 +154,38 @@
 }
 
 /* Responsive */
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+  .card{
+    height: 235px;
+  }
+  .cardImg{
+    height: 235px !important;
+  }
+}
 
 @media (max-width: 991.98px) {}
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  .card{
+    height: 430px;
+  }
+  .cardImg{
+    height: 200px !important;
+
+  }
+}
 
 @media (max-width: 575.98px) {
   .btn1{
     margin-top: 3px;
+  }
+}
+
+@media(min-width:1199.98px){
+  .card{
+    height: 220px;
+  }
+  .cardImg{
+    height: 220px !important;
   }
 }
