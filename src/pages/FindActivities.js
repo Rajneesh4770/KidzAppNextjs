@@ -77,7 +77,7 @@ function FindActivities() {
         <section className={style1.filter}>
           <div className="container py-4">
             <div className="row">
-              <div className="col-md-10 ">
+              <div className="col-md-10 sm-6">
                 <div className="row leftContent">
                   <div className={`col-md-2 col-sm-2 ${style1.md2}`}>
                     <input

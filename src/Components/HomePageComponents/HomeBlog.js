@@ -3,7 +3,6 @@ import style from "../../styles/ComponentsCss/HomePageComponents/HomeBlog.module
 import { baseUrl } from "../../config";
 import axios from "axios";
 import Link from "next/link";
-import HomeButton from "./HomeButton";
 function Homeblog2() {
   const [data, setData] = useState([]);
   useEffect(() => {

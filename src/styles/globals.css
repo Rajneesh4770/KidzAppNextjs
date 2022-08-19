@@ -29,6 +29,9 @@ a {
   content: "←";
   display: none !important;
 }
+.slick-dots {
+  margin: revert;
+}
 #navbarSupportedContent ul{
   margin-left: auto;
   flex-grow: 0;
@@ -56,15 +59,7 @@ p {
 .header{
   box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
 }
- /* @media(min-width:1200px){ */
-/* .container {
-  max-width: 1150px !important;
-} */
-/* }  */
-/* .languagebtn .css-jedpe8-MuiSelect-select{
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-} */
+ 
 header {
   position: absolute;
   top: 0;

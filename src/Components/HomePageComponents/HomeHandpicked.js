@@ -155,12 +155,12 @@ function HomeHandpicked() {
         <div className="row">
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
-              <div className="col-lg-4" key={item.id}>
+              <div className="container" key={item.id}>
                 <div className={`card ${style.card}`}>
                   <img
                     className={`card-img-top ${style.cardimage}`}
                     src={item.image_url}
-                    alt="Card image cap"
+                  alt='Loading..... please wait'
                   />
                   <img
                     src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
