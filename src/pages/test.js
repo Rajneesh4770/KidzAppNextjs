@@ -6,7 +6,7 @@ function Profile (props) {
 
 console.log(props.data,'hjhj');
   return (
-    <Carousel style={{marginTop:'10px'}}>
+    <Carousel >
     {props.data.map((item) => {
       return (
         <Carousel.Item key={item.id}>
