@@ -23,7 +23,7 @@
 }
 .ul{
     display: flex;
-    gap: 90px;
+    gap: 50px;
     margin-top: 25px;
 }
 .ul li{
@@ -286,9 +286,7 @@
 @media(max-width: 425px){
     .ul{
         gap: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 0;
     }
     .ul li img{
         width: 40px !important;
