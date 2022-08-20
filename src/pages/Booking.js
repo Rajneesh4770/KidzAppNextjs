@@ -42,7 +42,7 @@ const Booking = () => {
 				);
 				return (
 					<section className={style.section1} key={item.id}>
-            <h1>hiiiii</h1>
+            <h1>hiiiii rajneesh</h1>
 						<div className="container">
 							<div className="row">
 								<div className="col-lg-12">
