@@ -1,0 +1,192 @@
+.marginFromHeader {
+  margin-top: 133px;
+}
+
+/* filter section */
+.filter {
+  background-color: #58cbf8;
+
+}
+
+/* .md2 {
+  padding: 0px 5px;
+} */
+
+.btn1 {
+  background-color: #329bc5;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  padding: 7px;
+  border: none !important;
+  border-radius: 5px;
+
+}
+
+/* search result section */
+.mainPara {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.leftcontainer {
+  border-right: 1px solid gray;
+}
+
+.imgSection {
+  position: relative;
+}
+
+.newdeal {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.newDealImg {
+  width: 50px;
+  height: 50px;
+}
+
+
+.card {
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  height: 202px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.cardImg {
+  height: 202px !important;
+}
+
+
+.cardtoppara {
+  font-weight: bold;
+}
+
+.cardtitle {
+  color: #9576b3;
+  font-weight: bold;
+  display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.starspan {
+  width: max-content;
+  font-size: 14px;
+}
+
+.bottomtext {
+  color: #37c8f8;
+}
+
+.bottomButton {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+  border-radius: 10px;
+  margin-top: 2px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bottomButton:hover {
+  background-color: #d44241 !important;
+  color: #fff !important;
+}
+
+.distance {
+  color: #ad80b7;
+}
+
+.activity-page .searchResultSection .rightContainer .col-md-12 {
+  padding: 0;
+}
+
+.rightcard {
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.rightcard:hover {
+  transform: translateY(-2px);
+}
+
+.rightcardtitle {
+  font-weight: bold;
+}
+
+.rightstarRateButton {
+  color: #fff;
+  border-radius: 12px;
+  background-color: #f0c61a;
+  padding: 0px 10px;
+  padding: 0px 3px;
+  padding-bottom: 5px;
+}
+
+.rightspan {
+  width: max-content;
+  font-size: 14px;
+}
+
+.newdeal {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.newdealimg {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+  .card{
+    height: 235px;
+  }
+  .cardImg{
+    height: 235px !important;
+  }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {
+  .card{
+    height: 430px;
+  }
+  .cardImg{
+    height: 200px !important;
+
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn1{
+    margin-top: 3px;
+  }
+}
+
+@media(min-width:1199.98px){
+  .card{
+    height: 220px;
+  }
+  .cardImg{
+    height: 220px !important;
+  }
+}

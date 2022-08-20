@@ -1,0 +1,89 @@
+.body {
+	margin-top: 100px;
+}
+.section1 {
+	margin-top: 100px;
+}
+.topbackground {
+	background-image: url('https://beta.kidzapp.com/images/get-touch-banner.jpg');
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.9 ease;
+}
+.cardimg {
+	position: relative;
+}
+.dealimg {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 0%;
+	right: 0%;
+	padding: 5px;
+}
+
+.boxWrap {
+	background: white;
+	display: flex;
+	box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.imgText {
+	padding: 30px;
+	width: 100%;
+	max-width: 50%;
+    position: relative;
+}
+
+.imggBox img {
+	height: 100% !important;
+	object-fit: cover;
+}
+.imggBox::before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #12121180;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.imggBox {
+	width: 100%;
+	max-width: 50%;
+	position: relative;
+}
+.rating {
+	position: absolute;
+	/* background: rgb(132, 40, 40); */
+	bottom: -26px;
+	left: 0;
+	width: 100%;
+}
+
+
+.boxWrap:hover .rating {
+	background-color: #fafafad9;
+	bottom: 0px;
+	transition: all 0.2s linear;
+	z-index: 2;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hearticon {
+	float: right;
+	font-size: x-large;
+}
+
+
+@media(max-width:1199.98px){
+    .rating sm{
+        display: none;
+    }
+}

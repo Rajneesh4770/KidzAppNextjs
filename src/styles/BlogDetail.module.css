@@ -1,0 +1,270 @@
+.blog1{
+    margin-top: 100px;
+}
+.searchAndBanner{
+    background-image: url(https://kidzapp.com/images/blog-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0;
+}
+.container{
+    max-width: 600px;;
+}
+ .searchInput {
+    padding:10px 22px;
+    border-radius: 12px;
+  }
+ .searchBtn{
+    margin-left: 10px;
+    background-color: #00aff4;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 20px;
+    border-radius: 12px;
+  }
+   .goBackBtn{
+    font-weight: 700 ;
+  }
+ 
+  .mainImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .mainText h1{
+    color: #E35B26;
+    font-weight: 700;
+  }
+  .textSearchButton{
+    text-align: right;
+  }
+  .mainText h6{
+    margin-right: 20px;
+    color: #666;
+  }
+  .leftContent i{
+color: #000;
+margin-right: 8px;
+  }
+  .mainText p{
+    padding: 10px 0 !important;
+    color: #666;
+    margin-bottom: 20px;
+  }
+.elementorDivider{
+  padding-top: 32px;
+  line-height: 0;
+  font-size: 0;
+  padding-bottom: 28px;
+}
+.elementorDividerSeparator{
+  display: inline-block;
+  border-top-style: dotted;
+  border-top-width: 3px;
+  border-top-color: #14bbef;
+  width: 100%;
+}
+.mapCards h2{
+  color: #E35B26;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contentRow{
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contentRow2{
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mapCards p{
+  color: #666;
+    font-size: 16px;
+    /* font-weight: 500; */
+    line-height: 28px;
+    margin-bottom: 15px;
+    letter-spacing: -.2px;
+    text-align: justify;
+}
+.cardBody h6{
+  color: #965DA5;
+  font-weight: 700;
+  font-size: 15px;
+  /* font-size: 18px; */
+}
+
+.cardBody p{
+  /* color: black; */
+  font-size: 15px;
+  /* margin-bottom: 10px; */
+}
+.CardButton{
+width: 25%;
+margin: 10px auto 0px auto;
+font-size: 14px;
+}
+.location{
+  display: flex;
+
+}
+.location p{
+  margin: 0px !important;
+  line-height: 25px !important;
+}
+.location p:first-child{
+  color: #E35B26;
+  width: 35%;
+}
+.location p:last-child{
+  width: 65%;
+}
+
+.columnn{
+  overflow: hidden;
+}
+.contentImage{
+  height: 450px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.contentImage img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.contentImage::before{
+  content: '';
+  display: block;
+  background: #2823234d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.mainColumnDiv{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 21px 20px;
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0%;
+  /* left: 70%; */
+  transform: translate(0%, -50%);
+  /* height: 100%; */
+  overflow: visible;
+  border-radius: 0px;
+  /* height: 300px; */
+  overflow: hidden;
+}
+
+.mainColumnDiv2{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 21px 20px;
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0%;
+  /* left: 70%; */
+  transform: translate(0%, -50%);
+  /* height: 100%; */
+  overflow: visible;
+  border-radius: 0px;
+  /* height: 300px; */
+  overflow: hidden;
+}
+
+.secondViewImgContainer{
+  height: 365px;
+  width: 650px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secondViewImgContainer img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+.secondViewTextContainer{
+  text-align: right;
+}
+.secondViewContent h2{
+  color: #E35B26;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.secondViewTextContainer button{
+  color: #E35B26;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media(max-width:991.98px){
+  .location p:first-child{
+    color: #E35B26;
+    width: 40%;
+  }
+  .mapCards h2{
+   padding-top: 1.25rem;
+  }
+  .location p:last-child{
+    width: 60%;
+  }
+  .CardButton{
+    width: 35%;
+   
+    }
+}
+@media(max-width:575.98px){
+  .location p:first-child{
+    color: #E35B26;
+    width: 50%;
+  }
+  .location p:last-child{
+    width: 50%;
+  }
+  .textSearchButton{
+    text-align: left;
+  }
+  .cardRow2{
+    flex-direction: column-reverse;
+  }
+  .contentImage {
+    height: 100%;
+    width:100%;
+  }
+  .mainColumnDiv{
+    position: inherit;
+    margin: 10px 0px;
+    top:0%;
+    right: 0%;
+    transform: translate(0px,0px);
+    width: 100%;
+  }
+  .mainColumnDiv2{
+position: inherit;
+margin: 10px 0px;
+top:0%;
+left: 0%;
+    width: 100%;
+    transform: translate(0px,0px);
+  }
+  .contentRow2{
+    flex-direction: column-reverse;
+  }
+
+  .secondViewImgContainer {
+    height: 100%;
+    width:100%;
+  }
+}

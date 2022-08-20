@@ -1,0 +1,57 @@
+.section1{
+    margin-top: 140px;
+    margin-bottom: 30px;
+}
+.firstcard{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.firstcard img{
+    width: -webkit-fill-available;
+    height:150px;
+    border-radius: 8px;
+}
+.firstcard img:hover{
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.secondcard{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.secondcard p{
+    color: #858484f1;
+}
+/* right section */
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.card:hover{
+    transform: translateY(-2px);
+}
+.cardimg2 {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 0;
+}
+.secondheading {
+	color: #9c5ca7;
+}
+.section1 button{
+    background-color: #00adee;
+    border: #00adee;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+
+}
+.section1 button:hover{
+    background-color: #00adee;
+}
+@media(max-width:767.98px){
+    .firstcard img{
+        height: 100px;
+    }
+}
