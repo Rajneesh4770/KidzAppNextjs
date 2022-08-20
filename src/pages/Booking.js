@@ -23,7 +23,6 @@ const Booking = () => {
 			)
 			.then((res) => {
 				console.log(res.data.results);
-
 				setData(res.data.results);
 			});
 	}, []);
@@ -33,7 +32,6 @@ const Booking = () => {
 		slidesToScroll: 1,
 		arrow: false,
 	};
-
 	return (
 		<>
 			{data.map((item) => {
@@ -50,10 +48,7 @@ const Booking = () => {
 									<div className="row">
 										<div className="col-lg-8 col-sm-12">
 											<img className={style.leftimg1} src={item.image_url} />
-											{/* <img
-													className={style.leftimg1}
-													src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg"
-												/> */}
+											
 											{/* heading and button section row */}
 
 											<div className="row">
