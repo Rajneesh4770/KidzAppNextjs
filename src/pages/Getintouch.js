@@ -230,10 +230,10 @@ function Getintouch() {
                 </form>
               </Box>
             </div>
-            <div className={`col-md-5 ${style.image}`}>
+            <div className={`col-md-5 my-4 ${style.image}`}>
               <Image src="/getInTouch.png" alt="Picture"
-                width="600"
-                height="600" />
+                width="700"
+                height="700" />
             </div>
           </div>
         </div>

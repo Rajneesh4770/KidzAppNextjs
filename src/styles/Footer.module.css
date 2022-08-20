@@ -4,18 +4,22 @@
   padding-top: 40px;
   padding-bottom: 10px;
 }
+
 .footer li {
   list-style: none;
   color: #8d969b;
   cursor: pointer;
 }
+
 .img1 {
   width: 150px;
   margin-top: 6px;
 }
+
 .img2 {
   width: 150px;
 }
+
 .nav-link {
   display: contents;
   color: white;
@@ -32,17 +36,47 @@
   text-decoration: none !important;
   padding-bottom: 4px;
 }
+
 .footer h6 {
   font-size: larger;
 }
-.maincontainer{
+
+.maincontainer {
   margin-left: auto;
   margin-right: auto;
 }
 
-.iconEffect:hover{
+.iconEffect:hover {
   color: #ffee10;
 }
-.copyrightdiv{
+
+.copyrightdiv {
   margin-bottom: 9px;
+}
+
+.whatsappImg {
+  position: fixed;
+  bottom: 20px;
+  width: 30px;
+  right: 20px;
+  padding-bottom: 50px;
+  /* animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: moveIcon; */
+  animation: moveIcon 1s infinite;
+}
+.chatbot{
+  bottom: 100px;
+  right: 10px;
+  z-index: 9;
+  opacity: 1;
+}
+.chatbot a{
+  color: rgb(37,211,102);
+  font-size: 48px;
 }

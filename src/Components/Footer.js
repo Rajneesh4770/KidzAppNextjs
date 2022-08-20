@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../styles/Footer.module.css';
 import Link from 'next/link';
+import Image from "next/image";
 import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
@@ -187,6 +188,16 @@ function Footer() {
             {' '}
             <span>Copyright © 2022 kidzapp.com. All Rights Reserved</span>
           </center>
+
+          <div className={`row ${style.chatbot}`}>
+            <div className='col'>
+              <a>
+                <i>
+                  <img src='https://www.code-brew.com/wp-content/uploads/2019/06/whatsapp-logo.png' className={style.whatsappImg} />
+                </i>
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
 
