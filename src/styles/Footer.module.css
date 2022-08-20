@@ -60,14 +60,14 @@
   width: 30px;
   right: 20px;
   padding-bottom: 50px;
-  /* animation-duration: 1s;
+  animation-duration: 1s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: none;
   animation-play-state: running;
-  animation-name: moveIcon; */
+  animation-name: moveIcon;
   animation: moveIcon 1s infinite;
 }
 .chatbot{
