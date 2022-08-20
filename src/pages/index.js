@@ -82,6 +82,7 @@ export async function getStaticProps() {
   );
   let props = {
     data: res.data.results,
+    
   };
   return { props };
 }
