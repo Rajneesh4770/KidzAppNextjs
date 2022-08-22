@@ -10,7 +10,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
 import getResponseMessage from "../../Language/multilingualServices";
 import { constants } from "../Navbar";
-
+import Link from "next/link";
 function HomeKidzappolis() {
   const settings = {
     dots: false,
@@ -172,13 +172,14 @@ function HomeKidzappolis() {
                 <Slider {...settings}>
                   {data.map((item) => (
                     <div key={item.id}>
+                      <Link href='/FindActivities'>
                       <div className={`item ${style.activityBox}`}>
                         <img
                           className={style.activityBoxImage}
                           src={item.image_url}
                         />
                         <p className={style.activityBoxHeading}>{item.name}</p>
-                      </div>
+                      </div></Link>
                     </div>
                   ))}
                 </Slider>
@@ -199,7 +200,10 @@ function HomeKidzappolis() {
           <br />
           <div className={`${style.slider2} ${style.collectionSlider}`}>
             <Slider {...settings2}>
-              {data2.map((item1) => (
+              {data2.map((item1) => {
+                return(
+                <Link href='/SubKidzapproved'>
+                
                 <div
                   key={item1.id}
                   className={`collection-slides ${style.collectioncard}`}
@@ -213,7 +217,9 @@ function HomeKidzappolis() {
                     </div>
                   </div>
                 </div>
-              ))}
+                </Link>
+                
+)})}
             </Slider>
           </div>
         </div><br/>

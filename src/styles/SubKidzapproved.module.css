@@ -1,0 +1,58 @@
+.section1{
+    margin-top: 133px;
+    margin-bottom:10% ;
+}
+.topbackground{
+    height: 200px;
+   position: relative;
+    background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  margin-bottom: 5%;
+}
+.topbackground img{
+    padding-top: 90px;
+    margin-bottom: 30px;
+}
+.topbackground h1{
+    color: #fff;
+   
+}
+.topbackground h5{
+    color: #fff;
+}
+.heading{
+    padding: 9% 5% 0 2%;
+}
+.card {
+	border-radius: 10px !important;
+	overflow: hidden;
+	border: none !important;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	width: 90%;
+	float: right;
+}
+
+.cardimg {
+	height: 230px !important;
+	position: relative;
+}
+
+.cardimg2 {
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	right: 0;
+}
+.dealimg {
+	position: absolute;
+	height: 15%;
+	width: 15%;
+	padding: 5px;
+}
+
+.card:hover {
+	transform: translateY(-2px);
+}
+.secondheading {
+	margin-left: auto;
+}

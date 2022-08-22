@@ -17,11 +17,7 @@
    .reviewcard {
      border-radius: 12px;
      margin: 10px;
-     /* overflow: hidden; */
-     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-     /* box-shadow: 2px 2px 5px rgba(0,0,0,0.2); */
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     /* height: 1; */
      min-height: 320px;
    }
    .cardimg{
@@ -68,7 +64,6 @@
    .bottomRow {
      background-color: #fafafaf1;
      padding: 5px;
-     /* position: absolute; */
      bottom: 25px;
      padding-right: 59px;
      border-radius: 10px;
@@ -155,7 +150,6 @@
        width: 16rem !important;
        margin-left: auto;
        margin-right: auto;
-       /* height: 280px; */
      }
      .bottomRow {
        padding: 10px 23px;

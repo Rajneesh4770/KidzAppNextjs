@@ -85,17 +85,15 @@
 
 /* Button slider css */
 
-
 .button14 {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
   border-color: transparent;
-  /* border-color: #adb1b8 #a2a6ac #8d9096; */
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
   box-sizing: border-box;
-  color: #e35b26;
+  color: #030303;
   font-family: "Amazon Ember", Arial, sans-serif;
   height: 40px;
   font-size: 15.5px;
@@ -140,40 +138,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-/* cards css */
-/* .cards {
-  border-radius: 14px !important;
-  margin: 15px auto;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-  display: inherit !important;
-}
-
-.cards:hover {
-  transform: translateY(-4px);
-}
-
-.imageDiv {
-  overflow: hidden;
-}
-
-.cardImage {
-  transform-origin: 50% 65%;
-  transition: transform 3s, filter 1s ease-in-out;
-  filter: brightness(100%);
-}
-
-.cardImage:hover {
-  filter: brightness(100%);
-  transform: scale(1.3);
-} */
-
-/* card container  */
-/* .cardSection {
-  margin-bottom: 50px;
-  max-width: 1150px;
-} */
-
 /* card button */
 .cardbutton {
   border-radius: 10px !important;
@@ -193,7 +157,6 @@
   font-family: bold;
   font-weight: 600;
 }
-
 /* new card */
 .card{
   width: 90%;
@@ -207,11 +170,11 @@
 .cardimage{
   position: relative;
   padding: 8px;
-    border: 1px solid white;
     border-radius: 20px 20px 0px 0px;
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
   filter: brightness(100%);
+  color: #030303;
 }
 .dealimg{
   width: 15%;
@@ -265,17 +228,21 @@
 .button:hover{
   transform: translateY(-2px);
 }
-
 @media (max-width: 767.98px) {
   .mainslider {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .card{
     width: 100%;
     justify-content: center;
   }
+  .dealimg{
+    top: 0;
+    padding: 3px;
+  }
 }
-
 @media (max-width: 575.98px) {
   .heading {
     text-align: center;
@@ -285,7 +252,6 @@
     color: #002240;
   }
 }
-
 @media(max-width:370px) {
 
   .mainslider {
@@ -293,7 +259,6 @@
     width: 100%;
   }
 }
-
 .newdealimg {
   position: absolute;
   top: 10px;

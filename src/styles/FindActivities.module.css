@@ -4,16 +4,14 @@
 
 /* filter section */
 .filter {
-  background-color: #58cbf8;
+  background-color:#19AFF4;
 
 }
 
-.md2 {
-  padding: 0px 5px;
-}
+
 
 .btn1 {
-  background-color: #329bc5;
+  background-color: #58CBF8;
   width: 100%;
   color: #fff;
   font-weight: bold;
@@ -93,13 +91,14 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
   border-radius: 10px;
   margin-top: 2px;
+  padding-top: 5px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .bottomButton:hover {
-  background-color: #d44241;
-  color: #fff;
+  background-color: #d44241 !important;
+  color: #fff !important;
 }
 
 .distance {
@@ -151,12 +150,88 @@
   width: 50px;
   height: 50px;
 }
-
+.collapserow{
+  background-color: #f0f0f0;
+}
+.collapsediv1{
+  display: flex;
+  justify-content: space-between;
+}
+.selectbox{
+  padding: 3px 30px 3px 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.collapsediv2{
+  display: flex;
+  justify-content: space-between;
+}
+.collapsediv4{
+  display: flex;
+  column-gap: 25px;
+}
+.collapsediv4 img{
+  height: 30px;
+  width: 30px;
+}
 /* Responsive */
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+  .card{
+    height: 235px;
+  }
+  .cardImg{
+    height: 235px !important;
+  }
+  .marginFromHeader{
+    margin-top: 120px !important;
+  }
+}
 
 @media (max-width: 991.98px) {}
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  .card{
+    height: 430px;
+  }
+  .cardImg{
+    height: 200px !important;
 
-@media (max-width: 575.98px) {}
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn1{
+    margin-top: 3px;
+  }
+}
+@media(max-width:1199.98px){
+  .collapsediv2{
+    margin-left: 5px !important;
+
+  }
+ 
+  .selectbox{
+    padding: 3px 12px 3px 5px;
+  }
+  .collapsediv4{
+    display: flex;
+    column-gap: 5px;
+    margin-left: 27px;
+  }
+}
+@media(min-width:1199.98px){
+  .card{
+    height: 220px;
+  }
+  .cardImg{
+    height: 220px !important;
+  }
+  .collapsediv2{
+    margin-left: 10px !important;
+
+  }
+  .collapsediv4{
+   margin-left: 15px !important;
+
+  }
+}
