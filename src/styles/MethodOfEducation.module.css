@@ -11,16 +11,37 @@
     padding-right:0px;
     text-align: center;
 }
-.searchbar{
-    width: 50% !important;
+.Container{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.FormRow{
+    padding-top: 30px;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
 }
-.section2{
-    margin-top: 20px;
+.playImage{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.cards{
+    /* width:22rem; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+     border-radius:8px;
+     margin-bottom: 30px;
 }
 .cardHeading{
     color: #007bfb;
+}
+.cardText{
+    color:#965da4;
 }
 .cardFooter{
     display:inline-flex;
@@ -38,93 +59,16 @@
     min-width: 40px;
     text-align: center;
 }
-.cardText{
-    color:#965da4;
-}
-.playImage{
-    position: absolute;
-    top:25%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    
-}
-.playImage1{
-    border-radius: 15px;
-    position: absolute;
-    top:50% !important;
-    left:50%;
-    transform: translate(-50%,-50%);
-    
-}
-.video{
-    border-radius: 15px;
-}
-
-.videoShareIcon{
-    position: absolute;
-    top: 20px;
-    right:10px;
-}
-.videoLikeIcon{
-    position: absolute;
-    top:20px;
-    right: 60px;
-}
-.FormRow{
-    padding-top: 30px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-}
-.Container{
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-right: 0px;
-}
-.section{
-    padding-bottom:30px !important;
+.imageStyle{
+    width: 22px;
+    height: 22px;
 }
 .heading1{
-    font-size: 50px;
+    font-size: 40px;
     margin-left: 30px;
     color: #484848;
     font-weight: 500;
     /* line-height: 1.17; */
-}
-.heading2{
-    font-size: 40px;
-    color: #484848;
-    font-weight: 500;
-}
-.SeeAllButton{
-    background-color: white;
-    border: 1px solid #007bfb;
-    color:#007bfb;
-    width: 100px;
-    border-radius: 4px;
-}
-.SeeAllButton1{
-    background-color: white;
-    border: 1px solid #007bfb;
-    color:#007bfb;
-    width: 100px;
-    border-radius: 4px;
-}
-.SeeAllButton:hover{
-    background-color: #007bfb;
-    color: white;
-}
-.cards{
-    /* width:22rem; */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-     border-radius:8px;
-     margin-bottom: 30px;
-}
-.imageStyle{
-    width: 22px;
-    height: 22px;
 }
 @media (max-width: 1199.98px) {
     .imageStyle{
@@ -183,11 +127,6 @@
     
 }
 @media (max-width: 575.98px) {
-    .heading2{
-        font-size: 18px;
-        color: #484848;
-        font-weight: 500;
-    }
     .heading1{
         font-size: 20px;
         margin-left: 30px;
@@ -235,20 +174,7 @@
     .playImage1{
         width: 50px !important;
       }
-      .videoLikeIcon{
-        position: absolute;
-        top:10px;
-        width:40px;
-        height: 40px;
-        right: 60px;
-    }
-    .videoShareIcon{
-        position: absolute;
-        top: 10px;
-        right:50px;
-        width:10px !important;
-        height:10px;
-    }
+    
     }
 
 

@@ -3,6 +3,7 @@ import KidzappFeed from '../../Components/KidzappFeed';
 import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap'
 import Slider from "react-slick";
 import style from "../../styles/KidzappTv.module.css";
+import Link from "next/link";
 const KidzappTv = () => {
   const settings = {
     dots:true,
@@ -316,7 +317,11 @@ const slider2Data=[{
             Demo Category
             </h1>
             </Col>
-            <Col lg={6} xs={6} md={6}  align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton1}`}>See All</Button></Col>
+            <Col lg={6} xs={6} md={6}  align="right">
+            <Link href='/KidzappTv/MethodOfEducation'>
+            <Button  className={`btn-md btn-xs ${style.SeeAllButton1}`}>See All</Button>
+            </Link>
+            </Col>
             </Row>
             <Row>
           {CardData.map((item)=>{ 
@@ -382,7 +387,11 @@ const slider2Data=[{
                 Water Park Fun
             </h1>
             </Col>
-            <Col xs={6} md={6} lg={6} align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button></Col>
+            <Col xs={6} md={6} lg={6} align="right">
+            <Link href='/KidzappTv/MethodOfEducation'>
+            <Button  className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button>
+            </Link>
+            </Col>
             </Row>
           <Row className={style.section}>
       <Slider  {...settings} >
@@ -442,7 +451,10 @@ const slider2Data=[{
               Test Video For Demo
             </h1>
             </Col>
-            <Col xs={6} md={6} lg={6} align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button></Col>
+            <Col xs={6} md={6} lg={6} align="right">
+            <Link href='/KidzappTv/MethodOfEducation'>
+            <Button   className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button>
+            </Link></Col>
           </Row>
           <Row className={style.section}>
       <Slider  {...settings} >
