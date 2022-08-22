@@ -66,41 +66,7 @@ const Blog1 = (props) => {
       location: "BOUNCE",
       workingHours: "Sun-Thu 10:00 to 23:00, Fri-Sat until 00:00",
       prices: "Full Costumes from EGP 220",
-    },
-    {
-      id: 2,
-      mainHeading: "Souq.com",
-      detail:
-        "During the long quarantine period, a lot of parents have relied on Souq as one of their go-to websites. The online shopping giant, doesn't just end at baby care, home accessories, and impulse buys. In fact, you can buy all your Halloween goodies from there. Simply type costumes in the search bar and you can receive the costume of your dreams within 24 hours!",
-     text: "**delivery times vary depending on time of order.",
-      cardImg:
-        "https://testimages.kidzapp.com/media/blog/images/asouq-650x365.jpg",
-      location: "Air Maniax, Al Quoz",
-      workingHours: "Mon-Fri 9:00 to 22:00, Sat-Sun from 10:00",
-      prices: "Full Costumes from EGP 230",
-    },
-    {
-      id: 3,
-      mainHeading: "Hedeya",
-      text: "Get 10% OFF all Fun and Play.",
-      cardImg:
-        "https://testimages.kidzapp.com/media/blog/images/aHedeya-650x365.jpg",
-      location: "No. EB1, Entrance 8 - Bluewaters Island - Dubai",
-      workingHours: "Daily from 10:00 (see details in description)",
-      prices: "Skyfall Trampoline",
-    },
-    {
-      id: 4,
-      mainHeading: "Shopzinia",
-      detail:
-        "Aqua Parks Leisure is a hidden gem located on Kite Beach - Dubai's first fresh water swimming pool waterpark! ",
-     text: "Enjoy a great offer with over 15% OFF Entry Tickets OR Buy 1 Hour Get 1 Hour FREE on weekdays!",
-      cardImg:
-        "https://testimages.kidzapp.com/media/blog/images/ashopzinia-650x365.jpg",
-      location: "Kite Beach, Umm Suqqueim 2, Dubai",
-      workingHours: "Daily 08:30 to sunset",
-      prices: "1 Hour + 1 Hour FREE : AED 60",
-    },
+    }
   ]
   return (
     <>
