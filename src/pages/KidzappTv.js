@@ -216,7 +216,7 @@ const slider2Data=[{
       <section className={style.section1}>
         <div className="container-flex">
           <Row className={style.Container}>
-            <Col lg={12}>
+            <Col className={style.colStyle} lg={12}>
               <div className={style.background}>
               <Container>
               <Form >  
@@ -441,7 +441,7 @@ const slider2Data=[{
           <Row className="mx-2">
             <Col xs={6} md={6} lg={6}>
             <h1 className={style.heading2}>
-            Water Park Fun
+              Test Video For Demo
             </h1>
             </Col>
             <Col xs={6} md={6} lg={6} align="right"><Button  className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button></Col>
@@ -452,7 +452,7 @@ const slider2Data=[{
           {slider2Data.map((item)=>{ 
           return(
             <>
-            <Col >
+            <Col>
             <Card  xs={12} md={4} className={`mx-4 my-2 ${style.cards}`} >
       <Card.Img  variant="top" src={item.image} />
       <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
