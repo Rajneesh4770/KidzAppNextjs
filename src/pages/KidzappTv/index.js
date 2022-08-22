@@ -247,7 +247,7 @@ const slider2Data=[{
         </Col>
         
             <div>
-            <Container className={style.dynamicCrousel}>
+            <Container className="dynamicCrousel">
       <Carousel className='maincrousel' >
   <Carousel.Item interval={5000}>
   <Image className={style.playImage1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>

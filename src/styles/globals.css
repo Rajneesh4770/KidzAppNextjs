@@ -130,8 +130,9 @@ a.carousel-control-next {
   }
 }
 .sliderContainer .slick-slider .slick-dots li button:before  {
-  font-size: 13px !important ;
-  margin-top: 30px !important;
+  font-size: 15px !important ;
+  margin-top: 20px !important;
+  color: gray !important;
 }
 
 
@@ -141,4 +142,12 @@ a.carousel-control-next {
   height: 15px !important;
   border-radius: 50% !important;
   margin-top: 30px !important;
+}
+.dynamicCrousel .carousel-indicators [data-bs-target] {
+border-radius: 50%;
+width:15px;
+height: 15px;
+margin-bottom: -50px !important;
+margin-top: 20px;
+background-color: gray;
 }
