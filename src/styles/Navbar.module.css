@@ -226,4 +226,17 @@
   color: #19AFF4 !important;
 }
 
+/* .loginModal{
+  width: 400px;
+} */
+.loginModal label{
+  text-align: left;
+}
+.loginModal input{
+  width: 400px;
+}
+.loginModal .btn{
+  width: 100%;
+}
+
 

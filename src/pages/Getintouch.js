@@ -38,7 +38,7 @@ function Getintouch() {
 
 
   const onSubmit = () => {
-    // toast.success('Register successfully')
+    toast.success('Register successfully')
   }
 
   const formik = useFormik({
