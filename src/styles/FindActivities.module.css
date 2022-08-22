@@ -31,17 +31,7 @@
   border-right: 1px solid gray;
 }
 
-/* .imgSection {
-  position: relative;
-} */
 
-/* .newdeal {
- width: 12%;
-    top: 0;
-    position: absolute;
-    left: 0;
-    margin: 2%;
-} */
 .rightcard img:nth-child(1){
   position: relative;
   

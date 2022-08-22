@@ -16,6 +16,7 @@ function index(props) {
    className={`fixed ${style.a}`}>Chat</a>
   </div> */}
  
+ 
 
       <Carousel  className="maincrousel">
     {props.data.map((item) => {
