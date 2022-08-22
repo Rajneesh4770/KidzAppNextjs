@@ -44,11 +44,15 @@
     
 }
 .playImage1{
+    border-radius: 15px;
     position: absolute;
     top:50% !important;
     left:50%;
     transform: translate(-50%,-50%);
     
+}
+.video{
+    border-radius: 15px;
 }
 
 .videoShareIcon{
