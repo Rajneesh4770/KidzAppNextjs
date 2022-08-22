@@ -6,6 +6,7 @@ import KidzappFeed from "../Components/KidzappFeed";
 import style from '../styles/Index.module.css';
 import HomeBlog from '../Components/HomePageComponents/HomeBlog'
 import axios, { Axios } from 'axios'
+import { baseUrl } from "../config";
 import { Carousel } from "react-bootstrap";
 function index(props) {
   return (
@@ -64,7 +65,7 @@ function index(props) {
   )
 };
 export async function getStaticProps (){
-  let res = await axios.get('https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar');
+  let res = await axios.get(baseUrl+'experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar');
   let props = {
     data:res.data.results
    };
