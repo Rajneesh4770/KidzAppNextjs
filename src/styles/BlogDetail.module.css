@@ -138,6 +138,7 @@ border-radius: 15px;
 height: 100%;
 width: 100%;
 object-fit: cover;
+
 }
 .contentImage::before{
   content: '';
@@ -162,7 +163,7 @@ object-fit: cover;
   /* height: 100%; */
   overflow: visible;
   border-radius: 15px;
-  /* height: 300px; */
+  height: 250px;
   overflow: hidden;
 }
 
@@ -180,7 +181,7 @@ object-fit: cover;
   /* height: 100%; */
   overflow: visible;
   border-radius: 15px;
-  /* height: 300px; */
+  height: 250px;
   overflow: hidden;
 }
 
