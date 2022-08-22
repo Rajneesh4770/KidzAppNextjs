@@ -48,13 +48,18 @@
     transform: translate(-50%,-50%);
     
 }
-/* .dynamicCrousel .playImage1{
+.playImage1{
+    border-radius: 15px;
     position: absolute;
-    top:30%;
+    top:50% !important;
     left:50%;
     transform: translate(-50%,-50%);
     
-} */
+}
+.video{
+    border-radius: 15px;
+}
+
 .videoShareIcon{
     position: absolute;
     top: 20px;
@@ -172,6 +177,9 @@
 }
 
 @media (max-width: 767.98px) {
+    .playImage1{
+      width: 75px !important;
+    }
     
 }
 @media (max-width: 575.98px) {
@@ -224,7 +232,9 @@
         padding-right:0px;
         text-align: center;
     }
-   
+    .playImage1{
+        width: 50px !important;
+      }
     
     }
 

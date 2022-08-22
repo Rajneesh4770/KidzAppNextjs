@@ -1,10 +1,8 @@
 import React from "react";
-import KidzappFeed from '../Components/KidzappFeed';
+import KidzappFeed from '../../Components/KidzappFeed';
 import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap'
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-import style from "../styles/KidzappTv.module.css";
+import style from "../../styles/KidzappTv.module.css";
 const KidzappTv = () => {
   const settings = {
     dots:true,
@@ -249,9 +247,9 @@ const slider2Data=[{
         
             <div>
             <Container className={style.dynamicCrousel}>
-      <Carousel  >
+      <Carousel className='maincrousel' >
   <Carousel.Item interval={5000}>
-  <Image className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
+  <Image className={style.playImage1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
   <Image src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.videoLikeIcon}/>
   <em className={style.videoShareIcon}>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -22 512 511" width="45" height="41" class="" fill="#fff">
@@ -266,7 +264,7 @@ const slider2Data=[{
   </Carousel.Item>
 
   <Carousel.Item interval={5000}>
-  <Image className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
+  <Image className={style.playImage1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
   <Image src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.videoLikeIcon} data-src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" alt=""  id="heart1_32" pagespeed_url_hash="1435827137" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
   <em className={style.videoShareIcon}>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -22 512 511" width="45" height="41" class="" fill="#fff">
@@ -285,7 +283,7 @@ const slider2Data=[{
   </Carousel.Item>
 
   <Carousel.Item interval={5000}>
-  <Image className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
+  <Image className={style.playImage1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
   <Image src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.videoLikeIcon} data-src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" alt=""  id="heart1_32" pagespeed_url_hash="1435827137" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
   <em className={style.videoShareIcon}>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -22 512 511" width="45" height="41" class="" fill="#fff">

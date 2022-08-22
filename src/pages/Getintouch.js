@@ -1,16 +1,69 @@
 import style from "../styles/Getintouch.module.css";
 import { FormLabel, TextField, Button, Box } from "@mui/material";
-import Recaptcha from "react-google-recaptcha";
 import KidzappFeed from '../../src/Components/KidzappFeed';
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+import toast, { Toaster } from "react-hot-toast";
+import Image from "next/image";
+import Recaptcha from "../Components/Recaptcha";
+
 function Getintouch() {
+
+  const initialValues = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  }
+
+  const validationSchema = Yup.object({
+    firstName: Yup.string()
+      .required('**Required'),
+
+    lastName: Yup.string()
+      .required('**Required'),
+
+    email: Yup.string()
+      .email('Invalid email format')
+      .required('**Required'),
+
+    subject: Yup.string()
+      .required('**Required'),
+
+    message: Yup.string()
+      .required('**Required')
+
+  })
+
+
+  const onSubmit = () => {
+    // toast.success('Register successfully')
+  }
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema,
+  })
+
+  // const submitHandler = () => {
+  //   toast.success('Register Successfully !!!')
+  //   console.log("Button");
+  // }
+
+
+  // function onChange(value){
+  //   console.log('captcha value:', value);
+  // }
+
   return (
     <div className={style.body}>
       {/* background image section */}
-
       <section className={style.section1}>
-        <div className="container-flex">
-          <div className="row">
-            <div className="col-12 p-0">
+        <div className="container-flex p-0">
+          <div className={`row ${style.row}`} >
+            <div className="col-md-12 ">
               <div className={style.topbackground}>
                 <h1 style={{ color: "white" }}>Get In Touch</h1>
               </div>
@@ -74,88 +127,113 @@ function Getintouch() {
 
       <section className={style.section2}>
         <div className="container mt-5 mb-5">
-          <div className="row">
-            <div className={`col-lg-12 ${style.fromcontent}`}>
+          <div className="row p-0">
+            <div className={`col-md-7 p-0 ${style.fromcontent}`}>
               <Box
                 className={style.box}
-                
               >
-                <FormLabel>
-                  <div className="row">
-                    <div className={`col-lg-6`}>
-                      <TextField
-                        id="filled-basic"
-                        label="First Name"
-                        variant="standard"
-                        className={style.TextField}
-                      />
-                    </div>
-                    <div className={`col-lg-6`}>
-                      <TextField
-                        id="filled-basic"
-                        label="Last Name"
-                        variant="standard"
-                        className={style.TextField}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className={`col-lg-12`}>
-                      <TextField
-                      className={style.TextField}
-                        id="filled-basic"
-                        label="E-mail"
-                        variant="standard"
-                        placeholder="@gmail.com"
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className={`col-lg-12`}>
-                      <TextField
-                        id="filled-basic"
-                        label="Subject"
-                        variant="standard"
-                        className={style.TextField}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className={`col-lg-12`}>
-                      <TextField
-                        id="standard-helperText"
-                        variant="standard"
-                        label="Message"
-                        multiline
-                        rows={4}
-                        className={style.TextField}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className={`col-lg-12`}>
-                      <div className="pb-2"><lable >Recaptcha</lable></div>
-                      <Recaptcha 
-                      sitekey="6Ler570SAAAAAOfjh3CNFPtuBSH_QdavHc5x_JUv" 
-                      />
-                    </div>
-                  </div>
+                <form className='' onSubmit={formik.handleSubmit}>
+                  <FormLabel>
+                    <div className="row">
+                      <div className={`col-lg-6`}>
+                        <TextField
+                          id="filled-basic"
+                          label="First Name"
+                          variant="standard"
+                          className={style.TextField}
+                          type='text'
+                          {...formik.getFieldProps('firstName')}
+                        />
+                        {formik.touched.firstName && formik.errors.firstName ? <p className="text-danger error pl-2">{formik.errors.firstName}</p> : null}
+                      </div>
+                      <div className={`col-lg-6`}>
+                        <TextField
+                          id="filled-basic"
+                          label="Last Name"
+                          variant="standard"
+                          className={style.TextField}
+                          type='text'
+                          {...formik.getFieldProps('lastName')}
+                        />
+                        {formik.touched.lastName && formik.errors.lastName ? <p className="text-danger error pl-2">{formik.errors.lastName}</p> : null}
 
-                  <div className="row pt-5">
-                    <div className={`col-lg-12`}>
-                      <center>
-                        <Button
-                          className={style.Button}
-                          variant="contained"
-                          sx={{ width: 200 }}
-                        >
-                          Send
-                        </Button>
-                      </center>
+                      </div>
                     </div>
-                  </div>
-                </FormLabel>
+                    <div className="row">
+                      <div className={`col-lg-12`}>
+                        <TextField
+                          className={style.TextField}
+                          id="filled-basic"
+                          label="E-mail"
+                          variant="standard"
+                          placeholder="@gmail.com"
+                          type='text'
+                          {...formik.getFieldProps('email')}
+                        />
+                        {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className={`col-lg-12`}>
+                        <TextField
+                          id="filled-basic"
+                          label="Subject"
+                          variant="standard"
+                          className={style.TextField}
+                          type='text'
+                          {...formik.getFieldProps('subject')}
+                        />
+                        {formik.touched.subject && formik.errors.subject ? <p className="text-danger error pl-2">{formik.errors.subject}</p> : null}
+
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className={`col-lg-12`}>
+                        <TextField
+                          id="standard-helperText"
+                          variant="standard"
+                          label="Message"
+                          multiline
+                          rows={4}
+                          className={style.TextField}
+                          type='text'
+                          {...formik.getFieldProps('message')}
+                        />
+                        {formik.touched.message && formik.errors.message ? <p className="text-danger error pl-2">{formik.errors.message}</p> : null}
+
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className={`col-lg-12`}>
+                        <div className="pb-2"><label >Recaptcha</label></div>
+                          <Recaptcha />
+                      </div>
+                    </div>
+
+                    <div className="row pt-5">
+                      <div className={`col-lg-12`}>
+                        <center>
+                          <Button
+                            className={style.Button}
+                            variant="contained"
+                            type="submit"
+                            // onClick={submitHandler}
+                            onClick={() => toast("Successfully")}
+                            sx={{ width: 200 }}
+                          >
+                            Send
+                          </Button>
+                        </center>
+                      </div>
+                    </div>
+                  </FormLabel>
+                </form>
               </Box>
+            </div>
+            <div className={`col-md-5 ${style.image}`}>
+              <Image src="/getInTouch.png" alt="Picture"
+                width="600"
+                height="600" />
             </div>
           </div>
         </div>
