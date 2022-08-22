@@ -25,12 +25,7 @@
   color: white;
 }
 
-.animate__animated.animate__rubberBand.animate__infinite {
-  --animate-duration: 2s;
-  --animate__infinite: infinite;
-  --animate-delay: 0.9s;
-  --animate__fast: 800ms;
-}
+
 
 .footer a {
   text-decoration: none !important;
@@ -61,6 +56,9 @@
   right: 5%;
   padding-bottom: 50px;
  cursor: pointer;
+}
+.whatsappImg:hover{
+  transform: translateY(-2px);
 }
 .chatbot{
   bottom: 100px;

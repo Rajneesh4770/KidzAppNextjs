@@ -191,8 +191,8 @@ function Footer() {
 
           <div className={`row ${style.chatbot}`}>
             <div className='col'>
-              <a className='animate__animated animate__zoomIn animate__infinite'>
-                <i>
+              <a className='animate__animated animate__bounce animate__infinite'>
+                <i >
                   <Link href='https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions'>
                   <img src='https://www.code-brew.com/wp-content/uploads/2019/06/whatsapp-logo.png' className={`${style.whatsappImg}`} />
                   </Link>
