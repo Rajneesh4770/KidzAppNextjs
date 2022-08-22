@@ -1,10 +1,8 @@
 import React from "react";
-import KidzappFeed from '../Components/KidzappFeed';
+import KidzappFeed from '../../Components/KidzappFeed';
 import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap'
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-import style from "../styles/KidzappTv.module.css";
+import style from "../../styles/KidzappTv.module.css";
 const KidzappTv = () => {
   const settings = {
     dots:true,
