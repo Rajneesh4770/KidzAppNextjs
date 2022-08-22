@@ -131,6 +131,8 @@ font-size: 14px;
   width: 100%;
   position: relative;
   overflow: hidden;
+border-radius: 15px;
+
 }
 .contentImage img{
 height: 100%;
@@ -159,7 +161,7 @@ object-fit: cover;
   transform: translate(0%, -50%);
   /* height: 100%; */
   overflow: visible;
-  border-radius: 0px;
+  border-radius: 15px;
   /* height: 300px; */
   overflow: hidden;
 }
@@ -177,7 +179,7 @@ object-fit: cover;
   transform: translate(0%, -50%);
   /* height: 100%; */
   overflow: visible;
-  border-radius: 0px;
+  border-radius: 15px;
   /* height: 300px; */
   overflow: hidden;
 }
