@@ -11,10 +11,10 @@ import { Carousel } from "react-bootstrap";
 function index(props) {
   return (
     <div className={style.body}>
-     <div  className={`container ${style.sidenav}`}>
+     {/* <div  className={`container ${style.sidenav}`}>
   <a href="https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions"
    className={`fixed ${style.a}`}>Chat</a>
-  </div>
+  </div> */}
  
 
       <Carousel  className="maincrousel">

@@ -170,7 +170,7 @@
 .cardimage{
   position: relative;
   padding: 8px;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
   filter: brightness(100%);
