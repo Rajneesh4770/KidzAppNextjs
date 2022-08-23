@@ -1,10 +1,27 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import KidzappFeed from '../../Components/KidzappFeed';
-import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap'
+import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap';
+import axios from 'axios';
 import Slider from "react-slick";
 import style from "../../styles/KidzappTv.module.css";
 import Link from "next/link";
+
 const KidzappTv = () => {
+  const [cardData,setCardData]=useState([])
+  useEffect(()=>{
+    axios.get("https://api2.kidzapp.com/api/3.0/tv/video_category")
+    .then((res)=>{
+      console.log(res.data,'console');
+        setCardData(res.data);
+       
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+    console.log(cardData)
+  },[])
+
+  
   const settings = {
     dots:true,
     infinite: true,
@@ -40,41 +57,41 @@ const KidzappTv = () => {
     ]
   }
  
-  const CardData=[{
-    id:1,
-    image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
-    playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-    likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-    heading:"Demo Video",
-    text:"Demo Category",
-    bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-    commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-    shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
+//   const CardData=[{
+//     id:1,
+//     image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
+//     playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
+//     likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
+//     heading:"Demo Video",
+//     text:"Demo Category",
+//     bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
+//     commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
+//     shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
 
-  },
-  {
-  id:2,
-  image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
-  playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-  likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-  heading:"Demo Video",
-  text:"Demo Category",
-  bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-  commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-  shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
-},
-{
-  id:3,
-  image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/05383f52-cff3-4418-bd04-271cf0c2f5ff.png",
-  playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-  likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-  heading:"Demo Video",
-  text:"Demo Category",
-  bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-  commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-  shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
-},
-]
+//   },
+//   {
+//   id:2,
+//   image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
+//   playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
+//   likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
+//   heading:"Demo Video",
+//   text:"Demo Category",
+//   bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
+//   commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
+//   shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
+// },
+// {
+//   id:3,
+//   image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/05383f52-cff3-4418-bd04-271cf0c2f5ff.png",
+//   playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
+//   likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
+//   heading:"Demo Video",
+//   text:"Demo Category",
+//   bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
+//   commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
+//   shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
+// },
+// ]
 const sliderData=[{
   id:1,
   image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/cbb58b83-1c48-4bda-839a-ed6e3a1c5766.jpg",
@@ -248,7 +265,7 @@ const slider2Data=[{
         
             <div>
             <Container className="dynamicCrousel">
-      <Carousel className='maincrousel' >
+      <Carousel className='maincrousel'>
   <Carousel.Item interval={5000}>
   <Image className={style.playImage1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" id="myplay33" pagespeed_url_hash="1333257139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></Image>
   <Image src="https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg" className={style.videoLikeIcon}/>
@@ -323,31 +340,31 @@ const slider2Data=[{
             </Link>
             </Col>
             </Row>
-            <Row>
-          {CardData.map((item)=>{ 
-          return(
+            <Row> 
+          {cardData.map((item)=>{
+            return(
             <>
             <Col  xs={12} md={4}  >
             <Card key={item.id} className={`mx-3 ${style.cards}`} >
              <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
-      <Card.Img variant="top" src={item.image} />
+      <Card.Img variant="top" src="https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg"/>
       <Card.Body>
      
-        <Card.Title><h3 className={style.cardHeading}>{item.heading} </h3></Card.Title>
+        <Card.Title><h3 className={style.cardHeading}>{item.name} </h3></Card.Title>
         <Card.Text className={style.cardText}>
-        {item.text}
+        {item.description}
         </Card.Text>
         <hr/>
         <Row >
             <Col xs={4} className={style.colStyle}>
             <div className={style.cardFooter}>
-            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src={item.bottomLikeIcon} />
+            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src="https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg" />
             <div className={style.Badge}>14</div>
             </div>
             </Col>
             <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src={item.commentIcon} />
+              <Image width="22px" height="22px" src="	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
@@ -355,25 +372,17 @@ const slider2Data=[{
             <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
                   <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src={item.shareIcon} alt="share" />
+                  <Image width="22px" height="22px"  src="	https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
                </div> 
             </Col>
         </Row>
-        {/* <div className={style.CardFooter}>
-        <Image width="22px" height="22px" src={item.bottomLikeIcon}/>
-        <span clasName={style.Badge}>9</span>
-        <Image width="22px" height="22px" src={item.commentIcon}/>
-        <span clasName={style.Badge}>4</span>
-        <Image width="22px" height="22px" src={item.shareIcon}/>
-        </div> */}
       </Card.Body>
-    </Card>
-    </Col>
+    </Card> 
+   </Col>
     </>
-          )
-    }
-          )}
-          </Row>
+            ) })
+           }
+          </Row> 
           
         </Container>
       </div>

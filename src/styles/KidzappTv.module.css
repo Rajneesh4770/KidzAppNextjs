@@ -40,6 +40,8 @@
 }
 .cardText{
     color:#965da4;
+    height:60px;
+    
 }
 .playImage{
     position: absolute;
@@ -149,8 +151,11 @@
         padding-left:0px;
         padding-right:0px;
     }
+    .cardHeading{
+        color: #007bfb;
+        font-size:20px !important;
+    }
 }
-
 @media (max-width: 991.98px) {
     .imageStyle{
         width: 10px;
@@ -174,13 +179,18 @@
         padding-left:0px;
         padding-right:0px;
     }
+   
 }
 
-@media (max-width: 767.98px) {
+@media (max-width:767.98px) {
     .playImage1{
       width: 75px !important;
     }
-    
+    .cardHeading{
+        color: #007bfb;
+        font-size:20px !important;
+    }
+   
 }
 @media (max-width: 575.98px) {
     .heading2{
