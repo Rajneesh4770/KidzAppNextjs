@@ -40,7 +40,7 @@ function FindActivities() {
 		axios
 			.get(
 				baseUrl +
-					`experiences/?country_code=ae&page=1&page_size=${pageindex}&search=${search}&city_id=${city}&area_id=${area}&category=${category}&subcategory=${subcategory}`,
+					`experiences/?country_code=ae&page=1&page_size=${pageindex}&search=${search}&city_id=${city}&area_id=${area}&category=${category}}`,
 			)
 			.then((res) => {
 				console.log('findActivity page search result', res.data.results);
@@ -81,11 +81,11 @@ function FindActivities() {
 			setAreas(res.data);
 		});
 		console.log(cities, 'kuyguygu');
-		axios.get('https://api2.kidzapp.com/api/1.9/areas').then((res) => {
-			console.log(res.data.results, 'jbnknikninh');
-			setLoader(true);
-			setSubCategories(res.data);
-		});
+		// axios.get('https://api2.kidzapp.com/api/1.9/areas').then((res) => {
+		// 	console.log(res.data.results, 'jbnknikninh');
+		// 	setLoader(true);
+		// 	setSubCategories(res.data);
+		// });
 	}, []);
 
 	return (
@@ -116,7 +116,11 @@ function FindActivities() {
 											<option value="">City</option>
 
 											{cities.map((list) => {
-												return <option value={list.id}>{list.name}</option>;
+												return (
+													<option key={list.id} value={list.id}>
+														{list.name}
+													</option>
+												);
 											})}
 										</select>
 									</div>
@@ -128,7 +132,11 @@ function FindActivities() {
 										>
 											<option value="">Area</option>
 											{areas.map((list) => {
-												return <option value={list.id}>{list.name}</option>;
+												return (
+													<option key={list.id} value={list.id}>
+														{list.name}
+													</option>
+												);
 											})}
 										</select>
 									</div>
@@ -150,7 +158,11 @@ function FindActivities() {
 											<option value="">Category</option>
 
 											{categories.map((list) => {
-												return <option value={list.id}>{list.name}</option>;
+												return (
+													<option key={list.id} value={list.id}>
+														{list.name}
+													</option>
+												);
 											})}
 										</select>
 									</div>
@@ -166,7 +178,7 @@ function FindActivities() {
 											<option value="">Sub Category</option>
 
 											{subcategories.map((list) => {
-												return <option>{list.name}</option>;
+												return <option key={list.id}>{list.name}</option>;
 											})}
 										</select>
 									</div>
