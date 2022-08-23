@@ -1,7 +1,7 @@
 import { useState, useEffect, useTransition } from "react";
 import Axios from "axios";
 import { baseUrl } from "../config";
-import style1 from "../styles/FindActivities.module.css";
+import style1 from "../styles/Filter.module.css";
 import { Rating, Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";

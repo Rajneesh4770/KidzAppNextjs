@@ -223,7 +223,7 @@ const Header = (props) => {
                       id="navbarSupportedContent"
                     >
                       <ul class={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
-                        <Link href="/FindActivities">
+                        <Link href="/Filter">
                           <li class="nav-item">
                             <a
                               class="nav-link active"
