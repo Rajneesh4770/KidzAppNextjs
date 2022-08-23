@@ -207,15 +207,16 @@
     margin-left: 5px !important;
 
   }
- 
-  .selectbox{
-    padding: 3px 12px 3px 5px;
-  }
+
   .collapsediv4{
     display: flex;
     column-gap: 5px;
     margin-left: 27px;
   }
+  .selectbox{
+    padding: 3px 5px 3px 5px !important;
+  }
+
 }
 @media(min-width:1199.98px){
   .card{
@@ -232,4 +233,12 @@
    margin-left: 15px !important;
 
   }
+ 
+
+}
+@media(max-width:1399.98px){
+  .selectbox{
+    padding: 3px 20px 3px 5px;
+  }
+
 }

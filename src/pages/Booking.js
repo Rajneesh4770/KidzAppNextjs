@@ -13,19 +13,8 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-const Booking = () => {
-	const [data, setData] = useState([]);
-	useEffect(() => {
-		axios
-			.get(
-				baseUrl +
-					'experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=1&page_size=1&city=&website=1',
-			)
-			.then((res) => {
-				console.log(res.data.results);
-				setData(res.data.results);
-			});
-	}, []);
+const Booking = (props) => {
+
 
 	const Setting = {
 		slidesToShow: 1,
@@ -34,7 +23,7 @@ const Booking = () => {
 	};
 	return (
 		<>
-			{data.map((item) => {
+			{props.data.map((item) => {
 				const AnyReactComponent = () => (
 					<FaMapMarkerAlt className="fa-4x" style={{ color: 'red' }} />
 				);
@@ -542,5 +531,13 @@ const Booking = () => {
 		</>
 	);
 };
+
+export async function getStaticProps (){
+	let res = await axios.get(baseUrl+'experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=1&page_size=1&city=&website=1');
+	let props = {
+	  data:res.data.results
+	 };
+	 return { props}
+  }
 
 export default Booking;
