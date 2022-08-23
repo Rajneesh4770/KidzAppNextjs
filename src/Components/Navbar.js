@@ -13,6 +13,7 @@ import { Button } from "@mui/material";
 // import { ar, ae } from "../Redux/Langauge";
 import { FaFacebookF } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
+
 import { TextField } from "@mui/material";
 
 const style1 = {
@@ -50,6 +51,7 @@ const style2 = {
 
 export let constants = "";
 const Header = () => {
+
   const [modal, setModal] = useState(true)
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
@@ -272,32 +274,30 @@ const Header = () => {
           </div>
         </section>
       </header>
-      {modal ?
-        <Modal
-          id="knkjn"
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          // BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <Box sx={style1}>
-              <Button variant="outlined" color="success" sx={{ width: 300 }} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={openModal}>
-                LogIn With E-mail &nbsp; <HiOutlineMail />
-              </Button>
-              <br />
-              <Button variant="outlined" color="success" sx={{ width: 300 }}>
-                LogIn With Facebook &nbsp; <FaFacebookF />
-              </Button>
-            </Box>
-          </Fade>
-        </Modal> :
-
+      {modal ? <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style1}>
+            <Button onClick={() => setModal(false)} variant="outlined" color="success" sx={{ width: 300 }}>
+              LogIn With E-mail &nbsp; <HiOutlineMail />
+            </Button>
+            <br />
+            <Button variant="outlined" color="success" sx={{ width: 300 }}>
+              LogIn With Facebook &nbsp; <FaFacebookF />
+            </Button>
+          </Box>
+        </Fade>
+      </Modal>
+        :
         <Modal
           id="knkjn"
           aria-labelledby="transition-modal-title"
@@ -334,6 +334,7 @@ const Header = () => {
             </Box>
           </Fade>
         </Modal>
+
       }
     </>
   );

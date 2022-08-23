@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../styles/Footer.module.css';
 import Link from 'next/link';
-import Image from "next/image";
+import 'animate.css';
 import { BsYoutube, BsWhatsapp, BsInstagram, BsFacebook } from 'react-icons/bs';
 function Footer() {
   return (
@@ -191,9 +191,11 @@ function Footer() {
 
           <div className={`row ${style.chatbot}`}>
             <div className='col'>
-              <a>
-                <i>
-                  <img src='https://www.code-brew.com/wp-content/uploads/2019/06/whatsapp-logo.png' className={style.whatsappImg} />
+              <a className='animate__animated animate__bounce animate__infinite'>
+                <i >
+                  <Link href='https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions'>
+                  <img src='https://www.code-brew.com/wp-content/uploads/2019/06/whatsapp-logo.png' className={`${style.whatsappImg}`} />
+                  </Link>
                 </i>
               </a>
             </div>

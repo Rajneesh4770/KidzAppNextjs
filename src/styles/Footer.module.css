@@ -25,12 +25,7 @@
   color: white;
 }
 
-.animate__animated.animate__rubberBand.animate__infinite {
-  --animate-duration: 2s;
-  --animate__infinite: infinite;
-  --animate-delay: 0.9s;
-  --animate__fast: 800ms;
-}
+
 
 .footer a {
   text-decoration: none !important;
@@ -57,18 +52,13 @@
 .whatsappImg {
   position: fixed;
   bottom: 20px;
-  width: 30px;
-  right: 20px;
+  width: 40px;
+  right: 5%;
   padding-bottom: 50px;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: moveIcon;
-  animation: moveIcon 1s infinite;
+ cursor: pointer;
+}
+.whatsappImg:hover{
+  transform: translateY(-2px);
 }
 .chatbot{
   bottom: 100px;
