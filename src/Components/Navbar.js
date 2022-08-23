@@ -14,6 +14,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { TextField } from "@mui/material";
 import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const style1 = {
   position: "absolute",
@@ -108,7 +109,9 @@ const Header = (props) => {
   })
 
   const onSubmit = (e) => {
-    alert("Click OK for more steps")
+    // alert("Click OK for more steps")
+    toast("confirm your mail & register here")
+
     // e.preventDefault();
     console.log(e);
     axios
