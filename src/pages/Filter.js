@@ -1,7 +1,7 @@
 import { useState, useEffect, useTransition } from "react";
 import Axios from "axios";
 import { baseUrl } from "../config";
-import style1 from "../styles/FindActivities.module.css";
+import style1 from "../styles/Filter.module.css";
 import { Rating, Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -423,14 +423,10 @@ function FindActivities() {
                           className="card-img-top"
                           alt="..."
                         />
-                        <div className={`${style1.newdeal}`}>
-                          <img
-                            src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-                            alt=""
-                            width="50"
-                            height="50"
-                          />
-                        </div>
+                        <img
+                    src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+                    className={style1.dealimg}
+                  />
                         <div className="card-body">
                           <p className={style1.rightcardtitle}>{card.title}</p>
                           <div className="row">
