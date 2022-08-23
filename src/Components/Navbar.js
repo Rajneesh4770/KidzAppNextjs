@@ -123,7 +123,7 @@ const Header = () => {
   })
 
 
-  
+
   return (
     <>
       <header >
@@ -311,23 +311,26 @@ const Header = () => {
           }}
         >
           <Fade in={open}>
-            <Box sx={style2} style={{ borderRadius: "10px", width: "500px", height: "200px" }}>
-              
-                <form onSubmit={formik.handleSubmit}>
-                  <div className={style.loginModal}>
-                    <TextField
-                       id="outlined-basic" 
-                       label="Email" 
-                       variant="outlined" 
-                       {...formik.getFieldProps('email')}
-                    />
-                    {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
-                    <br />
-                    <br />
-                    <Button variant='contained' color='primary' className={style.btn}>NEXT</Button>
-                  </div>
-                </form>
-              
+            <Box sx={style2} style={{ borderRadius: "10px", width: "700px", height: "350px" }}>
+
+              <form onSubmit={formik.handleSubmit}>
+                <div className={style.loginModal}>
+                  <TextField
+                    id="outlined-basic"
+                    label="Email"
+                    variant="outlined"
+                    {...formik.getFieldProps('email')}
+                  />
+                  {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
+                  <br />
+                  <br />
+                  <Button variant='contained' color='primary' className={style.btn}>NEXT</Button>
+                  <br /><br />
+                  <hr></hr>
+                  <p>Tap Next to get a Confirmation Email from a system </p>
+                </div>
+              </form>
+
             </Box>
           </Fade>
         </Modal>

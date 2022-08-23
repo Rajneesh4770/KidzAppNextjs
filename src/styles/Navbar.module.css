@@ -238,5 +238,10 @@
 .loginModal .btn{
   width: 100%;
 }
+.loginModal p{
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+}
 
 
