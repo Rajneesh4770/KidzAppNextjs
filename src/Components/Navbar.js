@@ -11,6 +11,7 @@ import { Button } from "@mui/material";
 // import { ar, ae } from "../Redux/Langauge";
 import {FaFacebookF} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
+import {TextField} from "@mui/material";
 
 const style1 = {
   position: "absolute",
@@ -29,6 +30,8 @@ const style1 = {
 };
 export let constants = "";
 const Header = () => {
+
+  const [modal,setModal]=useState(true);
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
     if (window.scrollY > 250) {
@@ -222,7 +225,7 @@ const Header = () => {
           </div>
         </section>
       </header>
-      <Modal
+      {modal ?  <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
@@ -235,7 +238,7 @@ const Header = () => {
       >
         <Fade in={open}>
           <Box sx={style1}>
-            <Button variant="outlined" color="success" sx={{ width: 300 }}>
+            <Button onClick={()=>setModal(false)} variant="outlined" color="success" sx={{ width: 300 }}>
               LogIn With E-mail &nbsp; <HiOutlineMail/>
             </Button>
             <br />
@@ -245,6 +248,28 @@ const Header = () => {
           </Box>
         </Fade>
       </Modal>
+      :
+      <Modal
+      aria-labelledby="transition-modal-title"
+      aria-describedby="transition-modal-description"
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{
+        timeout: 500,
+      }}
+    >
+      <Fade in={open}>
+        <Box sx={style1}>
+        <TextField id="outlined-basic" label="Email" variant="outlined" />
+        <Button >Submit</Button>
+        </Box>
+      </Fade>
+    </Modal>
+      
+      }
+     
     </>
   );
 };
