@@ -9,12 +9,11 @@ import { useFormik } from 'formik';
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import { Button } from "@mui/material";
-// import { useSelector, useDispatch } from "react-redux";
-// import { ar, ae } from "../Redux/Langauge";
 import { FaFacebookF } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-
 import { TextField } from "@mui/material";
+import { baseUrl } from "../config";
+import axios, { Axios } from "axios";
 
 const style1 = {
   position: "absolute",
@@ -31,8 +30,6 @@ const style1 = {
   alignItems: "center",
   flexDirection: "column",
 };
-
-
 const style2 = {
   position: "absolute",
   top: "50%",
@@ -45,12 +42,11 @@ const style2 = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  // flexDirection: "column",
 }
 
 
 export let constants = "";
-const Header = () => {
+const Header = (props) => {
 
   const [modal, setModal] = useState(true)
   const [show, setShow] = useState(false);
@@ -68,9 +64,7 @@ const Header = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, []);
-  // if (typeof window !== "undefined") {
-  //   var dropdownValue = localStorage.getItem("language");
-  // }
+
 
   const [Language, setLanguage] = useState("ae");
   const [open, setOpen] = useState(false);
@@ -80,7 +74,6 @@ const Header = () => {
   useEffect(() => {
     constants = localStorage.getItem("language") || "ae";
   }, [Language]);
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     window.onscroll = function () {
@@ -114,8 +107,18 @@ const Header = () => {
       .required('Email required')
   })
 
-  const onSubmit = () => {
-    toast.success("Registered Successfully")
+  const onSubmit = (e) => {
+    alert("Click OK for more steps")
+    // e.preventDefault();
+    console.log(e);
+    axios
+      .post('https://api2.kidzapp.com/api/3.0/customlogin',e)
+      .then(res=>{
+      console.log(res,'res')
+    })
+    .catch((err)=>{
+      console.error(err,'err');
+    });
   }
 
   const formik = useFormik({
@@ -123,8 +126,7 @@ const Header = () => {
     validationSchema,
     onSubmit,
   })
-
-
+ 
 
   return (
     <>
@@ -324,7 +326,7 @@ const Header = () => {
                   {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
                   <br />
                   <br />
-                  <Button variant='contained' color='primary' className={style.btn}>NEXT</Button>
+                  <Button type="submit" variant='contained' color='primary' className={style.btn}>NEXT</Button>
                   <br /><br />
                   <hr></hr>
                   <p>Tap Next to get a Confirmation Email from a system </p>
@@ -339,5 +341,6 @@ const Header = () => {
     </>
   );
 };
+
 
 export default Header;
