@@ -325,9 +325,9 @@ const KidzappTv = () => {
                       <Card key={item.id} xs={12} md={4} className={`mx-4 my-2 ${style.cards}`} >
                         <video  src='https://images.kidzapp.com/media/kidzapp_tv/videos/None_1c0742c8-ac24-43af-b108-5638d989089b.mp4' autoPlay={false}></video>
 
-                        <Card.Img width="40px" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" />
+                        <Card.Img width="40px" height="40px" className={style.playImageSlider} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" />
                         <Card.Body>
-                          <Card.Title><h3 className={style.cardHeading}>{item.name} </h3></Card.Title>
+                          <Card.Title><h3 className={style.cardHeading1}>{item.name} </h3></Card.Title>
                           <Card.Text className={style.cardText}>
                             {item.video_category.name}
                           </Card.Text>
@@ -389,7 +389,7 @@ const KidzappTv = () => {
                     <Col>
                       <Card xs={12} md={4} className={`mx-4 my-2 ${style.cards}`} >
                         <Card.Img variant="top" src={item.image} />
-                        <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" />
+                        <Card.Img width="40x" height="40px" className={style.playImageSlider1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" />
                         <Card.Body>
                           <Card.Title><h3 className={style.cardHeading}>{item.heading} </h3></Card.Title>
                           <Card.Text className={style.cardText}>

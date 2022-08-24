@@ -14,7 +14,7 @@ function PrivacyPolicy() {
           </div>
         </div>
       </section>
-
+      
       <section className={style.section}>
         <div className="container">
           <div className="row">
