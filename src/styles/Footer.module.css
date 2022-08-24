@@ -4,45 +4,69 @@
   padding-top: 40px;
   padding-bottom: 10px;
 }
+
 .footer li {
   list-style: none;
   color: #8d969b;
   cursor: pointer;
 }
+
 .img1 {
   width: 150px;
   margin-top: 6px;
 }
+
 .img2 {
   width: 150px;
 }
+
 .nav-link {
   display: contents;
   color: white;
 }
 
-.animate__animated.animate__rubberBand.animate__infinite {
-  --animate-duration: 2s;
-  --animate__infinite: infinite;
-  --animate-delay: 0.9s;
-  --animate__fast: 800ms;
-}
+
 
 .footer a {
   text-decoration: none !important;
   padding-bottom: 4px;
 }
+
 .footer h6 {
   font-size: larger;
 }
-.maincontainer{
+
+.maincontainer {
   margin-left: auto;
   margin-right: auto;
 }
 
-.iconEffect:hover{
+.iconEffect:hover {
   color: #ffee10;
 }
-.copyrightdiv{
+
+.copyrightdiv {
   margin-bottom: 9px;
+}
+
+.whatsappImg {
+  position: fixed;
+  bottom: 20px;
+  width: 40px;
+  right: 5%;
+  padding-bottom: 50px;
+ cursor: pointer;
+}
+.whatsappImg:hover{
+  transform: translateY(-2px);
+}
+.chatbot{
+  bottom: 100px;
+  right: 10px;
+  z-index: 9;
+  opacity: 1;
+}
+.chatbot a{
+  color: rgb(37,211,102);
+  font-size: 48px;
 }

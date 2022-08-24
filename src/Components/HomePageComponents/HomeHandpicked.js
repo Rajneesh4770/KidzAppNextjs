@@ -4,6 +4,7 @@ import getResponseMessage from "../../Language/multilingualServices";
 import { constants } from "../Navbar";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import { baseUrl } from "../../config";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import Slider from "react-slick";
@@ -58,7 +59,7 @@ function HomeHandpicked() {
 
   useEffect(() => {
     axios
-      .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
+      .get(baseUrl+"lists?country_code=ae")
       .then((res) => {
         setData(res.data);
       })
@@ -95,8 +96,8 @@ function HomeHandpicked() {
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
     axios
-      .get(
-        `https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
+      .get(baseUrl+
+        `experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
       )
       .then((res) => {
         setResData1(res.data.results);

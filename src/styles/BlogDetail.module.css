@@ -131,20 +131,25 @@ font-size: 14px;
   width: 100%;
   position: relative;
   overflow: hidden;
+border-radius: 15px;
+filter: brightness(75%);
+
 }
 .contentImage img{
 height: 100%;
 width: 100%;
 object-fit: cover;
+
 }
 .contentImage::before{
-  content: '';
+  /* content: ''; */
   display: block;
   background: #2823234d;
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 1;
+
+  /* z-index: 1; */
 }
 .mainColumnDiv{
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -152,15 +157,15 @@ object-fit: cover;
   width: 50%;
   background-color: white;
   position: absolute;
-  z-index: 2;
+  /* z-index: 2; */
   top: 50%;
   right: 0%;
   /* left: 70%; */
   transform: translate(0%, -50%);
   /* height: 100%; */
   overflow: visible;
-  border-radius: 0px;
-  /* height: 300px; */
+  border-radius: 15px;
+  height: 260px;
   overflow: hidden;
 }
 
@@ -177,8 +182,8 @@ object-fit: cover;
   transform: translate(0%, -50%);
   /* height: 100%; */
   overflow: visible;
-  border-radius: 0px;
-  /* height: 300px; */
+  border-radius: 15px;
+  height: 260px;
   overflow: hidden;
 }
 

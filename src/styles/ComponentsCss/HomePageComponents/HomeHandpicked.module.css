@@ -170,7 +170,7 @@
 .cardimage{
   position: relative;
   padding: 8px;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;
   filter: brightness(100%);
@@ -188,6 +188,12 @@
 }
 .card p{
   color: purple;
+  display: -webkit-box;
+  max-width: auto;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
 }
 .card a{
   padding: 5px 15px;
