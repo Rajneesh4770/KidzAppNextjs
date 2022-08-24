@@ -182,7 +182,7 @@
   position: absolute !important;
   margin: 10px;
 }
-.card img:hover{
+.cardimage:hover{
   filter: brightness(100%);
   transform: scale(1.3);
 }

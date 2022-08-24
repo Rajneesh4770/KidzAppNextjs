@@ -111,7 +111,7 @@ const Header = (props) => {
   const onSubmit = (e) => {
     // alert("Click OK for more steps")
     toast("confirm your mail & register here")
-
+    setLogin(false);
     // e.preventDefault();
     console.log(e);
     axios
@@ -129,7 +129,9 @@ const Header = (props) => {
     validationSchema,
     onSubmit,
   })
- 
+
+  const [login,setLogin]=useState(false)
+  
 
   return (
     <>
@@ -265,11 +267,19 @@ const Header = (props) => {
                               {getResponseMessage(constants).get_listed}</a>
                           </li>
                         </Link>
+
+                        {login?
+                         <Link href="/">
+                         <li class="nav-item">
+                           <a class="nav-link " onClick={handleOpen}>Login</a>
+                         </li>
+                       </Link>:
                         <Link href="/">
-                          <li class="nav-item">
-                            <a class="nav-link " onClick={handleOpen}>Login</a>
-                          </li>
-                        </Link>
+                        <li class="nav-item">
+                          <a class="nav-link " onClick={()=>setLogin(true)}>Logout</a>
+                        </li>
+                      </Link>
+                      }
                       </ul>
                     </div>
                   </div>
@@ -329,7 +339,7 @@ const Header = (props) => {
                   {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
                   <br />
                   <br />
-                  <Button type="submit" variant='contained' color='primary' className={style.btn}>NEXT</Button>
+                  <Button type="submit" variant='contained' color='primary' className={style.btn} >NEXT</Button>
                   <br /><br />
                   <hr></hr>
                   <p>Tap Next to get a Confirmation Email from a system </p>

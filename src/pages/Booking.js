@@ -302,7 +302,7 @@ const Booking = (props) => {
 															</h4>
 														</div>
 														<div className="row mt-5">
-															<div className="col-4">
+															<div className="col-lg-4 sm-12">
 																<div className={style.blog_title}>
 																	<p className={style.startext}>5.0</p>
 																</div>
@@ -318,7 +318,7 @@ const Booking = (props) => {
 																	<p style={{ fontSize: '18px' }}>4,2556435</p>
 																</div>
 															</div>
-															<div className="col-8">
+															<div className="col-lg-8 sm-12">
 																<div className="progress mb-3">
 																	<div
 																		className="progress-bar"

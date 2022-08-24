@@ -25,7 +25,7 @@ function index(props) {
           <img
             className={style.crouselImages}
             src={item.image_url}
-            alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
+            alt = "Image is not available"
           />
           <Carousel.Caption>
             <h1 className={style.crouselHeading}>{item.title}</h1>
