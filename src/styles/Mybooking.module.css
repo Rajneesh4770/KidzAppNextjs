@@ -23,3 +23,18 @@
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 	width: 90%;
 }
+.title{
+    font-size: 20px;
+    color: #9c5ca7;
+}
+.time{
+    margin-left: auto;
+}
+.price{
+    color: #e35b26;
+}
+.deliverdtext{
+    color: #6dd5ed;
+    font-size: 20px ;
+    margin-bottom: 0;
+}

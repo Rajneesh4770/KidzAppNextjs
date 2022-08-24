@@ -1,3 +1,4 @@
+import { CheckCircle } from "@mui/icons-material";
 import React from "react";
 import style from '../styles/Mybooking.module.css'
 const Mybooking = () => {
@@ -26,7 +27,18 @@ const Mybooking = () => {
                       />
                      
                       <div className="card-body">
-                        <p className="card-title">title</p>
+                        <p className={style.title}>10% off The Digger Hub - Marassi </p>
+                        <div className="d-flex">
+                        <p>20 AUGUST, 2022</p>
+                        <p className={style.time}>6:30PM</p>
+                        </div>
+                        <div className="d-flex">
+                        <p className={style.price}>EGP 270.00</p>
+                        <p className={style.time}><CheckCircle sx={{color:'#25D366'}}/>confirmed</p>
+                        </div>
+                        <div>
+                            <center><p className={style.deliverdtext}>Delivered</p>&nbsp;<span>Created on : 22 AUGUST,2022</span></center>
+                        </div>
                                              
                                              
                                              

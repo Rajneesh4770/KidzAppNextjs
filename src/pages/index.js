@@ -68,7 +68,8 @@ function index(props) {
 export async function getStaticProps (){
   let res = await axios.get(baseUrl+'experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar');
   let props = {
-    data:res.data.results
+    data:res?.data?.results,
+    
    };
    return { props}
 }
