@@ -15,6 +15,7 @@ import { TextField } from "@mui/material";
 import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { AccountCircle } from "@mui/icons-material";
 
 const style1 = {
   position: "absolute",
@@ -274,11 +275,28 @@ const Header = (props) => {
                            <a class="nav-link " onClick={handleOpen}>Login</a>
                          </li>
                        </Link>:
+                       <>
                         <Link href="/">
                         <li class="nav-item">
                           <a class="nav-link " onClick={()=>setLogin(true)}>Logout</a>
                         </li>
                       </Link>
+                        
+
+                      <li class="nav-item dropdown">
+                      <a class="nav-link toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <AccountCircle sx={{color:'#58cbf8'}}/>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <Link href='/Profile'>
+            <li><a class="dropdown-item" href="#">Profile</a></li></Link>
+            <Link href='/Mybooking'>
+            <li><a class="dropdown-item" href="#">Booking</a></li></Link>
+            <Link href='WishList'>
+            <li><a class="dropdown-item" href="#">WishList</a></li></Link>
+          </ul>
+        </li>
+                      </>
                       }
                       </ul>
                     </div>
