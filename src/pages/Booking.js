@@ -6,8 +6,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Rating } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import Slider from 'react-slick';
 import { baseUrl } from '../config';
 import axios from 'axios';
 import { useEffect } from 'react';

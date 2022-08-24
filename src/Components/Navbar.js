@@ -116,7 +116,7 @@ const Header = (props) => {
     // e.preventDefault();
     console.log(e);
     axios
-      .post('https://api2.kidzapp.com/api/3.0/customlogin',e)
+      .post('https://api2.kidzapp.com/api/3.0/custom_email_authentication',e)
       .then(res=>{
       console.log(res,'res')
     })

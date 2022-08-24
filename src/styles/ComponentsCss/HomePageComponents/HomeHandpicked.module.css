@@ -164,8 +164,12 @@
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 15px;
+  margin-top: 1%;
   margin-left: auto;
   margin-right: auto;
+}.card:hover{
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 7px 8px;
 }
 .cardimage{
   position: relative;
