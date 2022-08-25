@@ -42,6 +42,7 @@
 }
 .cardText{
     color:#965da4;
+    height: 33px;
 }
 .cardFooter{
     display:inline-flex;
@@ -63,12 +64,11 @@
     width: 22px;
     height: 22px;
 }
-.heading1{
+
+.heading2{
     font-size: 40px;
-    margin-left: 30px;
     color: #484848;
     font-weight: 500;
-    /* line-height: 1.17; */
 }
 @media (max-width: 1199.98px) {
     .imageStyle{
@@ -92,6 +92,11 @@
      .colStyle{
         padding-left:0px;
         padding-right:0px;
+    }
+    .cardHeading{
+        color: #007bfb;
+        font-size:20px !important;
+        height:40px !important
     }
 }
 
@@ -118,11 +123,20 @@
         padding-left:0px;
         padding-right:0px;
     }
+    .cardText{
+        color:#965da4;
+        height: 55px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 767.98px) {
     .playImage1{
       width: 75px !important;
+    }
+    .cardHeading{
+        color: #007bfb;
+        font-size:20px !important;
     }
     
 }
@@ -174,6 +188,16 @@
     .playImage1{
         width: 50px !important;
       }
+      .cardHeading{
+        color: #007bfb;
+        font-size:20px !important;
+        height:20px !important
+    }
+    .cardText{
+        color:#965da4;
+        height:24px;
+        font-size: 14px;
+    }
     
     }
 

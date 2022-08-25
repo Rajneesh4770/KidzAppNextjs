@@ -44,7 +44,6 @@ const Booking = () => {
 							<div className="row">
 								<div className="col-lg-12">
 									{/* image section column */}
-
 									<div className="row">
 										<div className="col-lg-8 col-sm-12">
 											<img className={style.leftimg1} src={item.image_url} />

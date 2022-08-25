@@ -1,0 +1,207 @@
+.section1{
+    margin-top: 133px;
+}
+.background{
+    background-image: url("https://kidzapp.com/images/blog-banner.jpg");
+    height: 100px;
+    width:auto;
+}
+.colStyle{
+    padding-left:0px;
+    padding-right:0px;
+    text-align: center;
+}
+.Container{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.FormRow{
+    padding-top: 30px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.playImageSlider{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.cards{
+    /* width:22rem; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+     border-radius:8px;
+     margin-bottom: 30px;
+}
+.cardHeading{
+    color: #007bfb;
+    font-size:20px !important;
+    height:70px !important;
+
+}
+.cardText{
+    color:#965da4;
+    height:40px;
+}
+.cardFooter{
+    display:inline-flex;
+    
+}
+.cardFooter .Badge{
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.28;
+    background-color: #3f3e3e;
+    border-radius: 12px;
+    padding: 4px 8px;
+    display: inline-block;
+    margin-left: 10px;
+    min-width: 40px;
+    text-align: center;
+}
+.imageStyle{
+    width: 22px;
+    height: 22px;
+}
+.heading1{
+    font-size: 40px;
+    margin-left: 30px;
+    color: #484848;
+    font-weight: 500;
+    /* line-height: 1.17; */
+}
+@media (max-width: 1199.98px) {
+    .imageStyle{
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 8px;
+        line-height:1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 4px;
+        display: inline-block;
+        margin-left: 3px;
+        min-width:30px;
+        text-align: center;
+    }
+     .colStyle{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    
+}
+
+@media (max-width: 991.98px) {
+    .imageStyle{
+        width: 10px;
+        height: 10px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 8px;
+        line-height:1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 4px;
+        display: inline-block;
+        margin-left: 3px;
+        min-width:18px;
+        text-align: center;
+    }
+     .colStyle{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .cardHeading{
+        color: #007bfb;
+        font-size:18px !important;
+        height:100px !important
+    }
+    .playImageSlider{
+        width: 75px !important;
+        position:absolute;
+        top:10%;
+        transform: translate(-50%,-50%);
+        left: 50%;
+      }
+}
+
+@media (max-width: 767.98px) {
+    .playImageSlider{
+      width: 75px !important;
+    }
+    
+}
+@media (max-width: 575.98px) {
+    .heading1{
+        font-size: 20px;
+        margin-left: 30px;
+        color: #484848;
+        font-weight: 500;
+        /* line-height: 1.17; */
+    }
+    .SeeAllButton{
+        background-color: white;
+        border: 1px solid #007bfb;
+        color:#007bfb;
+        width: 80px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    .playImageSlider{
+        position: absolute;
+        top:25%;
+        width: 40px;
+        height: 40px;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .imageStyle{
+        width: 16px;
+        height: 16px;
+    }
+    .cardFooter .Badge{
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.28;
+        background-color: #3f3e3e;
+        border-radius: 12px;
+        padding: 4px 8px;
+        display: inline-block;
+        margin-left: 10px;
+        min-width: 20px;
+        text-align: center;
+    }
+    .colStyle{
+        padding-left:0px;
+        padding-right:0px;
+        text-align: center;
+    }
+    .playImageSlider{
+        width: 50px !important;
+        position:absolute;
+        top:20%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .cardHeading{
+        color: #007bfb;
+        font-size:14px !important;
+        height:40px !important
+    }
+    
+    }
+
+
+

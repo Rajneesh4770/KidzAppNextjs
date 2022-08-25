@@ -19,9 +19,7 @@
 .section2{
     margin-top: 20px;
 }
-.cardHeading{
-    color: #007bfb;
-}
+
 .cardFooter{
     display:inline-flex;
 }
@@ -203,10 +201,6 @@
     }
     .playImage{
         width: 60px !important;
-        /* position:absolute;
-        top:15%;
-        left: 50%;
-        transform: translate(-50%,-50%); */
       }
     .cardFooter .Badge{
         color: #fff;
@@ -224,11 +218,11 @@
         padding-left:0px;
         padding-right:0px;
     }
-    .cardText{
+   .cardText{
         color:#965da4;
         height:55px !important;
         
-    }
+    } 
     .cardHeading1{
         color: #007bfb;
         font-size:20px !important;
@@ -241,7 +235,6 @@
         width:50px;
         transform: translate(-50%,-50%  );
     }
-   
 }
 
 @media (max-width:767.98px) {
@@ -265,7 +258,6 @@
         margin-left: 30px;
         color: #484848;
         font-weight: 500;
-        /* line-height: 1.17; */
     }
     .SeeAllButton{
         background-color: white;

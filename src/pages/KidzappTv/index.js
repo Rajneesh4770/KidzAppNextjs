@@ -249,7 +249,7 @@ const KidzappTv = () => {
               </h1>
             </Col>
             <Col lg={6} xs={6} md={6} align="right">
-              <Link href='/KidzappTv/MethodOfEducation'>
+              <Link href='/KidzappTv/DemoCategory'>
                 <Button className={`btn-md btn-xs ${style.SeeAllButton1}`}>See All</Button>
               </Link>
             </Col>
@@ -278,7 +278,7 @@ const KidzappTv = () => {
             </Col>
             <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src="	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
+              <Image width="22px" height="22px" src="https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
@@ -286,7 +286,7 @@ const KidzappTv = () => {
             <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
                   <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src="	https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
+                  <Image width="22px" height="22px"  src="https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
                </div> 
             </Col>
         </Row>
@@ -310,7 +310,7 @@ const KidzappTv = () => {
               </h1>
             </Col>
             <Col xs={6} md={6} lg={6} align="right">
-              <Link href='/KidzappTv/MethodOfEducation'>
+              <Link href='/KidzappTv/WaterParkFun'>
                 <Button className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button>
               </Link>
             </Col>
@@ -376,7 +376,7 @@ const KidzappTv = () => {
               </h1>
             </Col>
             <Col xs={6} md={6} lg={6} align="right">
-              <Link href='/KidzappTv/MethodOfEducation'>
+              <Link href='/KidzappTv/TestVideoForDemo'>
                 <Button className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button>
               </Link></Col>
           </Row>

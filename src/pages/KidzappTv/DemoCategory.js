@@ -1,43 +1,21 @@
-import React from 'react'
-import style from "../../styles/MethodOfEducation.module.css";
+import React,{useState,useEffect} from 'react'
+import axios from 'axios';
+// import style from "../../styles/MethodOfEducation.module.css";
+import style from "../../styles/DemoCategory.module.css";
 import KidzappFeed from '../../Components/KidzappFeed';
 import { Container,Row,Col,Button,FormControl,Form,Card,Image} from 'react-bootstrap'
-const MethodOfEducation = () => {
-  const CardData=[{
-    id:1,
-    image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
-    playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-    likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-    heading:"Demo Video",
-    text:"Demo Category",
-    bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-    commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-    shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
-
-  },
-  {
-  id:2,
-  image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg",
-  playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-  likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-  heading:"Demo Video",
-  text:"Demo Category",
-  bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-  commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-  shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
-},
-{
-  id:3,
-  image:"https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/05383f52-cff3-4418-bd04-271cf0c2f5ff.png",
-  playIcon:"https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg",
-  likeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/heart-v1.svg",
-  heading:"Demo Video",
-  text:"Demo Category",
-  bottomLikeIcon:"https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg",
-  commentIcon:"	https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg",
-  shareIcon:"	https://beta.kidzapp.com/images/share-review-kd-new.png"
-},
-]
+const DemoCategory = () => {
+    const [cardData,setCardData]=useState([]);
+    useEffect(()=>{
+        axios.get("https://api2.kidzapp.com/api/3.0/tv/video_category")
+        .then((res)=>{
+          console.log(res.data,'console');
+            setCardData(res.data);
+        })
+        .catch((err)=>{
+          console.log(err);
+        })
+      },[]) 
   return (
     <>
     <section className={style.section1}>
@@ -73,30 +51,30 @@ const MethodOfEducation = () => {
             </Col>
             </Row>
             <Row>
-          {CardData.map((item)=>{ 
+          {cardData.map((item)=>{ 
           return(
             <>
             <Col  xs={12} md={4}  >
             <Card key={item.id} className={`mx-3 ${style.cards}`} >
              <Card.Img width="40x" height="40px" className={style.playImage} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg"/>
-      <Card.Img variant="top" src={item.image} />
+      <Card.Img variant="top" src="https://testimages.kidzapp.com/media/kidzapp_tv/video_thumbnals/e82e3d46-41ee-4576-bf49-17c70b805a3d.jpg"/>
       <Card.Body>
      
-        <Card.Title><h3 className={style.cardHeading}>{item.heading} </h3></Card.Title>
+        <Card.Title><h3 className={style.cardHeading}>{item.name} </h3></Card.Title>
         <Card.Text className={style.cardText}>
-        {item.text}
+        {item.description}
         </Card.Text>
         <hr/>
         <Row >
             <Col xs={4} className={style.colStyle}>
             <div className={style.cardFooter}>
-            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src={item.bottomLikeIcon} />
+            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src="https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg" />
             <div className={style.Badge}>14</div>
             </div>
             </Col>
             <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src={item.commentIcon} />
+              <Image width="22px" height="22px" src="https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
               <div className={style.Badge}>7</div>
               </div>
             </Col>
@@ -104,7 +82,7 @@ const MethodOfEducation = () => {
             <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
                   <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src={item.shareIcon} alt="share" />
+                  <Image width="22px" height="22px"  src="https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
                </div> 
             </Col>
         </Row>
@@ -124,4 +102,4 @@ const MethodOfEducation = () => {
   )
 }
 
-export default MethodOfEducation
+export default DemoCategory
