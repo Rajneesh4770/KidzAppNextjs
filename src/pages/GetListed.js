@@ -50,7 +50,6 @@ function Getintouch() {
 	};
 
 	useEffect(() => {
-		debugger;
 		axios.get('https://api2.kidzapp.com/api/1.9/cities').then((res) => {
 			setCities(res.data);
 		});

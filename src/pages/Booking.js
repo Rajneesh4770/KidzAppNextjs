@@ -10,19 +10,12 @@ import { baseUrl } from '../config';
 import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
 
-export async function getServerSideProps (context){
-	const id=context.query.id;
-	console.log("id",id)
-	let res = await axios.get(baseUrl+`experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=1&page_size=1&city=&website=1&id=${id}`);
-	let props = {
-	  data:res.data.results
-	 };
-	 
-	 return { props}
-  }
+
 const Booking = (props) => {
 	console.log('data',props.data);
-
+	const AnyReactComponent = () => (
+		<FaMapMarkerAlt className="fa-4x" style={{ color: 'red' }} />
+	);
 	const Setting = {
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -30,13 +23,11 @@ const Booking = (props) => {
 	};
 	return (
 		<>
-			{props.data.map((item) => {
-				const AnyReactComponent = () => (
-					<FaMapMarkerAlt className="fa-4x" style={{ color: 'red' }} />
-				);
-				return (
+			{/* {props.data.map((props.data) => { */}
 				
-					<section className={style.section1} key={item.id}>
+				{/* return ( */}
+				
+					<section className={style.section1} key={props.data.id}>
 						<div className="container">
 							<div className="row">
 								<div className="col-lg-12">
@@ -44,14 +35,14 @@ const Booking = (props) => {
 
 									<div className="row">
 										<div className="col-lg-8 col-sm-12">
-											<img className={style.leftimg1} src={item.image_url} />
+											<img className={style.leftimg1} src={props.data.image_url} />
 											
 											{/* heading and button section row */}
 
 											<div className="row">
 												<div className="col-12">
 													<div className={style.blog_title}>
-														<h2>{item.title}</h2>
+														<h2>{props.data.title}</h2>
 														<div>
 															{' '}
 															<h5>AED 79</h5>
@@ -96,7 +87,7 @@ const Booking = (props) => {
 															></i>
 														</span>
 														&nbsp; &nbsp;
-														<span>{item.address}</span>
+														<span>{props.data.address}</span>
 													</div>
 													<div className="time pb-3">
 														<span>
@@ -113,7 +104,7 @@ const Booking = (props) => {
 											<div className="row">
 												<div className="col-lg-12">
 													<div className="accordion" id="accordionExample">
-														<div className="accordion-item">
+														<div className="accordion-props.data">
 															<h2 className="accordion-header" id="headingOne">
 																<button
 																	className="accordion-button"
@@ -133,11 +124,11 @@ const Booking = (props) => {
 																data-bs-parent="#accordionExample"
 															>
 																<div className="accordion-body">
-																	{item.description}
+																	{props.data.description}
 																</div>
 															</div>
 														</div>
-														<div className="accordion-item">
+														<div className="accordion-props.data">
 															<h2 className="accordion-header" id="headingTwo">
 																<button
 																	className="accordion-button collapsed"
@@ -287,15 +278,15 @@ const Booking = (props) => {
 															libraries: ['visualization'],
 														}}
 														defaultCenter={{
-															lat: item.location.lat,
-															lng: item.location.lon,
+															lat: props.data.location.lat,
+															lng: props.data.location.lon,
 														}}
 														yesIWantToUseGoogleMapApiInternals
 														defaultZoom={15}
 													>
 														<AnyReactComponent
-															lat={item.location.lat}
-															lng={item.location.lon}
+															lat={props.data.location.lat}
+															lng={props.data.location.lon}
 															text="My Marker"
 														/>
 													</GoogleMapReact>
@@ -534,11 +525,22 @@ const Booking = (props) => {
 							</div>
 						</div>
 					</section>
-				);
-			})}
+				{/* ); */}
+			{/* })} */}
 		</>
 	);
 };
-
+export async function getServerSideProps (context){
+	const id=context.query.id;
+	console.log("id",id)
+	let res = await axios.get(baseUrl+`experiences/${id}/?country_code=ae`);
+	console.log(res.data);
+	let props = {
+	  data:res.data
+	 };
+	 
+	 return { props}
+  }
 
 export default Booking;
+
