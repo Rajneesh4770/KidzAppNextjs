@@ -191,9 +191,13 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
+                      {item.booking_required?
                       <Link href={`/Booking?&id=${item.id}`}>
-                        <button className="btn btn-success float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
-                      </Link>
+                      <button className="btn  float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
+                    </Link>:
+                   <button className="btn  disabled float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
+                    }
+                      
                     </div>
                   </div>
                 </div>

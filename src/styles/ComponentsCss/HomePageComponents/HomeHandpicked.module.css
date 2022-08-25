@@ -207,7 +207,7 @@
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 6px;
 }
-.card a:hover{
+.card button:hover{
   background-color: #e35b26;
   color: #fff;
   transform: translateY(-1px);
