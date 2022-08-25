@@ -5,6 +5,7 @@ import style1 from "../styles/Filter.module.css";
 import { Rating, Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
+import Link from "next/link";
 
 function FindActivities() {
   const [loader, setLoader] = useState(false);
@@ -363,7 +364,7 @@ function FindActivities() {
                                 </h6>
                                 <Rating
                                   name="rating"
-                                  defaultValue={card.number_of_reviews}
+                                  defaultValue={card.average_rating}
                                 />
                                 <br />
                                 <span
@@ -384,7 +385,6 @@ function FindActivities() {
                                       <span className={style1.distance}>
                                         2100 KM
                                       </span>{" "}
-                                      {/* right side  cards */}
                                       {card.bottomLeftText}
                                     </h6>
                                   </div>
@@ -393,6 +393,8 @@ function FindActivities() {
                                   </div>
                                 </div>
                                 {card.bookable? 
+                                <>
+                                <Link href='/Booking'>
                                  <Button
                                  size="small"
                                  variant="outlined"
@@ -401,7 +403,7 @@ function FindActivities() {
                                >
                                 
                                  {card.booking_button.text}
-                               </Button>:null
+                               </Button></Link></>:null
                               }
                                
                               </div>
@@ -413,6 +415,7 @@ function FindActivities() {
                   })}
               </div>
             </div>
+                                      {/* right side  cards */}
 
             <div className="col-md-4 rightContainer">
               <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
@@ -420,6 +423,7 @@ function FindActivities() {
                 {dataright?.map((card) => {
                   return (
                     <div key={card.id} className={style1.carditems}>
+                      <Link href='/Booking'>
                       <div className={style1.rightcard}>
                         <img
                           src={card.image_url}
@@ -431,7 +435,7 @@ function FindActivities() {
                     className={style1.dealimg}
                   />
                         <div className="card-body">
-                          <p className={style1.rightcardtitle}>{card.title}</p>
+                          <p className={style1.rightcardtitle}>{card.address}</p>
                           <div className="row">
                             <div className="col-md-6" align="left">
                               <Rating
@@ -445,7 +449,7 @@ function FindActivities() {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div></Link>
                     </div>
                   );
                 })}
