@@ -44,8 +44,7 @@ const Booking = (props) => {
 													<div className={style.blog_title}>
 														<h2>{props.data.title}</h2>
 														<div>
-															{' '}
-															<h5>AED 79</h5>
+														
 															<Link href="/Booking2">
 																<button className={style.blog_rating}>
 																	Book Now
