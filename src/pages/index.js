@@ -9,6 +9,18 @@ import axios, { Axios } from "axios";
 import { baseUrl } from "../config";
 import { Carousel } from "react-bootstrap";
 // import { Markup } from "interweave";
+
+export async function getStaticProps() {
+  let res = await axios.get(
+    baseUrl +
+      "experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar"
+  );
+  let props = {
+    data: res?.data?.results,
+  };
+  return { props };
+}
+
 function index(props) {
   return (
     <div className={style.body}>
@@ -60,14 +72,5 @@ function index(props) {
     </div>
   );
 }
-export async function getStaticProps() {
-  let res = await axios.get(
-    baseUrl +
-      "experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar"
-  );
-  let props = {
-    data: res?.data?.results,
-  };
-  return { props };
-}
+
 export default index;

@@ -8,11 +8,20 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Rating } from '@mui/material';
 import { baseUrl } from '../config';
 import axios from 'axios';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-const Booking = (props) => {
 
+export async function getServerSideProps (context){
+	const id=context.query.id;
+	console.log("id",id)
+	let res = await axios.get(baseUrl+`experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=1&page_size=1&city=&website=1&id=${id}`);
+	let props = {
+	  data:res.data.results
+	 };
+	 
+	 return { props}
+  }
+const Booking = (props) => {
+	console.log('data',props.data);
 
 	const Setting = {
 		slidesToShow: 1,
@@ -26,6 +35,7 @@ const Booking = (props) => {
 					<FaMapMarkerAlt className="fa-4x" style={{ color: 'red' }} />
 				);
 				return (
+				
 					<section className={style.section1} key={item.id}>
 						<div className="container">
 							<div className="row">
@@ -530,12 +540,5 @@ const Booking = (props) => {
 	);
 };
 
-export async function getStaticProps (){
-	let res = await axios.get(baseUrl+'experiences/curated-list/?list_name=featured_kidzapp_deal&country_code=&page=1&page_size=1&city=&website=1');
-	let props = {
-	  data:res.data.results
-	 };
-	 return { props}
-  }
 
 export default Booking;

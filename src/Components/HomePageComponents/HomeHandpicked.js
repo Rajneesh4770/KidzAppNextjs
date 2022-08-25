@@ -101,6 +101,7 @@ function HomeHandpicked() {
       )
       .then((res) => {
         setResData1(res.data.results);
+        console.log("Homehandpic card ",res.data.results)
       })
       .catch((err) => {
         console.log(err);
@@ -190,8 +191,8 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
-                      <Link href="/Booking">
-                        <a className="btn btn-success float-end">Book Now</a>
+                      <Link href={`/Booking?&id=${item.id}`}>
+                        <button className="btn btn-success float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
                       </Link>
                     </div>
                   </div>

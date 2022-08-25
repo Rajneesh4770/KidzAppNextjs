@@ -392,15 +392,18 @@ function FindActivities() {
                                     <h6>{card.bottomRightText}</h6>
                                   </div>
                                 </div>
-                                <Button
-                                  size="small"
-                                  variant="outlined"
-                                  color="error"
-                                  className={`${style1.bottomButton}`}
-                                >
-                                  Book Now
-                                  {card.buttonText}
-                                </Button>
+                                {card.bookable? 
+                                 <Button
+                                 size="small"
+                                 variant="outlined"
+                                 color="error"
+                                 className={`${style1.bottomButton}`}
+                               >
+                                
+                                 {card.booking_button.text}
+                               </Button>:null
+                              }
+                               
                               </div>
                             </div>
                           </div>

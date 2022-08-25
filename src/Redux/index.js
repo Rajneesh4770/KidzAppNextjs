@@ -33,8 +33,7 @@ export const counterSlice2 = createSlice({
     },
   },
 })
-
-
+ 
 
 export const { increment, decrement } = counterSlice.actions
 
