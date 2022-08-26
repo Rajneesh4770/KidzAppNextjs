@@ -36,9 +36,7 @@ function Homeblog2() {
                     />
                     <div className={`card-img-overlay ${style.card1body}`}>
                       <h5 className="card-title"> {item.meta_title}</h5>
-                      
                       <p className="card-text">{item.auther_name}</p>
-                   
                     </div>
                   </div>
                 </div>

@@ -209,7 +209,7 @@ const Booking = (props) => {
                   <div className="row">
                     <div
                       className="col-12"
-                      style={{ height: "100vh", width: "100%" }}
+                      style={{ height: "75vh", width: "100%" }}
                     >
                       <GoogleMapReact
                         bootstrapURLKeys={{

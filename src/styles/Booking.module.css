@@ -30,7 +30,7 @@
 	transform: translateY(-2px);
 }
 .cruselimage{
-	width: 90%;
+	width: 150px;
 	border-radius: 5px;
 }
 
@@ -158,6 +158,10 @@
 	font-size: 70px;
 	margin: 0;
 	margin-top: -25px;
+	width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blogSpan {
