@@ -463,10 +463,8 @@ const Booking = (props) => {
 export async function getServerSideProps(context) {
   const id = context.query.id;
   console.log("id", id);
-  // let res = await axios.get(baseUrl+`experiences/${id}/?country_code=ae`);
-  let res = await axios.get(
-    `https://api.kidzapp.com/api/3.0/experiences/111992/?country_code=ae`
-  );
+  let res = await axios.get(baseUrl+`experiences/${id}/?country_code=ae`);
+//   let res = await axios.get(`https://api.kidzapp.com/api/3.0/experiences/111992/?country_code=ae`);
   console.log(res.data);
   let props = {
     data: res.data,
