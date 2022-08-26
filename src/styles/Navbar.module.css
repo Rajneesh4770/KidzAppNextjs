@@ -243,5 +243,26 @@
   color: gray;
   text-align: center;
 }
+.loginModalForm{
+  width: 700px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+@media(max-width:426px){
+  .loginModalForm{
+    width: 320px;
+    height: 250px;
+  }
+  .loginModal input{
+    width: 200px;
+  }
+  .loginModal{
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 20px;
+  }
+}
 
 

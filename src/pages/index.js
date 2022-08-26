@@ -3,45 +3,54 @@ import HomeKidzappolis from "../Components/HomePageComponents/HomeKidzappolis";
 import HomeKidsActivitiesReviews from "../Components/HomePageComponents/HomeKidsActivitiesReviews";
 import HomeAsfeature from "../Components/HomePageComponents/HomeAsfeature";
 import KidzappFeed from "../Components/KidzappFeed";
-import style from '../styles/Index.module.css';
-import HomeBlog from '../Components/HomePageComponents/HomeBlog'
-import axios, { Axios } from 'axios'
+import style from "../styles/Index.module.css";
+import HomeBlog from "../Components/HomePageComponents/HomeBlog";
+import axios, { Axios } from "axios";
 import { baseUrl } from "../config";
 import { Carousel } from "react-bootstrap";
+// import { Markup } from "interweave";
+
+export async function getStaticProps() {
+  let res = await axios.get(
+    baseUrl +
+      "experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar"
+  );
+  let props = {
+    data: res?.data?.results,
+  };
+  return { props };
+}
+
 function index(props) {
   return (
     <div className={style.body}>
-     {/* <div  className={`container ${style.sidenav}`}>
-  <a href="https://api.whatsapp.com/send?phone=971566578854&text=Hi%2C+I%27m+browsing+home+screen+and+have+some+questions"
-   className={`fixed ${style.a}`}>Chat</a>
-  </div> */}
- 
- 
-
-      <Carousel  className="maincrousel">
-    {props.data.map((item) => {
-      return (
-        <Carousel.Item key={item.id}>
-          <img
-            className={style.crouselImages}
-            src={item.image_url}
-            alt="https://c4.wallpaperflare.com/wallpaper/921/18/419/loading-black-background-wallpaper-preview.jpg"
-          />
-          <Carousel.Caption>
-            <h1 className={style.crouselHeading}>{item.title}</h1>
-            <p className={style.crouselParagraph}>{item.description}</p>
-            <button
-              className={`btn ${style.button}`}
-              onClick={() => toast("Successfully Booked")}
-            >
-              Book Now
-            </button>
-          </Carousel.Caption>
-        </Carousel.Item>
-      )
-    })}
-    ;
-  </Carousel>
+      <Carousel className="maincrousel">
+        {props.data.map((item) => {
+          return (
+            <Carousel.Item key={item.id}>
+              <img
+                className={style.crouselImages}
+                src={item.image_url}
+                alt="Image is not available"
+              />
+              <Carousel.Caption>
+                <h1 className={style.crouselHeading}>{item.title}</h1>
+                 <p className={style.crouselParagraph}> {item.description}</p>
+                 {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p>
+                 <Markup className="bg-primary text-color-warning" markup={item?.description}/>  */}
+                
+                <button
+                  className={`btn ${style.button}`}
+                  onClick={() => toast("Successfully Booked")}
+                >
+                  Book Now
+                </button>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
+        ;
+      </Carousel>
 
       {/* Handpicked component of Home page */}
       <HomeHandpicked />
@@ -53,23 +62,15 @@ function index(props) {
       <HomeBlog />
 
       {/*  HomeKidsActivitiesReviews component of Home Page */}
-      <HomeKidsActivitiesReviews/>
+      <HomeKidsActivitiesReviews />
 
       {/* HomeAsfeature component of home page */}
-      <HomeAsfeature/>
+      <HomeAsfeature />
 
-{/* kidzappFeed component */}
-<KidzappFeed/>
-
+      {/* kidzappFeed component */}
+      <KidzappFeed />
     </div>
-
-  )
-};
-export async function getStaticProps (){
-  let res = await axios.get(baseUrl+'experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar');
-  let props = {
-    data:res.data.results
-   };
-   return { props}
+  );
 }
-export default index
+
+export default index;

@@ -106,12 +106,7 @@ header {
   opacity: .5;
   transition: opacity .15s ease;
 }
-/* .animate__animated.animate__flipOutY.animate__infinite  {
-  --animate-duration: 2s;
-  --animate-delay: 5s;
-  --animate__fast:	800ms;
-  --animate__infinite	:infinite;
-} */
+
 @media (min-width:992px) and (max-width:1199.98px) {
   .nav-link{
     font-size:14px!important;
@@ -147,4 +142,7 @@ a.carousel-control-next {
   height: 15px !important;
   border-radius: 50% !important;
   margin-top: 30px !important;
+}
+.imagesliderofbooking .slick-track{
+  display: flex !important;
 }

@@ -15,6 +15,7 @@ import { TextField } from "@mui/material";
 import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { AccountCircle } from "@mui/icons-material";
 
 const style1 = {
   position: "absolute",
@@ -36,7 +37,6 @@ const style2 = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -111,11 +111,11 @@ const Header = (props) => {
   const onSubmit = (e) => {
     // alert("Click OK for more steps")
     toast("confirm your mail & register here")
-
+    setLogin(false);
     // e.preventDefault();
     console.log(e);
     axios
-      .post('https://api2.kidzapp.com/api/3.0/customlogin',e)
+      .post('https://api2.kidzapp.com/api/3.0/custom_email_authentication',e)
       .then(res=>{
       console.log(res,'res')
     })
@@ -129,7 +129,9 @@ const Header = (props) => {
     validationSchema,
     onSubmit,
   })
- 
+
+  const [login,setLogin]=useState(true)
+  
 
   return (
     <>
@@ -265,11 +267,36 @@ const Header = (props) => {
                               {getResponseMessage(constants).get_listed}</a>
                           </li>
                         </Link>
+
+                        {login?
+                         <Link href="/">
+                         <li class="nav-item">
+                           <a class="nav-link " onClick={handleOpen}>Login</a>
+                         </li>
+                       </Link>:
+                       <>
                         <Link href="/">
-                          <li class="nav-item">
-                            <a class="nav-link " onClick={handleOpen}>Login</a>
-                          </li>
-                        </Link>
+                        <li class="nav-item">
+                          <a class="nav-link " onClick={()=>setLogin(true)}>Logout</a>
+                        </li>
+                      </Link>
+                        
+
+                      <li class="nav-item dropdown">
+                      <a class="nav-link toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <AccountCircle sx={{color:'#58cbf8'}}/>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <Link href='/Profile'>
+            <li><a class="dropdown-item" href="#">Profile</a></li></Link>
+            <Link href='/Mybooking'>
+            <li><a class="dropdown-item" href="#">Booking</a></li></Link>
+            <Link href='WishList'>
+            <li><a class="dropdown-item" href="#">WishList</a></li></Link>
+          </ul>
+        </li>
+                      </>
+                      }
                       </ul>
                     </div>
                   </div>
@@ -316,7 +343,7 @@ const Header = (props) => {
           }}
         >
           <Fade in={open}>
-            <Box sx={style2} style={{ borderRadius: "10px", width: "700px", height: "350px" }}>
+            <Box sx={style2} className={style.loginModalForm}>
 
               <form onSubmit={formik.handleSubmit}>
                 <div className={style.loginModal}>
@@ -329,7 +356,7 @@ const Header = (props) => {
                   {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
                   <br />
                   <br />
-                  <Button type="submit" variant='contained' color='primary' className={style.btn}>NEXT</Button>
+                  <Button type="submit" variant='contained' color='primary' className={style.btn} >NEXT</Button>
                   <br /><br />
                   <hr></hr>
                   <p>Tap Next to get a Confirmation Email from a system </p>
