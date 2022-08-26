@@ -143,3 +143,6 @@ a.carousel-control-next {
   border-radius: 50% !important;
   margin-top: 30px !important;
 }
+.imagesliderofbooking .slick-track{
+  display: flex !important;
+}

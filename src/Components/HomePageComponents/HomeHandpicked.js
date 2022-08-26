@@ -10,7 +10,6 @@ import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import Slider from "react-slick";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css";
 import { Typography, Rating } from "@mui/material";
-
 function HomeHandpicked() {
   const settings = {
     dots: false,
