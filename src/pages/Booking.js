@@ -174,7 +174,6 @@ const Booking = (props) => {
                             <h4 className={style.price_txt}>{item.header}</h4>
                             <p>{item.description}</p>
                           </div>
-
                           <div className="container">
                             <div className="row mt-2">
                               <div className="col-12">
@@ -187,7 +186,7 @@ const Booking = (props) => {
 
                                         <p>{sub_item.type_en}({item.small_text_type})</p>
                                         <p>
-                                          <b>
+                                          <b>  
                                             {sub_item.currency}
                                             {sub_item.final_price}
                                           </b>

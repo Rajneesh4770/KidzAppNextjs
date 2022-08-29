@@ -201,7 +201,6 @@ function FindActivities() {
 									</div>
 								</div>
 							</div>
-
 							<div className="col-md-2 sm-6 rightContent">
 								<button
 									className={style1.btn1}

@@ -32,10 +32,7 @@ const Booking = () => {
                             {/* image section column */}
                             <div className="row">
                                 <div className="col-lg-6 col-sm-12">
-                                    <Slider {...Setting}>
                                         <img className={style.leftimg1} src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg" />
-                                        <img className={style.leftimg1} src="https://images.kidzapp.com/media/CACHE/images/venues/aabe2180-3cf2-46d8-9fb4-c231c3bd9a70/special-offer-kidzania-dubai.jpg" />
-                                    </Slider>
                                     {/* heading and button section row */}
                                     <div className="row">
                                         <div className="col-12">
