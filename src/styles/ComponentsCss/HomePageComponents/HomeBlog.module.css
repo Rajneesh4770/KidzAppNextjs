@@ -25,13 +25,14 @@
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer ;
 
 }
 .card1 p{
     text-decoration: underline;
 }
 .cardimage{
+    object-fit: cover;
     filter: brightness(70%);
     transform-origin: 50% 65%;
   transition: transform 3s, filter 1s ease-in-out;

@@ -17,17 +17,20 @@ export const counterSlice = createSlice({
 	},
 });
 export const counterSlice2 = createSlice({
-	name: 'counterAdult',
-	initialState,
-	reducers: {
-		incrementAdult: (state) => {
-			state.value += 1;
-		},
-		decrementAdult: (state) => {
-			state.value -= 1;
-		},
-	},
-});
+  name: 'counterAdult',
+  reducers: {
+    incrementAdult: (state) => {
+      
+      state.value += 1
+    },
+    decrementAdult: (state) => {
+      state.value -= 1
+    },
+  },
+})
+ 
+
+
 
 export const { increment, decrement } = counterSlice.actions;
 

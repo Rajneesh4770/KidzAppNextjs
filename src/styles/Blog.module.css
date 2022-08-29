@@ -223,6 +223,7 @@
 }
 
 .blogcard {
+  cursor: pointer;
   padding: 0 30px 0px 30px;
   position: relative;
   margin: 0px 15px 0px 0px;
