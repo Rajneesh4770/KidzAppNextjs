@@ -22,6 +22,11 @@ function FindActivities() {
 	const [subcategories, setSubCategories] = useState([]);
 	const [subcategory, setSubCategory] = useState('');
 	const [isPending, loaderHandler] = useTransition();
+	const [venue, setVenue] = useState(false);
+	const [course, setCourse] = useState(false);
+	const [event, setEvent] = useState(false);
+	const [indoor, setIndoor] = useState(false);
+	const [outdoor, setOutdoor] = useState(false);
 	useEffect(() => {
 		const scrolling = (event) => {
 			if (window.scrollY > scroll) {
@@ -41,7 +46,14 @@ function FindActivities() {
 		axios
 			.get(
 				baseUrl +
-					`experiences/?country_code=ae&page=1&page_size=${pageindex}&search=${search}&city_id=${city}&area_id=${area}&category=${category}}`,
+					`experiences/?country_code=ae&page=1&page_size=${pageindex}${
+						search ? `&search=${search}` : ``
+					}${city ? `&city_id=${city}` : ``}${area ? `&area_id=${area}` : ``}${
+						category ? `&category=${category}` : ``
+					}${subcategory ? `&subcategory=${subcategory}` : ``}${
+						venue ? `&type=venue` : ``
+					}${course ? `&type=course` : ``}${event ? `&type=event` : ``}
+					${indoor ? `&venue_type=indoor` : ``}${outdoor ? `&venue_type=outdoor` : ``}`,
 			)
 			.then((res) => {
 				console.log('findActivity page search result', res.data.results);
@@ -52,7 +64,11 @@ function FindActivities() {
 			});
 		axios
 			.get(
-				`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22&category=${category}`,
+				`https://api2.kidzapp.com/api/3.0/experiences/curated-list/?country_code=ae&page=1&list_name=featured&searchQuery=%22%22 &${
+					search ? `&search=${search}` : ``
+				}${city ? `&city_id=${city}` : ``}${area ? `&area_id=${area}` : ``}${
+					category ? `&category=${category}` : ``
+				}${subcategory ? `&subcategory=${subcategory}` : ``} `,
 			)
 			.then((res) => {
 				console.log('findActivity page right section', res.data.results);
@@ -62,7 +78,19 @@ function FindActivities() {
 			.catch((error) => {
 				console.log(error);
 			});
-	}, [search, pageindex, category, city, area, subcategory]);
+	}, [
+		search,
+		pageindex,
+		category,
+		city,
+		area,
+		subcategory,
+		venue,
+		course,
+		event,
+		indoor,
+		outdoor,
+	]);
 
 	useEffect(() => {
 		axios
@@ -82,11 +110,11 @@ function FindActivities() {
 			setAreas(res.data);
 		});
 		console.log(cities, 'kuyguygu');
-		// axios.get('https://api2.kidzapp.com/api/1.9/areas').then((res) => {
-		// 	console.log(res.data.results, 'jbnknikninh');
-		// 	setLoader(true);
-		// 	setSubCategories(res.data);
-		// });
+		axios.get('https://api2.kidzapp.com/api/1.9/areas').then((res) => {
+			console.log(res.data.results, 'jbnknikninh');
+			setLoader(true);
+			setSubCategories(res.data);
+		});
 	}, []);
 
 	return (
@@ -117,11 +145,7 @@ function FindActivities() {
 											<option value="">City</option>
 
 											{cities.map((list) => {
-												return (
-													<option key={list.id} value={list.id}>
-														{list.name}
-													</option>
-												);
+												return <option value={list.id}>{list.name}</option>;
 											})}
 										</select>
 									</div>
@@ -133,11 +157,7 @@ function FindActivities() {
 										>
 											<option value="">Area</option>
 											{areas.map((list) => {
-												return (
-													<option key={list.id} value={list.id}>
-														{list.name}
-													</option>
-												);
+												return <option value={list.id}>{list.name}</option>;
 											})}
 										</select>
 									</div>
@@ -159,11 +179,7 @@ function FindActivities() {
 											<option value="">Category</option>
 
 											{categories.map((list) => {
-												return (
-													<option key={list.id} value={list.id}>
-														{list.name}
-													</option>
-												);
+												return <option value={list.id}>{list.name}</option>;
 											})}
 										</select>
 									</div>
@@ -179,7 +195,7 @@ function FindActivities() {
 											<option value="">Sub Category</option>
 
 											{subcategories.map((list) => {
-												return <option key={list.id}>{list.name}</option>;
+												return <option>{list.name}</option>;
 											})}
 										</select>
 									</div>
@@ -395,7 +411,10 @@ function FindActivities() {
 												<input
 													className="form-check-input"
 													type="checkbox"
-													value=""
+													checked={venue}
+													onChange={() => {
+														setVenue((x) => !x);
+													}}
 													id="flexCheckDefault"
 												/>
 												<label
@@ -409,7 +428,10 @@ function FindActivities() {
 												<input
 													className="form-check-input"
 													type="checkbox"
-													value=""
+													checked={course}
+													onChange={() => {
+														setCourse((x) => !x);
+													}}
 													id="flexCheckChecked"
 												/>
 												<label
@@ -423,7 +445,10 @@ function FindActivities() {
 												<input
 													className="form-check-input"
 													type="checkbox"
-													value=""
+													checked={event}
+													onChange={() => {
+														setEvent((x) => !x);
+													}}
 													id="flexCheckChecked"
 												/>
 												<label
@@ -443,7 +468,10 @@ function FindActivities() {
 												<input
 													className="form-check-input"
 													type="checkbox"
-													value=""
+													checked={indoor}
+													onChange={() => {
+														setIndoor((x) => !x);
+													}}
 													id="flexCheckDefault"
 												/>
 												<label
@@ -457,7 +485,10 @@ function FindActivities() {
 												<input
 													className="form-check-input"
 													type="checkbox"
-													value=""
+													checked={outdoor}
+													onChange={() => {
+														setOutdoor((x) => !x);
+													}}
 													id="flexCheckChecked"
 												/>
 												<label
@@ -504,28 +535,27 @@ function FindActivities() {
 						<div className={`col-md-8 ${style1.leftcontainer}`}>
 							<p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
 							<div className="col-md-12">
-								{isPending ||
-									(!data.length && (
-										<Stack
+								{isPending || !data.length ? (
+									<Stack
+										sx={{
+											alignItems: 'center',
+											marginLeft: 'auto',
+											marginRight: 'auto',
+										}}
+										spacing={2}
+										direction="row"
+									>
+										<CircularProgress
+											color="success"
 											sx={{
 												alignItems: 'center',
 												marginLeft: 'auto',
 												marginRight: 'auto',
 											}}
-											spacing={2}
-											direction="row"
-										>
-											<CircularProgress
-												color="success"
-												sx={{
-													alignItems: 'center',
-													marginLeft: 'auto',
-													marginRight: 'auto',
-												}}
-											/>
-										</Stack>
-									))}
-								{data &&
+										/>
+									</Stack>
+								) : (
+									data &&
 									data?.map((card) => {
 										return (
 											<div key={card.id} className="card-items">
@@ -607,7 +637,8 @@ function FindActivities() {
 												</div>
 											</div>
 										);
-									})}
+									})
+								)}
 							</div>
 						</div>
 
