@@ -11,11 +11,14 @@ import Fade from "@mui/material/Fade";
 import { Button } from "@mui/material";
 import { FaFacebookF } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
+import { AiOutlineMail } from 'react-icons/Ai'
 import { TextField } from "@mui/material";
 import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { AccountCircle } from "@mui/icons-material";
+// import Loader from '../Loader'
+import PulseLoader from 'react-spinners/PulseLoader';
 
 const style1 = {
   position: "absolute",
@@ -48,7 +51,7 @@ const style2 = {
 
 export let constants = "";
 const Header = (props) => {
-
+  const [resmodal, setResmodal] = useState(true);
   const [modal, setModal] = useState(true)
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
@@ -115,13 +118,13 @@ const Header = (props) => {
     // e.preventDefault();
     console.log(e);
     axios
-      .post('https://api2.kidzapp.com/api/3.0/custom_email_authentication',e)
-      .then(res=>{
-      console.log(res,'res')
-    })
-    .catch((err)=>{
-      console.error(err,'err');
-    });
+      .post('https://api2.kidzapp.com/api/3.0/custom_email_authentication', e)
+      .then(res => {
+        console.log(res, 'res')
+      })
+      .catch((err) => {
+        console.error(err, 'err');
+      });
   }
 
   const formik = useFormik({
@@ -130,8 +133,8 @@ const Header = (props) => {
     onSubmit,
   })
 
-  const [login,setLogin]=useState(true)
-  
+  const [login, setLogin] = useState(true)
+
 
   return (
     <>
@@ -268,35 +271,35 @@ const Header = (props) => {
                           </li>
                         </Link>
 
-                        {login?
-                         <Link href="/">
-                         <li class="nav-item">
-                           <a class="nav-link " onClick={handleOpen}>Login</a>
-                         </li>
-                       </Link>:
-                       <>
-                        <Link href="/">
-                        <li class="nav-item">
-                          <a class="nav-link " onClick={()=>setLogin(true)}>Logout</a>
-                        </li>
-                      </Link>
-                        
+                        {login ?
+                          <Link href="/">
+                            <li class="nav-item">
+                              <a class="nav-link " onClick={handleOpen}>Login</a>
+                            </li>
+                          </Link> :
+                          <>
+                            <Link href="/">
+                              <li class="nav-item">
+                                <a class="nav-link " onClick={() => setLogin(true)}>Logout</a>
+                              </li>
+                            </Link>
 
-                      <li class="nav-item dropdown">
-                      <a class="nav-link toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <AccountCircle sx={{color:'#58cbf8'}}/>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <Link href='/Profile'>
-            <li><a class="dropdown-item" href="#">Profile</a></li></Link>
-            <Link href='/Mybooking'>
-            <li><a class="dropdown-item" href="#">Booking</a></li></Link>
-            <Link href='WishList'>
-            <li><a class="dropdown-item" href="#">WishList</a></li></Link>
-          </ul>
-        </li>
-                      </>
-                      }
+
+                            <li class="nav-item dropdown">
+                              <a class="nav-link toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <AccountCircle sx={{ color: '#58cbf8' }} />
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <Link href='/Profile'>
+                                  <li><a class="dropdown-item" href="#">Profile</a></li></Link>
+                                <Link href='/Mybooking'>
+                                  <li><a class="dropdown-item" href="#">Booking</a></li></Link>
+                                <Link href='WishList'>
+                                  <li><a class="dropdown-item" href="#">WishList</a></li></Link>
+                              </ul>
+                            </li>
+                          </>
+                        }
                       </ul>
                     </div>
                   </div>
@@ -306,66 +309,119 @@ const Header = (props) => {
           </div>
         </section>
       </header>
-      {modal ? <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <Box sx={style1}>
-            <Button onClick={() => setModal(false)} variant="outlined" color="success" sx={{ width: 300 }}>
-              LogIn With E-mail &nbsp; <HiOutlineMail />
-            </Button>
-            <br />
-            <Button variant="outlined" color="success" sx={{ width: 300 }}>
-              LogIn With Facebook &nbsp; <FaFacebookF />
-            </Button>
-          </Box>
-        </Fade>
-      </Modal>
-        :
+
+      {modal ?
         <Modal
-          id="knkjn"
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
           open={open}
           onClose={handleClose}
           closeAfterTransition
-          // BackdropComponent={Backdrop}
+          BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
           }}
         >
           <Fade in={open}>
-            <Box sx={style2} className={style.loginModalForm}>
-
-              <form onSubmit={formik.handleSubmit}>
-                <div className={style.loginModal}>
-                  <TextField
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                    {...formik.getFieldProps('email')}
-                  />
-                  {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
-                  <br />
-                  <br />
-                  <Button type="submit" variant='contained' color='primary' className={style.btn} >NEXT</Button>
-                  <br /><br />
-                  <hr></hr>
-                  <p>Tap Next to get a Confirmation Email from a system </p>
-                </div>
-              </form>
-
+            <Box sx={style1}>
+              <Button onClick={() => setModal(false)} variant="outlined" color="success" sx={{ width: 300 }}>
+                LogIn With E-mail &nbsp; <HiOutlineMail />
+              </Button>
+              <br />
+              <Button variant="outlined" color="success" sx={{ width: 300 }}>
+                LogIn With Facebook &nbsp; <FaFacebookF />
+              </Button>
             </Box>
           </Fade>
         </Modal>
+        :
+        (resmodal ?
+          <Modal
+            id="knkjn"
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            // BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={open}>
+              <Box sx={style2} className={style.loginModalForm}>
+
+                <form onSubmit={formik.handleSubmit}>
+                  <div className={style.loginModal}>
+                    <TextField
+                      id="outlined-basic"
+                      label="Email"
+                      variant="outlined"
+                      {...formik.getFieldProps('email')}
+                    />
+                    {formik.touched.email && formik.errors.email ? <p className="text-danger error pl-2">{formik.errors.email}</p> : null}
+                    <br />
+                    <br />
+                    <Button onClick={() => (setResmodal(false))} type="submit" variant='contained' color='primary' className={style.btn} >NEXT</Button>
+                    <br /><br />
+                    <hr></hr>
+                    <p>Tap Next to get a Confirmation Email from a system </p>
+                  </div>
+                </form>
+
+              </Box>
+            </Fade>
+          </Modal>
+          :
+          <Modal
+            id="knkjn"
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            // BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={open}>
+              <Box sx={style2} className={style.confirmationModal}>
+                <form>
+                  <div className={style.messagepopup}>
+                    <a></a>
+                  </div>
+                  <div className={style.detail}>
+                    <div className={style.wrapper}>
+                      <p className={style.title}>
+                        We have sent an email to
+                        <span>A@gmail.com</span>
+                        Open the email and confirm your email address
+                      </p>
+                      <h6>If you dont see the email please check your spam <br></br> folder</h6>
+                      <div className={style.icon}>
+                        <AiOutlineMail style={{ height: "100px", width: "300px" }} />
+                      </div>
+                    </div>
+                    <div className={`${style.resendWrapper} p-3`}>
+                      <h6>Resend Email</h6>
+                    </div>
+                    <div className={`${style.loader} p-3`}>
+                      <PulseLoader
+                        color="#FF8C00"
+                      />
+                    </div>
+                    <div>
+                      <p>Please keep this open until you've confirmed your email</p>
+                    </div>
+
+                  </div>
+                </form>
+              </Box>
+            </Fade>
+          </Modal>
+
+        )
 
       }
     </>
