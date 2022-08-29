@@ -231,6 +231,142 @@ function FindActivities() {
 												<option value="2">2</option>
 												<option value="3">3</option>
 											</select>
+											<select
+												className={`form ${style1.selectbox} text-secondary`}
+												aria-label="Default select example"
+											>
+												<option selected>To</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</div>
+									</div>
+
+									<div className="col-lg-4 md-6">
+										<div className={`${style1.collapsediv2} `}>
+											<span>Type*</span>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={venue}
+													onChange={() => {
+														setVenue((x) => !x);
+													}}
+													id="flexCheckDefault"
+												/>
+												<label
+													className="form-check-label text-secondary"
+													for="flexCheckDefault"
+												>
+													Venue
+												</label>
+											</div>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={course}
+													onChange={() => {
+														setCourse((x) => !x);
+													}}
+													id="flexCheckChecked"
+												/>
+												<label
+													className="form-check-label text-secondary"
+													for="flexCheckChecked"
+												>
+													Courses
+												</label>
+											</div>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={event}
+													onChange={() => {
+														setEvent((x) => !x);
+													}}
+													id="flexCheckChecked"
+												/>
+												<label
+													className="form-check-label text-secondary"
+													for="flexCheckChecked"
+												>
+													Event
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div className="col-lg-3 ">
+										<div className={`${style1.collapsediv2} `}>
+											<span>VenueType*</span>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={indoor}
+													onChange={() => {
+														setIndoor((x) => !x);
+													}}
+													id="flexCheckDefault"
+												/>
+												<label
+													className="form-check-label text-secondary"
+													for="flexCheckDefault"
+												>
+													Indoor
+												</label>
+											</div>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={outdoor}
+													onChange={() => {
+														setOutdoor((x) => !x);
+													}}
+													id="flexCheckChecked"
+												/>
+												<label
+													className="form-check-label text-secondary"
+													for="flexCheckChecked"
+												>
+													Outdoor
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div className="col-lg-2 ">
+										<div className={`${style1.collapsediv4} `}>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													value=""
+													id="flexCheckDefault"
+												/>
+												<img src="https://drfsb8fjssbd3.cloudfront.net/images/free-green.svg"></img>
+											</div>
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													value=""
+													id="flexCheckChecked"
+												/>
+												<img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"></img>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						</section>
 
         {/* search result section */}
         <section className="searchResultSection py-3 container">
@@ -392,143 +528,9 @@ function FindActivities() {
         </section>
       </div>
     
-											<select
-												className={`form ${style1.selectbox} text-secondary`}
-												aria-label="Default select example"
-											>
-												<option selected>To</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-											</select>
-										</div>
-									</div>
+											
 
-									<div className="col-lg-4 md-6">
-										<div className={`${style1.collapsediv2} `}>
-											<span>Type*</span>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													checked={venue}
-													onChange={() => {
-														setVenue((x) => !x);
-													}}
-													id="flexCheckDefault"
-												/>
-												<label
-													className="form-check-label text-secondary"
-													for="flexCheckDefault"
-												>
-													Venue
-												</label>
-											</div>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													checked={course}
-													onChange={() => {
-														setCourse((x) => !x);
-													}}
-													id="flexCheckChecked"
-												/>
-												<label
-													className="form-check-label text-secondary"
-													for="flexCheckChecked"
-												>
-													Courses
-												</label>
-											</div>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													checked={event}
-													onChange={() => {
-														setEvent((x) => !x);
-													}}
-													id="flexCheckChecked"
-												/>
-												<label
-													className="form-check-label text-secondary"
-													for="flexCheckChecked"
-												>
-													Event
-												</label>
-											</div>
-										</div>
-									</div>
 
-									<div className="col-lg-3 ">
-										<div className={`${style1.collapsediv2} `}>
-											<span>VenueType*</span>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													checked={indoor}
-													onChange={() => {
-														setIndoor((x) => !x);
-													}}
-													id="flexCheckDefault"
-												/>
-												<label
-													className="form-check-label text-secondary"
-													for="flexCheckDefault"
-												>
-													Indoor
-												</label>
-											</div>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													checked={outdoor}
-													onChange={() => {
-														setOutdoor((x) => !x);
-													}}
-													id="flexCheckChecked"
-												/>
-												<label
-													className="form-check-label text-secondary"
-													for="flexCheckChecked"
-												>
-													Outdoor
-												</label>
-											</div>
-										</div>
-									</div>
-
-									<div className="col-lg-2 ">
-										<div className={`${style1.collapsediv4} `}>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													value=""
-													id="flexCheckDefault"
-												/>
-												<img src="https://drfsb8fjssbd3.cloudfront.net/images/free-green.svg"></img>
-											</div>
-											<div className="form-check">
-												<input
-													className="form-check-input"
-													type="checkbox"
-													value=""
-													id="flexCheckChecked"
-												/>
-												<img src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"></img>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-</section>
-
-					</div>
 				{/* search result section */}
 				<section className="searchResultSection py-3 container">
 					<div className="row">
