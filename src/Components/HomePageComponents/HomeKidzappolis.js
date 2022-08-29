@@ -173,7 +173,7 @@ function HomeKidzappolis() {
                 <Slider {...settings}>
                   {data.map((item) => (
                     <div key={item.id}>
-                      <Link href={`/FindActivities?&name=${item.name}`}>
+                      <Link href={`/Filter?&olisid=${item.id}`}>
                       <div className={`item ${style.activityBox}`}>
                         <img
                           className={style.activityBoxImage}

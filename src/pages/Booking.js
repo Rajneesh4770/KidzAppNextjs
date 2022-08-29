@@ -112,16 +112,9 @@ const Booking = (props) => {
                       <div className="accordion" id="accordionExample">
                         <div className="accordion-props.data">
                           <h2 className="accordion-header" id="headingOne">
-                            <button
-                              className="accordion-button"
-                              type="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target="#collapseOne"
-                              aria-expanded="true"
-                              aria-controls="collapseOne"
-                            >
-                              Description
-                            </button>
+                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            Description
+                                                        </button>
                           </h2>
                           <div
                             id="collapseOne"
