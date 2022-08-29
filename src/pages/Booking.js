@@ -461,8 +461,6 @@ export async function getServerSideProps(context) {
   let props = {
     data: res.data,
   };
-
   return { props };
 }
-
 export default Booking;

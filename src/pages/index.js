@@ -73,5 +73,4 @@ function index(props) {
     </div>
   );
 }
-
 export default index;
