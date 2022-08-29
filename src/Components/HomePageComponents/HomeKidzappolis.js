@@ -109,6 +109,7 @@ function HomeKidzappolis() {
   useEffect(() => {
     axios.get(baseUrl + "categories?country_code=ae").then((res) => {
       setData(res.data);
+      console.log('kidzappolis circle',res.data)
     });
   }, []);
   const [data2, setData2] = useState([]);
@@ -172,7 +173,7 @@ function HomeKidzappolis() {
                 <Slider {...settings}>
                   {data.map((item) => (
                     <div key={item.id}>
-                      <Link href='/FindActivities'>
+                      <Link href={`/FindActivities?&name=${item.name}`}>
                       <div className={`item ${style.activityBox}`}>
                         <img
                           className={style.activityBoxImage}

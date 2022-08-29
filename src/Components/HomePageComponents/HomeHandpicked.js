@@ -196,7 +196,6 @@ function HomeHandpicked() {
                     </Link>:
                    <button className="btn  disabled float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
                     }
-                      
                     </div>
                   </div>
                 </div>
