@@ -8,6 +8,7 @@ import HomeBlog from "../Components/HomePageComponents/HomeBlog";
 import axios, { Axios } from "axios";
 import { baseUrl } from "../config";
 import { Carousel } from "react-bootstrap";
+import { Markup } from "interweave";
 // import { Markup } from "interweave";
 
 export async function getStaticProps() {
@@ -35,9 +36,9 @@ function index(props) {
               />
               <Carousel.Caption>
                 <h1 className={style.crouselHeading}>{item.title}</h1>
-                 <p className={style.crouselParagraph}> {item.description}</p>
-                 {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p>
-                 <Markup className="bg-primary text-color-warning" markup={item?.description}/>  */}
+                 {/* <p className={style.crouselParagraph}> {item.description}</p> */}
+                 {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
+               <p>  <Markup  markup={item.description}/>  </p>
                 
                 <button
                   className={`btn ${style.button}`}
