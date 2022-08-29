@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from '../Redux/Store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function MyApp({ Component, pageProps }) {
 	// module.exports = {
 	//   eslint: {
@@ -20,6 +21,17 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				{/* bootsrap cdn */}
 				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+
+				{/* <link
+					href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+					rel="stylesheet"
+					integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+					crossorigin="anonymous"
+				/>
+
+				
+				/>
+				 */}
 
 				{/* slick slider cdn */}
 
@@ -50,9 +62,11 @@ function MyApp({ Component, pageProps }) {
 				{/* recaptcha cdn */}
 			</Head>
 
+
 			<Provider store={store}>
 				<Navbar />
-				<Component {...pageProps} />
+					<Component {...pageProps} />
+
 				<ToastContainer
 					position="top-right"
 					autoClose={5000}

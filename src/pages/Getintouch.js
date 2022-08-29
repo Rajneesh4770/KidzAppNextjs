@@ -47,16 +47,6 @@ function Getintouch() {
     validationSchema,
   })
 
-  // const submitHandler = () => {
-  //   toast.success('Register Successfully !!!')
-  //   console.log("Button");
-  // }
-
-
-  // function onChange(value){
-  //   console.log('captcha value:', value);
-  // }
-
   return (
     <div className={style.body}>
       {/* background image section */}
