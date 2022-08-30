@@ -17,7 +17,6 @@ import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { AccountCircle } from "@mui/icons-material";
-// import Loader from '../Loader'
 import PulseLoader from "react-spinners/PulseLoader";
 
 const style1 = {
@@ -50,6 +49,7 @@ const style2 = {
 
 export let constants = "";
 const Header = (props) => {
+  const [access,setAccess]=useState(false)
   const [email, setEmail] = useState(null);
   const [resmodal, setResmodal] = useState(true);
   const [modal, setModal] = useState(true);
@@ -85,7 +85,6 @@ const Header = (props) => {
 
     var header = document.getElementById("myHeader");
     var sticky = header.offsetTop;
-
     function myFunction() {
       if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
@@ -98,17 +97,14 @@ const Header = (props) => {
   const openModal = () => {
     setModal(false);
   };
-
   const initialValues = {
     email: "",
   };
-
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid Email format")
       .required("Email required"),
   });
-
   const onSubmit = (e) => {
     toast("confirm your mail & register here");
     setLogin(false);
@@ -126,34 +122,33 @@ const Header = (props) => {
         console.error(err, "err");
       });
   };
+  const myData = () => {
+    axios
+      .post(
+        "https://api2.kidzapp.com/api/1.9/custom_email_authentication/",
+        { email }
+      )
+      .then((res) => {
+        console.log(res.data.access_token, "token");
+        if(res.data?.access_token){
+          localStorage.setItem("access_token", res.data.access_token);
+          setEmail(null);
+        }
+        setAccess(x=>!x);
+      })
+      .catch((err) => console.log(err));
+  };
   useEffect(() => {
-    if (email && !localStorage.getItem('access_token')) {
-      let interval = setInterval(() => {
-        axios
-          .post(
-            "https://api2.kidzapp.com/api/1.9/custom_email_authentication/",
-            { email }
-          )
-          .then((res) => {
-            console.log(res.data.access_token, "token");
-            localStorage.setItem("access_token", res.data.access_token);
-          })
-          .catch((err) => console.log(err));
-      }, 2000);
-      if(localStorage.getItem('access_token')){
-        clearInterval(interval);
-      }
+    if (email) {
+      setTimeout(myData, 2000);
     }
-  }, [email]);
-
+  }, [email,access]);
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
   });
-
   const [login, setLogin] = useState(true);
-
   return (
     <>
       <header>
@@ -235,7 +230,6 @@ const Header = (props) => {
                     </Link>
                     <button
                       class="navbar-toggler"
-                      // className={style.toggle_focus}
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#navbarSupportedContent"
