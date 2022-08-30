@@ -1,10 +1,14 @@
 import React,{useEffect,useState} from "react";
 import KidzappFeed from '../../Components/KidzappFeed';
-import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap';
+import { Container,Row,Col,Button,Carousel,FormControl,Form,Card,Image} from 'react-bootstrap';
 import axios from 'axios';
 import Slider from "react-slick";
+import { baseUrl } from "../../config";
+import Accordion from 'react-bootstrap/Accordion';
 import style from "../../styles/KidzappTv.module.css";
 import Link from "next/link";
+import  {BsFacebook,BsTwitter,BsWhatsapp,BsInstagram,BsLinkedin} from 'react-icons/bs'
+import {AiFillMail} from 'react-icons/ai'
 
 const KidzappTv = () => {
   const [cardData,setCardData]=useState([])
@@ -111,7 +115,7 @@ const KidzappTv = () => {
     ]
   }
   useEffect(()=>{
-    axios.get("https://api2.kidzapp.com/api/3.0/tv/video_category")
+    axios.get(baseUrl +"tv/video_category")
     .then((res)=>{
       console.log(res.data,'console');
         setCardData(res.data);
@@ -120,7 +124,7 @@ const KidzappTv = () => {
     .catch((err)=>{
       console.log(err);
     })
-    axios.get("https://api2.kidzapp.com/api/3.0/tv/featured/videos")
+    axios.get(baseUrl +"tv/featured/videos")
       .then(resp => {
         setSliderData(resp.data)
         console.log(resp.data,"Slider Data");
@@ -128,7 +132,6 @@ const KidzappTv = () => {
       .catch(err => { console.log(err); })
   },[])
 
- 
   return (
     <>
       <section className={style.section1}>
@@ -146,7 +149,6 @@ const KidzappTv = () => {
                         <Button variant="primary">Search</Button>
                       </Col>
                     </Row>
-
                   </Form>
                 </Container>
               </div>
@@ -269,24 +271,54 @@ const KidzappTv = () => {
         {item.description}
         </Card.Text>
         <hr/>
-        <Row >
+        <Row className='mx-3'>
             <Col xs={4} className={style.colStyle}>
             <div className={style.cardFooter}>
-            <Image width="22px" height="22px" className='tvLikeImage' alt="like" src="https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg" />
+            <Image className={style.imageStyle} src= "https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg"/>
             <div className={style.Badge}>14</div>
             </div>
             </Col>
             <Col xs={4} className={style.colStyle} >
               <div className={style.cardFooter} >
-              <Image width="22px" height="22px" src="https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
+              <Link href='/KidzappTv/CommentShow'>
+              <Image className={style.imageStyle} src="https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
+              </Link>
+              <Link href='/KidzappTv/CommentShow'>
               <div className={style.Badge}>7</div>
+              </Link>
               </div>
             </Col>
             
             <Col xs={4} className={style.colStyle}>
                <div className={style.cardFooter}>
-                  <p style={{color:"black"}}>Share</p>
-                  <Image width="22px" height="22px"  src="https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
+               <Accordion defaultActiveKey="0" alwaysOpen>
+               
+               <Accordion.Header>
+               <p className={style.Badge} >Share</p>
+               <Image className={style.imageStyle} src="https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
+                  </Accordion.Header>
+            <Accordion.Body className={style.CardIcon}>
+            <div className={style.iconContainer}>
+            <BsFacebook className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsTwitter className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsWhatsapp className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <AiFillMail className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsInstagram className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsLinkedin className={style.iconStyle}/>
+            </div>
+        </Accordion.Body>
+              </Accordion>
+                 
                </div> 
             </Col>
         </Row>
@@ -332,24 +364,55 @@ const KidzappTv = () => {
                             {item.video_category.name}
                           </Card.Text>
                           <hr />
-                          <Row >
+                          <Row className={style.cardBottomContainer}>
                             <Col xs={4}>
                               <div className={style.cardFooter}>
+                              
                                 <Image className={style.imageStyle} src= "https://drfsb8fjssbd3.cloudfront.net/images/like-icon.svg"/>
                                 <div className={style.Badge}>{item.likes_count}</div>
+                              
+                              
                               </div>
                             </Col>
                             <Col xs={4} className={style.colStyle} >
                               <div className={style.cardFooter} >
+                              <Link href='/KidzappTv/CommentShow'>
                                 <Image className={style.imageStyle} src="https://drfsb8fjssbd3.cloudfront.net/images/comment-icon.svg" />
+                              </Link>
+                              <Link href='/KidzappTv/CommentShow'>
                                 <div className={style.Badge}>{item.comments_count}</div>
+                              </Link>
                               </div>
                             </Col>
 
                             <Col xs={4} className={style.colStyle}>
                               <div className={style.cardFooter}>
+                              <Accordion defaultActiveKey="0" alwaysOpen>
+                              <Accordion.Header>
                                 <p className={style.Badge}>Share</p>
                                 <Image className={style.imageStyle} src="https://beta.kidzapp.com/images/share-review-kd-new.png" alt="share" />
+                                </Accordion.Header>
+                                <Accordion.Body className={style.CardIcon1}>
+            <div className={style.iconContainer}>
+            <BsFacebook className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsTwitter className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsWhatsapp className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <AiFillMail className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsInstagram className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsLinkedin className={style.iconStyle}/>
+            </div>
+        </Accordion.Body>
+              </Accordion>
                               </div>
                             </Col>
                           </Row>
@@ -365,8 +428,6 @@ const KidzappTv = () => {
           </Row>
         </Container>
       </div>
-
-
       <div >
         <Container className="my-5 sliderContainer">
           <Row className="mx-2">
@@ -380,7 +441,7 @@ const KidzappTv = () => {
                 <Button className={`btn-md btn-xs ${style.SeeAllButton}`}>See All</Button>
               </Link></Col>
           </Row>
-          <Row className={style.section}>
+          <Row >
             <Slider  {...settings} >
 
               {slider2Data.map((item) => {
@@ -396,7 +457,7 @@ const KidzappTv = () => {
                             {item.text}
                           </Card.Text>
                           <hr />
-                          <Row >
+                          <Row className={style.cardBottomContainer}>
                             <Col xs={4}>
                               <div className={style.cardFooter}>
                                 <Image className={style.imageStyle} src={item.bottomLikeIcon} />
@@ -405,15 +466,42 @@ const KidzappTv = () => {
                             </Col>
                             <Col xs={4} className={style.colStyle} >
                               <div className={style.cardFooter} >
+                              <Link href='/KidzappTv/CommentShow'>
                                 <Image className={style.imageStyle} src={item.commentIcon} />
+                                </Link>
+                                <Link href='/KidzappTv/CommentShow'>
                                 <div className={style.Badge}>7</div>
+                                </Link>
                               </div>
                             </Col>
-
                             <Col xs={4} className={style.colStyle}>
                               <div className={style.cardFooter}>
+                              <Accordion defaultActiveKey="0" alwaysOpen>
+                              <Accordion.Header>
                                 <p className={style.Badge}>Share</p>
                                 <Image className={style.imageStyle} src={item.shareIcon} alt="share" />
+                                </Accordion.Header>
+                                <Accordion.Body className={style.CardIcon}>
+            <div className={style.iconContainer}>
+            <BsFacebook className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsTwitter className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsWhatsapp className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <AiFillMail className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsInstagram className={style.iconStyle}/>
+            </div>
+            <div className={style.iconContainer}>
+            <BsLinkedin className={style.iconStyle}/>
+            </div>
+        </Accordion.Body>
+              </Accordion>
                               </div>
                             </Col>
                           </Row>

@@ -151,3 +151,22 @@ margin-bottom: -50px !important;
 margin-top: 20px;
 background-color: gray;
 }
+.accordion-button::after{
+  display: none !important;
+  content: floral-white;
+ 
+}
+.accordion-button{
+  padding: 0px 0px !important;
+  align-items:inherit;
+}
+.accordion-button:focus {
+border:0;
+border-color: none;
+
+box-shadow:none
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: transparent;
+}

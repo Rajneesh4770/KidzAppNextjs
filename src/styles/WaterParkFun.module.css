@@ -74,6 +74,31 @@
     font-weight: 500;
     /* line-height: 1.17; */
 }
+.CardIcon{
+    position: absolute;
+    top: 32%;
+    right: 0px;
+    width: 18%;
+}
+.iconStyle{
+    margin-bottom: 15px;
+    font-size:18px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.iconContainer{
+    background-color:#00acef ;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width:30px;
+    height: 30px;
+}
+.iconContainer:hover{
+    background-color: #965da4;
+}
+
 @media (max-width: 1199.98px) {
     .imageStyle{
         width: 20px;

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container,Row,Col,Button,Carousel ,FormControl,Form,Card,Image} from 'react-bootstrap';
+import { Container,Row,Col,Button,FormControl,Form,Card,Image} from 'react-bootstrap';
 import style from "../../styles/TestVideoForDemo.module.css";
+import KidzappFeed from '../../Components/KidzappFeed';
 const TestVideoForDemo = () => {
     const slider2Data = [{
         id: 1,
@@ -77,16 +78,15 @@ const TestVideoForDemo = () => {
             <Col className={style.colStyle} lg={12}>
               <div className={style.background}>
               <Container>
-              <Form >  
+              <Form>  
               <Row className={style.FormRow}>
                   <Col xs={8} md={7}>
-                      <FormControl type="search" placeholder="Search"   aria-label="Search"  />           
+                      <FormControl type="search" placeholder="Search"  aria-label="Search"  />           
                   </Col>
                   <Col xs={3} align="center" md={2} >
                   <Button   variant="primary">Search</Button>           
                   </Col>
               </Row>
-             
               </Form>
           </Container>
               </div>
@@ -95,7 +95,6 @@ const TestVideoForDemo = () => {
         </div>
       </section>
         <Container className="my-5 sliderContainer">
-          
           <Row>
               {slider2Data.map((item) => {
                 return (
@@ -105,7 +104,7 @@ const TestVideoForDemo = () => {
                         <Card.Img variant="top" src={item.image}/>
                         <Card.Img width="40x" height="40px" className={style.playImageSlider1} src="https://drfsb8fjssbd3.cloudfront.net/images/play-icon-large-kd-new.svg" />
                         <Card.Body>
-                          <Card.Title><h3 className={style.cardHeading}>{item.heading} </h3></Card.Title>
+                          <Card.Title><h3 className={style.cardHeading}>{item.heading}</h3></Card.Title>
                           <Card.Text className={style.cardText}>
                             {item.text}
                           </Card.Text>
@@ -140,6 +139,7 @@ const TestVideoForDemo = () => {
               )}
           </Row>
         </Container>
+        <KidzappFeed/>
     </div>
   )
 }

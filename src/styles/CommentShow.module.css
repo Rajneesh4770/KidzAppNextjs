@@ -70,11 +70,33 @@
     color: #484848;
     font-weight: 500;
 }
+.CardBottom{
+    width: 300px;
+}
+.profile{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.commentContent{
+    margin-bottom:50px;
+}
+.comment{
+    width:35%;
+    margin-bottom:20px;
+}
+.CommentYear{
+    color: grey;
+}
+.profileColumn{
+    width: 25%;
+}
 .CardIcon{
+    display: inline-flex;
     position: absolute;
-    top: 26%;
-    right: 0px;
-    width: 18%;
+    top: 91%;
+    left: 32%;
+    width: 100%;
 }
 .iconStyle{
     margin-bottom: 15px;
@@ -86,7 +108,7 @@
 
 .iconContainer{
     background-color:#00acef ;
-    margin-bottom: 10px;
+    margin-left:30px;
     border-radius: 10px;
     width:30px;
     height: 30px;
@@ -152,6 +174,29 @@
         color:#965da4;
         height: 55px;
         font-size: 14px;
+    }
+    .CardIcon{
+        display: inline-flex;
+       position:absolute;
+       top: 88%;
+       left: 40%;
+    }
+    .iconStyle{
+        /* margin-bottom: 15px; */
+        font-size:14px;
+        color: white;
+        /* text-align: center; */
+        /* margin-top: 5px; */
+    }
+    .iconContainer{
+        background-color:#00acef ;
+        /* margin-left:30px; */
+        border-radius: 10px;
+        width:30px;
+        height: 30px;
+    }
+    .iconContainer:hover{
+        background-color: #965da4;
     }
 }
 
@@ -222,6 +267,28 @@
         color:#965da4;
         height:24px;
         font-size: 14px;
+    }
+    .CardIcon{
+        display: inline-flex;
+       position:absolute;
+       left: -4%;
+    }
+    .iconStyle{
+        /* margin-bottom: 15px; */
+        font-size:14px;
+        color: white;
+        /* text-align: center; */
+        /* margin-top: 5px; */
+    }
+    .iconContainer{
+        background-color:#00acef ;
+        /* margin-left:30px; */
+        border-radius: 10px;
+        width:30px;
+        height: 30px;
+    }
+    .iconContainer:hover{
+        background-color: #965da4;
     }
     
     }

@@ -142,7 +142,42 @@
     top:25%;
     left: 50%;
     width:50px;
-    transform: translate(-50%,-50%  );
+    transform: translate(-50%,-50%);
+}
+.CardIcon{
+    position: absolute;
+    top: 24%;
+    right: 0px;
+    width: 18%;
+}
+.CardIcon1{
+    position: absolute;
+    top:32%;
+    right: 0px;
+    width: 18%;
+}
+.iconStyle{
+    margin-bottom: 15px;
+    font-size:18px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.iconContainer{
+    background-color:#00acef ;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width:30px;
+    height: 30px;
+}
+.iconContainer:hover{
+    background-color: #965da4;
+}
+.cardBottomContainer{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 @media (max-width: 1199.98px) {
     .imageStyle{
@@ -208,10 +243,10 @@
         line-height:1.28;
         background-color: #3f3e3e;
         border-radius: 12px;
-        padding: 4px 4px;
+        padding: 0px 4px;
         display: inline-block;
-        margin-left: 3px;
-        min-width:18px;
+        margin-left: 2px;
+        min-width:14px;
         text-align: center;
     }
      .colStyle{
@@ -230,10 +265,40 @@
     }
     .playImageSlider1{
         position: absolute;
-        top:15%;
+        top:18%;
         left: 50%;
         width:50px;
         transform: translate(-50%,-50%  );
+    }
+    .CardIcon{
+        position: absolute;
+        top:32%;
+        right: 0px;
+        width: 18%;
+    }
+    .CardIcon1{
+        position: absolute;
+        top:50%;
+        right: 0px;
+        width: 18%;
+    }
+    .iconStyle{
+        margin-bottom: 15px;
+        font-size:8px;
+        color: white;
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .iconContainer{
+        background-color:#00acef ;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        width:16px;
+        height: 16px;
+    }
+    .iconContainer:hover{
+        background-color: #965da4;
     }
 }
 
@@ -276,19 +341,19 @@
         transform: translate(-50%,-50%);
     }
     .imageStyle{
-        width: 18px;
-        height: 18px;
+        width: 14px;
+        height: 14px;
     }
     .cardFooter .Badge{
         color: #fff;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.28;
         background-color: #3f3e3e;
         border-radius: 12px;
-        padding: 4px 8px;
+        padding: 0px 8px;
         display: inline-block;
-        margin-left: 10px;
-        min-width: 20px;
+        margin-left: 6px;
+        min-width:16px;
         text-align: center;
     }
     .colStyle{
@@ -335,6 +400,41 @@
         left: 50%;
         width:50px;
         transform: translate(-50%,-50%  );
+    }
+    .CardIcon{
+        position: absolute;
+        top:32%;
+        right: 0px;
+        width: 18%;
+    }
+    .CardIcon1{
+        position: absolute;
+        top:50%;
+        right: 0px;
+        width: 18%;
+    }
+    .iconStyle{
+        margin-bottom: 15px;
+        font-size:12px;
+        color: white;
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .iconContainer{
+        background-color:#00acef ;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        width:20px;
+        height: 20px;
+    }
+    .iconContainer:hover{
+        background-color: #965da4;
+    }
+    .cardBottomContainer{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
     }
 
