@@ -49,6 +49,8 @@ const style2 = {
 
 export let constants = "";
 const Header = (props) => {
+  const [status,setStatus]=useState()
+  const [login, setLogin] = useState(true);
   const [access,setAccess]=useState(false)
   const [email, setEmail] = useState(null);
   const [resmodal, setResmodal] = useState(true);
@@ -138,6 +140,15 @@ const Header = (props) => {
       })
       .catch((err) => console.log(err));
   };
+
+  useEffect(()=>{
+    setStatus( localStorage.getItem('access_token') )
+    console.log(status,'status')
+    
+  },[myData])
+
+
+
   useEffect(() => {
     if (email) {
       setTimeout(myData, 2000);
@@ -148,7 +159,6 @@ const Header = (props) => {
     validationSchema,
     onSubmit,
   });
-  const [login, setLogin] = useState(true);
   return (
     <>
       <header>
@@ -293,7 +303,7 @@ const Header = (props) => {
                           </li>
                         </Link>
 
-                        {login ? (
+                        {!status ? (
                           <Link href="/">
                             <li class="nav-item">
                               <a class="nav-link " onClick={handleOpen}>
@@ -307,7 +317,7 @@ const Header = (props) => {
                               <li class="nav-item">
                                 <a
                                   class="nav-link "
-                                  onClick={() => setLogin(true)}
+                                  onClick={() => setStatus(localStorage.removeItem('access_token') )}
                                 >
                                   Logout
                                 </a>
@@ -326,7 +336,7 @@ const Header = (props) => {
                                 <AccountCircle sx={{ color: "#58cbf8" }} />
                               </a>
                               <ul
-                                class="dropdown-menu"
+                                className={`${style.ullist} dropdown-menu`}
                                 aria-labelledby="navbarDropdownMenuLink"
                               >
                                 <Link href="/Profile">
