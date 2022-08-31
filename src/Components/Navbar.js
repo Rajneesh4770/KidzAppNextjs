@@ -13,7 +13,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { TextField } from "@mui/material";
-import { baseUrl } from "../config";
 import axios, { Axios } from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { AccountCircle } from "@mui/icons-material";
@@ -49,6 +48,7 @@ const style2 = {
 
 export let constants = "";
 const Header = (props) => {
+  
   const [status,setStatus]=useState()
   const [login, setLogin] = useState(true);
   const [access,setAccess]=useState(false)
@@ -134,6 +134,8 @@ const Header = (props) => {
         console.log(res.data.access_token, "token");
         if(res.data?.access_token){
           localStorage.setItem("access_token", res.data.access_token);
+          toast('Now you are successfully login')
+          // setResmodal(true)
           setEmail(null);
         }
         setAccess(x=>!x);
