@@ -17,7 +17,7 @@ const Booking = (props) => {
     <FaMapMarkerAlt className="fa-4x" style={{ color: "red" }} />
   );
   const Setting = {
-	dots: true,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -40,16 +40,21 @@ const Booking = (props) => {
                 <div className="col-lg-8 col-sm-12">
                   <img className={style.leftimg1} src={props.data.image_url} />
 
-					<div className="row">
-
-				  <Slider className="imagesliderofbooking" {...Setting}>
-					{props.data.image_carousel_alt_list?.map((crouselimage)=>(
-						<div className="container" key={crouselimage.id}>
-					<img className={style.cruselimage} src={crouselimage.image_url} alt=''></img>
-					</div>
-					))}
-					</Slider>
-					</div>
+                  <div className="row">
+                    <Slider className="imagesliderofbooking" {...Setting}>
+                      {props.data.image_carousel_alt_list?.map(
+                        (crouselimage) => (
+                          <div className="container" key={crouselimage.id}>
+                            <img
+                              className={style.cruselimage}
+                              src={crouselimage.image_url}
+                              alt=""
+                            ></img>
+                          </div>
+                        )
+                      )}
+                    </Slider>
+                  </div>
                   {/* heading and button section row */}
 
                   <div className="row">
@@ -112,9 +117,16 @@ const Booking = (props) => {
                       <div className="accordion" id="accordionExample">
                         <div className="accordion-props.data">
                           <h2 className="accordion-header" id="headingOne">
-                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            Description
-                                                        </button>
+                            <button
+                              className="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              Description
+                            </button>
                           </h2>
                           <div
                             id="collapseOne"
@@ -160,42 +172,53 @@ const Booking = (props) => {
                   </div>
 
                   <div className="row mt-5">
-                    {props.data.price?.filter((item,index,items) => items.findIndex(({header})=>header==item.header)==index).map((item)=>
-                      <div className="col-12">
-                        <div className={style.price_offer}>
-                          <div className={style.price_title}>
-                            <h4 className={style.price_txt}>{item.header}</h4>
-                            <p>{item.description}</p>
-                          </div>
-                          <div className="container">
-                            <div className="row mt-2">
-                              <div className="col-12">
-                                {item.header}
+                    {props.data.price
+                      ?.filter(
+                        (item, index, items) =>
+                          items.findIndex(
+                            ({ header }) => header == item.header
+                          ) == index
+                      )
+                      .map((item) => (
+                        <div className="col-12">
+                          <div className={style.price_offer}>
+                            <div className={style.price_title}>
+                              <h4 className={style.price_txt}>{item.header}</h4>
+                              <p>{item.description}</p>
+                            </div>
+                            <div className="container">
+                              <div className="row mt-2">
+                                <div className="col-12">
+                                  {item.header}
                                   {props.data.price
                                     .filter((obj) => obj.header == item.header)
                                     ?.map((sub_item) => (
                                       <>
-                                <div className={style.blog_title}>
-
-                                        <p>{sub_item.type_en}({item.small_text_type})</p>
-                                        <p>
-                                          <b>  
-                                            {sub_item.currency}
-                                            {sub_item.final_price}
-                                          </b>
-                                        </p>
-										</div>
-
+                                        <div className={style.blog_title}>
+                                          <p>
+                                            {sub_item.type_en}(
+                                            {item.small_text_type})
+                                          </p>
+                                          <p>
+                                            <b>
+                                              {sub_item.currency}
+                                              {sub_item.final_price}
+                                            </b>
+                                          </p>
+                                        </div>
                                       </>
                                     ))}
                                 </div>
-								<Link href='/Booking2'>
-								<button className={style.pricebutton}>Book Now</button></Link>
+                                <Link href="/Booking2">
+                                  <button className={style.pricebutton}>
+                                    Book Now
+                                  </button>
+                                </Link>
                               </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      ))}
                   </div>
 
                   <div className="row">
@@ -235,7 +258,9 @@ const Booking = (props) => {
                         <div className="row mt-5">
                           <div className="col-lg-4 sm-12">
                             <div className={style.blog_title}>
-                              <p className={style.startext}>{props.data.average_rating}</p>
+                              <p className={style.startext}>
+                                {props.data.average_rating}
+                              </p>
                             </div>
                             <div className={style.blog_star}>
                               <div>
@@ -455,8 +480,8 @@ const Booking = (props) => {
 export async function getServerSideProps(context) {
   const id = context.query.id;
   console.log("id", id);
-  let res = await axios.get(baseUrl+`experiences/${id}/?country_code=ae`);
-//   let res = await axios.get(`https://api.kidzapp.com/api/3.0/experiences/111992/?country_code=ae`);
+  let res = await axios.get(baseUrl + `experiences/${id}/?country_code=ae`);
+  //   let res = await axios.get(`https://api.kidzapp.com/api/3.0/experiences/111992/?country_code=ae`);
   console.log(res.data);
   let props = {
     data: res.data,

@@ -107,6 +107,8 @@ header {
   transition: opacity .15s ease;
 }
 
+
+
 @media (min-width:992px) and (max-width:1199.98px) {
   .nav-link{
     font-size:14px!important;

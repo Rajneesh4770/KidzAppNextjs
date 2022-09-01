@@ -6,15 +6,13 @@ import KidzappFeed from "../Components/KidzappFeed";
 import style from "../styles/Index.module.css";
 import HomeBlog from "../Components/HomePageComponents/HomeBlog";
 import axios, { Axios } from "axios";
-import { baseUrl } from "../config";
 import { Carousel } from "react-bootstrap";
 import { Markup } from "interweave";
-// import { Markup } from "interweave";
+import { HOME_CROUSEL_API } from "../services";
 
 export async function getStaticProps() {
   let res = await axios.get(
-    baseUrl +
-      "experiences/curated-list/?list_name=featured_banner_uae&country_code=ae&page=1&page_size=10&city=&website=1&lang=ar"
+    HOME_CROUSEL_API
   );
   let props = {
     data: res?.data?.results,
@@ -35,10 +33,10 @@ function index(props) {
                 alt="Image is not available"
               />
               <Carousel.Caption>
-                <h1 className={style.crouselHeading}>{item.title}</h1>
-                 {/* <p className={style.crouselParagraph}> {item.description}</p> */}
+                <h1 className={`animate__animated animate__backInDown ${style.crouselHeading}`}>{item.title}</h1>
+                 <p className={style.crouselParagraph}> {item.description}</p>
                  {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
-               <p>  <Markup  markup={item.description}/>  </p>
+               {/* <p>  <Markup  markup={item.description}/>  </p> */}
                 
                 <button
                   className={`btn ${style.button}`}

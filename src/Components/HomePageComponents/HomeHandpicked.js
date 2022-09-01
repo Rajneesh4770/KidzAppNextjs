@@ -110,27 +110,24 @@ function HomeHandpicked() {
   useEffect(() => {
     setNewlanguage(constants);
   }, [constants]);
-  const notify = () => toast("Login & Book here");
 
   return (
     <div className={style.background}>
       {/* Headings */}
-
       <div className={`${style.headingDiv}`}>
-        <h1 className={style.heading}>
+        <h1 className={`animate__animated animate__backInLeft ${style.heading}`}>
           {getResponseMessage(constants).find_best_place_uae}{" "}
         </h1>
         <h1 className={style.h1}>
           {getResponseMessage(constants).hand_pick_exp}
         </h1>
-        <p className={style.p}>
+        <p className={` animate__animated animate__backInRight ${style.p}`}>
           {
             getResponseMessage(constants)
               .Our_pick_of_the_best_kids_activities_in_UAE
           }
         </p>
       </div>
-
       <div className={`container modifiedSlickBtn ${style.buttonRow}`}>
         <div className="row">
           <Slider {...settings}>
@@ -157,7 +154,7 @@ function HomeHandpicked() {
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
               <div className="container" key={item.id}>
-                <div className={`card ${style.card}`}>
+                <div className={`card animate__animated animate__backInLeft ${style.card}`}>
                   <img
                     className={`card-img-top ${style.cardimage}`}
                     src={item.image_url}

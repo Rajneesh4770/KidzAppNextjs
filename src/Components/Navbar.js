@@ -235,7 +235,7 @@ const Header = (props) => {
                     <Link href="/">
                       <a class="navbar-brand" className={style.navlogo1}>
                         <img
-                          className={style.navlogo}
+                          className={`animate__animated animate__zoomIn 	 ${style.navlogo}`}
                           src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
                         />
                       </a>

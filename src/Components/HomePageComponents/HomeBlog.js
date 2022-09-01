@@ -26,7 +26,8 @@ function Homeblog2() {
                     i === 0 || i === 5 || i === 6
                       ? `col-lg-6 md-9 sm-12 ${style.bigcard}`
                       : `col-lg-3  ${style.smcard}`
-                  }  col-sm-12 ${style.blogCardHome}`}
+                  }  col-sm-12 ${style.blogCardHome}      
+                  ${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft': 'animate__animated animate__backInRight'}`}
                 >
                   <div className={`card ${style.card1} mb-4`}>
                     <img
