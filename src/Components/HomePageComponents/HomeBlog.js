@@ -5,35 +5,18 @@ import axios from "axios";
 import Link from "next/link";
 function Homeblog2() {
   const [data, setData] = useState([]);
+  const [scroll,setScroll]=useState(false);
   useEffect(() => {
     axios.get(baseUrl + "blogs?page=1&limit=6&country_code=ae").then((res) => {
       setData(res.data.results);
     });
   }, []);
 
-//   useEffect(()=>{
-
-//   let lastKnownScrollPosition = 0;
-// let ticking = false;
-
-// function doAnimation(scrollPos) {
-// const el = document.getElementById('animate')
-// el.classList.add(  `${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow'}`)
-// }
-
-// document.addEventListener('scroll', (e) => {
-//   lastKnownScrollPosition = window.scrollY;
-
-//   if (!ticking) {
-//     window.requestAnimationFrame(() => {
-//       doAnimation(lastKnownScrollPosition);
-//       ticking = false;
-//     });
-
-//     ticking = true;
-//   }
-// });
-// },[])
+useEffect(()=>{
+  window.addEventListener("scroll", () => {
+    setScroll(window.scrollY > 1500);
+  });
+},[scroll])
   return (
     <>
       <section className={style.section1}>
@@ -41,7 +24,7 @@ function Homeblog2() {
           <center>
             <h1 className={style.heading}>Our Blog Picks</h1>
           </center>
-          <div className="row mb-4">
+          <div className={`row mb-4 ${scroll? style.scrolltrue:style.scrollfalse}`}>
             {data.map((item, i) => {
               return (
                 <div
@@ -52,7 +35,7 @@ function Homeblog2() {
                       ? `col-lg-6 md-9 sm-12 ${style.bigcard}`
                       : `col-lg-3  ${style.smcard}`
                   }  col-sm-12 ${style.blogCardHome}      
-                  ${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow'}`}
+                 ${scroll ?  (i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow') : null}`}
                 >
                   <div className={`card ${style.card1} mb-4`}>
                     <img
