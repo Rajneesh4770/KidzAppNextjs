@@ -1,13 +1,16 @@
-import { useState, useEffect, useTransition } from "react";
-import style1 from "../styles/Filter.module.css";
-import { Rating, Button } from "@mui/material";
-import Stack from "@mui/material/Stack";
-import CircularProgress from "@mui/material/CircularProgress";
-import Link from "next/link";
+import { useState, useEffect, useTransition } from 'react';
+import style1 from '../styles/Filter.module.css';
+import { Rating, Button } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+import Link from 'next/link';
 import axios from 'axios';
 import { baseUrl } from '../config';
+import { useRouter } from 'next/router';
 
 function FindActivities() {
+	const router = useRouter();
+	const { cat } = router.query;
 	const [loader, setLoader] = useState(false);
 	const [data, setData] = useState([]);
 	const [pageindex, setPageindex] = useState(9);
@@ -27,6 +30,7 @@ function FindActivities() {
 	const [event, setEvent] = useState(false);
 	const [indoor, setIndoor] = useState(false);
 	const [outdoor, setOutdoor] = useState(false);
+	const [id, setId] = useState('');
 
 	useEffect(() => {
 		const scrolling = (event) => {
@@ -42,8 +46,14 @@ function FindActivities() {
 	}, [scroll]);
 
 	const [dataright, setDataright] = useState([]);
+	console.log(cat);
 
 	useEffect(() => {
+		if (cat) {
+			setCategory(cat);
+		} else {
+			console.log('Error');
+		}
 		axios
 			.get(
 				baseUrl +
@@ -91,6 +101,7 @@ function FindActivities() {
 		event,
 		indoor,
 		outdoor,
+		cat,
 	]);
 
 	useEffect(() => {
@@ -366,168 +377,171 @@ function FindActivities() {
 								</div>
 							</div>
 						</div>
+					</div>
+				</section>
+
+				{/* search result section */}
+				<section className="searchResultSection py-3 container">
+					<div className="row">
+						<div className={`col-md-8 ${style1.leftcontainer}`}>
+							<p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
+							<div className="col-md-12">
+								{isPending ||
+									(!data.length && (
+										<Stack
+											sx={{
+												alignItems: 'center',
+												marginLeft: 'auto',
+												marginRight: 'auto',
+											}}
+											spacing={2}
+											direction="row"
+										>
+											<CircularProgress
+												color="success"
+												sx={{
+													alignItems: 'center',
+													marginLeft: 'auto',
+													marginRight: 'auto',
+												}}
+											/>
+										</Stack>
+									))}
+								{data &&
+									data?.map((card) => {
+										return (
+											<div key={card.id} className="card-items">
+												<div className={style1.card}>
+													<div className="row no-gutters">
+														<div className={`col-md-6 ${style1.imgSection}`}>
+															<img
+																src={card.image_url}
+																className={`card-img ${style1.cardImg}`}
+																alt="..."
+															/>
+															<div
+																className={`${
+																	!card.newDealImg ? 'd-none' : style1.newdeal
+																}`}
+															>
+																<img
+																	src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+																	alt=""
+																	width="100"
+																	height="100"
+																	className={style1.newDealImg}
+																/>
+															</div>
+														</div>
+														<div className="col-md-6">
+															<div className="card-body">
+																<p
+																	className={`card-top-para ${style1.cardtoppara}`}
+																>
+																	{card.name}
+																</p>
+																<h6 className={style1.cardtitle}>
+																	{card.address}
+																</h6>
+																<Rating
+																	name="rating"
+																	defaultValue={card.average_rating}
+																/>
+																<br />
+																<span
+																	className={`card-text bottom-text mb-0 ${style1.bottomtext}`}
+																>
+																	Ages: &nbsp;
+																	{card.ages_display[0]} -{' '}
+																	{
+																		card.ages_display[
+																			card.ages_display.length - 1
+																		]
+																	}
+																</span>
+																<div className="row">
+																	<div className="col-md-6" align="left">
+																		<h6>
+																			Distance:{' '}
+																			<span className={style1.distance}>
+																				2100 KM
+																			</span>{' '}
+																			{card.bottomLeftText}
+																		</h6>
+																	</div>
+																	<div className="col-md-6" align="right">
+																		<h6>{card.bottomRightText}</h6>
+																	</div>
+																</div>
+																{card.bookable ? (
+																	<>
+																		<Link href="/Booking">
+																			<Button
+																				size="small"
+																				variant="outlined"
+																				color="error"
+																				className={`${style1.bottomButton}`}
+																			>
+																				{card.booking_button.text}
+																			</Button>
+																		</Link>
+																	</>
+																) : null}
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										);
+									})}
+							</div>
 						</div>
-						</section>
+						{/* right side  cards */}
 
-        {/* search result section */}
-        <section className="searchResultSection py-3 container">
-          <div className="row">
-            <div className={`col-md-8 ${style1.leftcontainer}`}>
-              <p className={`pb-1 ${style1.mainPara}`}>Search Results</p>
-              <div className="col-md-12">
-                {isPending ||
-                  (!data.length && (
-                    <Stack
-                      sx={{
-                        alignItems: "center",
-                        marginLeft: "auto",
-                        marginRight: "auto",
-                      }}
-                      spacing={2}
-                      direction="row"
-                    >
-                      <CircularProgress
-                        color="success"
-                        sx={{
-                          alignItems: "center",
-                          marginLeft: "auto",
-                          marginRight: "auto",
-                        }}
-                      />
-                    </Stack>
-                  ))}
-                {data &&
-                  data?.map((card) => {
-                    return (
-                      <div key={card.id} className="card-items">
-                        <div className={style1.card}>
-                          <div className="row no-gutters">
-                            <div className={`col-md-6 ${style1.imgSection}`}>
-                              <img
-                                src={card.image_url}
-                                className={`card-img ${style1.cardImg}`}
-                                alt="..."
-                              />
-                              <div
-                                className={`${
-                                  !card.newDealImg ? "d-none" : style1.newdeal
-                                }`}
-                              >
-                                <img
-                                  src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-                                  alt=""
-                                  width="100"
-                                  height="100"
-                                  className={style1.newDealImg}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="card-body">
-                                <p
-                                  className={`card-top-para ${style1.cardtoppara}`}
-                                >
-                                  {card.name}
-                                </p>
-                                <h6 className={style1.cardtitle}>
-                                  {card.address}
-                                </h6>
-                                <Rating
-                                  name="rating"
-                                  defaultValue={card.average_rating}
-                                />
-                                <br />
-                                <span
-                                  className={`card-text bottom-text mb-0 ${style1.bottomtext}`}
-                                >
-                                  Ages: &nbsp;
-                                  {card.ages_display[0]} -{" "}
-                                  {
-                                    card.ages_display[
-                                      card.ages_display.length - 1
-                                    ]
-                                  }
-                                </span>
-                                <div className="row">
-                                  <div className="col-md-6" align="left">
-                                    <h6>
-                                      Distance:{" "}
-                                      <span className={style1.distance}>
-                                        2100 KM
-                                      </span>{" "}
-                                      {card.bottomLeftText}
-                                    </h6>
-                                  </div>
-                                  <div className="col-md-6" align="right">
-                                    <h6>{card.bottomRightText}</h6>
-                                  </div>
-                                </div>
-                                {card.bookable? 
-                                <>
-                                <Link href='/Booking'>
-                                 <Button
-                                 size="small"
-                                 variant="outlined"
-                                 color="error"
-                                 className={`${style1.bottomButton}`}
-                               >
-                                
-                                 {card.booking_button.text}
-                               </Button></Link></>:null
-                              }
-                               
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-              </div>
-            </div>
-                                      {/* right side  cards */}
-
-            <div className="col-md-4 rightContainer">
-              <p className={`pb-1 ${style1.mainPara}`}>Featured</p>
-              <div className="col-md-12">
-                {dataright?.map((card) => {
-                  return (
-                    <div key={card.id} className={style1.carditems}>
-                      <Link href='/Booking'>
-                      <div className={style1.rightcard}>
-                        <img
-                          src={card.image_url}
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <img
-                    src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
-                    className={style1.dealimg}
-                  />
-                        <div className="card-body">
-                          <p className={style1.rightcardtitle}>{card.address}</p>
-                          <div className="row">
-                            <div className="col-md-6" align="left">
-                              <Rating
-                                name="read-only"
-                                value={card.average_rating}
-                                readOnly
-                              />
-                            </div>
-                            <div className="col-md-6" align="right">
-                              <h6>{card.bottomRightText}</h6>
-                            </div>
-                          </div>
-                        </div>
-                      </div></Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>	
+						<div className="col-md-4 rightContainer">
+							<p className={`pb-1 ${style1.mainPara}`}>Featured</p>
+							<div className="col-md-12">
+								{dataright?.map((card) => {
+									return (
+										<div key={card.id} className={style1.carditems}>
+											<Link href="/Booking">
+												<div className={style1.rightcard}>
+													<img
+														src={card.image_url}
+														className="card-img-top"
+														alt="..."
+													/>
+													<img
+														src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
+														className={style1.dealimg}
+													/>
+													<div className="card-body">
+														<p className={style1.rightcardtitle}>
+															{card.address}
+														</p>
+														<div className="row">
+															<div className="col-md-6" align="left">
+																<Rating
+																	name="read-only"
+																	value={card.average_rating}
+																	readOnly
+																/>
+															</div>
+															<div className="col-md-6" align="right">
+																<h6>{card.bottomRightText}</h6>
+															</div>
+														</div>
+													</div>
+												</div>
+											</Link>
+										</div>
+									);
+								})}
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</>
 	);
 }
