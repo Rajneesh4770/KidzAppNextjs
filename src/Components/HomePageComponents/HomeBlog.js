@@ -10,6 +10,30 @@ function Homeblog2() {
       setData(res.data.results);
     });
   }, []);
+
+//   useEffect(()=>{
+
+//   let lastKnownScrollPosition = 0;
+// let ticking = false;
+
+// function doAnimation(scrollPos) {
+// const el = document.getElementById('animate')
+// el.classList.add(  `${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow'}`)
+// }
+
+// document.addEventListener('scroll', (e) => {
+//   lastKnownScrollPosition = window.scrollY;
+
+//   if (!ticking) {
+//     window.requestAnimationFrame(() => {
+//       doAnimation(lastKnownScrollPosition);
+//       ticking = false;
+//     });
+
+//     ticking = true;
+//   }
+// });
+// },[])
   return (
     <>
       <section className={style.section1}>
@@ -21,13 +45,14 @@ function Homeblog2() {
             {data.map((item, i) => {
               return (
                 <div
+                id="animate"
                   key={item.id}
                   className={`${
                     i === 0 || i === 5 || i === 6
                       ? `col-lg-6 md-9 sm-12 ${style.bigcard}`
                       : `col-lg-3  ${style.smcard}`
                   }  col-sm-12 ${style.blogCardHome}      
-                  ${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft': 'animate__animated animate__backInRight'}`}
+                  ${i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow'}`}
                 >
                   <div className={`card ${style.card1} mb-4`}>
                     <img
