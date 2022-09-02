@@ -75,6 +75,12 @@
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
 }
+.scrolltrue{
+  visibility: show;
+}
+.scrollfalse{
+  visibility: hidden;
+}
 @media (max-width:1200px){
   .searchbarrow{
     width: 520px;

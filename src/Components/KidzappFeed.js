@@ -7,8 +7,8 @@ function KidzappFeed() {
     <>
       <section className="kidzappFeed py-5 ">
         <div className="container py-4">
-          <div className={`row ${style.row} ${style.globeRow}`}>
-            <div className={`col-lg-4 col-md-4 col-sm-12  ${style.column}`}>
+          <div className={`row ${style.row} ${style.globeRow} animate__animated animate__backInDown`}>
+            <div className={`col-lg-4 col-md-4 col-sm-12  ${style.column} `}>
               <img className={style.col1img} src="https://drfsb8fjssbd3.cloudfront.net/images/subsc-baby.png" alt="" />
             </div>
             <div className={`col-md-8  col-sm-12 p-2  ${style.col2}`}>
