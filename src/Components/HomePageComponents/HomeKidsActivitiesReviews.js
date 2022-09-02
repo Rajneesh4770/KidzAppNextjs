@@ -91,15 +91,15 @@ useEffect(()=>{
         <h1 className={style.heading}>{getResponseMessage(constants).kids_act_reviews_by_parents}</h1>
         {/* <h1 className={style.heading}>by Real Parents</h1> */}
       </center>
-      <div className={`${style.reviewComp} container`}>
-      <div className="row  mt-5">
+      <div className={`${style.reviewComp} container `}>
+      <div className={`row  mt-5 ${scroll? style.scrolltrue:style.scrollfalse} `}>
           <div className={`container `}>
             <Slider {...settings} className={style.cardsection}>
               {reviewData.map((slide, i) => {
                 return (
                   <div key={slide.id} 
                   className={`${i===1  ? style.index :style.index1 }
-                  ${scroll? 'animate__animated animate__backInLeft animate__slow' : style.scrollfalse }`}>
+                  ${scroll? 'animate__animated animate__backInDown ' : null }`}>
                     <div className={style.reviewcard} style={{ width: "18rem" }}>
                       <div className={style.cardbody}>
                       <img

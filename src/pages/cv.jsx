@@ -5,7 +5,7 @@ const cv = () => {
   return (
     <div style={{marginTop:'100px'}}>
         <div className='container'>
-      <center>  <Image src='/Rajneeshcv.jpg' width='1000' height='1200'></Image></center>
+      <center>  <Image src='/Rajneeshcv.jpg' width='1000' height='1250'></Image></center>
     </div>
     </div>
   )

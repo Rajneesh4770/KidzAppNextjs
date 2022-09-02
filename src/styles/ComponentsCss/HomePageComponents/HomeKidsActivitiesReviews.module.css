@@ -44,9 +44,12 @@
      overflow: hidden;
     
    }
-   .scrollfalse {
-    visibility: hidden !important;
-   }
+   .scrollfalse{
+    visibility: hidden;
+}
+.scrolltrue{
+    visibility: show;
+}
    .hr {
      border-bottom: 6px solid #00aff4;
      max-width: 30px;
