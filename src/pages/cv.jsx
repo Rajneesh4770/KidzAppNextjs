@@ -3,9 +3,9 @@ import React from 'react'
 
 const cv = () => {
   return (
-    <div style={{marginTop:'135px'}}>
+    <div style={{marginTop:'100px'}}>
         <div className='container'>
-        <Image src='/Rajneeshcv.jpg' width='1000' height='1200'></Image>
+      <center>  <Image src='/Rajneeshcv.jpg' width='1000' height='1200'></Image></center>
     </div>
     </div>
   )
