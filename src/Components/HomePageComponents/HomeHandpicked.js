@@ -115,13 +115,13 @@ function HomeHandpicked() {
     <div className={style.background}>
       {/* Headings */}
       <div className={`${style.headingDiv}`}>
-        <h1 className={`animate__animated animate__backInLeft animate__slow ${style.heading}`}>
+        <h1 className={`animate__animated animate__backInDown  ${style.heading}`}>
           {getResponseMessage(constants).find_best_place_uae}{" "}
         </h1>
         <h1 className={style.h1}>
           {getResponseMessage(constants).hand_pick_exp}
         </h1>
-        <p className={` animate__animated animate__backInRight animate__slow ${style.p}`}>
+        <p className={` animate__animated animate__backInDown  ${style.p}`}>
           {
             getResponseMessage(constants)
               .Our_pick_of_the_best_kids_activities_in_UAE
@@ -154,7 +154,7 @@ function HomeHandpicked() {
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
               <div className="container" key={item.id}>
-                <div className={`card animate__animated animate__backInLeft animate__slow ${style.card}`}>
+                <div className={`card animate__animated animate__backInDown animate__slow ${style.card}`}>
                   <img
                     className={`card-img-top ${style.cardimage}`}
                     src={item.image_url}
