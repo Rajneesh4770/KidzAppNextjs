@@ -10,6 +10,13 @@ import getResponseMessage from "../../Language/multilingualServices";
 import { constants } from "../Navbar";
 import Link from "next/link";
 function HomeKidzappolis() {
+const [scroll,setScroll]=useState(false);
+useEffect(()=>{
+  window.addEventListener("scroll",()=>{
+    setScroll(window.scrollY>1100);
+  });
+},[scroll]);
+  
   const settings = {
     dots: false,
     infinite: true,
@@ -139,6 +146,7 @@ function HomeKidzappolis() {
     });
   }, []);
   
+  
   return (
     <>
       <div className={style.body}>
@@ -182,14 +190,14 @@ function HomeKidzappolis() {
             </strong>
           </center>
           <br />
-          <div className={`${style.slider2} ${style.collectionSlider}`}>
+          <div className={`${style.slider2} ${style.collectionSlider} ${scroll? style.scrolltrue :style.scrollfalse}`}>
             <Slider {...settings2}>
               {data2.map((item1) => {
                 return(
                 <Link href='/SubKidzapproved'>
                 <div
                   key={item1.id}
-                  className={`collection-slides ${style.collectioncard}`}
+                  className={`collection-slides ${style.collectioncard} ${scroll? 'animate__animated animate__backInDown ': null}`}
                 >
                   <div className={style.imgtext}>
                     <div className={style.image}>

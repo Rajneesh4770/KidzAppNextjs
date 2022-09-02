@@ -20,6 +20,12 @@ element.style {
     width: 600px;
     margin: 0 auto;
 }
+.scrolltrue{
+    visibility: show;
+}
+.scrollfalse{
+    visibility: hidden;
+}
 
 /* new */
 .collectioncard{
