@@ -14,7 +14,7 @@ function Homeblog2() {
 
 useEffect(()=>{
   window.addEventListener("scroll", () => {
-    setScroll(window.scrollY > 1300);
+    setScroll(window.scrollY > 1400);
   });
 },[scroll])
   return (
