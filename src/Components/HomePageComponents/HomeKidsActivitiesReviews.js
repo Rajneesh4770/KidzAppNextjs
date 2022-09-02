@@ -64,6 +64,14 @@ function HomeKidsActivitiesReviews() {
     getReviewData();
   }, []);
 
+  const [scroll,setScroll]=useState(false);
+
+useEffect(()=>{
+  window.addEventListener("scroll", () => {
+    setScroll(window.scrollY > 2400);
+  });
+},[scroll])
+
   return (
     <div className={style.body}>
       <Head>
@@ -90,7 +98,8 @@ function HomeKidsActivitiesReviews() {
               {reviewData.map((slide, i) => {
                 return (
                   <div key={slide.id} 
-                  className={`${i===1  ? style.index :style.index1 }`}>
+                  className={`${i===1  ? style.index :style.index1 }
+                  ${scroll? 'animate__animated animate__backInLeft animate__slow' : style.scrollfalse }`}>
                     <div className={style.reviewcard} style={{ width: "18rem" }}>
                       <div className={style.cardbody}>
                       <img

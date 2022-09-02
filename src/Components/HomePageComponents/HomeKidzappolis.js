@@ -138,6 +138,7 @@ function HomeKidzappolis() {
       setData2(kidzaprovedCollections);
     });
   }, []);
+  
   return (
     <>
       <div className={style.body}>

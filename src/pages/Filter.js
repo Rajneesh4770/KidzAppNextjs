@@ -399,6 +399,7 @@ function FindActivities() {
                 {data &&
                   data?.map((card) => {
                     return (
+						<Link href={`/Booking?&filterid=${card.id}`}>
                       <div key={card.id} className="card-items">
                         <div className={style1.card}>
                           <div className="row no-gutters">
@@ -464,7 +465,7 @@ function FindActivities() {
                                 </div>
                                 {card.bookable? 
                                 <>
-                                <Link href='/Booking'>
+                                <Link href={card.website}>
                                  <Button
                                  size="small"
                                  variant="outlined"
@@ -480,7 +481,7 @@ function FindActivities() {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div></Link>
                     );
                   })}
               </div>
