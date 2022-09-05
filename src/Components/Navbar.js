@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../styles/Navbar.module.css";
 import Link from "next/link";
-import getResponseMessage from "../Language/multilingualServices";
+import getResponseMessage from "../language/multilingualServices";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import * as Yup from "yup";

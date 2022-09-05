@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeButton.module.css';
 import toast,{ Toaster } from 'react-hot-toast';
-import getResponseMessage from '../../Language/multilingualServices';
+import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';
 function HomeButton() {
   return (

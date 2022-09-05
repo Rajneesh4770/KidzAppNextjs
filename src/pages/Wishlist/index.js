@@ -1,9 +1,8 @@
-import { Rating } from '@mui/material';
-import { fontSize } from '@mui/system';
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import style from '../styles/WishList.module.css';
+import { Rating } from '@mui/material';
 import { FcLike } from 'react-icons/fc';
+
+import style from '../../styles/WishList.module.css';
 
 const WishList = () => {
 	return (

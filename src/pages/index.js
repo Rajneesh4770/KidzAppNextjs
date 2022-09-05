@@ -1,19 +1,19 @@
-import HomeHandpicked from "../Components/HomePageComponents/HomeHandpicked";
-import HomeKidzappolis from "../Components/HomePageComponents/HomeKidzappolis";
-import HomeKidsActivitiesReviews from "../Components/HomePageComponents/HomeKidsActivitiesReviews";
-import HomeAsfeature from "../Components/HomePageComponents/HomeAsfeature";
-import KidzappFeed from "../Components/KidzappFeed";
-import style from "../styles/Index.module.css";
-import HomeBlog from "../Components/HomePageComponents/HomeBlog";
-import axios, { Axios } from "axios";
+import React from "react";
+import axios from "axios";
 import { Carousel } from "react-bootstrap";
-import { Markup } from "interweave";
+
+import style from "../styles/Index.module.css";
+
+import HomeHandpicked from "../Components/Homepage/HomeHandpicked";
+import HomeKidzappolis from "../Components/Homepage/HomeKidzappolis";
+import HomeKidsActivitiesReviews from "../Components/Homepage/HomeKidsActivitiesReviews";
+import HomeAsfeature from "../Components/Homepage/HomeAsfeature";
+import KidzappFeed from "../Components/KidzappFeed";
+import HomeBlog from "../Components/Homepage/HomeBlog";
 import { HOME_CROUSEL_API } from "../services";
 
 export async function getStaticProps() {
-  let res = await axios.get(
-    HOME_CROUSEL_API
-  );
+  let res = await axios.get(HOME_CROUSEL_API);
   let props = {
     data: res?.data?.results,
   };
@@ -33,11 +33,15 @@ function index(props) {
                 alt="Image is not available"
               />
               <Carousel.Caption>
-                <h1 className={`animate__animated animate__backInDown ${style.crouselHeading}`}>{item.title}</h1>
-                 <p className={style.crouselParagraph}> {item.description}</p>
-                 {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
-               {/* <p>  <Markup  markup={item.description}/>  </p> */}
-                
+                <h1
+                  className={`animate__animated animate__backInDown ${style.crouselHeading}`}
+                >
+                  {item.title}
+                </h1>
+                <p className={style.crouselParagraph}> {item.description}</p>
+                {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
+                {/* <p>  <Markup  markup={item.description}/>  </p> */}
+
                 <button
                   className={`btn ${style.button}`}
                   onClick={() => toast("Successfully Booked")}

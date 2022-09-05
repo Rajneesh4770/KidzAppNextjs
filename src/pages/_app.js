@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../Components/Footer";
 import "../styles/globals.css";
 import { Provider } from "react-redux";
-import { store } from "../Redux/Store";
+import { store } from "../redux/Store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "slick-carousel/slick/slick.css";
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </Provider>
     </>

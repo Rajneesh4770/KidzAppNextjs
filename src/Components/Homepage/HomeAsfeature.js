@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../../styles/ComponentsCss/HomePageComponents/HomeAsfeature.module.css';
 import Slider from 'react-slick';
-import getResponseMessage from '../../Language/multilingualServices';
+import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';
 function HomeAsfeature() {
   const settings ={

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import getResponseMessage from "../../Language/multilingualServices";
+import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";

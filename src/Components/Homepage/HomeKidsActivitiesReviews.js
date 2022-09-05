@@ -4,8 +4,8 @@ import  {baseUrl}  from '../../config';
 import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';
-import HomeButton from "../HomePageComponents/HomeButton"
-import getResponseMessage from '../../Language/multilingualServices';
+import HomeButton from "../Homepage/HomeButton"
+import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';
 import Link from 'next/link';
 function HomeKidsActivitiesReviews() {

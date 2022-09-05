@@ -1,14 +1,11 @@
-import react,{useState} from 'react'
+import React, {useState} from 'react'
 import style from "../../src/styles/Booking.module.css";
-import Router from "next/router";
 import Link from "next/link";
 import { Button } from "@mui/material";
-import Slider from "react-slick";
 import { Rating, TextField } from "@mui/material";
-import Bookingreview from '../Components/BookingComponet/Bookingreview';
+import Bookingreview from '../Components/Booking/Bookingreview';
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../src/Redux/index'
-import { decrementAdult, incrementAdult } from '../../src/Redux/index'
+import { decrement, increment } from '../../src/redux/index'
 
 const Booking = () => {
     const count = useSelector((state) => state.counter.value)

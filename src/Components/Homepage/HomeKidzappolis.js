@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
-import getResponseMessage from "../../Language/multilingualServices";
+import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
 import Link from "next/link";
 function HomeKidzappolis() {

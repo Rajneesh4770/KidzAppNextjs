@@ -1,11 +1,12 @@
-import style from '../styles/Getintouch.module.css';
 import { FormLabel, TextField, Button, Box } from '@mui/material';
-import KidzappFeed from '../../src/Components/KidzappFeed';
-import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import Image from 'next/image';
-import Recaptcha from '../Components/Recaptcha';
+
+import style from '../../styles/Getintouch.module.css';
+import KidzappFeed from '../../Components/KidzappFeed';
+import Recaptcha from '../../Components/Recaptcha';
+import getInTouchValidation from '../../schema/getInTouchValidation';
 
 function Getintouch() {
 
@@ -17,25 +18,6 @@ function Getintouch() {
     message: ''
   }
 
-  const validationSchema = Yup.object({
-    firstName: Yup.string()
-      .required('**Required'),
-
-    lastName: Yup.string()
-      .required('**Required'),
-
-    email: Yup.string()
-      .email('Invalid email format')
-      .required('**Required'),
-
-    subject: Yup.string()
-      .required('**Required'),
-
-    message: Yup.string()
-      .required('**Required')
-
-  })
-
 
   const onSubmit = () => {
     toast.success('Register successfully')
@@ -44,7 +26,7 @@ function Getintouch() {
   const formik = useFormik({
     initialValues,
     onSubmit,
-    validationSchema,
+    validationSchema: getInTouchValidation,
   })
 
   return (
