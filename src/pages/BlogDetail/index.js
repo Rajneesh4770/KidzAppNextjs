@@ -3,8 +3,8 @@ import Link from "next/link";
 import React from "react";
 
 import { baseUrl } from "../../config";
-import style from "../../styles/BlogDetail.module.css";
-import style1 from "../../styles/Booking.module.css";
+import style from "./style.module.css";
+import bookingStyle from "../../styles/Booking.module.css";
 
 const BlogDetails = (props) => {
   // const data = [
@@ -171,7 +171,7 @@ const BlogDetails = (props) => {
                     </div>
                     <div className="row">
                       <button
-                        className={`${style1.blog_rating} ${style.CardButton}`}
+                        className={`${bookingStyle.blog_rating} ${style.CardButton}`}
                       >
                         Read More
                       </button>
@@ -212,7 +212,7 @@ const BlogDetails = (props) => {
                     <div className="row">
                       <Link href={item.checkout_link}>
                         <button
-                          className={`${style1.blog_rating} ${style.CardButton}`}
+                          className={`${bookingStyle.blog_rating} ${style.CardButton}`}
                         >
                           {item.checkout_text}
                         </button>

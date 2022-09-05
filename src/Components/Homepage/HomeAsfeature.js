@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../styles/ComponentsCss/HomePageComponents/HomeAsfeature.module.css';
+import style from './styles/HomeAsfeature.module.css';
 import Slider from 'react-slick';
 import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';

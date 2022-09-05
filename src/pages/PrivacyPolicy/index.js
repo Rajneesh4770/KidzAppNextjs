@@ -1,14 +1,17 @@
-import style from "../../styles/PrivacyPolicy.module.css";
+import React from 'react';
+
+import style from "./style.module.css";
 import KidzappFeed from "../../Components/KidzappFeed";
+
 function PrivacyPolicy() {
   return (
     <>
-<section className={style.section1}>
+      <section className={style.section1}>
         <div className="container-flex">
           <div className="row">
             <div className="col-12 p-0">
               <div className={style.topbackground}>
-              <h1 className={style.mainheading}>Kidzapp Privacy Policy</h1>
+                <h1 className={style.mainheading}>Kidzapp Privacy Policy</h1>
               </div>
             </div>
           </div>
@@ -19,8 +22,6 @@ function PrivacyPolicy() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              
-
               <p className={style.paragraph1}>
                 This is the privacy and cookies policy for www.Kidzapp.com and
                 the Kidzapp application. For the purposes of this privacy
@@ -291,11 +292,9 @@ function PrivacyPolicy() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-                      <KidzappFeed/>
+              <KidzappFeed />
             </div>
-
           </div>
-
         </div>
       </section>
     </>

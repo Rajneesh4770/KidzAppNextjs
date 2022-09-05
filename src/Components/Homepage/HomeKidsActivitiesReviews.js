@@ -1,13 +1,14 @@
 import React,{useState,useEffect} from 'react';
-import style from '../../styles/ComponentsCss/HomePageComponents/HomeKidsActivitiesReviews.module.css';
-import  {baseUrl}  from '../../config';
-import Head from 'next/head';
 import Slider from 'react-slick';
 import axios from 'axios';
-import HomeButton from "../Homepage/HomeButton"
+import Link from 'next/link';
+
+import style from './styles/HomeKidsActivitiesReviews.module.css';
+import  {baseUrl}  from '../../config';
+import Head from 'next/head';
 import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';
-import Link from 'next/link';
+
 function HomeKidsActivitiesReviews() {
   const settings = {
     infinite: true,

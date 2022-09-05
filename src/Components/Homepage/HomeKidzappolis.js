@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
-import style from "../../styles/ComponentsCss/HomePageComponents/HomeKidzappolis.module.css";
-import { baseUrl } from "../../config";
 import axios from "axios";
 import Slider from "react-slick";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
+import Link from "next/link";
+import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
+
+import style from "./styles/HomeKidzappolis.module.css";
+import { baseUrl } from "../../config";
+
 import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
-import Link from "next/link";
+
 function HomeKidzappolis() {
-const [scroll,setScroll]=useState(false);
-useEffect(()=>{
-  window.addEventListener("scroll",()=>{
-    setScroll(window.scrollY>1100);
-  });
-},[scroll]);
-  
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 1100);
+    });
+  }, [scroll]);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -28,12 +31,12 @@ useEffect(()=>{
     autoplaySpeed: 3000,
     prevArrow: (
       <Typography className={style.typography}>
-        <ArrowBackIosNewIcon className={style.backarrow} />
+        <ArrowBackIosNew className={style.backarrow} />
       </Typography>
     ),
     nextArrow: (
       <Typography className={style.typography}>
-        <ArrowForwardIosIcon className={style.forwardarrow} />
+        <ArrowForwardIos className={style.forwardarrow} />
       </Typography>
     ),
     responsive: [
@@ -114,7 +117,7 @@ useEffect(()=>{
   useEffect(() => {
     axios.get(baseUrl + "categories?country_code=ae").then((res) => {
       setData(res.data);
-      console.log('kidzappolis circle',res.data)
+      console.log("kidzappolis circle", res.data);
     });
   }, []);
   const [data2, setData2] = useState([]);
@@ -145,8 +148,7 @@ useEffect(()=>{
       setData2(kidzaprovedCollections);
     });
   }, []);
-  
-  
+
   return (
     <>
       <div className={style.body}>
@@ -166,13 +168,16 @@ useEffect(()=>{
                   {data.map((item) => (
                     <div key={item.id}>
                       <Link href={`/Filter?&olisid=${item.id}`}>
-                      <div className={`item ${style.activityBox}`}>
-                        <img
-                          className={style.activityBoxImage}
-                          src={item.image_url}
-                        />
-                        <p className={style.activityBoxHeading}>{item.name}</p>
-                      </div></Link>
+                        <div className={`item ${style.activityBox}`}>
+                          <img
+                            className={style.activityBoxImage}
+                            src={item.image_url}
+                          />
+                          <p className={style.activityBoxHeading}>
+                            {item.name}
+                          </p>
+                        </div>
+                      </Link>
                     </div>
                   ))}
                 </Slider>
@@ -190,29 +195,41 @@ useEffect(()=>{
             </strong>
           </center>
           <br />
-          <div className={`${style.slider2} ${style.collectionSlider} ${scroll? style.scrolltrue :style.scrollfalse}`}>
+          <div
+            className={`${style.slider2} ${style.collectionSlider} ${
+              scroll ? style.scrolltrue : style.scrollfalse
+            }`}
+          >
             <Slider {...settings2}>
               {data2.map((item1) => {
-                return(
-                <Link href='/SubKidzapproved'>
-                <div
-                  key={item1.id}
-                  className={`collection-slides ${style.collectioncard} ${scroll? 'animate__animated animate__backInDown ': null}`}
-                >
-                  <div className={style.imgtext}>
-                    <div className={style.image}>
-                      <img className="" src={item1.thumbnail_url} alt=".." />
-                      <span className={style.collectioncardtext}>
-                        {item1.name}
-                      </span>
+                return (
+                  <Link href="/SubKidzapproved">
+                    <div
+                      key={item1.id}
+                      className={`collection-slides ${style.collectioncard} ${
+                        scroll ? "animate__animated animate__backInDown " : null
+                      }`}
+                    >
+                      <div className={style.imgtext}>
+                        <div className={style.image}>
+                          <img
+                            className=""
+                            src={item1.thumbnail_url}
+                            alt=".."
+                          />
+                          <span className={style.collectioncardtext}>
+                            {item1.name}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                </Link>
-)})}
+                  </Link>
+                );
+              })}
             </Slider>
           </div>
-        </div><br/>
+        </div>
+        <br />
       </div>
     </>
   );

@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
+import { Toaster } from "react-hot-toast";
+import {ArrowBackIos, ArrowForwardIos} from "@mui/icons-material";
+import Slider from "react-slick";
+import { Typography, Rating } from "@mui/material";
+
 import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
-import toast, { Toaster } from "react-hot-toast";
-import axios from "axios";
 import { baseUrl } from "../../config";
-import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
-import Slider from "react-slick";
-import style from "../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css";
-import { Typography, Rating } from "@mui/material";
+import style from "./styles/HomeHandpicked.module.css";
+
 function HomeHandpicked() {
   const settings = {
     dots: false,
@@ -19,7 +20,7 @@ function HomeHandpicked() {
     slidesToScroll: 1,
     prevArrow: (
       <Typography className={style.typography}>
-        <ArrowBackIosNew className={style.backarrow} />
+        <ArrowBackIos className={style.backarrow} />
       </Typography>
     ),
     nextArrow: (
@@ -58,7 +59,7 @@ function HomeHandpicked() {
 
   useEffect(() => {
     axios
-      .get(baseUrl+"lists?country_code=ae")
+      .get(baseUrl + "lists?country_code=ae")
       .then((res) => {
         setData(res.data);
       })
@@ -95,12 +96,13 @@ function HomeHandpicked() {
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
     axios
-      .get(baseUrl+
-        `experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
+      .get(
+        baseUrl +
+          `experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
       )
       .then((res) => {
         setResData1(res.data.results);
-        console.log("Homehandpic card ",res.data.results)
+        console.log("Homehandpic card ", res.data.results);
       })
       .catch((err) => {
         console.log(err);
@@ -115,7 +117,9 @@ function HomeHandpicked() {
     <div className={style.background}>
       {/* Headings */}
       <div className={`${style.headingDiv}`}>
-        <h1 className={`animate__animated animate__backInDown  ${style.heading}`}>
+        <h1
+          className={`animate__animated animate__backInDown  ${style.heading}`}
+        >
           {getResponseMessage(constants).find_best_place_uae}{" "}
         </h1>
         <h1 className={style.h1}>
@@ -154,11 +158,13 @@ function HomeHandpicked() {
           <Slider className={style.mainslider} {...settings1}>
             {resData1?.map((item) => (
               <div className="container" key={item.id}>
-                <div className={`card animate__animated animate__backInDown animate__slow ${style.card}`}>
+                <div
+                  className={`card animate__animated animate__backInDown animate__slow ${style.card}`}
+                >
                   <img
                     className={`card-img-top ${style.cardimage}`}
                     src={item.image_url}
-                  alt='Loading..... please wait'
+                    alt="Loading..... please wait"
                   />
                   <img
                     src="https://drfsb8fjssbd3.cloudfront.net/images/Deal.svg"
@@ -187,12 +193,23 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
-                      {item.booking_required?
-                      <Link href={`/Booking?&id=${item.id}`}>
-                      <button className="btn  float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
-                    </Link>:
-                   <button className="btn  disabled float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
-                    }
+                      {item.booking_required ? (
+                        <Link href={`/Booking?&id=${item.id}`}>
+                          <button
+                            className="btn  float-end"
+                            id={item.booking_button.id}
+                          >
+                            {item.booking_button.text}
+                          </button>
+                        </Link>
+                      ) : (
+                        <button
+                          className="btn  disabled float-end"
+                          id={item.booking_button.id}
+                        >
+                          {item.booking_button.text}
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -215,7 +232,5 @@ function HomeHandpicked() {
     </div>
   );
 }
-
-
 
 export default HomeHandpicked;

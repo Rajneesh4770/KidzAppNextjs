@@ -2,7 +2,7 @@ import React from 'react';
 import { Rating } from '@mui/material';
 import { FcLike } from 'react-icons/fc';
 
-import style from '../../styles/WishList.module.css';
+import style from './style.module.css';
 
 const WishList = () => {
 	return (

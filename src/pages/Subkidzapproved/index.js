@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import style from "../../styles/SubKidzapproved.module.css";
+import style from "./style.module.css";
 
 const SubKidzapproved = () => {
   const [data, setData] = useState([]);

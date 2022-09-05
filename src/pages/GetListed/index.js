@@ -6,7 +6,7 @@ import axios from "axios";
 import KidzappFeed from "../../Components/KidzappFeed";
 import Recaptcha from "../../Components/Recaptcha";
 import Map from "../../Components/Map";
-import style from "../../styles/GetListed.module.css";
+import style from "./style.module.css";
 import validationSchema from '../../schema/getListedValidation';
 
 function Getintouch() {

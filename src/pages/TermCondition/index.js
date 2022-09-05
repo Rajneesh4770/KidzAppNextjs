@@ -1,5 +1,6 @@
 import React from "react";
-import style from "../../styles/TermCondition.module.css";
+
+import style from "./style.module.css";
 
 const TermCondition = () => {
   return (

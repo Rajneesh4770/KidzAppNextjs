@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 
-import style from "../../styles/Handpicked.module.css";
+import style from "./style.module.css";
 
 const Handpicked = () => {
   const [title, settitle] = useState([]);

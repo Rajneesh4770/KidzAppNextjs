@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "../../styles/ComponentsCss/HomePageComponents/HomeBlog.module.css";
+import style from "./styles/HomeBlog.module.css";
 import { baseUrl } from "../../config";
 import axios from "axios";
 import Link from "next/link";
