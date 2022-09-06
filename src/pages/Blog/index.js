@@ -20,6 +20,7 @@ import KidzappFeed from "../../Components/KidzappFeed";
 function Blog() {
   const [loader, setLoader] = useState(false);
   const [data, setData] = useState([]);
+  const [categories, setCategory] = useState([]);
   const [pageindex, setPageindex] = useState(9);
 
   useEffect(() => {
@@ -39,7 +40,6 @@ function Blog() {
   const getData = () => {
     Axios.get(baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=2`)
       .then((res) => {
-        console.log("Blog cards Data", res.data.results);
         setData(res.data.results);
         setLoader(true);
       })
@@ -48,7 +48,21 @@ function Blog() {
       });
   };
 
+  const gitBlogCategory = () => {
+    
+    Axios.get(baseUrl + `blogs/categories?country_code=ae`)
+    .then((res) => {
+      console.log("res.data.results", res.data)
+      setCategory(res.data);
+      setLoader(true);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
   useEffect(() => {
+    gitBlogCategory();
     getData();
   }, [pageindex]);
 
@@ -100,26 +114,15 @@ function Blog() {
 
           <div className="container">
             <div className="row">
+            {categories?.map((category) => {
+              return (
               <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
                 <button className={styles.button85} role="button">
-                  Arts & Crafts &nbsp; <BubbleChart />
+                  {category.internal_name} <BubbleChart />
                 </button>
               </div>
-              <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
-                <button className={styles.button85} role="button">
-                  Kids Activities &nbsp; <Stadium />
-                </button>
-              </div>
-              <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
-                <button className={styles.button85} role="button">
-                  Parenting &nbsp; <BabyChangingStation />
-                </button>
-              </div>
-              <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
-                <button className={styles.button85} role="button">
-                  Health&Nutri.. &nbsp; <HealthAndSafety />
-                </button>
-              </div>
+             );
+            })}
             </div>
           </div>
           <br />
