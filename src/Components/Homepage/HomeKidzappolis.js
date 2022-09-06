@@ -120,7 +120,7 @@ function HomeKidzappolis() {
       console.log("kidzappolis circle", res.data);
     });
   }, []);
-  const [data2, setData2] = useState([]);
+  const [activityCategory, setActivityCategory] = useState([]);
   useEffect(() => {
     axios.get(baseUrl + "lists?country_code=ae").then((res) => {
       let kidzaprovedCollections = [];
@@ -145,7 +145,7 @@ function HomeKidzappolis() {
           }
         }
       }
-      setData2(kidzaprovedCollections);
+      setActivityCategory(kidzaprovedCollections);
     });
   }, []);
 
@@ -201,7 +201,7 @@ function HomeKidzappolis() {
             }`}
           >
             <Slider {...settings2}>
-              {data2.map((item1) => {
+              {activityCategory.map((item1) => {
                 return (
                   <Link href="/SubKidzapproved">
                     <div

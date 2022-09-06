@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Carousel } from "react-bootstrap";
+import Link from 'next/link';
+
 import style from "../styles/Index.module.css";
 import HomeHandpicked from "../Components/Homepage/HomeHandpicked";
 import HomeKidzappolis from "../Components/Homepage/HomeKidzappolis";
@@ -25,11 +27,13 @@ function index(props) {
         {props.data.map((item) => {
           return (
             <Carousel.Item key={item.id}>
+            <Link href="/Booking">
               <img
                 className={style.crouselImages}
                 src={item.image_url}
                 alt="Image is not available"
               />
+              </Link>
               <Carousel.Caption>
                 <h1
                   className={`animate__animated animate__wobble ${style.crouselHeading}`}
@@ -39,15 +43,21 @@ function index(props) {
                 <p className={style.crouselParagraph}> {item.description}</p>
                 {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
                 {/* <p>  <Markup  markup={item.description}/>  </p> */}
-
-                <button
-                  className={`btn ${style.button}`}
-                  onClick={() => toast("Successfully Booked")}
-                >
-                  Book Now
-                </button>
+                {item.backend_booking ? (
+                    <Link href={`/Booking?&id=${item.id}`}>
+                      <button className={`btn ${style.button}`} >  Book Now</button>
+                    </Link>
+                  ) : (
+                    <Link href={item.booking_url}>
+                      <button className={`btn ${style.button}`}>
+                        Book Now
+                      </button>
+                    </Link>
+                  )}
+                
               </Carousel.Caption>
             </Carousel.Item>
+            
           );
         })}
         ;

@@ -145,7 +145,6 @@ const Header = (props) => {
 
   useEffect(()=>{
     setStatus( localStorage.getItem('access_token') )
-    console.log(status,'status')
     
   },[myData])
 
@@ -230,10 +229,10 @@ const Header = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <nav class={`navbar navbar-expand-lg  ${style.nav2} `}>
+                <nav className={`navbar navbar-expand-lg  ${style.nav2} `}>
                   <div className="container-fluid p-1">
                     <Link href="/">
-                      <a className="navbar-brand" className={style.navlogo1}>
+                      <a className={`${style.navlogo1} navbar-brand`}>
                         <img
                           className={`animate__animated animate__zoomIn 	 ${style.navlogo}`}
                           src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
@@ -257,7 +256,7 @@ const Header = (props) => {
                       className="collapse navbar-collapse"
                       id="navbarSupportedContent"
                     >
-                      <ul class={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
+                      <ul className={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
                         <Link href="/Filter">
                           <li className="nav-item">
                             <a
