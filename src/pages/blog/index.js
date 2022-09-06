@@ -114,7 +114,7 @@ function Blog(props) {
             {categories?.map((category, index) => {
               return (
               <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div" key={index}>
-                <button className={styles.button85} role="button" onClick={() => selectCategory(category.name)}>
+                <button className={styles.button85} role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title={`See all the blogs of ${category.internal_name}`} onClick={() => selectCategory(category.name)}>
                   {category.internal_name} <BubbleChart />
                 </button>
                 
