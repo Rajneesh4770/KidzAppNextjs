@@ -28,7 +28,6 @@ function Blog(props) {
 
 
   const getBLogList = (selectedCategoryName = '') => {
-    console.log('>>>>categoryName', categoryName);
     const categoryName = selectedCategoryName  || '';
     const countryCode = 'ae';
     const pageSize = 6;
