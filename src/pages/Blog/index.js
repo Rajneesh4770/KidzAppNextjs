@@ -1,50 +1,45 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
-import Axios from "axios";
 import Link from "next/link";
 import { Button, Stack, CircularProgress } from "@mui/material";
 import {
   BubbleChart,
-  Stadium,
-  BabyChangingStation,
-  HealthAndSafety,
   ArrowBack,
   DateRange,
   AccountCircle,
 } from "@mui/icons-material";
+import { connect } from 'react-redux';
+import InfiniteScroll from "react-infinite-scroll-component";
 
-import { baseUrl } from "../../config";
 import styles from "./style.module.css";
 import KidzappFeed from "../../Components/KidzappFeed";
+import { BlogAction } from '../../redux/actions'
 
-function Blog() {
+function Blog(props) {
   const [loader, setLoader] = useState(true);
   const [data, setData] = useState([]);
+
   const [categories, setCategory] = useState([]);
-  const [pageindex, setPageindex] = useState(9);
+  const [pageIndex, setPageIndex] = useState(1);
+
   const selectCategory = (name) => {
-    getData(name);
+    getBLogList(name);
   }
 
-  useEffect(() => {
-    const scroll = (event) => {
-      if (window.scrollY > 400) {
-        setPageindex(pageindex + 3);
-      }
-      if (window.scrollY > 1200) {
-        setPageindex(pageindex + 6);
-      }
-      console.log(window.scrollY);
-    };
-    window.addEventListener("scroll", scroll, false);
-    return () => window.removeEventListener("scroll", scroll, false);
-  }, []);
 
-  const getData = (selectedCategoryName = '') => {
-    let categoryName = selectedCategoryName || ''
-    Axios.get(baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=1&category=${categoryName}`)
+  const getBLogList = (selectedCategoryName = '') => {
+    console.log('>>>>categoryName', categoryName);
+    const categoryName = selectedCategoryName  || '';
+    const countryCode = 'ae';
+    const pageSize = 6;
+
+    props.blogList(pageIndex, pageSize, countryCode, categoryName)
       .then((res) => {
-        setData(res.data.results);
+        if(data.length && res.data.results.length && !selectedCategoryName.length) {
+          setData(data.concat(res.data.results));
+        }
+        else setData(res.data.results);
+
         setLoader(false);
       })
       .catch((error) => {
@@ -52,15 +47,11 @@ function Blog() {
       });
   };
 
-
-
-  const gitBlogCategory = () => {
-    
-    Axios.get(baseUrl + `blogs/categories?country_code=ae`)
+  const getBlogCategory = () => {
+    props.blogCategories('ae')
     .then((res) => {
-      console.log("res.data.results", res.data)
-      setCategory(res.data);
-      setLoader(true);
+      setCategory(res);
+      setLoader(false);
     })
     .catch((error) => {
       console.log(error);
@@ -68,9 +59,13 @@ function Blog() {
   }
 
   useEffect(() => {
-    gitBlogCategory();
-    getData();
-  }, [pageindex]);
+    getBlogCategory();
+    getBLogList();
+  }, []);
+
+  useEffect(() => {
+    getBLogList();
+  }, [pageIndex]);
 
   return (
     <div className={styles.blogBody}>
@@ -117,9 +112,9 @@ function Blog() {
 
           <div className="container">
             <div className="row">
-            {categories?.map((category) => {
+            {categories?.map((category, index) => {
               return (
-              <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
+              <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div" key={index}>
                 <button className={styles.button85} role="button" onClick={() => selectCategory(category.name)}>
                   {category.internal_name} <BubbleChart />
                 </button>
@@ -154,62 +149,70 @@ function Blog() {
         ) : null}
 
         <div className="container">
+            <InfiniteScroll
+              dataLength={data.length}
+              next={() => setPageIndex(pageIndex + 3)}
+              hasMore={true}
+            >
           <div className="row">
-            {data?.map((item) => {
-              return (
-                <Link href="/BlogDetail">
-                  <div className="col-lg-4 col-md-6 col-sm-6" key={item.id}>
-                    <div className=" m-2">
-                      <article className={` ${styles.blogcard}`}>
-                        <div className={styles.blogcardbackground}>
-                          <div className={styles.cardbackgroundwrapper}>
-                            <div className={styles.cardbackgroundmain}>
-                              <img src={item.cover_image} />
-                              <div className={styles.cardbackgroundlayer}>
-                                <img
-                                  className={styles.cardimg}
-                                  src={item.cover_image}
-                                />
+
+              {data?.map((item, index) => {
+                return (
+                  <Link href="/BlogDetail" key={index}>
+                    <div className="col-lg-4 col-md-6 col-sm-6" key={item.id}>
+                      <div className=" m-2">
+                        <article className={` ${styles.blogcard}`}>
+                          <div className={styles.blogcardbackground}>
+                            <div className={styles.cardbackgroundwrapper}>
+                              <div className={styles.cardbackgroundmain}>
+                                <img src={item.cover_image} />
+                                <div className={styles.cardbackgroundlayer}>
+                                  <img
+                                    className={styles.cardimg}
+                                    src={item.cover_image}
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div className={styles.blogcardhead}></div>
-                        <div className={styles.blogcardinfo}>
-                          <h5 className={styles.title}>
-                            {" "}
-                            {item.meta_title}
-                          </h5>
-                          <br />
-                          <DateRange className={styles.icons} /> &nbsp;{" "}
-                          <span className={styles.iconsText}>
-                            {item.created_at}{" "}
-                          </span>
-                          <br />
-                          <AccountCircle className={styles.icons} /> &nbsp;
-                          <span className={styles.iconsText}>
-                            {item.auther_name}
-                          </span>
-                          <br />
-                          <br />
-                          <p className={styles.bodyapi}>{item.excerpt}</p>
-                          <a
-                            href="#"
-                            className={`${styles.btncard} ${styles.btnwithicon}`}
-                          >
-                            <i
-                              className={`${styles.btnicon} btn-icon fa fa-long-arrow-right `}
-                            ></i>
-                            READ MORE
-                          </a>
-                        </div>
-                      </article>
+                          <div className={styles.blogcardhead}></div>
+                          <div className={styles.blogcardinfo}>
+                            <h5 className={styles.title}>
+                              {" "}
+                              {item.meta_title}
+                            </h5>
+                            <br />
+                            <DateRange className={styles.icons} /> &nbsp;{" "}
+                            <span className={styles.iconsText}>
+                              {item.created_at}{" "}
+                            </span>
+                            <br />
+                            <AccountCircle className={styles.icons} /> &nbsp;
+                            <span className={styles.iconsText}>
+                              {item.auther_name}
+                            </span>
+                            <br />
+                            <br />
+                            <p className={styles.bodyapi}>{item.excerpt}</p>
+                            <a
+                              href="#"
+                              className={`${styles.btncard} ${styles.btnwithicon}`}
+                            >
+                              <i
+                                className={`${styles.btnicon} btn-icon fa fa-long-arrow-right `}
+                              ></i>
+                              READ MORE
+                            </a>
+                          </div>
+                        </article>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              );
-            })}
+                  </Link>
+                );
+              })}
           </div>
+
+            </InfiniteScroll>
         </div>
       </div>
 
@@ -222,4 +225,9 @@ function Blog() {
   );
 }
 
-export default Blog;
+const mapDispatchToProps = {
+  blogCategories: BlogAction.blogCategories,
+  blogList: BlogAction.blogList,
+};
+
+export default connect(null, mapDispatchToProps)(Blog);
