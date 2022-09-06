@@ -1,108 +1,48 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import axios from "axios";
 import { Toaster } from "react-hot-toast";
-import {ArrowBackIos, ArrowForwardIos} from "@mui/icons-material";
 import Slider from "react-slick";
-import { Typography, Rating } from "@mui/material";
+import { Rating } from "@mui/material";
+import { connect } from 'react-redux';
 
 import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
-import { baseUrl } from "../../config";
 import style from "./styles/HomeHandpicked.module.css";
+import { ExperienceAction } from "../../redux/actions";
+import { experienceCategoriesSliderSettings, experienceCuratedListSettings } from "../../config/slickerSettings";
 
-function HomeHandpicked() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    prevArrow: (
-      <Typography className={style.typography}>
-        <ArrowBackIos className={style.backarrow} />
-      </Typography>
-    ),
-    nextArrow: (
-      <Typography className={style.typography}>
-        <ArrowForwardIos className={style.forwardarrow} />
-      </Typography>
-    ),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          dots: false,
-          slidesToShow: 3,
-          arrows: false,
-          autoplay: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          dots: false,
-          slidesToShow: 2,
-          arrows: false,
-          autoplay: true,
-        },
-      },
-    ],
-  };
-  const [data, setData] = useState([]);
+function HomeHandpicked(props) {
+  
+  const [experienceCategories, setExperienceCategories] = useState([]);
+  const [newlanguage, setNewlanguage] = useState(constants);
+  const [experienceCuratedList, setExperienceCuratedList] = useState([]);
+  const [activeTab, setActiveTab] = useState("hearts_day_fun");
 
   useEffect(() => {
-    axios
-      .get(baseUrl + "lists?country_code=ae")
+    const query = {
+      country_code: 'ae',
+    };
+
+    props
+      .experienceCategories(query)
       .then((res) => {
-        setData(res.data);
+        setExperienceCategories(res);
       })
       .catch((err) => console.log(err, "error"));
   }, []);
 
-  const settings1 = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-  const [newlanguage, setNewlanguage] = useState(constants);
-  const [experiences, setExperiences] = useState([]);
-  const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
-    axios
-      .get(
-        baseUrl +
-          `experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
-      )
-      .then((res) => {
-        setExperiences(res.data.results);
-        console.log("Homehandpic card ", res.data.results);
+    const query = {
+      list_name: activeTab,
+      page: 1,
+      page_size: 10,
+      website: 1,
+    };
+
+    props
+      .experienceCuratedList(query)
+      .then((data) => {
+        setExperienceCuratedList(data.results);
       })
       .catch((err) => {
         console.log(err);
@@ -115,7 +55,6 @@ function HomeHandpicked() {
 
   return (
     <div className={style.background}>
-      {/* Headings */}
       <div className={`${style.headingDiv}`}>
         <h1
           className={`animate__animated animate__backInLeft  ${style.heading}`}
@@ -134,8 +73,8 @@ function HomeHandpicked() {
       </div>
       <div className={`container modifiedSlickBtn ${style.buttonRow}`}>
         <div className="row">
-          <Slider {...settings}>
-            {data?.map((item) => (
+          <Slider {...experienceCategoriesSliderSettings}>
+            {experienceCategories?.map((item) => (
               <div className="col-lg-12" key={item.id}>
                 <div className={style.buttondiv} key={item.id}>
                   <button
@@ -155,10 +94,9 @@ function HomeHandpicked() {
 
       <div className={`container ${style.card1}`}>
         <div className="row">
-          <Slider className={style.mainslider} {...settings1}>
-            {experiences?.map((item) => (
-                        <Link href={`/Booking?&id=${item.id}`}>
-
+          <Slider className={style.mainslider} {...experienceCuratedListSettings}>
+            {experienceCuratedList.map((item) => (
+              <Link href={`/Booking?&id=${item.id}`}>
               <div className="container" key={item.id}>
                 <div
                   className={`card animate__animated animate__backInDown animate__slow ${style.card}`}
@@ -227,4 +165,9 @@ function HomeHandpicked() {
   );
 }
 
-export default HomeHandpicked;
+const mapDispatchToProps = {
+  experienceCategories: ExperienceAction.experienceCategories,
+  experienceCuratedList: ExperienceAction.curatedList,
+};
+
+export default connect(null, mapDispatchToProps)(HomeHandpicked);
