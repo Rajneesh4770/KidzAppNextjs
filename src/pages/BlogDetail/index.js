@@ -4,56 +4,9 @@ import React from "react";
 
 import { baseUrl } from "../../config";
 import style from "./style.module.css";
-import bookingStyle from "../../styles/Booking.module.css";
 
 const BlogDetails = (props) => {
-  // const data = [
-  //   {
-  //     id: 1,
-  //     mainHeading: "BOUNCE Summer Offer",
-  //     detail:
-  //       "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
-  //    cardImg:
-  //       "https://images.kidzapp.com/media/CACHE/images/venues/d40837f4-9b9e-436b-8730-e0cec1a1f421/bounce-x-summer-offer.jpeg",
-  //     location: "BOUNCE",
-  //     workingHours: "Sun-Thu 10:00 to 23:00, Fri-Sat until 00:00",
-  //     prices: "1 Child : AED 120",
-  //   },
-  //   {
-  //     id: 2,
-  //     mainHeading: "Up to 20% off Entry at Air Maniax",
-  //     detail:
-  //       "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
-  //     cardImg:
-  //       "https://images.kidzapp.com/media/CACHE/images/venues/2f6f9b2e-39be-4a29-8219-1c284fe8c9aa/up-to-20-off-entry-at-air-maniax-dubai.jpg",
-  //     location: "Air Maniax, Al Quoz",
-  //     workingHours: "Mon-Fri 9:00 to 22:00, Sat-Sun from 10:00",
-  //     prices: "1hr General Access : AED 85 ",
-  //   },
-  //   {
-  //     id: 3,
-  //     mainHeading: "TR88HOUSE Family Entertainment Center",
-  //     detail:
-  //     "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
-
-  //     cardImg:
-  //       "https://images.kidzapp.com/media/CACHE/images/venues/66183f7e-210b-4874-94ba-8a52a884f37a/tr88house-family-entertainment-center.jpeg",
-  //     location: "No. EB1, Entrance 8 - Bluewaters Island - Dubai",
-  //     workingHours: "Daily from 10:00 (see details in description)",
-  //     prices: "Skyfall Trampoline",
-  //   },
-  //   {
-  //     id: 4,
-  //     mainHeading: "Aqua Parks Leisure",
-  //     detail:
-  //       "Bounce over to Bounce (excuse the pun) to enjoy their Summer Offer on their best-selling ticket: the 2-Hour Superpass.",
-  //     cardImg:
-  //       "https://images.kidzapp.com/media/CACHE/images/venues/06f03fbd-c981-4351-b1e1-53faba1ecf0e/aqua-parks-leisure.jpeg",
-  //     location: "Kite Beach, Umm Suqqueim 2, Dubai",
-  //     workingHours: "Daily 08:30 to sunset",
-  //     prices: "1 Hour + 1 Hour FREE : AED 60",
-  //   },
-  // ];
+  
 
   const secondViewData = [
     {
