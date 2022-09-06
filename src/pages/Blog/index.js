@@ -22,6 +22,9 @@ function Blog() {
   const [data, setData] = useState([]);
   const [categories, setCategory] = useState([]);
   const [pageindex, setPageindex] = useState(9);
+  const selectCategory = (name) => {
+    getData(name);
+  }
 
   useEffect(() => {
     const scroll = (event) => {
@@ -37,8 +40,9 @@ function Blog() {
     return () => window.removeEventListener("scroll", scroll, false);
   }, []);
 
-  const getData = () => {
-    Axios.get(baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=2`)
+  const getData = (selectedCategoryName = '') => {
+    let categoryName = selectedCategoryName || ''
+    Axios.get(baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=1&category=${categoryName}`)
       .then((res) => {
         setData(res.data.results);
         setLoader(false);
@@ -47,6 +51,8 @@ function Blog() {
         console.log(error);
       });
   };
+
+
 
   const gitBlogCategory = () => {
     
@@ -114,7 +120,7 @@ function Blog() {
             {categories?.map((category) => {
               return (
               <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
-                <button className={styles.button85} role="button">
+                <button className={styles.button85} role="button" onClick={() => selectCategory(category.name)}>
                   {category.internal_name} <BubbleChart />
                 </button>
               </div>
