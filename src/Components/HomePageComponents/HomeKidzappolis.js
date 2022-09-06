@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeKidzappolis.module.css";
-import Head from "next/head";
 import { baseUrl } from "../../config";
 import axios from "axios";
 import Slider from "react-slick";
-import { Card } from "react-bootstrap";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Typography } from "@mui/material";
@@ -109,6 +107,7 @@ function HomeKidzappolis() {
   useEffect(() => {
     axios.get(baseUrl + "categories?country_code=ae").then((res) => {
       setData(res.data);
+      console.log('kidzappolis circle',res.data)
     });
   }, []);
   const [data2, setData2] = useState([]);
@@ -136,27 +135,12 @@ function HomeKidzappolis() {
           }
         }
       }
-
       setData2(kidzaprovedCollections);
     });
   }, []);
   return (
     <>
       <div className={style.body}>
-        <Head>
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charSet="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-        </Head>
-
         <div className="container ">
           <center>
             <strong>
@@ -172,7 +156,7 @@ function HomeKidzappolis() {
                 <Slider {...settings}>
                   {data.map((item) => (
                     <div key={item.id}>
-                      <Link href='/FindActivities'>
+                      <Link href={`/Filter?&olisid=${item.id}`}>
                       <div className={`item ${style.activityBox}`}>
                         <img
                           className={style.activityBoxImage}
@@ -188,7 +172,6 @@ function HomeKidzappolis() {
           </div>
         </div>
         <br />
-
         <div className="container">
           <center>
             <strong>
@@ -203,7 +186,6 @@ function HomeKidzappolis() {
               {data2.map((item1) => {
                 return(
                 <Link href='/SubKidzapproved'>
-                
                 <div
                   key={item1.id}
                   className={`collection-slides ${style.collectioncard}`}
@@ -218,7 +200,6 @@ function HomeKidzappolis() {
                   </div>
                 </div>
                 </Link>
-                
 )})}
             </Slider>
           </div>

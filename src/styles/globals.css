@@ -109,6 +109,7 @@ header {
  .dynamicCrousel .carousel-indicators {
   z-index: 0 ;
 }
+
 @media (min-width:992px) and (max-width:1199.98px) {
   .nav-link{
     font-size:14px!important;
@@ -169,4 +170,8 @@ box-shadow:none
 .accordion-button:not(.collapsed) {
   box-shadow: none;
   background-color: transparent;
+
+}
+.imagesliderofbooking .slick-track{
+  display: flex !important;
 }

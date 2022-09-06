@@ -21,13 +21,17 @@
 
 .leftimg1 {
 	width: 100%;
-	border-radius: 15px;
+	border-radius: 10px;
 	margin-bottom: 10px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .leftimg1:hover {
 	transform: translateY(-2px);
+}
+.cruselimage{
+	width: 150px;
+	border-radius: 5px;
 }
 
 .Bookingbtn {
@@ -127,13 +131,15 @@
 	margin-top: 10px;
 }
 
-.priceoffer {
+.price_offer {
 	/* border: 1px solid grey; */
 	border-radius: 10px;
-	box-shadow: rgb(0, 0, 0) 0px 3px 6px;
-	height: 100px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 7px 8px;
+	margin-bottom: 5%;
 }
-
+.price_title p{
+	padding: 0 0 1% 2%;
+}
 .delprice {
 	color: #525353;
 }
@@ -152,6 +158,10 @@
 	font-size: 70px;
 	margin: 0;
 	margin-top: -25px;
+	width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blogSpan {
@@ -192,12 +202,28 @@
 .price_title {
 	background-color: #e8ebef;
 	color: #000;
-}
+	border-radius: 10px 10px 0px 0px;
 
+}
+.pricebutton{
+	width: auto;
+    border: none;
+    color: #fff;
+	background-color: #e35b26;
+    border-radius: 7px;
+    padding: 3px 15px 3px 15px;
+    margin: auto auto 2% auto;
+}
+.pricebutton:hover{
+	transform: translateY(-2px);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+
+}
 .price_txt {
 	color: #000 !important;
 	margin: 0;
 	padding: 10px;
+	padding-left: 2%;
 }
 
 .blog_title1 {

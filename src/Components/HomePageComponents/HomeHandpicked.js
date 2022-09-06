@@ -10,7 +10,6 @@ import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import Slider from "react-slick";
 import style from "../../styles/ComponentsCss/HomePageComponents/HomeHandpicked.module.css";
 import { Typography, Rating } from "@mui/material";
-
 function HomeHandpicked() {
   const settings = {
     dots: false,
@@ -101,6 +100,7 @@ function HomeHandpicked() {
       )
       .then((res) => {
         setResData1(res.data.results);
+        console.log("Homehandpic card ",res.data.results)
       })
       .catch((err) => {
         console.log(err);
@@ -190,9 +190,12 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
-                      <Link href="/Booking">
-                        <a className="btn btn-success float-end">Book Now</a>
-                      </Link>
+                      {item.booking_required?
+                      <Link href={`/Booking?&id=${item.id}`}>
+                      <button className="btn  float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
+                    </Link>:
+                   <button className="btn  disabled float-end" id={item.booking_button.id}>{item.booking_button.text}</button>
+                    }
                     </div>
                   </div>
                 </div>
@@ -215,5 +218,7 @@ function HomeHandpicked() {
     </div>
   );
 }
+
+
 
 export default HomeHandpicked;

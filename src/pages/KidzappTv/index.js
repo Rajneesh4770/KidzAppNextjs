@@ -166,7 +166,6 @@ const KidzappTv = () => {
                 </h1>
               </center>
             </Col>
-
             <div>
         <Container className="dynamicCrousel">
       <Carousel className='maincrousel'>
@@ -520,5 +519,4 @@ const KidzappTv = () => {
     </>
   );
 };
-
 export default KidzappTv;

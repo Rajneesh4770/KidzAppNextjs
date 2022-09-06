@@ -1,11 +1,11 @@
-import style from "../styles/Getintouch.module.css";
-import { FormLabel, TextField, Button, Box } from "@mui/material";
+import style from '../styles/Getintouch.module.css';
+import { FormLabel, TextField, Button, Box } from '@mui/material';
 import KidzappFeed from '../../src/Components/KidzappFeed';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import toast, { Toaster } from "react-hot-toast";
-import Image from "next/image";
-import Recaptcha from "../Components/Recaptcha";
+import toast, { Toaster } from 'react-hot-toast';
+import Image from 'next/image';
+import Recaptcha from '../Components/Recaptcha';
 
 function Getintouch() {
 
@@ -46,16 +46,6 @@ function Getintouch() {
     onSubmit,
     validationSchema,
   })
-
-  // const submitHandler = () => {
-  //   toast.success('Register Successfully !!!')
-  //   console.log("Button");
-  // }
-
-
-  // function onChange(value){
-  //   console.log('captcha value:', value);
-  // }
 
   return (
     <div className={style.body}>
