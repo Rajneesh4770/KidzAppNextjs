@@ -1,24 +1,19 @@
 import Navbar from "../Components/Navbar";
 import Head from "next/head";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "../Components/Footer";
-import "../styles/globals.css";
 import { Provider } from "react-redux";
-import { store } from "../redux/Store";
 import { ToastContainer } from "react-toastify";
+
+import { store } from "../redux/store";
+import Footer from "../Components/Footer";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'animate.css';
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  // module.exports = {
-  //   eslint: {
-  //     // Warning: This allows production builds to successfully complete even if
-  //     // your project has ESLint errors.
-  //     ignoreDuringBuilds: true,
-  //   },
-  // }
   return (
     <>
       <Head>
