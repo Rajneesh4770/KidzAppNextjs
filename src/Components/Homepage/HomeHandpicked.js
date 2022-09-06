@@ -92,7 +92,7 @@ function HomeHandpicked() {
     ],
   };
   const [newlanguage, setNewlanguage] = useState(constants);
-  const [resData1, setResData1] = useState([]);
+  const [experiences, setExperiences] = useState([]);
   const [activeTab, setActiveTab] = useState("hearts_day_fun");
   useEffect(() => {
     axios
@@ -101,7 +101,7 @@ function HomeHandpicked() {
           `experiences/curated-list/?list_name=${activeTab}&country_code=&page=1&page_size=10&city=&website=1`
       )
       .then((res) => {
-        setResData1(res.data.results);
+        setExperiences(res.data.results);
         console.log("Homehandpic card ", res.data.results);
       })
       .catch((err) => {
@@ -156,7 +156,9 @@ function HomeHandpicked() {
       <div className={`container ${style.card1}`}>
         <div className="row">
           <Slider className={style.mainslider} {...settings1}>
-            {resData1?.map((item) => (
+            {experiences?.map((item) => (
+                        <Link href={`/Booking?&id=${item.id}`}>
+
               <div className="container" key={item.id}>
                 <div
                   className={`card animate__animated animate__backInDown animate__slow ${style.card}`}
@@ -193,8 +195,7 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
-                      {item.booking_required ? (
-                        <Link href={`/Booking?&id=${item.id}`}>
+                      <Link href={`/Booking?&id=${item.id}`}>
                           <button
                             className="btn  float-end"
                             id={item.booking_button.id}
@@ -202,18 +203,11 @@ function HomeHandpicked() {
                             {item.booking_button.text}
                           </button>
                         </Link>
-                      ) : (
-                        <button
-                          className="btn  disabled float-end"
-                          id={item.booking_button.id}
-                        >
-                          {item.booking_button.text}
-                        </button>
-                      )}
                     </div>
                   </div>
                 </div>
               </div>
+              </Link>
             ))}
           </Slider>
         </div>
