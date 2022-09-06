@@ -1,4 +1,4 @@
-import style from "../pages/booking/Booking.module.css";
+import style from "./Booking.module.css";
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -6,12 +6,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Rating } from "@mui/material";
-import { baseUrl } from "../config";
+import { baseUrl } from "../../config";
 import axios from "axios";
 import GoogleMapReact from "google-map-react";
 import Slider from "react-slick";
 
-const ExperienceDetail = (props) => {
+const Booking = (props) => {
   const AnyReactComponent = () => (
     <FaMapMarkerAlt className="fa-4x" style={{ color: "red" }} />
   );
@@ -61,7 +61,7 @@ const ExperienceDetail = (props) => {
                       <div className={style.blog_title}>
                         <h2>{props.data.title}</h2>
                         <div>
-                          <Link href={`/booking?filterid=${props.data.id}` }>
+                          <Link href="/Booking/BookingConfirmation">
                             <button className={style.blog_rating}>
                               Book Now
                             </button>
@@ -70,29 +70,19 @@ const ExperienceDetail = (props) => {
                       </div>
 
                       <p>Theme Parks, Fun & Play</p>
-
-                      {props.data.cashback.length ? <p><img src="https://drfsb8fjssbd3.cloudfront.net/images/cashback-image.png"  alt="cashback"/> Get {props.data.cashback[0].cashback_amount} AED cashback, when you book through our mobile app!</p>: null}
-                      
-
                       <div className={style.blog_btn}>
                         <span
                           className={`${style.blogSpan} ${style.blog_rating}`}
                         >
-                          <i className="fa-solid fa-star"></i>&nbsp;  {props.data.average_rating.toFixed(1)}
+                          <i className="fa-solid fa-star"></i>&nbsp; 4.5
                         </span>
                         <span className={`${style.blogSpan} ${style.blog_age}`}>
                           <i className="fa-solid fa-calendar-days"></i> &nbsp;
-                          {props.data.ages_display[props.data.ages_display.length-1] < 18 ? <span>Age { props.data.ages_display[0] + '-' + props.data.ages_display[props.data.ages_display.length-1]} </span> : <span>Age { props.data.ages_display[0] } - Adult</span>}
+                          Ages4 - Adults
                         </span>
-                        {props.data.kids_only ?
                         <span className={`${style.blogSpan} ${style.blog_cat}`}>
                           <i className="fa-solid fa-child"></i> &nbsp; Kids Only
-                        </span> : null}
-
-                        {props.data.booking_required ?
-                        <span className={`${style.blogSpan} ${style.blog_cat}`}>
-                         BOOKING REQUIRED
-                        </span> : null}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -109,8 +99,6 @@ const ExperienceDetail = (props) => {
                         &nbsp; &nbsp;
                         <span>{props.data.address}</span>
                       </div>
-                      {
-                        props.data.working_hours_brief ? 
                       <div className="time pb-3">
                         <span>
                           <i
@@ -119,9 +107,8 @@ const ExperienceDetail = (props) => {
                           ></i>
                         </span>
                         &nbsp; &nbsp;
-                        <span>{props.data.working_hours_brief}</span>
-                      </div> : null
-                      }
+                        <span>Daily 10:00 to 22:00</span>
+                      </div>
                     </div>
                   </div>
                   <div className="row">
@@ -149,10 +136,9 @@ const ExperienceDetail = (props) => {
                             <div className="accordion-body">
                               {props.data.description}
                             </div>
-                            {/* <div>title</div> */}
                           </div>
                         </div>
-                        {/* <div className="accordion-props.data">
+                        <div className="accordion-props.data">
                           <h2 className="accordion-header" id="headingTwo">
                             <button
                               className="accordion-button collapsed"
@@ -179,7 +165,7 @@ const ExperienceDetail = (props) => {
                               for children 3 years old and above.
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -213,7 +199,6 @@ const ExperienceDetail = (props) => {
                                             {item.small_text_type})
                                           </p>
                                           <p>
-                                            <span> {sub_item.currency} {sub_item.orginal_price}</span> &nbsp;&nbsp;
                                             <b>
                                               {sub_item.currency}
                                               {sub_item.final_price}
@@ -223,7 +208,7 @@ const ExperienceDetail = (props) => {
                                       </>
                                     ))}
                                 </div>
-                                <Link href={`/booking?filterid=${props.data.id}` }>
+                                <Link href="/Booking/BookingConfirmation">
                                   <button className={style.pricebutton}>
                                     Book Now
                                   </button>
@@ -494,8 +479,9 @@ const ExperienceDetail = (props) => {
 export async function getServerSideProps(context) {
   const id = context.query.id;
   const filterid = context.query.filterid;
-  let res = await axios.get(baseUrl + `experiences/${id}/?country_code=ae`);
+  let res = await axios.get(baseUrl + `experiences/${filterid}/?country_code=ae`);
   //   let res = await axios.get(`https://api.kidzapp.com/api/3.0/experiences/111992/?country_code=ae`);
+  console.log(res.data);
   let props = {
     data: res?.data,
   };
@@ -503,4 +489,4 @@ export async function getServerSideProps(context) {
   return { props };
 }
 
-export default ExperienceDetail;
+export default Booking;

@@ -24,7 +24,12 @@ export const counterSlice2 = createSlice({
       state.value += 1
     },
     decrementAdult: (state) => {
-      state.value -= 1
+		if(state.value==0){
+			null
+		}
+		else{
+			state.value -= 1
+		}
     },
   },
 })

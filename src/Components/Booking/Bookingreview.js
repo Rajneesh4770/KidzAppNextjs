@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import style from "../../styles/Booking.module.css";
+import style from '../../pages/Booking/Booking.module.css'
 import { Button } from "@mui/material";
 import Link from "next/link";
 import DateRangeIcon from "@mui/icons-material/DateRange";

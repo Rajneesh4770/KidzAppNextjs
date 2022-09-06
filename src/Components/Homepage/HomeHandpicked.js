@@ -118,14 +118,14 @@ function HomeHandpicked() {
       {/* Headings */}
       <div className={`${style.headingDiv}`}>
         <h1
-          className={`animate__animated animate__backInDown  ${style.heading}`}
+          className={`animate__animated animate__backInLeft  ${style.heading}`}
         >
           {getResponseMessage(constants).find_best_place_uae}{" "}
         </h1>
         <h1 className={style.h1}>
           {getResponseMessage(constants).hand_pick_exp}
         </h1>
-        <p className={` animate__animated animate__backInDown  ${style.p}`}>
+        <p className={` animate__animated animate__backInRight  ${style.p}`}>
           {
             getResponseMessage(constants)
               .Our_pick_of_the_best_kids_activities_in_UAE

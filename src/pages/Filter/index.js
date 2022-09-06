@@ -1,11 +1,11 @@
 import { useState, useEffect, useTransition } from "react";
-import style1 from "../styles/Filter.module.css";
+import style1 from "./Filter.module.css";
 import { Rating, Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 import Link from "next/link";
 import axios from 'axios';
-import { baseUrl } from '../config';
+import { baseUrl } from '../../config';
 
 function FindActivities() {
 	const [loader, setLoader] = useState(false);

@@ -2,7 +2,6 @@ import Navbar from "../Components/Navbar";
 import Head from "next/head";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
-
 import { store } from "../redux/store";
 import Footer from "../Components/Footer";
 
@@ -16,15 +15,6 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        {/* font awesome icon cdn */}
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
-        {/* recaptcha cdn */}
-      </Head>
 
       <Provider store={store}>
         <Navbar />

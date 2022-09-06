@@ -35,7 +35,7 @@ useEffect(()=>{
                       ? `col-lg-6 md-9 sm-12 ${style.bigcard}`
                       : `col-lg-3  ${style.smcard}`
                   }  col-sm-12 ${style.blogCardHome}      
-                 ${scroll ?  (i===0 || i===1 || i===3 ? 'animate__animated animate__backInUp animate__slow': 'animate__animated animate__backInDown animate__slow') : null}`}
+                 ${scroll ?  (i===0 || i===1 || i===3 ? 'animate__animated animate__backInLeft animate__slow': 'animate__animated animate__backInRight animate__slow') : null}`}
                 >
                   <div className={`card ${style.card1} mb-4`}>
                     <img

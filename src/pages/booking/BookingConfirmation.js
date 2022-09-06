@@ -1,17 +1,16 @@
 import React, {useState} from 'react'
-import style from "../../src/styles/Booking.module.css";
+import style from './Booking.module.css'
 import Link from "next/link";
 import { Button } from "@mui/material";
 import { Rating, TextField } from "@mui/material";
-import Bookingreview from '../Components/Booking/Bookingreview';
+import Bookingreview from '../../Components/Booking/Bookingreview';
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../src/redux/index'
+import { decrement, increment } from '../../redux/reducer/counterReducer'
 
 const Booking = () => {
     const count = useSelector((state) => state.counter.value)
     const count2 =useSelector((state) => state.counter2.value1)
     const dispatch = useDispatch()
-  
     const [date,setDate] = useState(false);
     const [review,setReview] = useState(true);
     const Setting = {

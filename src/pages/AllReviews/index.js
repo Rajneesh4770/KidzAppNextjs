@@ -2,9 +2,11 @@ import React from "react";
 import { Rating } from "@mui/material";
 import { BiTime } from "react-icons/bi";
 import { FaUserCheck } from "react-icons/fa";
-import { ThumbUpOffAlt, ChatBubbleOutline, Star } from "@mui/icons-material";
+import {  Star } from "@mui/icons-material";
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 
-import style from "../styles/AllReview.module.css";
+import style from "./AllReview.module.css";
 
 const AllReviews = () => {
   return (
@@ -75,12 +77,12 @@ const AllReviews = () => {
                   <div className="row d-flex">
                     <div className="col-2">
                       <span>
-                        <ThumbUpOffAlt /> &nbsp; Like
+                        <ChatBubbleOutlineIcon /> &nbsp; Like
                       </span>
                     </div>
                     <div className="col-2">
                       <span>
-                        <ChatBubbleOutline /> &nbsp; Comment
+                        <ChatBubbleOutlineIcon /> &nbsp; Comment
                       </span>
                     </div>
                     <div className="col-8">
@@ -127,7 +129,7 @@ const AllReviews = () => {
                     </div>
                     <div className="col-2">
                       <span>
-                        <ChatBubbleOutline /> &nbsp; Comment
+                        <ChatBubbleOutlineIcon /> &nbsp; Comment
                       </span>
                     </div>
                     <div className="col-8">
