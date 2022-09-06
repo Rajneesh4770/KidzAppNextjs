@@ -35,7 +35,7 @@ function index(props) {
         {carouselItem.map((item) => {
           return (
             <Carousel.Item key={item.id}>
-            <Link href="/Booking">
+            <Link href={`/exprience-detail?&id=${item.id}`}>
               <img
                 className={style.crouselImages}
                 src={item.image_url}
