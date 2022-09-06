@@ -124,7 +124,7 @@ const BlogDetails = (props) => {
                     </div>
                     <div className="row">
                       <button
-                        className={`${bookingStyle.blog_rating} ${style.CardButton}`}
+                        className={`${style.blog_rating} ${style.CardButton}`}
                       >
                         Read More
                       </button>
@@ -165,7 +165,7 @@ const BlogDetails = (props) => {
                     <div className="row">
                       <Link href={item.checkout_link}>
                         <button
-                          className={`${bookingStyle.blog_rating} ${style.CardButton}`}
+                          className={`${style.blog_rating} ${style.CardButton}`}
                         >
                           {item.checkout_text}
                         </button>

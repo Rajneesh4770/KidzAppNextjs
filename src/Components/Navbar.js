@@ -268,7 +268,7 @@ const Header = (props) => {
                             </a>
                           </li>
                         </Link>
-                        <Link href="/Blog">
+                        <Link href="/blog">
                           <li className="nav-item">
                             <a className="nav-link" href="#">
                               {getResponseMessage(constants).blog}
