@@ -1,7 +1,7 @@
-import React from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import Link from 'next/link';
+import { connect } from 'react-redux';
 
 import style from "../styles/Index.module.css";
 import HomeHandpicked from "../Components/Homepage/HomeHandpicked";
@@ -10,21 +10,29 @@ import HomeKidsActivitiesReviews from "../Components/Homepage/HomeKidsActivities
 import HomeAsfeature from "../Components/Homepage/HomeAsfeature";
 import KidzappFeed from "../Components/KidzappFeed";
 import HomeBlog from "../Components/Homepage/HomeBlog";
-import { HOME_CROUSEL_API } from "../services";
-
-export async function getStaticProps() {
-  let res = await axios.get(HOME_CROUSEL_API);
-  let props = {
-    data: res?.data?.results,
-  };
-  return { props };
-}
+import { ExperienceAction } from "../redux/actions";
 
 function index(props) {
+  const [carouselItem, setCarouselItems] = useState([]);
+
+  useEffect(() => {
+    const query = {
+      list_name: 'featured_banner_uae',
+      country_code: 'ae',
+      page: 1,
+      page_size: 10,
+      website: 1,
+      lang: 'ar',
+    };
+    props.curatedList(query).then(res => {
+      setCarouselItems(res.results);
+    });
+  }, []);
+
   return (
     <div className={style.body}>
       <Carousel className="maincrousel">
-        {props.data.map((item) => {
+        {carouselItem.map((item) => {
           return (
             <Carousel.Item key={item.id}>
             <Link href="/Booking">
@@ -83,4 +91,9 @@ function index(props) {
     </div>
   );
 }
-export default index;
+
+const mapDispatchToProps = {
+  curatedList: ExperienceAction.curatedList,
+};
+
+export default connect(null, mapDispatchToProps)(index);

@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Slider from "react-slick";
-import { Typography } from "@mui/material";
 import Link from "next/link";
-import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
+import { connect } from 'react-redux';
 
 import style from "./styles/HomeKidzappolis.module.css";
-import { baseUrl } from "../../config";
 
 import getResponseMessage from "../../language/multilingualServices";
 import { constants } from "../Navbar";
+import { activitesSettings, kidzCollectionsSettings } from "../../config/slickerSettings";
+import { ExperienceAction, KidzApprovedCollectionAction } from "../../redux/actions";
 
-function HomeKidzappolis() {
+function HomeKidzappolis(props) {
   const [scroll, setScroll] = useState(false);
+  const [collectionList, setCollectionList] = useState([]);
+
+  const [activityCategory, setActivityCategory] = useState([]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -20,113 +22,21 @@ function HomeKidzappolis() {
     });
   }, [scroll]);
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-
-    autoplaySpeed: 3000,
-    prevArrow: (
-      <Typography className={style.typography}>
-        <ArrowBackIosNew className={style.backarrow} />
-      </Typography>
-    ),
-    nextArrow: (
-      <Typography className={style.typography}>
-        <ArrowForwardIos className={style.forwardarrow} />
-      </Typography>
-    ),
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          dots: false,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          dots: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-  const settings2 = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 3,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-  const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get(baseUrl + "categories?country_code=ae").then((res) => {
-      setData(res.data);
-      console.log("kidzappolis circle", res.data);
+    const query = { country_code: 'ae' };
+
+    props.collectionList(query).then((data) => {
+      setCollectionList(data);
     });
   }, []);
-  const [activityCategory, setActivityCategory] = useState([]);
   useEffect(() => {
-    axios.get(baseUrl + "lists?country_code=ae").then((res) => {
+    const query = { country_code: 'ae' };
+
+    props.experienceCategories(query).then((data) => {
       let kidzaprovedCollections = [];
       let response_Name = [];
-      if (res.data.length > 0) {
-        for (let val of res.data) {
+      if (data.length > 0) {
+        for (let val of data) {
           if (
             val.create_button === false &&
             val.internal_name !== "featured" &&
@@ -164,8 +74,8 @@ function HomeKidzappolis() {
           <div className={`container modifiedSlickBtn ${style.container}`}>
             <div className="row">
               <div className="col-lg-12">
-                <Slider {...settings}>
-                  {data.map((item) => (
+                <Slider {...activitesSettings}>
+                  {collectionList.map((item) => (
                     <div key={item.id}>
                       <Link href={`/Filter?&olisid=${item.id}`}>
                         <div className={`item ${style.activityBox}`}>
@@ -200,7 +110,7 @@ function HomeKidzappolis() {
               scroll ? style.scrolltrue : style.scrollfalse
             }`}
           >
-            <Slider {...settings2}>
+            <Slider {...kidzCollectionsSettings}>
               {activityCategory.map((item1) => {
                 return (
                   <Link href="/SubKidzapproved">
@@ -235,4 +145,10 @@ function HomeKidzappolis() {
   );
 }
 
-export default HomeKidzappolis;
+const mapDispatchToProps = {
+  collectionList: KidzApprovedCollectionAction.collectionList,
+  experienceCategories: ExperienceAction.experienceCategories,
+};
+
+
+export default connect(null, mapDispatchToProps)(HomeKidzappolis);
