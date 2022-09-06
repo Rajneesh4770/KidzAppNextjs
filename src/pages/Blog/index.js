@@ -81,7 +81,7 @@ function Blog(props) {
                     aria-label="Search"
                     aria-describedby="search-addon"
                   />
-                  <button type="button" className="btn btn-outline-primary">
+                  <button style={{zIndex:'0'}} type="button" className="btn btn-outline-primary ">
                     search
                   </button>
                 </div>
@@ -124,7 +124,6 @@ function Blog(props) {
             </div>
           </div>
           <br />
-
           <div className="row">
             <div className="col-lg-12">
               <h4>The KZ Blog</h4>
