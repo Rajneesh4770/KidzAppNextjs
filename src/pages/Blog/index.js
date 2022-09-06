@@ -18,7 +18,7 @@ import styles from "./style.module.css";
 import KidzappFeed from "../../Components/KidzappFeed";
 
 function Blog() {
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
   const [data, setData] = useState([]);
   const [categories, setCategory] = useState([]);
   const [pageindex, setPageindex] = useState(9);
@@ -41,7 +41,7 @@ function Blog() {
     Axios.get(baseUrl + `blogs?country_code=ae&limit=${pageindex}&page=2`)
       .then((res) => {
         setData(res.data.results);
-        setLoader(true);
+        setLoader(false);
       })
       .catch((error) => {
         console.log(error);
@@ -91,14 +91,11 @@ function Blog() {
         </div>
       </section>
 
-      {/* section-2 */}
-
       <section className={styles.section2}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12 md-12 sm-12">
               <div className={` ${styles.backbtn}`}>
-                {/* <Link to=''> */}
                 <Button
                   onClick={() => Router.back()}
                   className="changeBlogBackBtn"
@@ -142,15 +139,13 @@ function Blog() {
 
       <div className={styles.map1}>
         {loader ? (
-          getData()
-        ) : (
           <Stack sx={{ alignItems: "center" }} spacing={2} direction="row">
             <CircularProgress
               color="success"
               sx={{ marginLeft: "auto", marginRight: "auto" }}
             />
           </Stack>
-        )}
+        ) : null}
 
         <div className="container">
           <div className="row">
