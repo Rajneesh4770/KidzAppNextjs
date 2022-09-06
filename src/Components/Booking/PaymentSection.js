@@ -1,4 +1,4 @@
-import style from "../../styles/Booking.module.css";
+import style from '../../pages/Booking/Booking.module.css'
 import {
   Button,
   Checkbox,

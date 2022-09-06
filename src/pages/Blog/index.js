@@ -120,9 +120,10 @@ function Blog() {
             {categories?.map((category) => {
               return (
               <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div">
-                <button className={styles.button85} role="button" onClick={() => selectCategory(category.name)}>
+                <button className={styles.button85} data-bs-toggle="tooltip p-5" data-bs-placement="bottom  " title={`See All the Blogs of ${category.internal_name}`}  onClick={() => selectCategory(category.name)}>
                   {category.internal_name} <BubbleChart />
                 </button>
+                
               </div>
              );
             })}

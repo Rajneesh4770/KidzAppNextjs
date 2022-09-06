@@ -1,4 +1,4 @@
-import style from "../../src/styles/Booking.module.css";
+import style from "./Booking.module.css";
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -6,7 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Rating } from "@mui/material";
-import { baseUrl } from "../config";
+import { baseUrl } from "../../config";
 import axios from "axios";
 import GoogleMapReact from "google-map-react";
 import Slider from "react-slick";
@@ -62,7 +62,7 @@ const Booking = (props) => {
                       <div className={style.blog_title}>
                         <h2>{props.data.title}</h2>
                         <div>
-                          <Link href="/Booking2">
+                          <Link href="/Booking/BookingConfirmation">
                             <button className={style.blog_rating}>
                               Book Now
                             </button>
@@ -209,7 +209,7 @@ const Booking = (props) => {
                                       </>
                                     ))}
                                 </div>
-                                <Link href="/Booking2">
+                                <Link href="/Booking/BookingConfirmation">
                                   <button className={style.pricebutton}>
                                     Book Now
                                   </button>

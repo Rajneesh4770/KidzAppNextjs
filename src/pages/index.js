@@ -1,9 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Carousel } from "react-bootstrap";
-
 import style from "../styles/Index.module.css";
-
 import HomeHandpicked from "../Components/Homepage/HomeHandpicked";
 import HomeKidzappolis from "../Components/Homepage/HomeKidzappolis";
 import HomeKidsActivitiesReviews from "../Components/Homepage/HomeKidsActivitiesReviews";
@@ -34,7 +32,7 @@ function index(props) {
               />
               <Carousel.Caption>
                 <h1
-                  className={`animate__animated animate__backInDown ${style.crouselHeading}`}
+                  className={`animate__animated animate__wobble ${style.crouselHeading}`}
                 >
                   {item.title}
                 </h1>
