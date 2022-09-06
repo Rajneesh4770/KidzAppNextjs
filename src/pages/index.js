@@ -45,7 +45,7 @@ function index(props) {
                 {/* {/* <p className="bg-primary text-color-warning"><Markup {item?.title}/></p> */}
                 {/* <p>  <Markup  markup={item.description}/>  </p> */}
                 {item.backend_booking ? (
-                    <Link href={`/Booking?&id=${item.id}`}>
+                    <Link href={`/exprience-detail?&id=${item.id}`}>
                       <button className={`btn ${style.button}`} >  Book Now</button>
                     </Link>
                   ) : (

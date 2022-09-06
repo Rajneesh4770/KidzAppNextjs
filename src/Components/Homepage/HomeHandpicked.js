@@ -157,7 +157,7 @@ function HomeHandpicked() {
         <div className="row">
           <Slider className={style.mainslider} {...settings1}>
             {experiences?.map((item) => (
-                        <Link href={`/Booking?&id=${item.id}`}>
+                        <Link href={`/exprience-detail?&id=${item.id}`}>
 
               <div className="container" key={item.id}>
                 <div
@@ -195,7 +195,7 @@ function HomeHandpicked() {
                       <span>
                         <b>AED 99</b>
                       </span>
-                      <Link href={`/Booking?&id=${item.id}`}>
+                      <Link href={`/exprience-detail?&id=${item.id}`}>
                           <button
                             className="btn  float-end"
                             id={item.booking_button.id}

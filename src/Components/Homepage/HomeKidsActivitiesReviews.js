@@ -103,10 +103,7 @@ useEffect(()=>{
                   ${scroll? 'animate__animated animate__backInDown ' : null }`}>
                     <div className={style.reviewcard} style={{ width: "18rem" }}>
                       <div className={style.cardbody}>
-                      <img
-                          className={`${style.cardimg} mb-3`}
-                          src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
-                        />
+                  
                         <p className={style.cardTopPara}><b> {slide.venue.title} </b></p>
                         <h5 className={style.cardtitle}>{slide.title} </h5>
                         <hr className={style.hr}/>

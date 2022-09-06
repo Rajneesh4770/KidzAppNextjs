@@ -10,6 +10,7 @@ import { baseUrl } from "../config";
 import axios from "axios";
 import GoogleMapReact from "google-map-react";
 import Slider from "react-slick";
+import { data } from "jquery";
 
 const Booking = (props) => {
   console.log("data", props.data);
@@ -71,19 +72,29 @@ const Booking = (props) => {
                       </div>
 
                       <p>Theme Parks, Fun & Play</p>
+
+                      {props.data.cashback.length ? <p><img src="https://drfsb8fjssbd3.cloudfront.net/images/cashback-image.png"  alt="cashback"/> Get {props.data.cashback[0].cashback_amount} AED cashback, when you book through our mobile app!</p>: null}
+                      
+
                       <div className={style.blog_btn}>
                         <span
                           className={`${style.blogSpan} ${style.blog_rating}`}
                         >
-                          <i className="fa-solid fa-star"></i>&nbsp; 4.5
+                          <i className="fa-solid fa-star"></i>&nbsp;  {props.data.average_rating.toFixed(1)}
                         </span>
                         <span className={`${style.blogSpan} ${style.blog_age}`}>
                           <i className="fa-solid fa-calendar-days"></i> &nbsp;
-                          Ages4 - Adults
+                          {props.data.ages_display[props.data.ages_display.length-1] < 18 ? <span>Age { props.data.ages_display[0] + '-' + props.data.ages_display[props.data.ages_display.length-1]} </span> : <span>Age { props.data.ages_display[0] } - Adult</span>}
                         </span>
+                        {props.data.kids_only ?
                         <span className={`${style.blogSpan} ${style.blog_cat}`}>
                           <i className="fa-solid fa-child"></i> &nbsp; Kids Only
-                        </span>
+                        </span> : null}
+
+                        {props.data.booking_required ?
+                        <span className={`${style.blogSpan} ${style.blog_cat}`}>
+                         BOOKING REQUIRED
+                        </span> : null}
                       </div>
                     </div>
                   </div>
@@ -100,6 +111,8 @@ const Booking = (props) => {
                         &nbsp; &nbsp;
                         <span>{props.data.address}</span>
                       </div>
+                      {
+                        props.data.working_hours_brief ? 
                       <div className="time pb-3">
                         <span>
                           <i
@@ -108,8 +121,9 @@ const Booking = (props) => {
                           ></i>
                         </span>
                         &nbsp; &nbsp;
-                        <span>Daily 10:00 to 22:00</span>
-                      </div>
+                        <span>{props.data.working_hours_brief}</span>
+                      </div> : null
+                      }
                     </div>
                   </div>
                   <div className="row">
