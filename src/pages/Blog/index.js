@@ -21,18 +21,14 @@ function Blog(props) {
 
   const [categories, setCategory] = useState([]);
   const [pageIndex, setPageIndex] = useState(1);
+  const [selectedCategory, selectNewCategory] = useState(null);
 
-  const selectCategory = (name) => {
-    getBLogList(name);
-  }
-
-
-  const getBLogList = (selectedCategoryName = '') => {
+  const getBLogList = (selectedCategoryName = '', categoryIndex = null) => {
     const categoryName = selectedCategoryName  || '';
     const countryCode = 'ae';
     const pageSize = 6;
 
-    props.blogList(pageIndex, pageSize, countryCode, categoryName)
+    props.blogList(categoryIndex ?? pageIndex, pageSize, countryCode, categoryName)
       .then((res) => {
         if(data.length && res.data.results.length && !selectedCategoryName.length) {
           setData(data.concat(res.data.results));
@@ -63,8 +59,16 @@ function Blog(props) {
   }, []);
 
   useEffect(() => {
-    getBLogList();
+    if(pageIndex !== 1) {
+      getBLogList();
+    }
   }, [pageIndex]);
+
+  useEffect(() =>{
+    setPageIndex(1);
+
+    getBLogList(selectedCategory, 1);
+  }, [selectedCategory]);
 
   return (
     <div className={styles.blogBody}>
@@ -114,7 +118,7 @@ function Blog(props) {
             {categories?.map((category, index) => {
               return (
               <div className="col-lg-3  col-md-6 col-sm-12 mb-3 button-div" key={index}>
-                <button className={styles.button85} role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title={`See all the blogs of ${category.internal_name}`} onClick={() => selectCategory(category.name)}>
+                <button className={styles.button85} role="button" onClick={() => selectNewCategory(category.name)}>
                   {category.internal_name} <BubbleChart />
                 </button>
                 
@@ -152,6 +156,7 @@ function Blog(props) {
               dataLength={data.length}
               next={() => setPageIndex(pageIndex + 3)}
               hasMore={true}
+              className='overflow-hidden'
             >
           <div className="row">
 
