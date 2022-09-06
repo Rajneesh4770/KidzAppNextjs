@@ -2,59 +2,30 @@ import React,{useState,useEffect} from 'react';
 import Slider from 'react-slick';
 import axios from 'axios';
 import Link from 'next/link';
+import { connect } from "react-redux";
 
 import style from './styles/HomeKidsActivitiesReviews.module.css';
 import  {baseUrl}  from '../../config';
 import Head from 'next/head';
 import getResponseMessage from '../../language/multilingualServices';
 import { constants } from '../Navbar';
+import { kidzActivitiesReviewSettings } from '../../config/slickerSettings';
+import { KidzApprovedCollectionAction } from '../../redux/actions';
 
-function HomeKidsActivitiesReviews() {
-  const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    lazyLoad: true,
-    swipeToSlide: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slideToScroll: 1,
-          arrows: false,
-          dots: false,
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slideToScroll: 1,
-          arrows: false,
-          dots: false,
-        }
-      },
-      {
-      breakpoint:600,
-      settings:{
-        slidesToShow: 1,
-          slideToScroll: 1,
-          arrows: false,
-          dots: false,
-      }
-      }
-    ]
-  };
+function HomeKidsActivitiesReviews(props) {
+  
   const [reviewData, setReviewData] = useState([]);
+
   const getReviewData = () => {
-    axios
-      .get(
-        baseUrl+"reviews/featured?page=1&page_size=6&country_code=ae"
-      )
-      .then((response) => {
-        const myData = response.data;
-        setReviewData(myData);
+    const query = {
+      page: 1,
+      page_size: 6,
+      country_code: 'ae'
+    };
+    props
+      .activitiesReviewList(query)
+      .then((res) => {
+        setReviewData(res.data);
       })
       .catch((error) => {
         console.log(error);
@@ -95,7 +66,7 @@ useEffect(()=>{
       <div className={`${style.reviewComp} container `}>
       <div className={`row  mt-5 ${scroll? style.scrolltrue:style.scrollfalse} `}>
           <div className={`container `}>
-            <Slider {...settings} className={style.cardsection}>
+            <Slider {...kidzActivitiesReviewSettings} className={style.cardsection}>
               {reviewData.map((slide, i) => {
                 return (
                   <div key={slide.id} 
@@ -149,4 +120,8 @@ useEffect(()=>{
   );
 }
 
-export default HomeKidsActivitiesReviews;
+const mapDispatchToProps = {
+  activitiesReviewList: KidzApprovedCollectionAction.activitiesReviewList,
+};
+
+export default connect(null, mapDispatchToProps)(HomeKidsActivitiesReviews);

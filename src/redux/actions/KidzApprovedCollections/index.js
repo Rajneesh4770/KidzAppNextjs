@@ -9,5 +9,9 @@ const collectionList = (params) => (dispatch) => {
     });
 };
 
+const activitiesReviewList = (params) => (dispatch) => {
+  return axiosInstance.get(API.KIDZ_ACTIVITIES_REVIEWS, { params });
+};
 
-export { collectionList };
+
+export { collectionList, activitiesReviewList };

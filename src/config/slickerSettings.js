@@ -169,9 +169,47 @@ const kidzCollectionsSettings = {
   ],
 };
 
+const kidzActivitiesReviewSettings = {
+  infinite: true,
+  slidesToShow: 3,
+  lazyLoad: true,
+  swipeToSlide: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slideToScroll: 1,
+        arrows: false,
+        dots: false,
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slideToScroll: 1,
+        arrows: false,
+        dots: false,
+      }
+    },
+    {
+    breakpoint:600,
+    settings:{
+      slidesToShow: 1,
+        slideToScroll: 1,
+        arrows: false,
+        dots: false,
+    }
+    }
+  ]
+};
+
 export {
   experienceCategoriesSliderSettings,
   experienceCuratedListSettings,
   activitesSettings,
-  kidzCollectionsSettings
+  kidzCollectionsSettings,
+  kidzActivitiesReviewSettings
 };
