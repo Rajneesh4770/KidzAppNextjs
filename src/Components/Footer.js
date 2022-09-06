@@ -100,7 +100,7 @@ function Footer() {
               <Link href='/hrefuch '>
                 <li className={style.iconEffect}> Get in hrefuch</li>
               </Link>
-              <Link href='/Blog '>
+              <Link href='/blog '>
                 <li className={style.iconEffect}> Blog</li>
               </Link>
               <Link href='/map '>

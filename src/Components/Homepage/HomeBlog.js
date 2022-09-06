@@ -52,7 +52,7 @@ useEffect(()=>{
               );
             })}
           </div>
-          <Link href="/Blog">
+          <Link href="/blog">
         <center><button className={style.button}>View All</button></center>
         </Link>
         <br />
