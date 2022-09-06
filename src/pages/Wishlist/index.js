@@ -39,7 +39,7 @@ const WishList = () => {
 
 								<button
 									type="button"
-									class="btn btn-outline-danger  m-2 mb-4 mt-4"
+									className="btn btn-outline-danger  m-2 mb-4 mt-4"
 								>
 									<span className=""> Kidsapp Tv</span>
 								</button>
@@ -47,7 +47,7 @@ const WishList = () => {
 						</div>
 					</div>
 
-					<div class="row p-3">
+					<div className="row p-3">
 						<div className="col-lg-6 col-md-6 col-sm-12 mb-2">
 							<div className={style.boxWrap}>
 								<div className={style.imggBox}>
@@ -99,7 +99,7 @@ const WishList = () => {
 							</div>
 						</div>
 					</div>
-					<div class="row p-3">
+					<div className="row p-3">
 						<div className="col-lg-6 col-md-6 col-sm-12 mb-2">
 							<div className={style.boxWrap}>
 								<div className={style.imggBox}>

@@ -172,18 +172,18 @@ const Header = (props) => {
                   <div className={style.top_lang}>
                     <div className={` dropdown ${style.dropdownLang}`}>
                       <a
-                        class=" dropdown-toggle"
+                        className=" dropdown-toggle"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Lng<i class="fa-solid fa-language"></i>
+                        Lng<i className="fa-solid fa-language"></i>
                       </a>
-                      <ul class="dropdown-menu widthset">
+                      <ul className="dropdown-menu widthset">
                         <li>
                           <a
-                            class="dropdown-item"
+                            className="dropdown-item"
                             onClick={() => {
                               setLanguage("ae");
                               localStorage.setItem("language", "ae");
@@ -195,7 +195,7 @@ const Header = (props) => {
                         </li>
                         <li>
                           <a
-                            class="dropdown-item"
+                            className="dropdown-item"
                             onClick={() => {
                               setLanguage("ar");
                               localStorage.setItem("language", "ar");
@@ -209,15 +209,15 @@ const Header = (props) => {
                     </div>
                   </div>
                   <div className={style.top_search}>
-                    <form class="d-flex" role="search">
+                    <form className="d-flex" role="search">
                       <input
-                        class="form-control me-2"
+                        className="form-control me-2"
                         type="search"
                         placeholder="Search"
                         aria-label="Search"
                       />
-                      <button class="btn" type="submit">
-                        <i class="fa fa-solid fa-magnifying-glass"></i>{" "}
+                      <button className="btn" type="submit">
+                        <i className="fa fa-solid fa-magnifying-glass"></i>{" "}
                       </button>
                     </form>
                   </div>
@@ -231,9 +231,9 @@ const Header = (props) => {
             <div className="row">
               <div className="col-lg-12">
                 <nav class={`navbar navbar-expand-lg  ${style.nav2} `}>
-                  <div class="container-fluid p-1">
+                  <div className="container-fluid p-1">
                     <Link href="/">
-                      <a class="navbar-brand" className={style.navlogo1}>
+                      <a className="navbar-brand" className={style.navlogo1}>
                         <img
                           className={`animate__animated animate__zoomIn 	 ${style.navlogo}`}
                           src="https://drfsb8fjssbd3.cloudfront.net/images/kidzapp-logo.png"
@@ -241,7 +241,7 @@ const Header = (props) => {
                       </a>
                     </Link>
                     <button
-                      class="navbar-toggler"
+                      className="navbar-toggler"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#navbarSupportedContent"
@@ -249,19 +249,19 @@ const Header = (props) => {
                       aria-expanded="false"
                       aria-label="Toggle navigation"
                     >
-                      <span class="navbar-toggler-icon">
-                        <i class="fa-solid fa-bars-staggered"></i>
+                      <span className="navbar-toggler-icon">
+                        <i className="fa-solid fa-bars-staggered"></i>
                       </span>
                     </button>
                     <div
-                      class="collapse navbar-collapse"
+                      className="collapse navbar-collapse"
                       id="navbarSupportedContent"
                     >
                       <ul class={`${style.ul} navbar-nav mb-2 mb-lg-0`}>
                         <Link href="/Filter">
-                          <li class="nav-item">
+                          <li className="nav-item">
                             <a
-                              class="nav-link active"
+                              className="nav-link active"
                               aria-current="page"
                               href="#"
                             >
@@ -270,36 +270,36 @@ const Header = (props) => {
                           </li>
                         </Link>
                         <Link href="/Blog">
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">
+                          <li className="nav-item">
+                            <a className="nav-link" href="#">
                               {getResponseMessage(constants).blog}
                             </a>
                           </li>
                         </Link>
                         <Link href="/KidzappAward">
-                          <li class="nav-item">
-                            <a class="nav-link ">
+                          <li className="nav-item">
+                            <a className="nav-link ">
                               {getResponseMessage(constants).kidzapp_awards}
                             </a>
                           </li>
                         </Link>
                         <Link href="/KidzappTv">
-                          <li class="nav-item">
-                            <a class="nav-link ">
+                          <li className="nav-item">
+                            <a className="nav-link ">
                               {getResponseMessage(constants).kidzapp_tv}{" "}
                             </a>
                           </li>
                         </Link>
                         <Link href="/Getintouch">
-                          <li class="nav-item">
-                            <a class="nav-link ">
+                          <li className="nav-item">
+                            <a className="nav-link ">
                               {getResponseMessage(constants).get_in_touch}
                             </a>
                           </li>
                         </Link>
                         <Link href="/GetListed">
-                          <li class="nav-item">
-                            <a class="nav-link ">
+                          <li className="nav-item">
+                            <a className="nav-link ">
                               {getResponseMessage(constants).get_listed}
                             </a>
                           </li>
@@ -307,8 +307,8 @@ const Header = (props) => {
 
                         {!status ? (
                           <Link href="/">
-                            <li class="nav-item">
-                              <a class="nav-link " onClick={handleOpen}>
+                            <li className="nav-item">
+                              <a className="nav-link " onClick={handleOpen}>
                                 Login
                               </a>
                             </li>
@@ -316,9 +316,9 @@ const Header = (props) => {
                         ) : (
                           <>
                             <Link href="/">
-                              <li class="nav-item">
+                              <li className="nav-item">
                                 <a
-                                  class="nav-link "
+                                  className="nav-link "
                                   onClick={() => setStatus(localStorage.removeItem('access_token') )}
                                 >
                                   Logout
@@ -326,9 +326,9 @@ const Header = (props) => {
                               </li>
                             </Link>
 
-                            <li class="nav-item dropdown">
+                            <li className="nav-item dropdown">
                               <a
-                                class="nav-link toggle"
+                                className="nav-link toggle"
                                 href="#"
                                 id="navbarDropdownMenuLink"
                                 role="button"
@@ -343,21 +343,21 @@ const Header = (props) => {
                               >
                                 <Link href="/Profile">
                                   <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a className="dropdown-item" href="#">
                                       Profile
                                     </a>
                                   </li>
                                 </Link>
                                 <Link href="/Mybooking">
                                   <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a className="dropdown-item" href="#">
                                       Booking
                                     </a>
                                   </li>
                                 </Link>
                                 <Link href="WishList">
                                   <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a className="dropdown-item" href="#">
                                       WishList
                                     </a>
                                   </li>

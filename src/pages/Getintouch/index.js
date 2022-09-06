@@ -48,7 +48,7 @@ function Getintouch() {
             <div className="col-lg-4">
               <div className={style.box1}>
                 <div className={style.cicon}>
-                  <i class="fa-solid fa-envelope"></i>
+                  <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className={style.ctext}>
                   <span>info@kidzapp.com</span>
@@ -59,7 +59,7 @@ function Getintouch() {
             <div className="col-lg-4">
               <div className={style.box1}>
                 <div className={style.cicon}>
-                  <i class="fa-solid fa-phone"></i>
+                  <i className="fa-solid fa-phone"></i>
                 </div>
                 <div className={style.ctext}>
                   <span>+971585850843</span>
@@ -70,7 +70,7 @@ function Getintouch() {
             <div className="col-lg-4">
               <div className={style.box1}>
                 <div className={style.cicon}>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot"></i>
                 </div>
                 <div className={style.ctext}>
                   <span>
