@@ -227,7 +227,6 @@ const Booking = (props) => {
                     >
                       <GoogleMapReact
                         bootstrapURLKeys={{
-                          key: "AIzaSyBHxrllImC2OFUSQs5biR8aeR4SZOkRfJQ",
                           language: "en",
                           libraries: ["visualization"],
                         }}
